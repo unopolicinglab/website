@@ -73,4 +73,4 @@ user_groups:
 - Researchers
 ---
 
-Justin Nix is a distinguished associate professor in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. He coordinates the MA program and teaches undergraduate and graduate-level classes on policing. His research centers on policing with emphases on procedural justice, legitimacy, and officer-involved shootings. 
+Dr. Nix’s research centers on policing with emphases on procedural justice, legitimacy, and police shootings. He has recently co-authored articles appearing in *Justice Quarterly*, *Criminology & Public Policy*, and *Journal of Research in Crime and Delinquency*. He has also served as co-principal investigator on projects funded by the National Institute of Justice and the Department of Homeland Security. In 2020, he was the recipient of the Early Career Award from the American Society of Criminology’s Division of Policing. In 2021, he received the Outstanding Young Experimental Criminologist award from the Division of Experimental Criminology.

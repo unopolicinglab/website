@@ -67,3 +67,4 @@ user_groups:
 - Researchers
 ---
 
+Dr. Huff’s research revolves around evaluating police programs and policies in order to improve police effectiveness and the equitable administration of justice. She has partnered on several research projects with police agencies across the U.S., including randomized-controlled trials of body-worn cameras, an intelligence approach to gun violence, and violence reduction strategies. Her research has been funded through sources including the Centers for Disease Control and Prevention and the Bureau of Justice Assistance and has been published in outlets such as the *Journal of Experimental Criminology*, *Police Quarterly*, and *Crime & Delinquency*. She earned her PhD in criminology and criminal justice from Arizona State University in 2020.
