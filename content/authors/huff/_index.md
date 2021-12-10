@@ -18,12 +18,12 @@ organizations:
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include program evaluation, crime mapping, and police use of technology.
+bio: My research interests include program evaluation, police strategy, and crime mapping.
 
 interests:
 - Program Evaluation
+- Police Strategy
 - Crime Mapping
-- Police Technology
 
 education:
   courses:
