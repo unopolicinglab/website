@@ -20,4 +20,4 @@ design:
 
 <br>
 
-The **UNO Policing Lab** has been a center of excellence for policing and violence prevention research, teaching, and practice since its founding two days ago.
+The **UNO Policing Lab** has been a center of excellence for policing and violence prevention research, teaching, and practice since its inception in 2021.
