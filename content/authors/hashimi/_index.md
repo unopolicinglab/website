@@ -15,7 +15,8 @@ role: Assistant Professor
 # Organizations/Affiliations
 organizations:
 - name: University of Nebraska Omaha
-  url: ""
+  url: "https://www.sadafhashimi.com/"
+  
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include policing and policy, peer influence and crime, and violence prevention and intervention efforts.
@@ -60,7 +61,7 @@ social:
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
 #   icon_pack: ai
-#   link: files/cv.pdf
+#   link: file:///C:/Users/shashimi/OneDrive/CV/Hashimi.Sadaf%20(CV)%20211001.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 # email: ""
