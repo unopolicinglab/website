@@ -23,9 +23,8 @@ bio: My research interests include policing and policy, peer influence and crime
 
 interests:
 - Policing and policy
-- Police use of force
 - Peer influence and crime
-- Violence prevention
+- Social Network Analysis
 
 education:
   courses:
