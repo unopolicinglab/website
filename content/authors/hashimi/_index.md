@@ -15,15 +15,16 @@ role: Assistant Professor
 # Organizations/Affiliations
 organizations:
 - name: University of Nebraska Omaha
-  url: ""
+  url: "https://www.sadafhashimi.com/"
+  
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include policing and policy, peer influence and crime, and violence prevention efforts.
+bio: My research interests include policing and policy, peer influence and crime, and violence prevention and intervention efforts.
 
 interests:
 - Policing and policy
 - Peer influence and crime
-- Violence prevention
+- Social Network Analysis
 
 education:
   courses:
@@ -31,10 +32,10 @@ education:
     institution: Rutgers University
     year: "2021"
   - course: MA in Criminology
-    institution: Simon Frasier University
+    institution: Simon Fraser University
     year: "2015"
   - course: BA in Criminology
-    institution: Simon Frasier University
+    institution: Simon Fraser University
     year: "2013"
 
 # Social/Academic Networking
@@ -59,7 +60,7 @@ social:
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
 #   icon_pack: ai
-#   link: files/cv.pdf
+#   link: file:///C:/Users/shashimi/OneDrive/CV/Hashimi.Sadaf%20(CV)%20211001.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 # email: ""
@@ -70,4 +71,4 @@ user_groups:
 - Faculty
 ---
 
-Dr. Hashimi’s research centers on issues pertaining to policing and policy, peer influence and crime, and violence prevention efforts. Specifically, Dr. Hashimi employs social network analysis and various other research designs to uncover patterns of criminal and non-criminal behaviors that relate to co-offending, police misconduct, police use of force, and gang involvement. Her work has been funded by Public Safety Canada, the National Collaborative on Gun Violence Research, New Jersey’s Gun Violence Research Center and has appeared in outlets including *Journal of Research in Crime and Delinquency*, *Justice Quarterly,* *Criminology & Public Policy* and *Policing: An International Journal*. 
+Dr. Hashimi aims to understand how our social networks impact criminal and non-criminal behaviors. Her research centers on issues pertaining to policing and policy, peer influence and crime, and violence prevention and intervention efforts. Specifically, her current projects focus on: 1) the police role, including how the structure and composition of informal and formal officer networks contribute to departmental culture, officer wellbeing, and officer performance (i.e., police use of force, excessive use of force, misconduct), and 2) prevention and intervention efforts aimed at reducing at-risk behaviors, including criminal group involvement, firearm use, and criminal recidivism.  Her research has been funded by the Department of Homeland Security, Public Safety Canada, the National Collaborative on Gun Violence Research, New Jersey’s Gun Violence Research Center and has appeared in outlets including the *Journal of Research in Crime and Delinquency*, *Justice Quarterly*, *Criminology & Public Policy*, *Policing: An International Journal* and *Methodological Innovations*.
