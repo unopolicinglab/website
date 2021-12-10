@@ -67,7 +67,7 @@ social:
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Researchers
+- Faculty
 ---
 
-Dr. Huff’s research revolves around evaluating police programs and policies in order to improve police effectiveness and the equitable administration of justice. She has partnered on several research projects with police agencies across the U.S., including randomized-controlled trials of body-worn cameras, an intelligence approach to gun violence, and violence reduction strategies. Her research has been funded through sources including the Centers for Disease Control and Prevention and the Bureau of Justice Assistance and has been published in outlets such as the *Journal of Experimental Criminology*, *Police Quarterly*, and *Crime & Delinquency*. She earned her PhD in criminology and criminal justice from Arizona State University in 2020.
+Dr. Huff’s research revolves around evaluating police programs and policies in order to improve police effectiveness and the equitable administration of justice. She is an [NIJ LEADS Academic](https://nij.ojp.gov/funding/leads-scholar-biographies) committed to partnering with agencies to better understand what works in policing and how to achieve fair and equitable policing outcomes for civilians of diverse backgrounds. She has collaborated on several research projects with police agencies across the U.S., including randomized-controlled trials of body-worn cameras, violence reduction strategies, and intelligence approaches to gun crime. Her research has been funded through sources including the Centers for Disease Control and Prevention, Department of Homeland Security, and the Bureau of Justice Assistance. Her work has been published in outlets such as the *Journal of Experimental Criminology*, *Police Quarterly*, and *Crime & Delinquency*.

@@ -67,7 +67,7 @@ social:
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Researchers
+- Faculty
 ---
 
-Dr. Hashimi’s research centers on issues pertaining to policing and policy, peer influence and crime, and violence prevention efforts. Specifically, Dr. Hashimi employs social network analysis and various other research designs to uncover patterns of criminal and non-criminal behaviors that relate to co-offending, police misconduct, police use of force, and gang involvement. Her work has been funded by Public Safety Canada, the National Collaborative on Gun Violence Research, New Jersey’s Gun Violence Research Center and has appeared in outlets including *Journal of Research in Crime and Delinquency*, *Justice Quarterly,* *Criminology & Public Policy* and *Policing: An International Journal*. She earned her PhD in criminal justice from Rutgers University in 2021.
+Dr. Hashimi’s research centers on issues pertaining to policing and policy, peer influence and crime, and violence prevention efforts. Specifically, Dr. Hashimi employs social network analysis and various other research designs to uncover patterns of criminal and non-criminal behaviors that relate to co-offending, police misconduct, police use of force, and gang involvement. Her work has been funded by Public Safety Canada, the National Collaborative on Gun Violence Research, New Jersey’s Gun Violence Research Center and has appeared in outlets including *Journal of Research in Crime and Delinquency*, *Justice Quarterly,* *Criminology & Public Policy* and *Policing: An International Journal*. 
