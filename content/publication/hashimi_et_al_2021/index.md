@@ -18,7 +18,7 @@ publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
 publication: "*Journal of Research in Crime and Delinquency, 58*(5)"
-publication_short: "JRCD"
+publication_short: ""
 
 abstract: "**Objectives**: The processes driving gang entry and disengagement are central to classic and contemporary criminological research on gang involvement. Yet, the role of delinquent peer friendship networks in contouring gang membership has driven much of criminological research, with little empirical research devoted to understanding sibling influences on the gang career. **Method**:
 The study uses the National Longitudinal Survey of Youth 1997 to examine the transmission of gang membership among similar-aged siblings. These data offer the opportunity to use siblings’ self-report of gang involvement as a determinant of focal youths’ self-report of gang involvement while treating gang entry, persistence, and exit (and reentry) as unique transitions with potentially asymmetric determinants. **Results**: Results from the event history models indicate that gang involved siblings increase the hazard of entry and re-entry into the gang but have little influence on exit decisions. Sibling configurations with respect to sex and age-order further conditions these relations, with brothers and older siblings most influential. **Conclusion**: Ties to siblings serve as a salient and intimate type of social tie with siblings serving multiplex roles in each other’s lives. Findings lend additional insight on crime concentration in family networks and advance our understanding of continuity and change in gang involvement"
@@ -48,7 +48,7 @@ url_video: ''
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: "Image by [Gordon Johnson](https://pixabay.com/users/gdj-1086657/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3846597) from [Pixabay](https://pixabay.com/vectors/social-media-connections-networking-3846597/)"
+  caption: ""
   focal_point: ""
   preview_only: false
 

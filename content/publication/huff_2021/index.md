@@ -16,7 +16,7 @@ publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
 publication: "*Journal of Criminal Justice, 75*"
-publication_short: "JCJ"
+publication_short: ""
 
 abstract: "**Purpose**: Promote the use of multilevel modeling to refine theories of police discretion. Specifically, examine the simultaneous influence of situational factors, responding officers, and neighborhood context on arrests guided by a social-ecological framework. **Methods**: Cross-classified models were used to assess the outcomes of 835,381 incidents responded to by 835 Phoenix Police officers in 388 census tracts. **Results**: Situational, officer, and neighborhood factors all significantly influence arrests. Incident-level factors account for most of the variation, followed by officers, and neighborhoods. Incidents that resulted in arrest were more likely to involve victims, a greater number of responding officers, female officers, and college-educated officers. Arrests were more likely to occur in Hispanic and Black neighborhoods, even when controlling for situational and officer-level characteristics. Arrests were less likely to occur when officers were assigned to high crime precincts. **Conclusions**: Multilevel models enable a comprehensive examination of police use of arrest using administrative data that are already being collected by police agencies. Through accounting for both officer and neighborhood-level influences, this strategy improves on prior theory testing in policing research. The results support elements of some theories, but conflict with others. These findings have important implications for police policies surrounding arrest and resource deployment."
 
@@ -44,7 +44,7 @@ url_video: ''
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image: 
-  caption: "Image by [Matt Popovich](https://unsplash.com/@mattpopovich) on [Unsplash](https://unsplash.com/photos/7mqsZsE6FaU)"
+  caption: ""
   focal_point: ""
   preview_only: false
 
