@@ -58,9 +58,9 @@ social:
 
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-# - icon: cv
-#   icon_pack: ai
-#   link: file:///C:/Users/shashimi/OneDrive/CV/Hashimi.Sadaf%20(CV)%20211001.pdf
+- icon: cv
+  icon_pack: ai
+  link: "files/cv_hashimi.pdf"
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 # email: ""
