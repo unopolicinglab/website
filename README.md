@@ -6,7 +6,7 @@ Check out [our website](https://unopolicinglab.netlify.app)!
 
 Follow us on Twitter:
 
-Dr. Justin Nix: [@jnixy](https://twitter.com/jnixy)
-Dr. Jessie Huff: [@jessiehuff19](https://twitter.com/jessiehuff19)
-Dr. Sadaf Hashimi: [@sadaf_hashimi](https://twitter.com/sadaf_hashimi)
+Dr. Justin Nix: [@jnixy](https://twitter.com/jnixy)  
+Dr. Jessie Huff: [@jessiehuff19](https://twitter.com/jessiehuff19)  
+Dr. Sadaf Hashimi: [@sadaf_hashimi](https://twitter.com/sadaf_hashimi)  
 Our School: [@UNOSCCJ](https://twitter.com/UNOSCCJ)
