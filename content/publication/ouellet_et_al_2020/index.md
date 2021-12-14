@@ -1,11 +1,12 @@
 ---
-title: "Sibling transmission of gang involvement"
+title: "The Promise of a Network Approach for Policing Research"
 authors:
+- Marie Ouellet
 - hashimi
-- Sara Wakefield
-- Robert Apel
-date: "2021-08-01T13:00:00Z"
-doi: "10.1177/0022427820986592"
+- Jason Gravel
+- Dean Dabney
+date: "2020-12-21T13:00:00Z"
+doi: "10.1080/07418825.2020.1841268"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2021-12-11T13:00:00Z"
@@ -17,26 +18,24 @@ publishDate: "2021-12-11T13:00:00Z"
 publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*Journal of Research in Crime and Delinquency, 58*(5)"
+publication: "*Justice Quarterly, 37*(7)"
 publication_short: ""
 
-abstract: "**Objectives**: The processes driving gang entry and disengagement are central to classic and contemporary criminological research on gang involvement. Yet, the role of delinquent peer friendship networks in contouring gang membership has driven much of criminological research, with little empirical research devoted to understanding sibling influences on the gang career. **Method**:
-The study uses the National Longitudinal Survey of Youth 1997 to examine the transmission of gang membership among similar-aged siblings. These data offer the opportunity to use siblings’ self-report of gang involvement as a determinant of focal youths’ self-report of gang involvement while treating gang entry, persistence, and exit (and reentry) as unique transitions with potentially asymmetric determinants. **Results**: Results from the event history models indicate that gang involved siblings increase the hazard of entry and re-entry into the gang but have little influence on exit decisions. Sibling configurations with respect to sex and age-order further conditions these relations, with brothers and older siblings most influential. **Conclusion**: Ties to siblings serve as a salient and intimate type of social tie with siblings serving multiplex roles in each other’s lives. Findings lend additional insight on crime concentration in family networks and advance our understanding of continuity and change in gang involvement"
+abstract: "Considerable attention has been devoted to understanding police socialization and the resulting culture, yet only recently have scholars turned to a network approach to understand the social relationships between officers. We extend these efforts with results from a pilot study of officer networks in a large US police department. Network data are collected from 88 front-line officers to examine officers’ informal working relationships. Our findings shed light on the connected nature of officer relationships, showing how personal support networks intersect and diverge from more formal advice and mentorship networks. The study provides an alternative starting point for understanding socialization as a vehicle of officer attitudes, values, and behaviors. Likewise, it demonstrates the applicability of a network approach for understanding departments’ social and structural organization. We conclude with a discussion on how officer networks can inform meaningful policy initiatives, including shifting organizational climate, enhancing retention, and curbing abuses."
 
 # Summary. An optional shortened abstract.
 summary: 
 
 tags:
-- sibling influence
-- gang involvement
-- NLSY97
-- social learning theory
+- police networks
+- informal relationships
+- socialization
 featured: false
 
 # links:
 # - name: ""
 #   url: ""
-url_pdf: "https://www.crimrxiv.com/pub/xwarcm91/release/1?readingCollection=6c7c25ac"
+url_pdf: ""
 url_code: ""
 url_dataset: ''
 url_poster: ''
