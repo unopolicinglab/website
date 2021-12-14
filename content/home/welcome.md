@@ -7,8 +7,8 @@ widget: hero  # See https://wowchemy.com/docs/page-builder/
 headless: true  # This file represents a page section.
 weight: 10  # Order that this section will appear.
 title: |
-  UNO  
-  Policing Lab
+  The  
+  VIPER Lab
 hero_media: welcome.jpg
 design:
   # Choose how many columns the section has. Valid values: 1 or 2.
@@ -20,7 +20,7 @@ design:
 
 <br>
 
-The **VIPER Lab** at UNO has been a center of excellence for policing and violence prevention research, teaching, and practice since its inception in 2021.
+The **VIPER Lab** in the [UNO School of Criminology and Criminal Justice](https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/index.php) has been a center of excellence for policing and violence prevention research since its inception in 2021.
 
 **V**iolence  
 **I**nterventions,  
