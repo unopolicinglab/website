@@ -68,8 +68,6 @@ projects: []
 slides:
 ---
 
-Click [here](https://jnix.netlify.app/publication/45-pone-nonfatal-shootings/) to read a short summary of the findings.
-
 {{% callout note %}}
 Click the *Cite* button above to import publication metadata into your reference management software.
 {{% /callout %}}
