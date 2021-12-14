@@ -23,7 +23,7 @@ bio: My research centers on policing with emphases on procedural justice, legiti
 interests:
 - Procedural justice
 - Police legitimacy
-- Officer decision-making
+- Officer use of discretion
 - Police shootings
 
 education:
