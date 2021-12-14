@@ -1,13 +1,15 @@
 ---
-title: "Factors associated with police shooting mortality: A focus on race and a plea for more comprehensive data"
+title: "Are domestic incidents really more dangerous to police? Findings from the 2016 National Incident Based Reporting System"
 authors:
 - admin
-- John Shjarback
-date: "2021-11-10T13:00:00Z"
-doi: "10.1371/journal.pone.0259024"
+- Tara Richards
+- Gillian Pinchevsky
+- Emily Wright
+date: "2019-11-05T13:00:00Z"
+doi: "10.1080/07418825.2019.1675748"
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2021-12-11T13:00:00Z"
+publishDate: "2021-12-14T07:00:00Z"
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
@@ -16,29 +18,31 @@ publishDate: "2021-12-11T13:00:00Z"
 publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*PLOS ONE, 16*(11)"
+publication: "*Justice Quarterly* (In Press)"
 publication_short: ""
 
-abstract: "**Objectives**. To quantify nonfatal injurious police shootings of people and examine the factors associated with victim mortality. **Methods**. We gathered victim-level data on fatal and nonfatal injurious police shootings from four states that have such information publicly available: Florida (2009-14), Colorado (2010-19), Texas (2015-19), and California (2016-19). For each state, we examined bivariate associations between mortality and race/ethnicity, gender, age, weapon, and access to trauma care. We also estimated logistic regression models predicting victim mortality in each state. **Results**. Forty-five percent of these police shooting victims (N=1,322) did not die. Black-white disparities were more pronounced in nonfatal injurious police shootings than in fatal police shootings. Overall, Black victims were less likely than white victims to die from their wound(s). Younger victims were less likely to die from their wound(s), as well as those who were unarmed. **Conclusions**. Racial and age disparities in police shootings are likely more pronounced than previous estimates suggest. **Policy Implications**. Other states should strongly consider compiling data like that which is currently being gathered in California. Absent data on nonfatal injurious police shootings – which account for a large share of deadly force incidents – researchers and analysts must be cautious about comparing and/or ranking jurisdictions in terms of their police-involved fatality rates."
+abstract: "It is widely believed among police officers that domestic incidents are among the most dangerous incidents to which they respond. However, most research in this area suffers from the “denominator problem,” where prior studies have focused on incidents resulting in harm to police officers and failed to account for incidents not resulting in harm. Such methodologies can produce drastically misleading results. This paper uses data from the 2016 National Incident Based Reporting System (NIBRS) to overcome the denominator problem. We examine the probability of (1) an officer being assaulted and (2) an officer being injured or killed when responding to a domestic incident compared to a non-domestic incident while controlling for other potentially important variables. Results indicate that officers are significantly more likely to be assaulted or injured when responding to non-domestic incidents. Implications for law enforcement training, victim legitimacy, and future research are discussed."
 
 # Summary. An optional shortened abstract.
-summary: We quantify fatal and nonfatal police shootings in 4 states and show that conditional on being shot, Black victims in this sample were less likely to die. 
+summary: NIBRS data does not support the notion that domestic incidents are uniquely dangerous for responding officers.  
 
 tags:
-- deadly force
-- race
-- public health
+- NIBRS
+- domestic violence
+- violence against police
+- assaults
+- injuries
 featured: false
 
 # links:
 # - name: ""
 #   url: ""
-url_pdf: "https://doi.org/10.21428/cb6ab371.52abc4c3"
-url_code: "https://github.com/jnixy/replication-materials/tree/master/nix_shjarback_PONE_2021"
+url_pdf: "https://jnix.netlify.app/files/pdfs/jq_domestics.pdf"
+url_code: ""
 url_dataset: ''
 url_poster: ''
 url_project: ''
-url_slides: "https://jnix.netlify.app/slides/asc21_pone_paper"
+url_slides: ""
 url_source: ''
 url_video: ''
 
