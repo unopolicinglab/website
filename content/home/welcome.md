@@ -20,4 +20,10 @@ design:
 
 <br>
 
-The **UNO Policing Lab** has been a center of excellence for policing and violence prevention research, teaching, and practice since its inception in 2021.
+The **VIPER Lab** at UNO has been a center of excellence for policing and violence prevention research, teaching, and practice since its inception in 2021.
+
+**V**iolence  
+**I**nterventions,  
+**P**olicing  
+**E**valuations, and  
+**R**esearch
