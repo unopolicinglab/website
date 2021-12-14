@@ -128,3 +128,5 @@ cms:
 icon:
   pack:
     ai: true
+sharing_image: "icon.png"
+logo: "icon.png"
