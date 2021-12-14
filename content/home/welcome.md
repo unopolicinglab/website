@@ -22,8 +22,14 @@ design:
 
 The **VIPER Lab** in the [UNO School of Criminology and Criminal Justice](https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/index.php) has been a center of excellence for policing and violence prevention research since its inception in 2021.
 
+**VIPER** stands for:
+
 **V**iolence  
 **I**nterventions,  
 **P**olicing  
 **E**valuations, and  
 **R**esearch
+
+We invite you to explore our website for latest news and information on upcoming events, recent publications, and more.
+
+Questions? Email us: [unopolicinglab@gmail.com](mailto:unopolicinglab@gmail.com). 
