@@ -1,6 +1,6 @@
 # The UNO Policing Lab
 
-👋 Hi! We're the VIPER (**V**iolence **I**ntervention and **P**olice **R**esearch) Lab in the [School of Criminology and Criminal Justice](https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/index.php) at the [University of Nebraska Omaha](https://www.unomaha.edu/index.php). 
+👋 Hi! We're the VIPR (**V**iolence **I**ntervention and **P**olice **R**esearch) Lab in the [School of Criminology and Criminal Justice](https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/index.php) at the [University of Nebraska Omaha](https://www.unomaha.edu/index.php). 
 
 Check out [our website](https://unoviprlab.netlify.app)!
 
