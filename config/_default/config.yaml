@@ -4,7 +4,7 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 title: The VIPER Lab # Website name
-baseurl: 'https://unoviperlab.netlify.app/' # Website URL
+baseurl: 'https://unoviprlab.netlify.app/' # Website URL
 copyright: '' # Footer text, e.g. '© {year} Me'
 
 ############################
