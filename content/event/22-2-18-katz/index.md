@@ -2,7 +2,7 @@
 title: "Examining the Predictive Validity of the Indicators and Thresholds Used for the Phoenix Police Department's Early Intervention System"
 
 event: SCCJ Speaker Series
-event_url: https://example.org
+event_url: 
 
 location: UNO CPACS Bldg.
 address:
