@@ -9,7 +9,7 @@ Congratulations to faculty in The Lab on winning a DHS grant to examine how agen
 
 <!--more-->
 
-A team led by NCITE researcher and UNO Policing Lab Affiliate Erin Kearns recently won a nearly $136,000 grant from the Department of Homeland Security Science and Technology Directorate to study how police departments screen for and identify insider threats in the hiring process and among active officers.
+A team led by [NCITE](https://www.unomaha.edu/ncite/index.php) researcher and VIPR Lab Affiliate [Erin Kearns](https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/erin-kearns.php) recently won a nearly $136,000 grant from the Department of Homeland Security Science and Technology Directorate to study how police departments screen for and identify insider threats in the hiring process and among active officers.
 
 In addition to Kearns, co-principal investigators on the grant include Drs. Hashimi, Huff, and Nix. 
 
