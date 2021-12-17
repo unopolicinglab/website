@@ -29,6 +29,8 @@ The **VIPR Lab** in the [UNO School of Criminology and Criminal Justice](https:/
 **P**olicing  
 **R**esearch
 
+In addition to SCCJ faculty, research affiliates, and community partners, the VIPR Lab actively includes SCCJ undergraduate and graduate students to develop their research expertise.
+
 We invite you to explore our website for latest news and information on upcoming events, recent publications, and more.
 
 Questions? Email us: [unopolicinglab@gmail.com](mailto:unopolicinglab@gmail.com). 
