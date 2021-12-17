@@ -33,3 +33,7 @@ A running list of major reports published in the last decade.
 * [Advancing Diversity in Law Enforcement](https://policingequity.org/images/pdfs-doc/advancing_diversity_in_law_enforcement_report_october_2016.pdf)
 * [The Science of Justice: Race, Arrests, and Police Use of Force](https://policingequity.org/images/pdfs-doc/CPE_SoJ_Race-Arrests-UoF_2016-07-08-1130.pdf)
 * [Toolkit for Equitable Public Safety](https://policingequity.org/what-we-do/research/toolkit-for-equitable-public-safety)
+
+## SCCJ Faculty Publications
+
+* Check out our School's hosted collection on [CrimRxiv](https://www.crimrxiv.com/unosccj) to download the latest research from our faculty members!
