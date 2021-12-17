@@ -18,14 +18,9 @@ A running list of major reports published in the last decade.
 
 ## CCJ National Commission on COVID-19 and Criminal Justice
 
-### Pandemic, Social Unrest, and Crime in US Cities 
-
-* [2020 Year-End Update](https://build.neoninspire.com/counciloncj/wp-content/uploads/sites/96/2021/07/Year-End-Crime-Update_Designed.pdf)
-* [March 2021 Update](https://covid19.counciloncj.org/2021/05/21/impact-report-covid-19-and-crime-4/)
-
-### Domestic Violence During the COVID-19 Pandemic
-
-* [Evidence from a Systematic Review and Meta-Analysis](https://build.neoninspire.com/counciloncj/wp-content/uploads/sites/96/2021/07/Domestic-Violence-During-COVID-19-February-2021.pdf)
+* [Pandemic, Social Unrest, and Crime in US Cities: 2020 Year-End Update](https://build.neoninspire.com/counciloncj/wp-content/uploads/sites/96/2021/07/Year-End-Crime-Update_Designed.pdf)
+* [Pandemic, Social Unrest, and Crime in US Cities: March 2021 Update](https://covid19.counciloncj.org/2021/05/21/impact-report-covid-19-and-crime-4/)
+* [Domestic Violence During the COVID-19 Pandemic: Evidence from a Systematic Review and Meta-Analysis](https://build.neoninspire.com/counciloncj/wp-content/uploads/sites/96/2021/07/Domestic-Violence-During-COVID-19-February-2021.pdf)
 
 ## PERF *Critical Issues* Series
 
