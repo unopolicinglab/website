@@ -35,14 +35,16 @@ A running list of other groups and organizations working to advance knowledge in
   - An international organization whose members pursue scholarly, scientific, and professional knowledge concerning the measurement, etiology, consequences, prevention, control, and treatment of crime and delinquency.
 * [American Society of Evidence-Based Policing](https://www.americansebp.org/)
   - A group of working police officers advocating for evidence-based change within the profession.
+* [ASU Center for Problem-Oriented Policing](https://popcenter.asu.edu/)
+  - The mission of the Center for Problem-Oriented Policing is to advance the concept and practice of problem-oriented policing in open and democratic societies. It does so by making readily accessible information about ways in which police can effectively and equitably address specific crime and disorder problems.
 * [Campaign Zero](https://campaignzero.org/)
   - Campaign Zero encourages policymakers to focus on solutions with the strongest evidence of effectiveness at reducing police violence.
 * [Center for Policing Equity](https://policingequity.org/)
   - CPE produces analyses identifying and reducing the causes of racial disparities in public safety and advocates for large-scale and meaningful change.
 * [Council on Criminal Justice](https://counciloncj.org/)
   - The Council on Criminal Justice works to advance understanding of the criminal justice policy choices facing the nation and build consensus for solutions that enhance safety and justice for all.
-* [Office of Community Oriented Policing Services](https://cops.usdoj.gov/)
-  - The COPS Office is the component of the U.S. Department of Justice responsible for advancing the practice of community policing by the nation's state, local, territorial, and tribal law enforcement agencies through information and grant resources.
+* [Crime Solutions](https://crimesolutions.ojp.gov/)
+  - The National Institute of Justice’s CrimeSolutions is comprised of two components — a web-based clearinghouse of programs and practices and a process for identifying and rating those programs and practices.
 * [CURE Violence](https://cvg.org/)
   - Cure Violence Global is guided by the understanding that violence is a health issue, that individuals and communities can transform themselves, and that community partners and strategic partnerships are keys to success. Through a rigorous, scientific, and data-driven approach, Cure Violence Global helps communities to implement to implement violence prevention programs that are effective in significantly reducing violence.
 * [International Association of Chiefs of Police](https://www.theiacp.org/)
@@ -55,6 +57,8 @@ A running list of other groups and organizations working to advance knowledge in
   - The mission of MCCA is to provide a forum for police executives from large population centers to address the challenges and issues of policing, to influence national and international policy that affects police services, to enhance the development of current and future police leaders, and to encourage and sponsor research that advances this mission.
 * [Niskanen Center](https://www.niskanencenter.org/)
   - The Niskanen Center works to advance an open society by active engagement in the war of ideas, direct engagement in the policymaking process, and through the courts with amicus briefs and pro bono representation. 
+* [Office of Community Oriented Policing Services](https://cops.usdoj.gov/)
+  - The COPS Office is the component of the U.S. Department of Justice responsible for advancing the practice of community policing by the nation's state, local, territorial, and tribal law enforcement agencies through information and grant resources.
 * [Police Executive Research Forum](https://www.policeforum.org/)
   - PERF is a police research and policy organization and a provider of management services, technical assistance, and executive-level education to support law enforcement agencies. PERF helps to improve the delivery of police services through the exercise of strong national leadership; public debate of police and criminal justice issues; and research and policy development.
 * [Police Scorecard](https://policescorecard.org/)
