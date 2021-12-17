@@ -19,6 +19,8 @@ A running list of other groups and organizations working to advance knowledge in
   - A group of 50+ academics from 18 universities focused on 10 pressing areas of study related to counterterrorism. Their goal is to innovate, educate, and create new prevention strategies while building a workforce pipeline where it’s desperately needed: in STEM and Homeland Security fields.
 * [Nebraska Center for Justice Research](https://www.unomaha.edu/college-of-public-affairs-and-community-service/nebraska-center-for-justice-research/index.php)
   - A multidisciplinary research center that aims to develop and sustain research capacity internal to the State of Nebraska, assist the Legislature in research, evaluation, and policymaking to reduce recidivism, promote the use of evidence-based practices in corrections, and improve public safety.
+* [Nebraska Collaborative for Violence Intervention & Prevention](https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/research/ne-collaborative-for-violence-intervention.php#:~:text=The%20Nebraska%20Collaborative%20for%20Violence,assets%20and%20culture%2C%20and%20systematically)
+  - The Nebraska Collaborative for Violence Intervention and Prevention (NeCVIP) uses a scientific approach that builds from a medical, public health and criminological perspective to address the underlying factors that contribute to gun violence, strengthen existing community assets and culture, and systematically applying data and science to ensure effective outcomes.
 * [Victimology and Victim Studies Research Lab](https://www.unomaha.edu/college-of-public-affairs-and-community-service/juvenile-justice-institute/index.php)
   - The VVSR Lab aims to conduct high quality research related to crime victims and crime victimization, inform policy and practice, and help shape prevention and intervention efforts.
 
@@ -56,7 +58,9 @@ A running list of other groups and organizations working to advance knowledge in
 * [Major Cities Chiefs Association](https://majorcitieschiefs.com/)
   - The mission of MCCA is to provide a forum for police executives from large population centers to address the challenges and issues of policing, to influence national and international policy that affects police services, to enhance the development of current and future police leaders, and to encourage and sponsor research that advances this mission.
 * [Niskanen Center](https://www.niskanencenter.org/)
-  - The Niskanen Center works to advance an open society by active engagement in the war of ideas, direct engagement in the policymaking process, and through the courts with amicus briefs and pro bono representation. 
+  - The Niskanen Center works to advance an open society by active engagement in the war of ideas, direct engagement in the policymaking process, and through the courts with amicus briefs and pro bono representation.
+* [Northwestern Neighborhood & Network Initiative](https://n3networks.northwestern.edu/)
+  - The Northwestern Neighborhood & Network Initiative (N3) promotes new ways for faculty, experts, and students at Northwestern University’s Institute for Policy Research to engage communities, civic partners, and policymakers to address core problems facing the residents of Chicago and surrounding communities. 
 * [Office of Community Oriented Policing Services](https://cops.usdoj.gov/)
   - The COPS Office is the component of the U.S. Department of Justice responsible for advancing the practice of community policing by the nation's state, local, territorial, and tribal law enforcement agencies through information and grant resources.
 * [Police Executive Research Forum](https://www.policeforum.org/)

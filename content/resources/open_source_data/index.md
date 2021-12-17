@@ -43,5 +43,10 @@ A running list of open source data related to policing and other violence interv
 * [Missouri Vehicle Stops Report](https://ago.mo.gov/home/vehicle-stops-report)
 
 ## **Miscellaneous**
+
+* [Colorado Index of Complex Networks](https://icon.colorado.edu/#!/)
+  - ICON is a comprehensive index of research-quality network data sets from all domains of network science, including social, web, information, biological, ecological, connectome, transportation, and technological networks.
+* [Katya Ognyanova's blog](https://kateto.net/2016/05/network-datasets/)
+  - A helpful list of repositories containing network data, compiled by Katya Ognyanova
 * [Police Data Initiative](https://www.policedatainitiative.org/datasets/)
   - 200+ data sets (including traffic stops, uses of force, calls for service, hate crimes, and more) uploaded by 120+ police departments 

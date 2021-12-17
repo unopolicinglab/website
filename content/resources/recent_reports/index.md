@@ -34,6 +34,18 @@ A running list of major reports published in the last decade.
 * [The Science of Justice: Race, Arrests, and Police Use of Force](https://policingequity.org/images/pdfs-doc/CPE_SoJ_Race-Arrests-UoF_2016-07-08-1130.pdf)
 * [Toolkit for Equitable Public Safety](https://policingequity.org/what-we-do/research/toolkit-for-equitable-public-safety)
 
+## RAND
+
+* [Understanding Subgroups Within the Los Angeles County Sheriff’s Department](https://www.rand.org/pubs/research_reports/RRA616-1.html)
+* [SAFE Charlotte: Alternative response models and disparities in policing](https://www.rand.org/pubs/research_reports/RRA1355-1.html)
+
+## Bureau of Justice Statistics
+
+* [Contacts between police and the public, 2018](https://bjs.ojp.gov/content/pub/pdf/cbpp18st.pdf)
+* [Federal Deaths in Custody and During Arrest, 2018–2019](https://bjs.ojp.gov/sites/g/files/xyckuh236/files/media/document/fdcda1819st.pdf)
+* [State and local law enforcement training academies, 2018](https://bjs.ojp.gov/sites/g/files/xyckuh236/files/media/document/slleta18st.pdf)
+* [Additional BJS publications](https://bjs.ojp.gov/library)
+
 ## SCCJ Faculty Publications
 
 * Check out our School's hosted collection on [CrimRxiv](https://www.crimrxiv.com/unosccj) to download the latest research from our faculty members!
