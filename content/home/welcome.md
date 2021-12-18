@@ -17,8 +17,6 @@ interval: 5000s
 # Specify a height to ensure a consistent height for each slide.
 height: 300px
 
----
-
 item: 
   - title: 👋 Hello!
     content: We're the **VIPR Lab** in the [UNO School of Criminology and Criminal Justice](https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/index.php)
