@@ -23,6 +23,5 @@ item:
     align: center
     overlay_color: '#000000'
     overlay_img: blue_lights.jpg
-    overlay_filter: 0.8
     
 ---
