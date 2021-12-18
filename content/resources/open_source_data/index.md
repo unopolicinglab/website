@@ -56,3 +56,5 @@ A running list of open source data related to policing and other violence interv
 
 * [Police Data Initiative](https://www.policedatainitiative.org/datasets/)
   - 200+ data sets (including traffic stops, uses of force, calls for service, hate crimes, and more) uploaded by 120+ police departments 
+* [Police Scorecard Data](https://drive.google.com/drive/folders/1iivJXgHgyXF9RR-wKYLnpXwXRCGVXlpE)
+  - A Google Drive folder with several datasets (e.g., arrests, police funding, use of force, complaints, homicide clearance rates) compiled for [Police Scorecard](https://policescorecard.org/)
