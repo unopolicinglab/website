@@ -6,7 +6,7 @@
 widget: hero  # See https://wowchemy.com/docs/page-builder/
 headless: true  # This file represents a page section.
 weight: 20  # Order that this section will appear.
-title: About Us
+title: ""
 hero_media: sadaf_website_1.png
 design:
   # Choose how many columns the section has. Valid values: 1 or 2.
@@ -16,6 +16,8 @@ design:
   css_class:
 ---
 
-The VIPR Lab in the [UNO School of Criminology and Criminal Justice](https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/index.php) is an interdisciplinary, collaborative effort that focuses on enhancing public safety by providing research, resources, and training that engages with state agencies, practitioners, and the community. In addition to SCCJ faculty, research affiliates, and community partners, the VIPR Lab actively includes SCCJ undergraduate and graduate students to develop their research expertise.
+The Violence Intervention and Police Research (VIPR) Lab in the [UNO School of Criminology and Criminal Justice](https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/index.php) is an interdisciplinary, collaborative effort that focuses on enhancing public safety by providing research, resources, and training that engages with state agencies, practitioners, and the community. 
 
-We invite you to explore our website for latest news and information on upcoming events, recent publications, and more.
+In addition to SCCJ faculty, research affiliates, and community partners, the VIPR Lab works with SCCJ undergraduate and graduate students to conduct data-intensive research, develop specialized skills, and connect with the public in policy formulation.
+
+We invite you to explore our website for the latest news and information on upcoming events, recent publications, and more.
