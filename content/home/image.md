@@ -15,7 +15,7 @@ interval: 5000
 
 # Minimum slide height.
 # Specify a height to ensure a consistent height for each slide.
-# height: 
+height: '600px; background-position:center; background-repeat: no-repeat; background-size: contain'
 
 item: 
   - title: ""
@@ -35,6 +35,12 @@ item:
     overlay_img: sadaf_website_1.png
   - title: ""
     align: center
+    overlay_img: jessie_website_2.jpg
+  - title: ""
+    align: center
     overlay_img: nix_teaching_4.png
+  - title: ""
+    align: center
+    overlay_img: jessie_website_3.jpg
     
 ---
