@@ -30,4 +30,4 @@ design:
   show_social: true
 ---
 
-Coming soon: **Affiliates** and **Graduate Students**
+(Check back soon for **Affiliates** and **Graduate Students**)
