@@ -20,22 +20,22 @@ height: 300px
 
 item: 
   - title: 👋 Hello!
-    content: We're the **VIPR Lab** in the [UNO School of Criminology and Criminal Justice](https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/index.php)
+    content: 'We're the **VIPR Lab** in the [UNO School of Criminology and Criminal Justice](https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/index.php)'
     align: center
   - title: About Us
-    content: **VIPR** stands for **V**iolence **I**ntervention and **P**olicing **R**esearch
+    content: '**VIPR** stands for **V**iolence **I**ntervention and **P**olicing **R**esearch'
     align: center
   - title: About Us
-    content: **VIPR** is an interdisciplinary, collaborative effort that focuses on enhancing public safety by providing research, resources, and training that engages with state agencies, practitioners, and the community.
+    content: '**VIPR** is an interdisciplinary, collaborative effort that focuses on enhancing public safety by providing research, resources, and training that engages with state agencies, practitioners, and the community.'
     align: center
   - title: About Us
-    content: In addition to SCCJ faculty, research affiliates, and community partners, the VIPR Lab actively includes SCCJ undergraduate and graduate students to develop their research expertise.
+    content: 'In addition to SCCJ faculty, research affiliates, and community partners, the VIPR Lab actively includes SCCJ undergraduate and graduate students to develop their research expertise.'
     align: center
   - title: 👀 Look around!
-    content: We invite you to explore our website for latest news and information on upcoming events, recent publications, and more.
+    content: 'We invite you to explore our website for latest news and information on upcoming events, recent publications, and more.'
     align: center
   - title: Questions❓
-    content: Email us: [unopolicinglab@gmail.com](mailto:unopolicinglab@gmail.com)
+    content: 'Email us: [unopolicinglab@gmail.com](mailto:unopolicinglab@gmail.com)'
     align: center
     
 ---
