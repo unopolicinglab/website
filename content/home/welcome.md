@@ -23,5 +23,8 @@ item:
     align: center
     overlay_color: '#000000'
     overlay_img: blue_lights.jpg
+  - title: ""
+    align: center
+    overlay_img: uno_best_school.jpg
     
 ---
