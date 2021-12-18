@@ -21,6 +21,7 @@ height: 200px
 item: 
   - title: "**V**iolence **I**ntervention and **P**olicing **R**esearch"
     align: center
-    overlay_color: '#000000' 
+    overlay_color: '#000000'
+    overlay_img: blue_lights.png
     
 ---
