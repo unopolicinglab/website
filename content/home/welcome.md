@@ -19,10 +19,11 @@ interval: 5000
 height: 300px
 
 item: 
-  - title: "👋 Hello!"
-    content: "We are the **VIPR Lab** in the [UNO School of Criminology and Criminal Justice](https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/index.php)"
+  - title: ""
+    content: ""
     align: center
     overlay_color: '#000000'  # An HTML color value.
+    overlay_img: icon.png
   - title: "About Us"
     content: "**VIPR** stands for **V**iolence **I**ntervention and **P**olicing **R**esearch"
     align: center
