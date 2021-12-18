@@ -16,7 +16,7 @@ design:
   css_class:
 ---
 
-The Violence Intervention and Police Research (VIPR) Lab in the [UNO School of Criminology and Criminal Justice](https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/index.php) is an interdisciplinary, collaborative effort that focuses on enhancing public safety by providing research, resources, and training that engages with state agencies, practitioners, and the community. 
+The **Violence Intervention and Police Research (VIPR)** Lab in the [UNO School of Criminology and Criminal Justice](https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/index.php) is an interdisciplinary, collaborative effort that focuses on enhancing public safety by providing research, resources, and training that engages with state agencies, practitioners, and the community. 
 
 In addition to SCCJ faculty, research affiliates, and community partners, the VIPR Lab works with SCCJ undergraduate and graduate students to conduct data-intensive research, develop specialized skills, and connect with the public in policy formulation.
 
