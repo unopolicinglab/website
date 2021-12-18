@@ -1,31 +1,40 @@
 ---
-# An instance of the Blank widget.
-# Documentation: https://wowchemy.com/docs/page-builder/
-widget: blank
-
-# Activate this widget? true/false
+widget: slider  # See https://wowchemy.com/docs/page-builder/
+headless: true  # This file represents a page section.
+weight: 10  # Order that this section will appear.
 active: true
-
-# This file represents a page section.
-headless: true
 
 # Order that this section appears on the page.
 weight: 40
 
-title:
-subtitle:
+# ... Put Your Section Options Here (section position etc.) ...
 
-design:
-  columns: "1"
-  background:
-    image: nix-tregle-data.jpg
-    image_darken: 0
-    image_parallax: false
-    image_position: center
-    image_size: cover
-    text_color_light: true
-  spacing:
-    padding: ["20px", "0", "20px", "0"]
-advanced:
-  css_class: fullscreen
+# Slide interval.
+# Use `false` to disable animation or enter a time in ms, e.g. `5000` (5s).
+interval: 5000
+
+# Minimum slide height.
+# Specify a height to ensure a consistent height for each slide.
+height: '500px; background-position:center; background-repeat: no-repeat; background-size: cover'
+
+item: 
+  - title: ""
+    align: center
+    overlay_img: nix-tregle-data.jpg
+  - title: ""
+    align: center
+    overlay_img: sadaf_website_2.png
+  - title: ""
+    align: center
+    overlay_img: jessie_website_1.jpg
+  - title: ""
+    align: center
+    overlay_img: nix_teaching_2.pdf
+  - title: ""
+    align: center
+    overlay_img: sadaf_website_1.png
+  - title: ""
+    align: center
+    overlay_img: nix_teaching_4.pdf
+    
 ---
