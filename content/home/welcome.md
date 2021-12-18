@@ -19,7 +19,8 @@ interval: false
 height: 300px
 
 item: 
-  - title: "**V**iolence **I**ntervention and **P**olicing **R**esearch"
+  - title: "|
+  **V**iolence **I**ntervention and **P**olicing **R**esearch"
     align: center
     overlay_color: '#000000'
     overlay_img: blue_lights.jpg
