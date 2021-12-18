@@ -1,11 +1,11 @@
 ---
-title: Faculty in the Policing Lab awarded a DHS grant to help law enforcement with screening and hiring
+title: Faculty in the VIPR Lab awarded a DHS grant to help law enforcement with screening and hiring
 date: 2021-11-23
 image:
   focal_point: "top"
 ---
 
-Congratulations to faculty in The Lab on winning a DHS grant to examine how agencies screen for insider threats!
+Congratulations to faculty in The VIPR Lab on winning a DHS grant to examine how agencies screen for insider threats!
 
 <!--more-->
 
