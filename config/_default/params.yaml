@@ -7,7 +7,7 @@
 
 theme: my_theme
 day_night: true
-font: native
+font: minimal
 font_size: M
 
 # SEO
