@@ -20,27 +20,35 @@ height: '500px; background-position:center; background-repeat: no-repeat; backgr
 item: 
   - title: ""
     align: center
+    overlay_color: '#000000'
     overlay_img: nix-tregle-data.jpg
   - title: ""
     align: center
+    overlay_color: '#000000'
     overlay_img: sadaf_website_2.png
   - title: ""
     align: center
+    overlay_color: '#000000'
     overlay_img: jessie_website_1.jpg
   - title: ""
     align: center
+    overlay_color: '#000000'
     overlay_img: nix_teaching_2.png
   - title: ""
     align: center
+    overlay_color: '#000000'
     overlay_img: sadaf_website_1.png
   - title: ""
     align: center
+    overlay_color: '#000000'
     overlay_img: jessie_website_2.jpg
   - title: ""
     align: center
+    overlay_color: '#000000'
     overlay_img: nix_teaching_4.png
   - title: ""
     align: center
+    overlay_color: '#000000'
     overlay_img: jessie_website_3.jpg
     
 ---
