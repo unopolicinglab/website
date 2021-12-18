@@ -16,7 +16,7 @@ interval: false
 
 # Minimum slide height.
 # Specify a height to ensure a consistent height for each slide.
-height: 200px
+height: 250px
 
 item: 
   - title: "**V**iolence **I**ntervention and **P**olicing **R**esearch"
