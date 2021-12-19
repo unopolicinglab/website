@@ -15,7 +15,7 @@ role: Assistant Professor
 # Organizations/Affiliations
 organizations:
 - name: University of Nebraska Omaha
-  url: ""
+  url: "https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/jessica-huff.php"
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include program evaluation, police strategy, and crime mapping.
@@ -70,4 +70,4 @@ user_groups:
 - Faculty
 ---
 
-Dr. Huff’s research revolves around evaluating police programs and policies in order to improve police effectiveness and the equitable administration of justice. She is an [NIJ LEADS Academic](https://nij.ojp.gov/funding/leads-scholar-biographies) committed to partnering with agencies to better understand what works in policing and how to achieve fair and equitable policing outcomes for civilians of diverse backgrounds. She has collaborated on several research projects with police agencies across the U.S., including randomized-controlled trials of body-worn cameras, violence reduction strategies, and intelligence approaches to gun crime. Her research has been funded through sources including the Centers for Disease Control and Prevention, Department of Homeland Security, and the Bureau of Justice Assistance. Her work has been published in outlets such as the *Journal of Experimental Criminology*, *Police Quarterly*, and *Crime & Delinquency*.
+Dr. Huff’s research revolves around evaluating police programs and policies in order to improve police effectiveness and the equitable administration of justice. She is an [NIJ LEADS Academic](https://nij.ojp.gov/funding/leads-scholar-biographies) committed to partnering with agencies to better understand what works in policing and how to achieve fair and equitable policing outcomes for civilians of diverse backgrounds. She has collaborated on several research projects with police agencies across the U.S., including randomized-controlled trials of body-worn cameras, violence reduction strategies, and intelligence approaches to gun crime. Her research has been funded through sources including the Centers for Disease Control and Prevention, Department of Homeland Security, and the Bureau of Justice Assistance. Her work has been published in outlets such as the *Journal of Experimental Criminology*, *Police Quarterly*, and *Crime & Delinquency*.
