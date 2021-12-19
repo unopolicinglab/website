@@ -24,9 +24,9 @@ bio:
 
 interests:
 - Terrorism
-- Media
-- Policing
-- Geography of crime
+- Community-police relations
+- Media depictions of terrorism
+- Public perceptions of terrorism
 
 education:
   courses:
@@ -70,4 +70,4 @@ user_groups:
 - Affiliates
 ---
 
-Dr. Kearns is an assistant professor in the UNO School of Criminology and Criminal Justice. Her primary research seeks to understand the relationships among terrorism, media, law enforcement, and the public. Her publications include articles on why groups lie about terrorism, media coverage of terrorism and counterterrorism, public perceptions of terrorism and counterterrorism practices, and relationships between communities and law enforcement. Her work has been funded through sources including the Department of Homeland Security Science and Technology Directorate and featured on numerous media outlets including CNN, *The Economist*, NPR, *The Washington Post*, and *Vox*. Dr. Kearns is currently a National Strategic Research Institute (NSRI) Fellow. She serves on the editorial boards of *Criminal Justice & Behavior*, *Studies in Conflict and Terrorism* and *Dynamics of Asymmetric Conflict* and has served as a consultant for the National Police Foundation and the Department of Justice's Office of Community Oriented Policing. 
+Dr. Erin M. Kearns is an Assistant Professor in the School of Criminology and Criminal Justice and the National Counterterrorism Innovation, Technology and Education (NCITE) Center of Excellence at the University of Nebraska at Omaha. Blending quantitative, qualitative, and experimental methods, her primary research seeks to understand the relationships among terrorism, media, law enforcement, and the public. Her work has been funded through a number of sources, including the Department of Homeland Security (DHS) Science and Technology Directorate and featured on numerous media outlets including CNN, *The Economist*, NPR, and *The Washington Post*. She is a National Strategic Research Institute (NSRI) Fellow and the Vice Chair of the American Society of Criminology’s Division of Terrorism & Bias Crimes. She serves on the editorial boards of *Criminal Justice & Behavior*, *Studies in Conflict and Terrorism*, and *Dynamics of Asymmetric Conflict* and has served as a consultant for the National Police Foundation and the Department of Justice’s Office of Community Oriented Policing.
