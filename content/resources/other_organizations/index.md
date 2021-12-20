@@ -71,6 +71,8 @@ A running list of other groups and organizations working to advance knowledge in
   - ProPublica is an independent, nonprofit newsroom that produces investigative journalism on a range of topics including criminal justice.
 * [RAND Corporation](https://www.rand.org/)
   - The RAND Corporation is a research organization that develops solutions to public policy challenges to help make communities throughout the world safer and more secure, healthier and more prosperous.
+* [Research on Policing Reform and Accountability](https://policingresearch.org/)
+  - A multi-disciplinary, multi-institutional team of social scientists studying the feasibility and efficacy of policing reform, with a focus on statistically rigorous research and practical application.
 * [RTI Center for Policing Research and Investigative Science](https://www.rti.org/practice-area/policing)
   - The RTI Center for Policing Research and Investigative Science partners with federal, state, and local law enforcement agencies and other stakeholders, such as crime laboratories and medical examiner and coroner offices to do work that has direct implications for the field and to help build the foundation of evidence-based policing.
 * [Vera Instiute of Justice - Redefining Public Safety](https://www.vera.org/centers/redefining-public-safety)
