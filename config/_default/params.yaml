@@ -119,7 +119,7 @@ map:
 marketing:
   google_analytics: ''
   google_tag_manager: ''
-  google_site_verification: ''
+  google_site_verification: 'google-site-verification=9phYZDHLIheeGOufnK_5SrXAhmGm41XeiQh9EWVPEH0'
   baidu_site_verification: ''
   baidu_tongji: ''
 cms:
