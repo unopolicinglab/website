@@ -15,7 +15,7 @@ font_size: M
 site_type: ResearchOrganization
 local_business_type: ''
 org_name: ''
-description: 'Violence Intervention and Policing Research.'
+description: 'The Violence Intervention & Policing Research Lab.'
 twitter: ''
 
 # Contact (edit or remove options as required)
@@ -117,7 +117,7 @@ map:
   api_key: ''
   zoom: 15
 marketing:
-  google_analytics: ''
+  google_analytics: 'G-27J58XV6J3'
   google_tag_manager: ''
   google_site_verification: 'google-site-verification=9phYZDHLIheeGOufnK_5SrXAhmGm41XeiQh9EWVPEH0'
   baidu_site_verification: ''
