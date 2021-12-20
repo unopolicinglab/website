@@ -78,7 +78,7 @@ A running list of other groups and organizations working to advance knowledge in
 * [RTI Center for Policing Research and Investigative Science](https://www.rti.org/practice-area/policing)
   - The RTI Center for Policing Research and Investigative Science partners with federal, state, and local law enforcement agencies and other stakeholders, such as crime laboratories and medical examiner and coroner offices to do work that has direct implications for the field and to help build the foundation of evidence-based policing.
 * [Urban Institute - Justice Policy Center](https://www.urban.org/policy-centers/justice-policy-center/sound-strategies-combating-crime-and-promoting-public-safety) 
-  - Urban Institute's mission is to prove solutions to crime and safety challenges in the interests of promoting effectiveness in justice systems and operations through objective, rigorous, interdisciplinary research, evaluation, and policy analysis.
+  - Urban Institute's mission is to provide solutions to crime and safety challenges in the interests of promoting effectiveness in justice systems and operations through objective, rigorous, interdisciplinary research, evaluation, and policy analysis.
 * [Vera Instiute of Justice - Redefining Public Safety](https://www.vera.org/centers/redefining-public-safety)
   - The goal of Vera’s Redefining Public Safety program is to shrink the footprint of American policing and advance racial equity. 
   
