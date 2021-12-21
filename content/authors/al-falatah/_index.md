@@ -64,4 +64,4 @@ user_groups:
 - Grad Students
 ---
 
-Hi I'm Sarah Al Falatah! I recently graduated from the University of South Florida with a B.S. in Biomedical Sciences. Currently, I am studying to get my MA in Criminology at the University of Nebraska Omaha. I am most passionate about mental health research. I am excited to expand my skills as a researcher and advance in my academic career. 
+Hi I'm Sarah Al Falatah! I recently graduated from the University of South Florida with a B.S. in Biomedical Science. Currently, I am studying to get my MA in Criminology at the University of Nebraska Omaha. I am most passionate about mental health research. I am excited to expand my skills as a researcher and advance in my academic career. 
