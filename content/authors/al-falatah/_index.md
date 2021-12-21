@@ -45,7 +45,7 @@ social:
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/Salfalatah
-- icon: fa-linkedin
+- icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/sarah-al-falatah-275925137/
 
