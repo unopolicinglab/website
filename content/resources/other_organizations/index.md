@@ -36,7 +36,7 @@ A running list of other groups and organizations working to advance knowledge in
 * [Academy of Criminal Justice Sciences](https://www.acjs.org/)
   - An international association established in 1963 to foster professional and scholarly activities in the field of criminal justice.
 * [American Society of Criminology](https://asc41.com/)
-  - An international organization whose members pursue scholarly, scientific, and professional knowledge concerning the measurement, etiology, consequences, prevention, control, and treatment of crime and delinquency. Be sure to check out all the different divisions, including the [Division of Policing](https://ascpolicing.org/)!
+  - An international organization whose members pursue scholarly, scientific, and professional knowledge concerning the measurement, etiology, consequences, prevention, control, and treatment of crime and delinquency. Be sure to check out all the different divisions, including the [Division of Policing](https://ascpolicing.org/).
 * [American Society of Evidence-Based Policing](https://www.americansebp.org/)
   - A group of working police officers advocating for evidence-based change within the profession.
 * [ASU Center for Problem-Oriented Policing](https://popcenter.asu.edu/)
@@ -77,6 +77,10 @@ A running list of other groups and organizations working to advance knowledge in
   - A multi-disciplinary, multi-institutional team of social scientists studying the feasibility and efficacy of policing reform, with a focus on statistically rigorous research and practical application.
 * [RTI Center for Policing Research and Investigative Science](https://www.rti.org/practice-area/policing)
   - The RTI Center for Policing Research and Investigative Science partners with federal, state, and local law enforcement agencies and other stakeholders, such as crime laboratories and medical examiner and coroner offices to do work that has direct implications for the field and to help build the foundation of evidence-based policing.
+* [The Marshall Project - Policing](https://www.themarshallproject.org/records/48-policing)
+  - The Marshall Project is a news organization that seeks to create and sustain a sense of national urgency about the U.S. criminal justice system through journalism.
+* [Urban Institute - Justice Policy Center](https://www.urban.org/policy-centers/justice-policy-center/sound-strategies-combating-crime-and-promoting-public-safety) 
+  - Urban Institute's mission is to promote effectiveness in justice systems and operations through objective, rigorous, interdisciplinary research, evaluation, and policy analysis.
 * [Vera Instiute of Justice - Redefining Public Safety](https://www.vera.org/centers/redefining-public-safety)
   - The goal of Vera’s Redefining Public Safety program is to shrink the footprint of American policing and advance racial equity. 
   
