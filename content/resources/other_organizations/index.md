@@ -36,7 +36,7 @@ A running list of other groups and organizations working to advance knowledge in
 * [Academy of Criminal Justice Sciences](https://www.acjs.org/)
   - An international association established in 1963 to foster professional and scholarly activities in the field of criminal justice.
 * [American Society of Criminology](https://asc41.com/)
-  - An international organization whose members pursue scholarly, scientific, and professional knowledge concerning the measurement, etiology, consequences, prevention, control, and treatment of crime and delinquency. Be sure to check out all the different divisions, including the [Division of Policing](https://ascpolicing.org/)!
+  - An international organization whose members pursue scholarly, scientific, and professional knowledge concerning the measurement, etiology, consequences, prevention, control, and treatment of crime and delinquency. Be sure to check out all the different divisions, including the [Division of Policing](https://ascpolicing.org/).
 * [American Society of Evidence-Based Policing](https://www.americansebp.org/)
   - A group of working police officers advocating for evidence-based change within the profession.
 * [ASU Center for Problem-Oriented Policing](https://popcenter.asu.edu/)
