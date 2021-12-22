@@ -65,7 +65,7 @@ social:
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Affiliates
+- SCCJ Faculty Affiliates
 ---
 
 Samantha Clinkinbeard  is an Associate Professor and the Undergraduate Program Coordinator (Lincoln & Omaha campus) in the School of Criminology and Criminal Justice. Currently, her research is focused on women in policing, including the presence of masculinity and issues surrounding recruitment and retention. Much of her previous research has focused on motivation, self-control, and health as related to delinquency and risky behavior. She was awarded honorable mention by ASC’s Division of Women and Crime for the best Article of the Year in Feminist Criminology for 2017. Dr. Clinkinbeard’s work appears in *Criminal Justice & Behavior*, *Feminist Criminology*, *Journal of Criminal Justice*, *Journal of Youth & Adolescence*, *Youth & Society*, and *Justice Quarterly*. She has taught a variety of courses though most often teaches research methods courses at all levels (undergraduate, masters, doctoral). She was recognized with the CPACS Alumni Outstanding Teaching Award in 2020.

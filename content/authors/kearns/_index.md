@@ -67,7 +67,7 @@ social:
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Affiliates
+- SCCJ Faculty Affiliates
 ---
 
 Dr. Erin M. Kearns is an Assistant Professor in the School of Criminology and Criminal Justice and the National Counterterrorism Innovation, Technology and Education (NCITE) Center of Excellence at the University of Nebraska at Omaha. Blending quantitative, qualitative, and experimental methods, her primary research seeks to understand the relationships among terrorism, media, law enforcement, and the public. Her work has been funded through a number of sources, including the Department of Homeland Security (DHS) Science and Technology Directorate and featured on numerous media outlets including CNN, *The Economist*, NPR, and *The Washington Post*. She is a National Strategic Research Institute (NSRI) Fellow and the Vice Chair of the American Society of Criminology’s Division of Terrorism & Bias Crimes. She serves on the editorial boards of *Criminal Justice & Behavior*, *Studies in Conflict and Terrorism*, and *Dynamics of Asymmetric Conflict* and has served as a consultant for the National Police Foundation and the Department of Justice’s Office of Community Oriented Policing.

@@ -70,7 +70,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Faculty
+- Co-Directors
 ---
 
 Dr. Nix’s research centers on policing with emphases on procedural justice, legitimacy, and police shootings. He has recently co-authored articles appearing in *Justice Quarterly*, *Criminology & Public Policy*, and *Journal of Research in Crime and Delinquency*. He has also served as co-principal investigator on projects funded by the National Institute of Justice and the Department of Homeland Security. In 2020, he was the recipient of the Early Career Award from the American Society of Criminology’s [Division of Policing](https://ascpolicing.org/). In 2021, he received the Outstanding Young Experimental Criminologist award from the [Division of Experimental Criminology](https://www.experimentalcrim.org/decaec2020awards).

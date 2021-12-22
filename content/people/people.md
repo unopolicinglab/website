@@ -16,13 +16,10 @@ content:
   # Choose which groups/teams of users to display.
   #   Edit `user_groups` in each user's profile to add them to one or more of these groups.
   user_groups:
-  - Faculty
-  - Affiliates
-  - Principal Investigators
-  - Researchers
+  - SCCJ Faculty Affiliates
+  - External Affiliates
+  - Co-Directors
   - Grad Students
-  - Administration
-  - Visitors
   - Alumni
 design:
   show_interests: false
@@ -30,4 +27,4 @@ design:
   show_social: true
 ---
 
-(Check back soon for more **Affiliates** and **Graduate Students**)
+(Check back soon for more **External Affiliates** and **Graduate Students**)

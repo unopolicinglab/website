@@ -69,7 +69,7 @@ social:
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Faculty
+- Co-Directors
 ---
 
 Dr. Hashimi seeks to understand how our social networks form and shape our behaviors. Her research focuses on issues pertaining to policing and policy, peer influence and crime, and violence prevention and intervention efforts. Specifically, her current projects center on: 1) the police role, including how the structure and composition of informal and formal officer relationships contribute to departmental culture, officer wellbeing, and officer performance (i.e., police use of force, excessive use of force, misconduct), and 2) prevention and intervention efforts aimed at reducing at-risk behaviors, including criminal group and gang involvement, firearm use, and criminal recidivism. Dr. Hashimi's research has been funded by the Department of Homeland Security, Public Safety Canada, the National Collaborative on Gun Violence Research, New Jersey’s Gun Violence Research Center and has appeared in outlets including the *Journal of Research in Crime and Delinquency*, *Justice Quarterly*, *Criminology & Public Policy*, *Policing: An International Journal* and *Methodological Innovations*.
