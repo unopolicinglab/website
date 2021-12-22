@@ -16,10 +16,10 @@ content:
   # Choose which groups/teams of users to display.
   #   Edit `user_groups` in each user's profile to add them to one or more of these groups.
   user_groups:
-  - SCCJ Faculty Affiliates
-  - External Affiliates
   - Co-Directors
+  - SCCJ Faculty Affiliates
   - Grad Students
+  - External Affiliates
   - Alumni
 design:
   show_interests: false
