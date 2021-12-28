@@ -18,3 +18,5 @@ Articles discussed:
 * [Compliance, noncompliance, and the in-between: causal effects of civilian demeanor on police officers’ cognitions and emotions](https://link.springer.com/article/10.1007%2Fs11292-019-09363-4)
 * [Elevated Police Turnover following the Summer of George Floyd Protests: A Synthetic Control Study](https://jnix.netlify.app/files/pdfs/cpp_turnover.pdf)
 * [Disparity does not mean bias: making sense of observed racial disparities in fatal officer-involved shootings with multiple benchmarks](https://digitalcommons.unomaha.edu/cgi/viewcontent.cgi?article=1061&context=criminaljusticefacpub)
+* [We've been underestimating racial disparities in police use of lethal force](https://www.washingtonpost.com/crime-law/2021/11/11/non-fatal-police-shootings-disparities-data/)
+* [Arresting the recruitment crisis](https://www.city-journal.org/police-departments-recruitment-crisis)
