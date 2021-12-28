@@ -1,7 +1,7 @@
 ---
 title: "The Promise of a Network Approach for Policing Research"
 authors:
-- Marie Ouellet
+- ouellet
 - hashimi
 - Jason Gravel
 - Dean Dabney

@@ -1,7 +1,7 @@
 ---
 title: "Network exposure and excessive use of force: Investigating the social transmission of police misconduct"
 authors:
-- Marie Ouellet
+- ouellet
 - hashimi
 - Jason Gravel
 - Andrew Papachristos
