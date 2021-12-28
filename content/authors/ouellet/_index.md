@@ -22,7 +22,6 @@ bio:
 
 interests:
 - Social Network Analysis
-- Police use of force
 - Police culture
 
 education:
