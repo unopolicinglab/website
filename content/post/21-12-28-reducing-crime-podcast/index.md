@@ -1,5 +1,5 @@
 ---
-title: Dr. Nix featured as a guest on Ep. 42 of the *Reducing Crime* Podcast
+title: Dr. Nix featured as a guest on Ep. 42 of the Reducing Crime Podcast
 date: 2021-12-28
 image:
   focal_point: "top"
