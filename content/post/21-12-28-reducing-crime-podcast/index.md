@@ -3,7 +3,7 @@ title: Dr. Nix featured as a guest on Ep. 42 of the Reducing Crime Podcast
 date: 2021-12-28
 ---
 
-![justin_jerry_asc](featured.jpg "Justin and Jerry at the 2021 ASC Conference in Chicago, IL")
+![justin_jerry_asc](justin_jerry_asc.jpg "Justin and Jerry at the 2021 ASC Conference in Chicago, IL")
 
 Dr. Nix was recently a guest on the [Reducing Crime](https://podcasts.apple.com/us/podcast/reducing-crime/id1412813382) Podcast (hosted by [Jerry Ratcliffe](https://twitter.com/Jerry_Ratcliffe)).
 
