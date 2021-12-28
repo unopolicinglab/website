@@ -7,6 +7,8 @@ weight: 30
 title: Latest News
 subtitle:
 
+image_preview: false
+
 content:
   count: 5
   filters:
