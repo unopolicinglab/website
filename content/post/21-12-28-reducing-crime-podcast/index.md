@@ -1,10 +1,9 @@
 ---
 title: Dr. Nix featured as a guest on Ep. 42 of the Reducing Crime Podcast
 date: 2021-12-28
-  
-# Optional header image (relative to `static/media/` folder).
-header:
-  image: "justin_jerry_ASC.jpg"
+
+image:
+  focal_point: "top"
   caption: "Justin and Jerry at the 2021 ASC Conference in Chicago, IL"
 ---
 
