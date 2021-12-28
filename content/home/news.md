@@ -7,20 +7,18 @@ weight: 30
 title: Latest News
 subtitle:
 
-image_preview: false
-
 content:
   count: 5
   filters:
     author: ""
     category: ""
-    exclude_featured: true
+    exclude_featured: false
     publication_type: ""
     tag: ""
   offset: 0
   order: desc
   page_type: post
 design:
-  view: 2
+  view: 1
   columns: "1"
 ---
