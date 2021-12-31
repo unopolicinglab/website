@@ -21,8 +21,9 @@ organizations:
 bio: 
 
 interests:
+- Group dynamics
+- Co-offending
 - Social Network Analysis
-- Police culture
 
 education:
   courses:
