@@ -27,4 +27,3 @@ design:
   show_social: true
 ---
 
-(Check back soon for more **External Affiliates** and **Graduate Students**)
