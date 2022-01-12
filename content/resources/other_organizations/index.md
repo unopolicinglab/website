@@ -23,7 +23,7 @@ A running list of other groups and organizations working to advance knowledge in
   - A multidisciplinary research center that aims to develop and sustain research capacity internal to the State of Nebraska, assist the Legislature in research, evaluation, and policymaking to reduce recidivism, promote the use of evidence-based practices in corrections, and improve public safety.
 * [Nebraska Collaborative for Violence Intervention & Prevention](https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/research/ne-collaborative-for-violence-intervention.php#:~:text=The%20Nebraska%20Collaborative%20for%20Violence,assets%20and%20culture%2C%20and%20systematically)
   - The Nebraska Collaborative for Violence Intervention and Prevention (NeCVIP) uses a scientific approach that builds from a medical, public health and criminological perspective to address the underlying factors that contribute to gun violence, strengthen existing community assets and culture, and systematically applying data and science to ensure effective outcomes.
-* [Victimology and Victim Studies Research Lab](https://www.unomaha.edu/college-of-public-affairs-and-community-service/juvenile-justice-institute/index.php)
+* [Victimology and Victim Studies Research Lab](https://vvsrlab.org/)
   - The VVSR Lab aims to conduct high quality research related to crime victims and crime victimization, inform policy and practice, and help shape prevention and intervention efforts.
 
 ## Community Groups in Omaha
