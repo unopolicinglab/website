@@ -54,4 +54,6 @@ slides:
 projects:
 ---
 
-Please join us in welcoming Dr. Katz to UNO on February 18, 2022. [Dr. Charles Katz](https://isearch.asu.edu/profile/24209) is the Watts Endowed Family Chair of the School of Criminology and Criminal Justice and Director of the [Center for Violence Prevention and Community Safety](https://cvpcs.asu.edu/) at Arizona State University. His work focuses on police transformation and strategic responses to crime.
+**Please note this event has been postponed due to COVID-19. We will update this page once it is rescheduled.**
+
+[Dr. Charles Katz](https://isearch.asu.edu/profile/24209) is the Watts Endowed Family Chair of the School of Criminology and Criminal Justice and Director of the [Center for Violence Prevention and Community Safety](https://cvpcs.asu.edu/) at Arizona State University. His work focuses on police transformation and strategic responses to crime.
