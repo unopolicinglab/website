@@ -12,7 +12,7 @@ address:
   postcode: '68182'
   country: United States
 
-summary: Dr. Katz is one of several guest speakers lined up for 2022.
+summary: 
 abstract: "In his presentation, Dr. Katz will present findings from an evaluation of the effectiveness of the current Early Intervention System used by the Phoenix Police Department to identify officers who have been involved in a critical incident. Importantly, his assessment points to several recommendations for improving the utility of these systems to identify officers at risk of being involved in a contentious or dangerous event with a civilian. These findings provide crucial guidance for police agencies across the nation who are interested in improving police recruitment efforts to ensure the appropriate candidates are hired, to ensure police performance evaluations provide accurate representations of officer behaviors, and to reduce police agency liability through intervening in officers displaying concerning behaviors to prevent potential future issues."
 
 # Talk start and end times.
