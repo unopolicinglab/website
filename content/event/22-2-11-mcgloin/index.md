@@ -1,5 +1,5 @@
 ---
-title: "The Social Interdependence of Decision Making: The Process of Integrating Peers into Decision"
+title: "The Social Interdependence of Decision Making: The Process of Integrating Peers into Decision Models"
 
 event: SCCJ Speaker Series
 event_url: 
