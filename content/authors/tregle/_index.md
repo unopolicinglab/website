@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Ph.D. Student
+role: Alumnus
 
 # Organizations/Affiliations
 organizations:
@@ -67,4 +67,4 @@ user_groups:
 - Alumni
 ---
 
-Brandon is a Ph.D. student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. He is a former police officer, and he received his Juris Doctor from Louisiana State University in 2016. His research is focused on body worn cameras, use of force, and police accountability. Next fall, he will join the [Department of Criminology & Criminal Justice](https://hcap.utsa.edu/criminal-justice/) at UTSA as an assistant professor. 
+Brandon is an alumnus of the SCCJ PhD program. He is a former police officer, and he received his Juris Doctor from Louisiana State University in 2016. His research is focused on body worn cameras, use of force, and police accountability. In August 2022, he will join the [Department of Criminology & Criminal Justice](https://hcap.utsa.edu/criminal-justice/) at UTSA as an assistant professor. 
