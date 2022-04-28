@@ -64,7 +64,7 @@ social:
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Grad Students
+- Alumni
 ---
 
 Brandon is a Ph.D. student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. He is a former police officer, and he received his Juris Doctor from Louisiana State University in 2016. His research is focused on body worn cameras, use of force, and police accountability. Next fall, he will join the [Department of Criminology & Criminal Justice](https://hcap.utsa.edu/criminal-justice/) at UTSA as an assistant professor. 

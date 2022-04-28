@@ -6,7 +6,7 @@ image:
   caption: "The newly minted Dr. Tregle and Dr. Nix, after the defense"
 ---
 
-Congratulations to Brandon Tregle, who successfully defended his dissertation, *Officer and Arrestee Perceptions of Police-Facilitated Restorative Justice*, on April 27th. Brandon used a mixed-methods approach to evaluate a local restorative justice diversion program.
+Congratulations to [Brandon Tregle](https://www.viprlab.org/author/brandon-tregle/), who successfully defended his dissertation, *Officer and Arrestee Perceptions of Police-Facilitated Restorative Justice*, on April 27th. Brandon used a mixed-methods approach to evaluate a local restorative justice diversion program.
 
 <!--more-->
 
