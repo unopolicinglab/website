@@ -64,4 +64,4 @@ user_groups:
 - Grad Students
 ---
 
-Trey Bussey is a doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. His research interests include police use of force - specifically officer-involved shootings. He also focuses on evidence-based policing strategies regarding proactive crime reduction. He is a trained crime analyst and seeks to develop strategies that assist with police resource allocation.
+Trey Bussey is a doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. His research interests include police use of force, officer-involved shootings, evidence-based policing, and proactive crime reduction strategies. He is a trained crime analyst and seeks to develop strategies that assist with police resource allocation.
