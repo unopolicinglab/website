@@ -1,5 +1,5 @@
 ---
-title: "Can body-worn cameras eliminate differences in arrest and use of force in minority neighborhoods?"
+title: "Dr. Huff: Can body-worn cameras eliminate differences in arrest and use of force in minority neighborhoods?"
 authors:
 - huff
 date: "2022-05-19T11:00:00Z"
