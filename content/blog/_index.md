@@ -7,4 +7,4 @@ header:
   image: ""
 ---
 
-# 👋 Welcome to the VIPR Blog! On this page, members and affiliates will occasionally post about ongoing/forthcoming research and current events.
+## 👋 Welcome to the VIPR Blog! On this page, members and affiliates will occasionally post about ongoing/forthcoming research and current events.
