@@ -65,6 +65,10 @@ projects: []
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
 slides:
+
+# Enable sharing
+share: true
+
 ---
 
 As an MA student in 2014, I watched protesters advocate for police reform to address racial/ethnic disparities after the death of Michael Brown at the hands of the police in Ferguson, Missouri. One of the most commonly proposed reforms was the adoption of police officer body-worn cameras (BWCs). At the time, BWCs were a relatively new technology, just beginning to be evaluated in a few places across the UK. Nevertheless, questions about the events that led to Michael’s death became inextricably tied to calls for police departments to equip their officers with cameras. This seemed to be based on the presumption that this technology could prevent these events in the future. The question that kept me up at night was: why? Why would strapping a camera to an officers’ chest reduce racial/ethnic disparities in policing? And, if there are reasons to believe that this technology would reduce disparities, can we prove it? I attempted to answer these questions in a recently published paper in *Criminology & Public Policy*. The full results are freely available [here](https://onlinelibrary.wiley.com/doi/10.1111/1745-9133.12590), but I want to use this space to talk about the major findings in a different way.
