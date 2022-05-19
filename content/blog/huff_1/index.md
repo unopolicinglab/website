@@ -1,5 +1,5 @@
 ---
-title: "Can body-worn cameras eliminate differences in arrest and use of force in minority neighborhoods?  "
+title: "Can body-worn cameras eliminate differences in arrest and use of force in minority neighborhoods?"
 authors:
 - huff
 date: "2022-05-19T11:00:00Z"
@@ -79,7 +79,7 @@ Next, the question becomes how BWC technology could eliminate differences in pol
 
 To put these things together, the expected relationship between BWCs and eliminating racial/ethnic disparities in police behavior seems to follow this pattern:
 
-![fig1](fig_1.png)
+![fig1](fig_1.jpg)
 
 All of this is fine and good, but the crucial question is whether it actually plays out in practice.
 
