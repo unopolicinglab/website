@@ -73,8 +73,6 @@ reading_time: true
 
 ---
 
-**Background**
-
 It is no secret that policing is group work – officers are assigned to beats/units, workgroups, and partnerships based on districts or specialized skills. Working in close contact, officers form tight bonds where they depend on one another for their safety and turn to one another for guidance and advice. Indeed, past work has argued that officers develop attitudes and form behaviors that align and are modeled after their peers. For examples, though this list is not exhaustive, see [Doreian & Conti (2017)](https://doi.org/10.1016/j.socnet.2017.03.011), [Fagan & Geller (2015)](https://heinonline.org/HOL/P?h=hein.journals/uclr82&i=57), [Ouellet et al. (2019)](https://doi.org/10.1111/1745-9133.12459), [Quispe-Torreblanca & Stewart (2019)](https://doi.org/10.1038/s41562-019-0612-8), [Roithmayr (2016)](https://heinonline.org/HOL/P?h=hein.journals/uchclf2016&i=413), and [Savitz (1970)](https://doi.org/10.1177/000276427001300505). Our study extends on this line of work, drawing from network science to identify whether officers' relationships within a department shape their risk of firearm use. Specifically, we evaluate how exposure to colleagues with histories of firearm use shapes an officer's likelihood of using their firearm during a use of force incident.
 
 **Data & Methodology**
@@ -84,7 +82,7 @@ accumulating in time, by May 2013 - the last event observed in the dataset - ego
 
 To test whether an officer's peers shape their firearm use, we rely on a matched case-control design with conditional logistic regression and permutation tests to make inferences. Our approach matches officers who used their firearm with officers who did not use their firearm during the same force incident, directly comparing firearm and non-firearm using officers within the same environmental and situational contexts. With this approach, we can compare officers responding to the same calls, at the same time, with the same civilians. Within each force incident, the permutation procedure randomly shuffles which officers use their firearm and which do not, creating a permutation distribution whereby firearm use is independent of officer characteristics. For more on this method, check out [this paper](https://doi.org/10.1080/2330443X.2015.1129918) by Greg Ridgeway.
 
-![fig1](featured.jpg)
+![fig1](fig1.jpg)
 
 **Findings**
 
