@@ -46,10 +46,10 @@ url_video: ''
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
-image: 
-  caption: ""
-  focal_point: ""
-  preview_only: false
+# image: 
+#  caption: ""
+#  focal_point: ""
+# preview_only: false
 
 # Associated Projects (optional).
 #   Associate this publication with one or more of your projects.
@@ -82,6 +82,8 @@ It is no secret that policing is group work – officers are assigned to beats/u
 We rely on a statewide dataset of use of force incidents in [New Jersey from 2012 to 2016](https://force.nj.com/). Each force report provides details of the nature of the incident, including whether a firearm was used (i.e., drawn, pointed, or discharged) and information on the officers involved in the incident. Because each force report in the database provides details of all officers named in the incident, we map the ties between officers who are co-named in the same force incident and then identify an officer's exposure to colleagues with histories of using their firearms. 
 
 To test whether an officer's peers shape their firearm use, we rely on a matched case-control design with conditional logistic regression and permutation tests to make inferences. Our approach matches officers who used their firearm with officers who did not use their firearm during the same force incident, directly comparing firearm and non-firearm using officers within the same environmental and situational contexts. With this approach, we can compare officers responding to the same calls, at the same time, with the same civilians. Within each force incident, the permutation procedure randomly shuffles which officers use their firearm and which do not, creating a permutation distribution whereby firearm use is independent of officer characteristics. For more on this method, check out [this paper](https://doi.org/10.1080/2330443X.2015.1129918) by Greg Ridgeway.  
+
+![fig1](featured.jpg)
 
 **Findings**
 
