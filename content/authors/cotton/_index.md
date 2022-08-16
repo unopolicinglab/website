@@ -1,16 +1,16 @@
 ---
 # Display name
-title: Brenna Dunlap
+title: Natalie Cotton
 
 # Username (this should match the folder name)
 authors:
-- dunlap
+- cotton
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
-role: Ph.D. Student
+role: M.A. Student
 
 # Organizations/Affiliations
 organizations:
@@ -21,21 +21,16 @@ organizations:
 bio: 
 
 interests:
-- Police use of force
-- Evidence-based policing
-- Procedural justice
+- Gangs
+- Networks
+- Interdiction methods
+- General Strain Theory
 
 education:
   courses:
-  - course: PhD in Criminology and Criminal Justice
+  - course: BS in Criminology & Criminal Justice
     institution: University of Nebraska Omaha
-    year: "Anticipated 2026"
-  - course: MA in Criminology & Criminal Justice
-    institution: Saint Louis University
     year: "2022"
-  - course: BA in Criminology & Criminal Justice
-    institution: Saint Louis University
-    year: "2020"
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -44,16 +39,16 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:@bdunlap@unomaha.edu'
-- icon: twitter
+  link: 'mailto:@ncotton@unomaha.edu'
+- icon: linkedin
   icon_pack: fab
-  link: https://twitter.com/b_dunlap4
+  link: https://www.linkedin.com/in/natalie-cotton-800575248
 
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-- icon: cv
-  icon_pack: ai
-  link: "files/cv_dunlap.pdf"
+# - icon: cv
+#  icon_pack: ai
+#  link: "files/"
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 # email: ""
@@ -64,4 +59,4 @@ user_groups:
 - Grad Students
 ---
 
-Brenna Dunlap is a doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests include policing, police use of force, procedural justice, and evidence-based policing. Currently, her research is focused on gender differences in police officers, stress and coping among female officers, and improving responses to trauma in officers.
+Natalie Cotton is an M.A. student in the School of Criminology and Criminal Justice at University of Nebraska Omaha. Her research interests include gang networking and interdiction methods as well as general strain theory and how it applies to the criminal justice system. She holds a B.S. in Criminology and Criminal Justice with a minor in Political Science from University of Nebraska Omaha. She is working with Dr. Hashimi on the Insider Threats Project and learning more about gang networks. 
