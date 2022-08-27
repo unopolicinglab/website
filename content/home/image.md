@@ -21,6 +21,10 @@ item:
   - title: ""
     align: center
     overlay_color: '#000000'
+    overlay_img: duck_bowling.png
+  - title: ""
+    align: center
+    overlay_color: '#000000'
     overlay_img: nix-tregle-data.jpg
   - title: ""
     align: center
