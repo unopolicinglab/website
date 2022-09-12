@@ -13,6 +13,14 @@ header:
   image: ""
 ---
 
+📺 **9/7/2022**: *KMTV News Now* interviewed Dr. Nix about a local homicide spike in August 2022. Watch it [here](https://www.3newsnow.com/news/local-news/the-month-of-august-sees-high-number-of-omaha-homicides-were-killing-ourselves-killing-one-another).
+
+📰 **7/20/2022**: *The Denver Post* interviewed Dr. Nix about a police shooting in LoDo that injured five bystanders. Read it [here](https://www.denverpost.com/2022/07/20/denver-police-shooting-lodo-injuries/).
+
+📰 **6/17/2022**: *NBC News* interviewed Dr. Nix about a fatal police shooting in Idaho. Read it [here](https://www.nbcnews.com/news/us-news/gonna-lose-gun-idaho-deputy-said-minutes-fatally-shooting-man-mental-h-rcna33601).
+
+📺 **5/23/2022**: *KLKN TV* interviewed Dr. Nix about the correlation between warm weather and violent crime. Watch it [here](https://www.klkntv.com/does-warm-weather-lead-to-increase-in-violent-crime/).
+
 📰 **1/30/2022**: *USA Today* interviewed Dr. Nix about the recent upward trend in gun violence against U.S. police officers. Read it [here](https://www.usatoday.com/story/news/nation/2022/01/29/police-attacked-4-us-cities-within-week-amid-violent-crime-spike/9248049002/?gnt-cfr=1).
 
 📰 **1/21/2022**: *The Salt Lake Tribune* interviewed Dr. Nix about an increase in violence against police in Utah. Read it [here](https://www.sltrib.com/news/2022/01/21/utah-broke-record-most/). 
