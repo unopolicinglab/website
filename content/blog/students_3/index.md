@@ -72,9 +72,7 @@ reading_time: true
 
 ---
 
-# Introducing the Graduate Students!
-
-## [Brenna Dunlap](https://www.viprlab.org/author/brenna-dunlap/) 
+# [Brenna Dunlap](https://www.viprlab.org/author/brenna-dunlap/) 
 
 I am a first year Ph.D. student working as a research assistant under Dr. Jessie Huff. Currently, we are evaluating a restorative justice program at a local police department and working on an in-depth assessment of neighborhood influences on police use of force. My research interests outside of my assistantship include police use of force, procedural justice, and evidence-based policing. 
  
@@ -82,7 +80,7 @@ Before starting this program, I earned my BA and MA at Saint Louis University. I
  
 Outside of school I enjoy sports, traveling, and anything outdoors. Recently, I’ve been running half marathons, weightlifting, and playing softball. I also spend a lot of time with my dog, Noodles, taking her for walks around Omaha.
 
-## [Trey Bussey](https://www.viprlab.org/author/preston-trey-bussey/) 
+# [Trey Bussey](https://www.viprlab.org/author/preston-trey-bussey/) 
 
 ![Trey at the Grand Canyon](bussey.jpeg)
 
@@ -94,7 +92,7 @@ As an MS student, I focused on crime analysis training. I planned on becoming a 
  
 Moving to Nebraska has been an interesting change, but I like it here! Some of my interests outside of school include weightlifting and training in Brazilian Jiu-Jitsu. I am also a certified personal trainer. I try to stay active during my free time and I think fitness improves other aspects of my life.
 
-## [Natalie Cotton](https://www.viprlab.org/author/natalie-cotton/)
+# [Natalie Cotton](https://www.viprlab.org/author/natalie-cotton/)
 
 ![Natalie about to crank a homerun](cotton.jpg)
 
@@ -104,7 +102,7 @@ As an undergrad, I studied criminal justice at University of Nebraska Kearney an
 
 When I am not at school, I like to stay active. I enjoy weightlifting, boxing, and taking my husky for walks. I have played softball most of my life, and I even played at the collegiate level during my time at UNK. I also really like to read and write. I work at Target on the weekends, where I have worked for the last five years. Between school and work, it can be hard to find free time, but staying active is a priority and I try to spend one or two hours a day involved in fitness. 
 
-## [Sarah Al Falatah](https://www.viprlab.org/author/brenna-dunlap/sarah-al-falatah) 
+# [Sarah Al Falatah](https://www.viprlab.org/author/brenna-dunlap/sarah-al-falatah) 
 
 I am a second-year MA student, currently working under the supervision of Dr. Sadaf Hashimi. Currently, we are working on a project with the Behavioral Health and Wellness Unit at the Omaha Police Department aimed at better understanding suicide-related police calls for service. My research interests are focused on mental health and the criminal justice system as well as the intersectionality of neuroscience and criminology.
 
@@ -112,7 +110,7 @@ Before moving to Omaha, I was an undergraduate student at the University of Sout
 
 Moving to Omaha has been great! When I’m not busy at school I like to spend time outdoors, especially during the warm summer. I have two cats, Mila and Magnus, and I also have a dog, Max. My three pets bring me a lot of joy and keep me busy, since one of them is always getting into trouble. I love to cuddle up at home with them and read a book or watch a movie. 
 
-## [Rachael Rief](https://www.viprlab.org/author/rachael-rief/)  
+# [Rachael Rief](https://www.viprlab.org/author/rachael-rief/)  
 
 I am a Ph.D. Candidate. I am currently a part of the research assistantship program at the National Institute of Justice where I have gotten to help organize and facilitate a symposium on the results of a 2020 recidivism forecasting challenge. I also worked on a review of the Challenge winner's methods. I am working on a research note examining gender responsivity and racial bias in risk assessment tools which was framed by discussions at the symposium. During my time at NIJ, I have also been able to work with agencies like the International Criminal Investigative Training Assistance Program, assisting them with the understanding of a standardized project design model. 
 
