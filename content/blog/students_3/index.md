@@ -72,6 +72,10 @@ reading_time: true
 
 ---
 
+<p align = "center">
+A fun night of candlestick bowling!
+</p>
+
 # [Brenna Dunlap](https://www.viprlab.org/author/brenna-dunlap/) 
 
 I am a first year Ph.D. student working as a research assistant under Dr. Jessie Huff. Currently, we are evaluating a restorative justice program at a local police department and working on an in-depth assessment of neighborhood influences on police use of force. My research interests outside of my assistantship include police use of force, procedural justice, and evidence-based policing. 
@@ -85,7 +89,7 @@ Outside of school I enjoy sports, traveling, and anything outdoors. Recently, Iâ
 ![Trey at the Grand Canyon](bussey.jpeg)
 
 <p align = "center">
-Trey at the Grand Canyon
+[Trey at the Grand Canyon]
 </p>
 
 I am a first-year Ph.D. student, currently working as a research assistant under Dr. Justin Nix. We are evaluating police officer de-escalation training and citizen interaction outcomes. This project is funded by the National Institute of Justice and is coordinated between multiple universities and police departments.
@@ -101,7 +105,7 @@ Moving to Nebraska has been an interesting change, but I like it here! Some of m
 ![Natalie about to crank a homerun](cotton.jpg)
 
 <p align = "center">
-Natalie about to crank a homerun
+[Natalie about to crank a homerun]
 </p>
 
 I am a first-year MA student, currently working as a research assistant under Dr. Sadaf Hashimi. We are planning on working together on gangs and network analysis, and we are working on a DHS-funded project that seeks to better understand [screening and hiring practices in policing](https://www.viprlab.org/post/21-11-23-dhs-insider-threats/). My research interests revolve around group crime and the connections between the actors involved. 
@@ -129,5 +133,5 @@ When I am not working, you can find me doing some outdoor activity with my dogs,
 ![Rachael's dogs getting in on the Halloween fun](riefs-dogs.png)
 
 <p align = "center">
-Rachael's dogs getting in on the Halloween fun
+[Rachael's dogs getting in on the Halloween fun]
 </p>
