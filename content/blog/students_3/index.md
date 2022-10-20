@@ -73,7 +73,7 @@ reading_time: true
 ---
 
 <p align = "center">
-A fun night of candlestick bowling!
+[A fun night of candlestick bowling!]
 </p>
 
 # [Brenna Dunlap](https://www.viprlab.org/author/brenna-dunlap/) 
@@ -83,6 +83,12 @@ I am a first year Ph.D. student working as a research assistant under Dr. Jessie
 Before starting this program, I earned my BA and MA at Saint Louis University. I am still working on multiple projects with Dr. Joseph Schafer involving gender differences in policing, stress and coping among female officers, and improving responses to trauma in officers. 
  
 Outside of school I enjoy sports, traveling, and anything outdoors. Recently, I’ve been running half marathons, weightlifting, and playing softball. I also spend a lot of time with my dog, Noodles, taking her for walks around Omaha.
+
+![Noodles](noodles.jpeg)
+
+<p align = "center">
+[Noodles is a very good girl]
+</p>
 
 # [Trey Bussey](https://www.viprlab.org/author/preston-trey-bussey/) 
 
