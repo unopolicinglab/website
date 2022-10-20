@@ -25,7 +25,7 @@ publication_short: ""
 abstract: ""
 
 # Summary. An optional shortened abstract.
-summary: "More about the graduate students working in the VIPR Lab"
+summary: "More about the graduate students working in the VIPR Lab."
 
 tags:
 
@@ -132,7 +132,7 @@ Moving to Omaha has been great! When I’m not busy at school I like to spend ti
 
 I am a Ph.D. Candidate. I am currently a part of the research assistantship program at the National Institute of Justice where I have gotten to help organize and facilitate a symposium on the results of a 2020 recidivism forecasting challenge. I also worked on a review of the Challenge winner's methods. I am working on a research note examining gender responsivity and racial bias in risk assessment tools which was framed by discussions at the symposium. During my time at NIJ, I have also been able to work with agencies like the International Criminal Investigative Training Assistance Program, assisting them with the understanding of a standardized project design model. 
 
-At UNO, I have mostly done research related to women in policing, and have published my findings in *Police Quarterly*, *Criminal Justice and Behavior*, *Feminist Criminology*, and an edited volume on *Rethinking and Reforming American Policing* (Schafer & Myers, Eds.). I would like to conduct more research on recruitment and training practices (i.e., academy and field training procedures) and how they impact the ability to attract and retain female officers. In recently collected qualitative data, policewomen discussed with me various issues that arose during their field training and academy, like negative experiences with training officers. I seek to apply an intersectional lens to this line of research. 
+At UNO, I have mostly done research related to women in policing, and have published my findings in [*Police Quarterly*](https://doi.org/10.1177/1098611120917942), [*Criminal Justice and Behavior*](https://doi.org/10.1177/0093854821993508), [*Feminist Criminology*](https://doi.org/10.1177/1557085120937799), and an edited volume on [*Rethinking and Reforming American Policing*](https://link.springer.com/chapter/10.1007/978-3-030-88896-1_7) (Schafer & Myers, Eds.). I would like to conduct more research on recruitment and training practices (i.e., academy and field training procedures) and how they impact the ability to attract and retain female officers. In recently collected qualitative data, policewomen discussed with me various issues that arose during their field training and academy, like negative experiences with training officers. I seek to apply an intersectional lens to this line of research. 
 
 When I am not working, you can find me doing some outdoor activity with my dogs, shown below in their Halloween costumes 😄. I also have a cat. My border collie keeps me very busy. I am always trying to find new ways to expend her energy. One of my favorites things to do with her is exploring different walking trails around Omaha. 
 
