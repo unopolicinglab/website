@@ -128,6 +128,12 @@ Before moving to Omaha, I was an undergraduate student at the University of Sout
 
 Moving to Omaha has been great! When I’m not busy at school I like to spend time outdoors, especially during the warm summer. I have two cats, Mila and Magnus, and I also have a dog, Max. My three pets bring me a lot of joy and keep me busy, since one of them is always getting into trouble. I love to cuddle up at home with them and read a book or watch a movie. 
 
+![Max](max.jpg)
+
+<p align = "center">
+[Max, a handsome boy]
+</p>
+
 # [Rachael Rief](https://www.viprlab.org/author/rachael-rief/)  
 
 I am a Ph.D. Candidate. I am currently a part of the research assistantship program at the National Institute of Justice where I have gotten to help organize and facilitate a symposium on the results of a 2020 recidivism forecasting challenge. I also worked on a review of the Challenge winner's methods. I am working on a research note examining gender responsivity and racial bias in risk assessment tools which was framed by discussions at the symposium. During my time at NIJ, I have also been able to work with agencies like the International Criminal Investigative Training Assistance Program, assisting them with the understanding of a standardized project design model. 
