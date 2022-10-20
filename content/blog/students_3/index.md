@@ -84,6 +84,10 @@ Outside of school I enjoy sports, traveling, and anything outdoors. Recently, Iâ
 
 ![Trey at the Grand Canyon](bussey.jpeg)
 
+<p align = "center">
+Trey at the Grand Canyon
+</p>
+
 I am a first-year Ph.D. student, currently working as a research assistant under Dr. Justin Nix. We are evaluating police officer de-escalation training and citizen interaction outcomes. This project is funded by the National Institute of Justice and is coordinated between multiple universities and police departments.
  
 Before starting this program, I earned my BS and MS at Radford University in Virginia. I served as a teaching fellow and taught undergraduate classes during graduate school. Teaching classes was a rewarding experience and influenced my decision to pursue a Ph.D. Upon completing this program, my goal is to become a professor and continue teaching. 
@@ -95,6 +99,10 @@ Moving to Nebraska has been an interesting change, but I like it here! Some of m
 # [Natalie Cotton](https://www.viprlab.org/author/natalie-cotton/)
 
 ![Natalie about to crank a homerun](cotton.jpg)
+
+<p align = "center">
+Natalie about to crank a homerun
+</p>
 
 I am a first-year MA student, currently working as a research assistant under Dr. Sadaf Hashimi. We are planning on working together on gangs and network analysis, and we are working on a DHS-funded project that seeks to better understand [screening and hiring practices in policing](https://www.viprlab.org/post/21-11-23-dhs-insider-threats/). My research interests revolve around group crime and the connections between the actors involved. 
 
@@ -119,3 +127,7 @@ At UNO, I have mostly done research related to women in policing, and have publi
 When I am not working, you can find me doing some outdoor activity with my dogs, shown below in their Halloween costumes ðŸ˜„. I also have a cat. My border collie keeps me very busy. I am always trying to find new ways to expend her energy. One of my favorites things to do with her is exploring different walking trails around Omaha. 
 
 ![Rachael's dogs getting in on the Halloween fun](riefs-dogs.png)
+
+<p align = "center">
+Rachael's dogs getting in on the Halloween fun
+</p>
