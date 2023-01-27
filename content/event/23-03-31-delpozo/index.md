@@ -5,9 +5,9 @@ event: SCCJ Speaker Series
 event_url: 
 
 location: Omaha, NE
-address: Barbara Weitz Community Engagement Center
-  street: 6400 University Drive South
-  city: Omaha, NE
+address: "Barbara Weitz Community Engagement Center"
+  street: "6400 University Drive South"
+  city: "Omaha, NE"
   region: 
   postcode: 68182
   country: 
