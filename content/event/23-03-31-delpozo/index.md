@@ -4,12 +4,12 @@ title: "Health, Safety, and Justice: Toward Policing the Liberal Democracy"
 event: SCCJ Speaker Series
 event_url: 
 
-location: Zoom
-address:
-  street: 
-  city: 
+location: Omaha, NE
+address: Barbara Weitz Community Engagement Center
+  street: 6400 University Drive South
+  city: Omaha, NE
   region: 
-  postcode: 
+  postcode: 68182
   country: 
 
 summary: 
