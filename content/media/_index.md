@@ -13,6 +13,10 @@ header:
   image: ""
 ---
 
+📺 **1/23/2023**: *KMTV News Now* interviewed Dr. Huff about recruitment and retention struggles in policing, including locally. Watch it [here](https://www.3newsnow.com/news/local-news/omaha-police-department-says-its-pulling-out-all-the-stops-this-recruitment-season).
+
+📰 **1/15/2023**: *The Omaha World-Herald* interviewed Dr. Nix about a federal investigation of PACE, a local nonprofit. Read it [here](https://omaha.com/news/local/crime-and-courts/omahas-pace-lpoa-restructure-amid-federalinvestigation/article_668a7a7c-92af-11ed-9d84-9be32a0e7a72.html).
+
 📺 **9/7/2022**: *KMTV News Now* interviewed Dr. Nix about a local homicide spike in August 2022. Watch it [here](https://www.3newsnow.com/news/local-news/the-month-of-august-sees-high-number-of-omaha-homicides-were-killing-ourselves-killing-one-another).
 
 📰 **7/20/2022**: *The Denver Post* interviewed Dr. Nix about a police shooting in LoDo that injured five bystanders. Read it [here](https://www.denverpost.com/2022/07/20/denver-police-shooting-lodo-injuries/).
