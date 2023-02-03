@@ -13,6 +13,8 @@ header:
   image: ""
 ---
 
+📰 **2/2/2023**: *The Washington Post* interviewed Dr. Nix about U.S. police reform since the murder of George Floyd. Read it [here](https://www.washingtonpost.com/national-security/2023/02/02/memphis-tyre-nichols-police-reform/)
+
 📺 **1/23/2023**: *KMTV News Now* interviewed Dr. Huff about recruitment and retention struggles in policing, including locally. Watch it [here](https://www.3newsnow.com/news/local-news/omaha-police-department-says-its-pulling-out-all-the-stops-this-recruitment-season).
 
 📰 **1/15/2023**: *The Omaha World-Herald* interviewed Dr. Nix about a federal investigation of PACE, a local nonprofit. Read it [here](https://omaha.com/news/local/crime-and-courts/omahas-pace-lpoa-restructure-amid-federalinvestigation/article_668a7a7c-92af-11ed-9d84-9be32a0e7a72.html).
