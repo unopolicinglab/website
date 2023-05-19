@@ -18,10 +18,14 @@ interval: 5000
 height: '500px; background-position:center; background-repeat: no-repeat; background-size: contain'
 
 item: 
-  - title: ""
+  - title: "Duck Bowling 🎳"
     align: center
     overlay_color: '#000000'
     overlay_img: duck_bowling.png
+  - title: "Omaha PSN Task Force"
+    align: center
+    overlay_color: '#000000'
+    overlay_img: psn_task_force.jpg
   - title: ""
     align: center
     overlay_color: '#000000'
