@@ -64,7 +64,7 @@ social:
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Grad Students
+- Alumni
 ---
 
 Rachael Rief is a doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. She currently works as a research assistant at the [National Institute of Justice](https://nij.ojp.gov/bio/rachael-rief). Her research focuses on women in policing, police culture, occupational outcomes, and officer well-being. Among other topics, she has examined the role of gender in individuals' decisions to enter the field and the effect of officers’ perceived fit in their work environment on outcomes like interactions with co-workers, tenure, and stress. Her work has appeared in *Police Quarterly*, *Feminist Criminology*, *Criminal Justice & Behavior*, *Policing: An International Journal*, and *Police Chief Magazine*.
