@@ -5,10 +5,10 @@ authors:
 - hashimi
 - George G. Vega Yon
 date: "2022-06-15T13:00:00Z"
-doi: "10.1080/07418825.2020.1841268"
+doi: "10.1007/s10940-022-09546-9"
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "10.1007/s10940-022-09546-9"
+publishDate: "2023-05-25T07:00:00Z"
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
