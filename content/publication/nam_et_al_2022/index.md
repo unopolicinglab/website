@@ -18,7 +18,7 @@ publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
 publication: "*Journal of Research in Crime & Delinquency*"
-publication_short: "JRCD"
+publication_short: ""
 
 abstract: "**Objectives**: Judgments about police procedural fairness consistently have a stronger influence on how the public ascribes legitimacy to the police than evaluations of police effectiveness. What remains largely underexplored, however, is the potential moderating effect of procedural justice on the relationship between effectiveness and legitimacy and whether this moderation varies by citizen race. **Method**: We administered two separate surveys to determine whether procedural justice's moderating effect on the relationship between police ineffectiveness and legitimacy varies by citizen race. The first was a mail survey of a random sample of citizens in a southern US city (N=1,681) conducted in 2013; the second, a national survey of adults (N=972) administered via Qualtrics in 2022. **Results**: We found that procedural justice could help protect against the harmful influence of perceived ineffectiveness on police legitimacy in Study 2. However, contrary to expectations, this moderation effect held only for White Americans. **Conclusions**: The effect of perceived ineffectiveness on legitimacy evaluations does not vary depending on citizens’ perceptions of procedural justice. Yet, police still do have control over how they treat people with whom they interact, which is one mechanism that can improve citizens’ views on police legitimacy."
 
