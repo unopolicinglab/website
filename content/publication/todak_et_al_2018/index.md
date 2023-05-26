@@ -4,7 +4,7 @@ authors:
 - todak
 - huff
 - Lois James
-date: "2021-07-01T13:00:00Z"
+date: "2018-01-17T13:00:00Z"
 doi: "10.1080/15614263.2018.1428097"
 
 # Schedule page publish date (NOT publication's date).
@@ -17,7 +17,7 @@ publishDate: "2023-05-26T13:00:00Z"
 publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*Police Practice and Research, 19*"
+publication: "*Police Practice and Research*, 19(5), 490-504"
 publication_short: ""
 
 abstract: "Many have suggested police diversity will improve police-community relations, but research testing this hypothesis is inconclusive. We investigated perceptions of police race, ethnicity, and diversity in a heterogeneous sample of prospective police officers. Data are drawn from interviews with 42 criminal justice college students in the Southwestern United States, of which 15 were Hispanic, and who each wanted to become a police officer. Participants supported diversity in policing, and collectively expressed a belief that race plays a central role in policing today. Furthermore, participants expressed support for the ideals of both passive and active representative bureaucracy. Hispanics in the sample in particular anticipated they would positively affect police relations in Hispanic neighborhoods and encourage immigrants to cooperate with police."
