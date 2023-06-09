@@ -17,7 +17,7 @@ publishDate: "2021-12-11T13:00:00Z"
 publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*Journal of Experimental Criminology* (In Press)"
+publication: "*Journal of Experimental Criminology*, 18, 247-272"
 publication_short: ""
 
 abstract: "**Objectives**: Evaluate the impact of body-worn cameras (BWCs) on officer-initiated activity, arrests, use of force, and complaints. **Methods**: We use instrumental variable analysis to examine the impact of BWC assignment and BWC activation on the outcomes of individual incidents through a randomized controlled trial of 436 officers in the Phoenix Police Department. **Results**: Incidents involving BWC activations were associated with a lower likelihood of officer-initiated contacts and complaints, but a greater likelihood of arrests and use of force. BWC assignment alone was unrelated to arrests or complaints; however, incidents involving officers who were assigned and activated their BWC were significantly more likely to result in an arrest and less likely to result in a complaint. **Conclusions**: Future researchers should account for BWC activation to better estimate the effects of BWCs on officer behavior. To maximize the effects of BWCs, police agencies should ensure that officers are complying with activation policies."
