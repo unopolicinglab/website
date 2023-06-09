@@ -11,6 +11,10 @@ A running list of open source data related to policing and other violence interv
 
 (Are we missing something? [Let us know!](mailto:unopolicinglab@gmail.com))
 
+## **Violence**
+
+* [Historical Violence Database](https://cjrc.osu.edu/research/interdisciplinary/hvd)
+
 ## **Use of Force**
 
 ### National level
