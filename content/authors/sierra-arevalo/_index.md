@@ -71,6 +71,6 @@ user_groups:
 - External Affiliates
 ---
 
-Dr. Sierra-Arévalo is an Assistant Professor in the Department of Sociology at the University of Texas at Austin. His research shows how danger and violence influence police culture, officer practice, and social inequality. His first book, *Peril on Patrol: Danger, Death, and U.S. Policing*, is under advance contract at Columbia University Press. Michael’s writing and research have appeared in *The Washington Post*, *Times Higher Education, NPR, Vox, GQ,* and *The New Republic*.
+Dr. Sierra-Arévalo is an Assistant Professor in the Department of Sociology at the University of Texas at Austin. His research shows how danger and violence influence police culture, officer practice, and social inequality. His first book, [*The Danger Imperative: Violence, Death, and the Soul of Policing*](http://www.sierraarevalo.com/dangerimperative), is forthcoming (Spring 2024) with Columbia University Press. Michael’s writing and research have appeared in *The Washington Post*, *The Los Angeles Times*, *NPR*, *Vox*, and *GQ*.
 
 Learn more about Dr. Sierra-Arévalo at his [personal website](http://www.sierraarevalo.com/).
