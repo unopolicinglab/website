@@ -13,6 +13,8 @@ header:
   image: ""
 ---
 
+📰 **6/23/2023**: *Louisville Public Media* interviewed Dr. Nix about LMPD's new Nonfatal Shooting Squad. Read it [here](https://www.lpm.org/news/2023-06-23/experts-say-louisvilles-new-nonfatal-shootings-unit-needs-resources-community-trust-to-succeed).
+
 📰 **2/2/2023**: *The Washington Post* interviewed Dr. Nix about U.S. police reform since the murder of George Floyd. Read it [here](https://www.washingtonpost.com/national-security/2023/02/02/memphis-tyre-nichols-police-reform/).
 
 📺 **1/23/2023**: *KMTV News Now* interviewed Dr. Huff about recruitment and retention struggles in policing, including locally. Watch it [here](https://www.3newsnow.com/news/local-news/omaha-police-department-says-its-pulling-out-all-the-stops-this-recruitment-season).
