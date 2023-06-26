@@ -15,7 +15,7 @@ publishDate: "2022-05-19T11:00:00Z"
 publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*Criminology and Public Policy* (forthcoming)"
+publication: "*Criminology and Public Policy*"
 publication_short: ""
 
 abstract: ""
