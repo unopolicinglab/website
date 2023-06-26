@@ -43,10 +43,14 @@ A running list of other groups and organizations working to advance knowledge in
   - The mission of the Center for Problem-Oriented Policing is to advance the concept and practice of problem-oriented policing in open and democratic societies. It does so by making readily accessible information about ways in which police can effectively and equitably address specific crime and disorder problems.
 * [Campaign Zero](https://campaignzero.org/)
   - Campaign Zero encourages policymakers to focus on solutions with the strongest evidence of effectiveness at reducing police violence.
+* [Campbell Collaboration](https://campbellcollaboration.org)
+  - An international social science research network that produces high quality, open and policy-relevant evidence syntheses, plain language summaries and policy briefs.
 * [Center for Policing Equity](https://policingequity.org/)
   - CPE produces analyses identifying and reducing the causes of racial disparities in public safety and advocates for large-scale and meaningful change.
 * [Council on Criminal Justice](https://counciloncj.org/)
   - The Council on Criminal Justice works to advance understanding of the criminal justice policy choices facing the nation and build consensus for solutions that enhance safety and justice for all.
+* [Crimrxiv](https://www.crimrxiv.com/)  
+  - The global open access hub for criminology.
 * [Crime Solutions](https://crimesolutions.ojp.gov/)
   - The National Institute of Justice’s CrimeSolutions is comprised of two components — a web-based clearinghouse of programs and practices and a process for identifying and rating those programs and practices.
 * [CURE Violence](https://cvg.org/)
@@ -55,8 +59,8 @@ A running list of other groups and organizations working to advance knowledge in
   - IACP is the world’s largest and most influential professional association for police leaders. With more than 31,000 members in over 165 countries, the IACP is a recognized leader in global policing, committed to advancing safer communities through thoughtful, progressive police leadership.
 * [Justice Navigator](https://justicenavigator.org/)
   - The Justice Navigator helps law enforcement agencies and communities make data-driven changes that advance more equitable policing.
-* [National Police Foundation](https://www.policefoundation.org/)
-  - The National Police Foundation (NPF) was established in 1970 as a non-partisan, non-profit, research and policy organization dedicated to advancing policing through innovation and scientific research.
+* [National Policing Institute](https://policinginstitute.org)
+  - The National Policing Institute (formerly the National Police Foundation) was established in 1970 as a non-partisan, non-profit, research and policy organization dedicated to advancing policing through innovation and scientific research.
 * [Major Cities Chiefs Association](https://majorcitieschiefs.com/)
   - The mission of MCCA is to provide a forum for police executives from large population centers to address the challenges and issues of policing, to influence national and international policy that affects police services, to enhance the development of current and future police leaders, and to encourage and sponsor research that advances this mission.
 * [Niskanen Center](https://www.niskanencenter.org/)
