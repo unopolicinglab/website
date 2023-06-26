@@ -21,7 +21,7 @@ publication_short: ""
 abstract: ""
 
 # Summary. An optional shortened abstract.
-summary: "A brief rundown of Dr. Huff's forthcoming CPP paper."
+summary: ""
 
 tags:
 - discretion

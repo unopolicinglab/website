@@ -21,7 +21,7 @@ publication_short: ""
 abstract: ""
 
 # Summary. An optional shortened abstract.
-summary: "A brief rundown of Dr. Hashimi's forthcoming JQC paper."
+summary: ""
 
 tags:
 - policing

@@ -25,7 +25,7 @@ publication_short: ""
 abstract: ""
 
 # Summary. An optional shortened abstract.
-summary: "More about the graduate students working in the VIPR Lab."
+summary: ""
 
 tags:
 
