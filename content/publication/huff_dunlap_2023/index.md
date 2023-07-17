@@ -18,7 +18,7 @@ publication_types: ["4"]
 publication: ""
 publication_short: ""
 
-abstract: "."
+abstract: ""
 
 # Summary. An optional shortened abstract.
 summary: ""
