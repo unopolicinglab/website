@@ -65,6 +65,4 @@ projects: []
 slides:
 ---
 
-{{% callout note %}}
-Click the *Cite* button above to import publication metadata into your reference management software.
-{{% /callout %}}
+
