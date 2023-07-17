@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position
-role: M.A. Student
+role: Ph.D. Student
 
 # Organizations/Affiliations
 organizations:
@@ -29,7 +29,7 @@ education:
   courses:
   - course: MA in Criminology and Criminal Justice
     institution: University of Nebraska Omaha
-    year: "Anticipated 2023"
+    year: "2023"
   - course: BS in Biomedical Science (minor in Criminology)
     institution: University of South Florida
     year: "2021"
@@ -64,4 +64,4 @@ user_groups:
 - Grad Students
 ---
 
-Sarah Al Falatah is an M.A. student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. She holds a B.S. from the University of South Florida in Biomedical Sciences with a minor in Criminology. Her research focuses on mental health and the criminal justice system. Sarah collaborates with the Omaha Police Department to examine the characteristics and prevalence of mental health-related calls for police services. 
+Sarah Al Falatah is a Ph.D. student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. She holds a B.S. from the University of South Florida in Biomedical Sciences with a minor in Criminology, and an MA in Criminology and Criminal Justice from the University of Nebraska Omaha. Her research focuses on mental health and the criminal justice system. For her thesis, Sarah collaborated with the Omaha Police Department to examine the characteristics and prevalence of mental health-related calls for police services before and during the COVID-19 pandemic. 
