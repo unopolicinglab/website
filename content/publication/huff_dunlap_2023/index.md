@@ -24,17 +24,15 @@ abstract: ""
 summary: ""
 
 tags:
-- firearm
-- investigations
-- ballistic evidence
-- gun crime
 - police
+- restorative justice
+- procedural justice
 featured: false
 
 # links:
 # - name: ""
 #   url: ""
-url_pdf: ""
+url_pdf: "http://dx.doi.org/10.13140/RG.2.2.35178.29128"
 url_code: ""
 url_dataset: ''
 url_poster: ''
