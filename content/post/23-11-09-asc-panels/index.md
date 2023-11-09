@@ -36,6 +36,8 @@ If you're in Philadelphia for ASC next week, we hope you'll stop by our thematic
 
 * Michaela Goldsmith, Tara Richards, Bradley Campbell, **Justin Nix**, and Emily Wright
 
+***
+
 ## Thursday, November 16th
 
 ### Peer Dynamics and the Role of Formal and Informal Control Agents (8AM, Franklin Hall 4)
@@ -90,6 +92,8 @@ If you're in Philadelphia for ASC next week, we hope you'll stop by our thematic
 
 * Chantal Fahmy, Stephanie Cardwell, **Brandon Tregle**, Rob Tillyer, and Michael Smith
 
+***
+
 ## Friday, November 17th
 
 ### The COPS Office: Funding and Findings (8AM, Franklin Hall 4)
@@ -123,6 +127,8 @@ If you're in Philadelphia for ASC next week, we hope you'll stop by our thematic
 *Sexual Assault Kit Initiatives and the Importance of Forensic Testing: Looking Beyond Solving Sexual Assault Cases*
 
 * Tara Richards, Caralin Branscum, **Justin Nix**, Bradley Campbell, and Emily Wright
+
+***
 
 ## Saturday, November 18th
 
