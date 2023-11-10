@@ -22,7 +22,7 @@ abstract = ""
 tags = ["Police", "Women", "Associations", "Affinity groups"]
 
 # Optional external URL for project (replaces project detail page).
-external_link = "https://www.researchgate.net/publication/374384430_Women_Police_Associations_Lessons_Learned_Brief_from_the_IAWP_Gender_Diversity_in_Policing_Summit?channel=doi&linkId=651b1b361e2386049df18a34&showFulltext=true"
+external_link = ""
 
 # Slides (optional).
 #   Associate this project with Markdown slides.
@@ -33,7 +33,7 @@ external_link = "https://www.researchgate.net/publication/374384430_Women_Police
 slides = ""
 
 # Links (optional).
-url_pdf = ""
+url_pdf = "https://www.researchgate.net/publication/374384430_Women_Police_Associations_Lessons_Learned_Brief_from_the_IAWP_Gender_Diversity_in_Policing_Summit?channel=doi&linkId=651b1b361e2386049df18a34&showFulltext=true"
 url_slides = ""
 url_video = ""
 url_code = ""

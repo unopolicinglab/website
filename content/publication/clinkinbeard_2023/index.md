@@ -22,7 +22,7 @@ abstract = ""
 tags = ["Police", "Women", "Gender diversity"]
 
 # Optional external URL for project (replaces project detail page).
-external_link = "https://www.researchgate.net/publication/374384325_The_Role_of_Men_in_Promoting_Gender_Diversity_Lessons_Learned_Brief_from_the_IAWP_Gender_Diversity_in_Policing_Summit?channel=doi&linkId=651b18ce321ec5513c2c07d1&showFulltext=true"
+external_link = ""
 
 # Slides (optional).
 #   Associate this project with Markdown slides.
@@ -33,7 +33,7 @@ external_link = "https://www.researchgate.net/publication/374384325_The_Role_of_
 slides = ""
 
 # Links (optional).
-url_pdf = ""
+url_pdf = "https://www.researchgate.net/publication/374384325_The_Role_of_Men_in_Promoting_Gender_Diversity_Lessons_Learned_Brief_from_the_IAWP_Gender_Diversity_in_Policing_Summit?channel=doi&linkId=651b18ce321ec5513c2c07d1&showFulltext=true"
 url_slides = ""
 url_video = ""
 url_code = ""
