@@ -57,7 +57,3 @@ links = [{name = "Preprint", url="https://doi.org/10.31235/osf.io/7mrgp"}, {name
 +++
 
 **NOTE: This paper was originally posted as a pre-print on SocArXiv on August 25, 2022. On July 27, 2023, it was accepted for publication by** ***Criminology.*** **It is scheduled to appear in the February 2024 issue. In the meantime, you can download the pre-print using the button above.** 
-
-{{% alert note %}}
-<p style="text-align:center"> Click on the button at the top of this page to download the pre-print version of our paper.</p>
-{{% /alert %}}
