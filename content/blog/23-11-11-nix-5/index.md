@@ -12,10 +12,10 @@ publication = "*Criminology*"
 publication_types = ["2"]
 
 # Date this page was created.
-date = 2023-11-11T08:00:00
+publishdate = 2023-11-11T08:00:00
 
 # Publication Date
-publishdate = 2024-02-01T08:00:00
+date = 2024-02-01T08:00:00
 
 # Project summary to display on homepage.
 summary = ""
