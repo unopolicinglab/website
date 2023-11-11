@@ -52,7 +52,7 @@ links = [{name = "Preprint", url="https://doi.org/10.31235/osf.io/7mrgp"}, {name
 # To use, add an image named `featured.jpg/png` to your project's folder. 
 [image]
   # Caption (optional)
-  caption = ""
+  caption = "[Image](https://pixabay.com/photos/bodyworn-body-camera-794108/) by [BodyWorn by Utility](https://pixabay.com/users/utility_inc-1078771/) on Pixabay"
   
   # Focal point (optional)
   # Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
