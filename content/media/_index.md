@@ -59,6 +59,8 @@ header:
 
 📰 *The Omaha World-Herald* interviewed Dr. Nix about a federal investigation of PACE, a local nonprofit. Read it [here](https://omaha.com/news/local/crime-and-courts/omahas-pace-lpoa-restructure-amid-federalinvestigation/article_668a7a7c-92af-11ed-9d84-9be32a0e7a72.html).
 
+***
+
 ## 2022
 
 ### September
@@ -82,6 +84,8 @@ header:
 📰 *USA Today* interviewed Dr. Nix about the recent upward trend in gun violence against U.S. police officers. Read it [here](https://www.usatoday.com/story/news/nation/2022/01/29/police-attacked-4-us-cities-within-week-amid-violent-crime-spike/9248049002/?gnt-cfr=1).
 
 📰 *The Salt Lake Tribune* interviewed Dr. Nix about an increase in violence against police in Utah. Read it [here](https://www.sltrib.com/news/2022/01/21/utah-broke-record-most/). 
+
+***
 
 ## 2021
 
