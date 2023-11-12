@@ -13,6 +13,10 @@ header:
   image: ""
 ---
 
+Our co-directors frequently share their expertise with local and national journalists covering topics related to policing and public safety. We've compiled the resulting stories below.[^1]
+
+[^1]: If a link is broken, please [let us know!](https://www.viprlab.org/contact/)
+
 ## 2023
 
 ### October
