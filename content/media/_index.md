@@ -25,6 +25,8 @@ header:
 
 ### June
 
+📰 *The Lincoln Journal-Star* interviewed Dr. Huff about body-worn cameras in policing. Read it [here](https://journalstar.com/news/state-regional/crime-courts/dashcam-body-camera-use-police-accountability/article_5f287043-b5f2-54ee-8c2f-57637ef297d9.html).
+
 📰 *Louisville Public Media* interviewed Dr. Nix about LMPD's new Nonfatal Shooting Squad. Read it [here](https://www.lpm.org/news/2023-06-23/experts-say-louisvilles-new-nonfatal-shootings-unit-needs-resources-community-trust-to-succeed).
 
 📰 The University of Texas at Austin did a press release about [this article](https://onlinelibrary.wiley.com/doi/10.1111/1745-9125.12334) in *Criminology* by Dr. Sierra-Arévalo and team. Read it [here](https://liberalarts.utexas.edu/news/study-police-murder-of-george-floyd-associated-with-short-term-spike-in-firearm-assaults-on-u-s-police-officers). 
@@ -38,6 +40,8 @@ header:
 📰 *The Omaha World-Herald* interviewed Dr. Nix about recruitment and retention in policing, generally, and OPD, specifically. Read it [here](https://omaha.com/news/local/staffing-woes-continue-to-plague-omaha-police-department/article_19b630de-bea5-11ed-b07c-9b7f82541a13.html). 
 
 ### February
+
+📻 *PolitiFact* interviewed Dr. Huff about how often police officers are indicted following uses of deadly force. Read it [here](https://www.politifact.com/article/2023/feb/10/statistic-house-democrat-cited-police-indictments/). 
 
 📻 *Nebraska Public Media* interviewed Dr. Nix about the police murder of Tyre Nichols and how it influenced U.S. policing. Listen to it [here](https://nebraskapublicmedia.org/en/news/news-articles/how-the-murder-of-tyre-nichols-is-influencing-policing-in-america/).
 
