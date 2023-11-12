@@ -10,7 +10,7 @@ A new effort led by researchers at the University of Nebraska at Omaha (UNO) see
 
 <!--more-->
 
-The project is led by [Teresa Kulig](https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/teresa-kulig.php) and Sadaf Hashimi, assistant professors in the School of Criminology and Criminal Justice at UNO. Kulig noted that the goal of this project is to provide an assessment of how these offenses are carried out and the challenges in detecting and responding to these crimes.
+The project is led by [Teresa Kulig](https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/teresa-kulig.php) and [Sadaf Hashimi](https://www.viprlab.org/author/sadaf-hashimi/), assistant professors in the School of Criminology and Criminal Justice at UNO. Kulig noted that the goal of this project is to provide an assessment of how these offenses are carried out and the challenges in detecting and responding to these crimes.
 
 “Although some research on labor trafficking exists, very little is known about these crimes, including the harms victims experience, pathways of exploitation, and the ongoing challenges that victims face once they are identified,” Kulig said. “Thanks to the Howard G. Buffett Foundation, we now have the resources to examine labor trafficking in our state and lay the foundation for future work in this area.”
 
@@ -18,4 +18,4 @@ Through collaboration with stakeholders and the use of grant funds, Kulig and Ha
 
 For questions about the study, please contact Teresa Kulig via [email](mailto:tkulig@unomaha.edu). For more information on the study, see media reports by the [*Nebraska Examiner*](https://nebraskaexaminer.com/briefs/labor-trafficking-in-nebraska-how-prevalent-is-it-uno-research-team-aims-to-find-out/) and [KLKN](https://www.klkntv.com/labor-trafficking-study-launches-in-nebraska-as-too-little-is-known-about-these-crimes/).
 
-From all of us in the VIPR Lab, congrats, Dr. Hashimi!
+From all of us in the VIPR Lab, congrats to you both!
