@@ -6,7 +6,7 @@ image:
   caption: ""
 ---
 
-Dr. Jessie Huff has been awarded an $800,000 grant from the Office of Justice Programs in collaboration with Tacoma Police Department!
+Dr. Jessie Huff has been awarded an **$800K** grant from the Office of Justice Programs in collaboration with Tacoma Police Department!
 
 <!--more-->
 
