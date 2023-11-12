@@ -47,10 +47,10 @@ social:
   link: 'mailto:jessiehuff@unomaha.edu'
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/jessiehuff19
+  link: 'https://twitter.com/jessiehuff19'
 - icon: google-scholar
   icon_pack: ai
-  link: https://scholar.google.co.uk/citations?user=8mKuFgQAAAAJ
+  link: 'https://scholar.google.co.uk/citations?user=8mKuFgQAAAAJ'
 - icon: github
   icon_pack: fab
   link: 'https://github.com/jessiehuff1'
