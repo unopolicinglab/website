@@ -20,4 +20,4 @@ The handbook will be designed to address that gap with a goal of minimizing both
 
 Research has begun with an end date of mid-June 2025. Other SCCJ Faculty are also involved: [Director Gaylene Armstrong](https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/gaylene-armstrong.php), [Zach Hamilton](https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/zach-hamilton.php), and VIPR Lab co-director [Sadaf Hashimi](https://www.viprlab.org/author/sadaf-hashimi/). [Noah Turner](https://cj.msu.edu/directory/turner-noah.html), a doctoral candidate at Michigan State University, has also been brought onto the project to serve as a research associate.
 
-From all of us in the VIPR Lab, congrats to you both!
+From all of us in the VIPR Lab, congrats to you all!
