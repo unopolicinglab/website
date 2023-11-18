@@ -18,10 +18,6 @@ interval: 5000
 height: '500px; background-position:center; background-repeat: no-repeat; background-size: contain'
 
 item: 
-  - title: "2nd Annual VIPR Panel at ASC 2023!"
-    align: center
-    overlay_color: '#000000'
-    overlay_img: vipr_panel_asc2023.jpg
   - title: "Trey presented results from an NIJ-funded project (with Dr. Nix)"
     align: center
     overlay_color: '#000000'
