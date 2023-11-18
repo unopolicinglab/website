@@ -21,23 +21,22 @@ item:
   - title: "Trey presented results from an NIJ-funded project (with Dr. Nix)"
     align: center
     overlay_color: '#000000'
-    overlay_img: trey_asc2023.jpg
+    overlay_img: trey_asc2023.jpeg
   - title: "Brenna shared results from Year #2 of Omaha's Restorative Justice Diversion Program (with Dr. Huff)"
     align: center
     overlay_color: '#000000'
-    overlay_img: brenna_asc2023.jpg
+    overlay_img: brenna_asc2023.jpeg
   - title: "Sarah presented findings from her thesis on suicide attempts in Omaha pre/post pandemic onset (supervised by Dr. Hashimi)"
     align: center
     overlay_color: '#000000'
-    overlay_img: sarah_asc2023.jpg
+    overlay_img: sarah_asc2023.jpeg
   - title: "Natalie shared results from the first phase of our DHS-funded project on insider threats in policing (with Dr. Kearns et al.)"
     align: center
     overlay_color: '#000000'
-    overlay_img: natalie_asc2023.jpg
+    overlay_img: natalie_asc2023.jpeg
   - title: "Brenna also shared results from a survey of the Division of Experimental Criminology members (with Dr. Huff)"
     align: center
     overlay_color: '#000000'
-    overlay_img: brenna_asc2023b.jpg
-
+    overlay_img: brenna_asc2023b.jpeg
     
 ---
