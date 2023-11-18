@@ -21,27 +21,27 @@ item:
   - title: "2nd Annual VIPR Panel at ASC 2023!"
     align: center
     overlay_color: '#000000'
-    overlay_img: vipr_panel_asc2023.png
+    overlay_img: vipr_panel_asc2023.jpg
   - title: "Trey presented results from an NIJ-funded project (with Dr. Nix)"
     align: center
     overlay_color: '#000000'
-    overlay_img: trey_asc2023.png
+    overlay_img: trey_asc2023.jpg
   - title: "Brenna shared results from Year #2 of Omaha's Restorative Justice Diversion Program (with Dr. Huff)"
     align: center
     overlay_color: '#000000'
-    overlay_img: brenna_asc2023.png
+    overlay_img: brenna_asc2023.jpg
   - title: "Sarah presented findings from her thesis on suicide attempts in Omaha pre/post pandemic onset (supervised by Dr. Hashimi)"
     align: center
     overlay_color: '#000000'
-    overlay_img: sarah_asc2023.png
+    overlay_img: sarah_asc2023.jpg
   - title: "Natalie shared results from the first phase of our DHS-funded project on insider threats in policing (with Dr. Kearns et al.)"
     align: center
     overlay_color: '#000000'
-    overlay_img: natalie_asc2023.png
+    overlay_img: natalie_asc2023.jpg
   - title: "Brenna also shared results from a survey of the Division of Experimental Criminology members (with Dr. Huff)"
     align: center
     overlay_color: '#000000'
-    overlay_img: brenna_asc2023b.png
+    overlay_img: brenna_asc2023b.jpg
 
     
 ---
