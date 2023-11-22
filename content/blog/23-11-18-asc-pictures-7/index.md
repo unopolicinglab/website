@@ -40,3 +40,7 @@ And last but not least, Trey shared findings from an NIJ-funded [project](https:
 Brenna also helped administer a survey to members of the Division of Experimental Criminology. Here she is sharing the results:
 
 ![brenna](brenna_asc2023b.jpeg)
+
+Dr. Nix received his plaque in recognition of being named the 2021 Outstanding Early Career Experimental Criminologist: 
+
+![nix](nix_award.jpeg)
