@@ -2,6 +2,7 @@
 title: "We had a great time in Philadelphia at the 2023 ASC Meeting!"
 categories: []
 date: "2023-11-18T11:00:00Z"
+publishdate: "2023-11-18T11:00:00z"
 featured: false
 image: 
   caption: ""
