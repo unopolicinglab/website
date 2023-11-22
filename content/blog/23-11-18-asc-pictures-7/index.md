@@ -43,4 +43,4 @@ Brenna also helped administer a survey to members of the Division of Experimenta
 
 Dr. Nix received his plaque in recognition of being named the 2021 Outstanding Early Career Experimental Criminologist: 
 
-![nix](nix_award.jpeg)
+![nix](nix-award.jpeg)
