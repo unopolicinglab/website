@@ -21,7 +21,7 @@ Over the past year, Dr. Huff has been a founding instructor for the American Soc
 
 ![everyone](everyone.jpg)
 
-Participants represented fifteen police agencies and several universities from across the U.S. and Canada. The studies they produced have had direct benefits for the practitioners' police agencies. A brief of each study conducted can be found on the ASEBP [website] (https://www.americansebp.org/ac_dc_course.php). 
+Participants represented fifteen police agencies and several universities from across the U.S. and Canada. The studies they produced have had direct benefits for the practitioners' police agencies. A brief of each study conducted can be found on the ASEBP [website](https://www.americansebp.org/ac_dc_course.php). 
 
 Dr. Huff was assigned as a mentor for the Cincinnati Police Department, Dallas Police Department, Manchester Police Department, and the Philadelphia Police Department research teams. She is proud to have contributed to this program and cannot wait to see what the future holds for AC/DC and for all of those involved. Being able to see police practitioners and researchers come together to use research to improve the quality of policing has been one of the most rewarding experiences of her career.
 
