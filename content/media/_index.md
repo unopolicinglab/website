@@ -17,6 +17,12 @@ header:
 
 [^1]: If a link is broken, please [let us know!](https://www.viprlab.org/contact/)
 
+## 2024
+
+### January
+
+📰 *USA Today* interviewed Dr. Nix about recent trends in killings by police. Read it [here](https://www.usatoday.com/story/news/nation/2024/01/17/police-killings-record-2023/72174081007/).
+
 ## 2023
 
 ### October
