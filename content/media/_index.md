@@ -23,6 +23,8 @@ header:
 
 📰 *USA Today* interviewed Dr. Nix about recent trends in killings by police. Read it [here](https://www.usatoday.com/story/news/nation/2024/01/17/police-killings-record-2023/72174081007/).
 
+📰 *USA Today* interviewed Dr. Nix about data showing a year-over-year decline in police line-of-duty deaths. Read it [here](https://www.usatoday.com/story/news/nation/2024/01/11/police-officer-killings-2023/72152566007/).
+
 ## 2023
 
 ### October
