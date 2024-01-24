@@ -9,7 +9,7 @@ A running list of other groups and organizations working to advance knowledge in
 
 <!--more-->
 
-(Who are we missing? [Let us know!](mailto:unopolicinglab@gmail.com))
+(Who are we missing? [Let us know!](mailto:viprlabuno@gmail.com))
 
 ## Here in SCCJ
 

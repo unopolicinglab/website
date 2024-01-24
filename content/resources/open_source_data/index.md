@@ -9,7 +9,7 @@ A running list of open source data related to policing and other violence interv
 
 <!--more-->
 
-(Are we missing something? [Let us know!](mailto:unopolicinglab@gmail.com))
+(Are we missing something? [Let us know!](mailto:viprlabuno@gmail.com))
 
 ## **Violence**
 
