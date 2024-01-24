@@ -14,8 +14,8 @@ role: Alumnus
 
 # Organizations/Affiliations
 organizations:
-- name: University of Nebraska Omaha
-  url: ""
+- name: University of Texas at San Antonio
+  url: "https://hcap.utsa.edu/faculty/profiles/tregle-brandon.html"
 
 # Short bio (displayed in user profile at end of posts)
 bio: 
@@ -23,13 +23,13 @@ bio:
 interests:
 - Policing
 - Use of force
-- Body-worn cameras
+- Evidence-based policing
 
 education:
   courses:
   - course: PhD in Criminology and Criminal Justice
     institution: University of Nebraska Omaha
-    year: "Anticipated 2022"
+    year: "2022"
   - course: JD/DCL
     institution: Louisiana State University, Law Center
     year: "2016"
@@ -44,7 +44,7 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:btregle@unomaha.edu'
+  link: 'mailto:brandon.tregle@utsa.edu'
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/btregle
