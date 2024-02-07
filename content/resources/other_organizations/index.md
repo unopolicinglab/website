@@ -23,15 +23,15 @@ A running list of other groups and organizations working to advance knowledge in
   - A multidisciplinary research center that aims to develop and sustain research capacity internal to the State of Nebraska, assist the Legislature in research, evaluation, and policymaking to reduce recidivism, promote the use of evidence-based practices in corrections, and improve public safety.
 * [Nebraska Collaborative for Violence Intervention & Prevention](https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/research/ne-collaborative-for-violence-intervention.php)
   - The Nebraska Collaborative for Violence Intervention and Prevention (NeCVIP) uses a scientific approach that builds from a medical, public health and criminological perspective to address the underlying factors that contribute to gun violence, strengthen existing community assets and culture, and systematically applying data and science to ensure effective outcomes.
-* The [TRAC Program](trac_brochure.pdf)
-  - Since 2017, the UNO Transforming, Renewing, Achieving and Connecting (TRAC) has been providing college classes for incarcerated students at the Omaha Correctional Center (OCC). TRAC offers post-secondary, for-credit general education classes on-site for incarcerated individuals. Read more about it [here](https://www.unomaha.edu/college-of-public-affairs-and-community-service/news/2023/08/a-new-home-the-trac-program-partners-with-the-school-of-criminology-and-criminal-justice-at-uno.php).
+* [TRAC Program](trac_brochure.pdf)
+  - Since 2017, the UNO Transforming, Renewing, Achieving and Connecting (TRAC) Program has been providing post-secondary, for-credit, general education classes and an array of electives to incarcerated individuals at the Omaha Correctional Center (OCC). Read more about it [here](https://www.unomaha.edu/college-of-public-affairs-and-community-service/news/2023/08/a-new-home-the-trac-program-partners-with-the-school-of-criminology-and-criminal-justice-at-uno.php).
 * [Victimology and Victim Studies Research Lab](https://vvsrlab.org/)
-  - The VVSR Lab aims to conduct high quality research related to crime victims and crime victimization, inform policy and practice, and help shape prevention and intervention efforts.
+  - The VVSR Lab aims to conduct high-quality research related to crime victims and crime victimization, inform policy and practice, and help shape prevention and intervention efforts.
 
 ## Community Groups in Omaha
 
 * [YouTurn](https://shareomaha.org/nonprofit/youturn)
-  - A violence prevention organization committed to using evidence-based strategies of suppression, intervention, prevention, mediation, and education to deter violence among adolescents and young adults aged12 to 25+ years. 
+  - A violence prevention organization committed to using evidence-based strategies of suppression, intervention, prevention, mediation, and education to deter violence among adolescents and young adults aged 12 to 25+ years. 
   
 ## Elsewhere in the US and Abroad
 
