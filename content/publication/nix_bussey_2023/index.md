@@ -36,14 +36,14 @@ external_link = ""
 slides = ""
 
 # Links (optional).
-url_pdf = "final_report.pdf"
+url_pdf = ""
 url_slides = ""
 url_video = ""
 url_code = ""
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-# links = [{}]
+links = [{name = "Report", url = "https://www.viprlab.org/publication/nix_bussey_2023/final_report.pdf"}]
 
 
 # Featured image
