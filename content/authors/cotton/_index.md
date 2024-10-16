@@ -56,7 +56,7 @@ social:
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Grad Students
+- Alumni
 ---
 
 Natalie Cotton is an M.A. student in the School of Criminology and Criminal Justice at University of Nebraska Omaha. Her research interests include social networks and street gangs, interdiction methods, and general strain theory and how it applies to the criminal justice system. She holds a B.S. in Criminology and Criminal Justice with a minor in Political Science from University of Nebraska Omaha. She is working with Dr. Hashimi on the Insider Threats Project.
