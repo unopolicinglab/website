@@ -14,8 +14,8 @@ role: Assistant Professor
 
 # Organizations/Affiliations
 organizations:
-- name: University of Nebraska Omaha
-  url: "https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/jessica-huff.php"
+- name: University of Cincinnati
+  url: "https://researchdirectory.uc.edu/p/huffj9"
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include program evaluation, police strategy, and crime mapping.
