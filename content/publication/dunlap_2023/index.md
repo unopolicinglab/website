@@ -3,7 +3,7 @@
 title = "Recruitment and Retention of Women Officers: Lessons Learned from the International Association of Women Police Gender Responsive Policing Summit"
 
 # Authors
-authors = ["dunlap"]
+authors = ["Brenna Dunlap"]
 
 # Publication types (2 = Journal article; 3 = preprint; 4 = report; 6 = book chapter)
 publication_types = ["4"]

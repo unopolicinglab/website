@@ -3,7 +3,7 @@
 title = "Report on the 2023 Douglas County Community Survey"
 
 # Authors
-authors = ["admin", "bussey"]
+authors = ["admin", "Trey Bussey"]
 
 # Publication
 publication = ""

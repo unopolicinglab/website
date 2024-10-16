@@ -2,7 +2,7 @@
 title: "An examination of the City of Omaha’s Restorative Justice Diversion Program: Final report"
 authors:
 - huff
-- dunlap
+- Brenna Dunlap
 date: "2023-07-11T13:00:00Z"
 
 # Schedule page publish date (NOT publication's date).
