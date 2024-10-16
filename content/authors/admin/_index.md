@@ -15,7 +15,7 @@ role: Distinguished Associate Professor
 # Organizations/Affiliations
 organizations:
 - name: University of Nebraska Omaha
-  url: "https://jnix.netlify.app"
+  url: "https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/justin-nix.php"
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research centers on policing with emphases on procedural justice, legitimacy, and police shootings. 
@@ -55,6 +55,10 @@ social:
 - icon: github
   icon_pack: fab
   link: 'https://github.com/jnixy'
+- icon: globe
+  icon_pack: fa
+  link: 'https://jnix.netlify.app'
+  
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 - icon: cv
