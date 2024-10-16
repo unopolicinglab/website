@@ -67,7 +67,7 @@ social:
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Co-Directors
+- External Affiliates
 ---
 
 Dr. Huff’s research revolves around policing and program evaluation. She is specifically interested in using experimental methods to examine police programs and policies intended to improve police effectiveness and fairness. She is an [NIJ LEADS Academic](https://nij.ojp.gov/funding/leads-scholar-biographies) who has partnered with police agencies across the U.S. to evaluate programs including body-worn cameras, police use of force, and intelligence-led approaches to gun crime investigations. She is currently evaluating a Crime Gun Intelligence Center with the Phoenix Police Department, a Restorative Justice Diversion Program with the Omaha Police Department, and a police use of force training program with the Saint Paul Police Department. Her research has been funded by the Department of Homeland Security, Centers for Disease Control and Prevention, and the Bureau of Justice Assistance. Her work has been published in outlets such as *Criminology*, the *Journal of Experimental Criminology*, and *Justice Quarterly*. In addition to her research, she has provided professional and academic training related to crime analysis, crime mapping, and statistics to police practitioners throughout the U.S. and internationally, funded by the United Nations Development Program and the American Society of Evidence-Based Policing. 
