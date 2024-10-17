@@ -13,6 +13,7 @@ A running list of open source data related to policing and other violence interv
 
 ## **Violence**
 
+* [Gun Violence Archive](https://www.gunviolencearchive.org/)
 * [Historical Violence Database](https://cjrc.osu.edu/research/interdisciplinary/hvd)
 
 ## **Use of Force**
@@ -22,10 +23,11 @@ A running list of open source data related to policing and other violence interv
 * [Fatal Encounters](https://fatalencounters.org)
 * [Fatal Force (by *Washington Post*)](https://github.com/washingtonpost/data-police-shootings)
 * [Mapping Police Violence](https://mappingpoliceviolence.org)
+* [SPOTLITE](https://clinecenter.illinois.edu/spotlite)
 
 ### State level
 
-* [California](https://openjustice.doj.ca.gov/data)
+* [California](https://openjustice.doj.ca.gov/exploration)
 * [Connecticut](https://portal.ct.gov/DESPP/Division-of-State-Police/Transparency-Portal/Officer-Involved-Shooting-Investigations)
 * [Florida](https://projects.tampabay.com/projects/2017/investigations/florida-police-shootings/database/)
 * [Georgia](https://gbi.georgia.gov/news/2021-12-10/2021-officer-involved-shootings)
@@ -39,8 +41,10 @@ A running list of open source data related to policing and other violence interv
 
 ### City/Jurisdiction level
 
-* [ Minneapolis](https://opendata.minneapolismn.gov/datasets/cityoflakes::police-officer-involved-shootings/about)
+* [Minneapolis](https://opendata.minneapolismn.gov/datasets/cityoflakes::police-officer-involved-shootings/about)
+* [New York](https://www.nyc.gov/site/nypd/stats/reports-analysis/firearms-discharge.page)
 * [Phoenix](https://www.phoenixopendata.com/showcase/officer-involved-shooting-ois-incidents)
+* [Seattle](https://www.seattle.gov/police/information-and-data/data/use-of-force-data/officer-involved-shootings-dashboard)
 * [Texas (large cities)](https://apps.texastribune.org/unholstered/)
 
 ## **Traffic Stops**
