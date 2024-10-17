@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Alumnus
+role: Alumna
 
 # Organizations/Affiliations
 organizations:
@@ -27,6 +27,10 @@ interests:
 - General Strain Theory
 
 education:
+  courses:
+  - course: MA in Criminology & Criminal Justice
+    institution: University of Nebraska Omaha
+    year: "2024"
   courses:
   - course: BS in Criminology & Criminal Justice
     institution: University of Nebraska Omaha
@@ -59,4 +63,4 @@ user_groups:
 - Alumni
 ---
 
-Natalie Cotton is an M.A. student in the School of Criminology and Criminal Justice at University of Nebraska Omaha. Her research interests include social networks and street gangs, interdiction methods, and general strain theory and how it applies to the criminal justice system. She holds a B.S. in Criminology and Criminal Justice with a minor in Political Science from University of Nebraska Omaha. She is working with Dr. Hashimi on the Insider Threats Project.
+Natalie Cotton is an alumna of the B.s. and M.A. programs in the School of Criminology and Criminal Justice at University of Nebraska Omaha. Her research interests include social networks and street gangs, interdiction methods, and general strain theory and how it applies to the criminal justice system. She holds a B.S. in Criminology and Criminal Justice with a minor in Political Science from University of Nebraska Omaha. She is working with Dr. Hashimi on the Insider Threats Project.
