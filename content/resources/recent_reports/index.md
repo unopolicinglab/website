@@ -13,12 +13,23 @@ A running list of major reports published in the last decade.
 
 ## Bureau of Justice Statistics
 
+* [Contacts between police and the public, 2022](https://bjs.ojp.gov/document/cbpp22.pdf)
+* [Contacts between police and the public, 2020](https://bjs.ojp.gov/media/document/cbpp20.pdf)
 * [Contacts between police and the public, 2018](https://bjs.ojp.gov/content/pub/pdf/cbpp18st.pdf)
 * [Federal Deaths in Custody and During Arrest, 2018–2019](https://bjs.ojp.gov/sites/g/files/xyckuh236/files/media/document/fdcda1819st.pdf)
 * [State and local law enforcement training academies, 2018](https://bjs.ojp.gov/sites/g/files/xyckuh236/files/media/document/slleta18st.pdf)
 * [Additional BJS publications](https://bjs.ojp.gov/library)
 
-## CCJ National Commission on COVID-19 and Criminal Justice
+## Campbell Systematic Reviews
+
+* [Campbell Collection on Policing, Open Access](https://onlinelibrary.wiley.com/doi/toc/10.1002/(ISSN)1891-1803.policing)
+* [Campbell Collaboration, Crime and Justice Impact](https://www.campbellcollaboration.org/crime/)
+
+## CCJ Crime Trends in U.S. Cities
+
+* [Mid-Year 2024 Update](https://counciloncj.org/crime-trends-in-u-s-cities-mid-year-2024-update/)
+
+### CCJ National Commission on COVID-19 and Criminal Justice
 
 * [Pandemic, Social Unrest, and Crime in US Cities: 2020 Year-End Update](https://build.neoninspire.com/counciloncj/wp-content/uploads/sites/96/2021/07/Year-End-Crime-Update_Designed.pdf)
 * [Pandemic, Social Unrest, and Crime in US Cities: March 2021 Update](https://covid19.counciloncj.org/2021/05/21/impact-report-covid-19-and-crime-4/)
@@ -36,6 +47,7 @@ A running list of major reports published in the last decade.
 
 ## PERF *Critical Issues* Series
 
+* [Professional Staff in Policing](https://www.policeforum.org/assets/Civilianization.pdf)
 * [Guiding Principles on Use of Force](https://www.policeforum.org/assets/30%20guiding%20principles.pdf)
 * [Lessons from the COVID-19 Pandemic](https://www.policeforum.org/assets/COVIDPandemic.pdf)
 * [Other Free Publications from PERF](https://www.policeforum.org/free-online-documents)
