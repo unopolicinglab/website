@@ -65,6 +65,8 @@ A running list of other groups and organizations working to advance knowledge in
   - The Justice Navigator helps law enforcement agencies and communities make data-driven changes that advance more equitable policing.
 * [National Policing Institute](https://policinginstitute.org)
   - The National Policing Institute (formerly the National Police Foundation) was established in 1970 as a non-partisan, non-profit, research and policy organization dedicated to advancing policing through innovation and scientific research.
+* [Law Enforcement Epidemiology Project](https://policeepi.uic.edu/)
+  - Our Law Enforcement Epidemiology Project aims to build a comprehensive surveillance system to better characterize the magnitude of civilian and law enforcement injuries that occur each year in the U.S. and to guide policy reform that addresses police use of force tactics and strategies to build community trust in the police.
 * [Major Cities Chiefs Association](https://majorcitieschiefs.com/)
   - The mission of MCCA is to provide a forum for police executives from large population centers to address the challenges and issues of policing, to influence national and international policy that affects police services, to enhance the development of current and future police leaders, and to encourage and sponsor research that advances this mission.
 * [Niskanen Center](https://www.niskanencenter.org/)
