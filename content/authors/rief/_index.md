@@ -44,7 +44,7 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:rrief@unomaha.edu'
+  link: 'mailto:rachael.rief@unt.edu'
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/RachaelRief
@@ -67,4 +67,4 @@ user_groups:
 - Alumni
 ---
 
-Rachael Rief is an alumna of the B.S., M.A., and Ph.D programs in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. She currently works as a research assistant at the [National Institute of Justice](https://nij.ojp.gov/bio/rachael-rief). Her research focuses on women in policing, police culture, occupational outcomes, and officer well-being. Among other topics, she has examined the role of gender in individuals' decisions to enter the field and the effect of officers’ perceived fit in their work environment on outcomes like interactions with co-workers, tenure, and stress. Her work has appeared in *Police Quarterly*, *Feminist Criminology*, *Criminal Justice & Behavior*, *Policing: An International Journal*, and *Police Chief Magazine*.
+Rachael Rief is an alumna of the B.S., M.A., and Ph.D programs in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research focuses on women in policing, police culture, occupational outcomes, and officer well-being. Among other topics, she has examined the role of gender in individuals' decisions to enter the field and the effect of officers’ perceived fit in their work environment on outcomes like interactions with co-workers, tenure, and stress. Her work has appeared in *Police Quarterly*, *Feminist Criminology*, *Criminal Justice & Behavior*, *Policing: An International Journal*, and *Police Chief Magazine*. Rachael is currently an assistant professor in the College of Health and Public Service at the [University of North Texas](https://hps.unt.edu/people/rachael-rief-phd.html). 
