@@ -33,7 +33,7 @@ external_link = ""
 slides = ""
 
 # Links (optional).
-url_pdf = "h"
+url_pdf = ""
 url_slides = ""
 url_video = ""
 url_code = ""
