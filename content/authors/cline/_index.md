@@ -49,6 +49,9 @@ social:
 - icon: blog
   icon_pack: fas
   link: https://jordancline.substack.com/
+- icon: google-scholar
+  icon_pack: ai
+  link: 'https://scholar.google.com/citations?hl=en&user=TtbaxoEAAAAJ&view_op=list_works&gmla=AL3_zijvNDO0tn8gzuf_Gsf8fK0q9i5dvGhP9SQtGVWjIg-l7lJxgqTB8X7wF_eQiIVHZSIPN-cuiw7Ie16gYBqx'
 
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
