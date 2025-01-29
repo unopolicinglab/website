@@ -15,7 +15,7 @@ role: Assistant Professor
 # Organizations/Affiliations
 organizations:
 - name: Georgia State University
-  url: "https://aysps.gsu.edu/profile/marie-ouellet-2/"
+  url: "https://www.sfu.ca/criminology/about/faculty/criminology-faculty/marie-ouellet/"
 
 # Short bio (displayed in user profile at end of posts)
 bio: 
@@ -67,6 +67,6 @@ user_groups:
 - External Affiliates
 ---
 
-Dr. Marie Ouellet is an Assistant Professor in the [Department of Criminal Justice and Criminology](https://aysps.gsu.edu/department/department-of-criminal-justice-and-criminology/) at Georgia State University. Her research applies network science to better understand the ways relationships and interactions shape group dynamics and offending patterns. She is currently conducting a longitudinal study on police networks to better understand the formal and informal structures of policing, including organizational cohesion and fragmentation within departments, and the consequences of these network structures on the diffusion of behaviors and attitudes. Dr. Ouellet’s work has been published in *Criminology*, *Criminology & Public Policy*, *Journal of Research in Crime and Delinquency*, and *Justice Quarterly*.
+Dr. Marie Ouellet is an Assistant Professor in the [School of Criminology](https://www.sfu.ca/criminology.html) at Simon Fraser University. Her research applies network science to better understand the ways relationships and interactions shape group dynamics and offending patterns. She is currently conducting a longitudinal study on police networks to better understand the formal and informal structures of policing, including organizational cohesion and fragmentation within departments, and the consequences of these network structures on the diffusion of behaviors and attitudes. Dr. Ouellet’s work has been published in *Criminology*, *Criminology & Public Policy*, *Journal of Research in Crime and Delinquency*, and *Justice Quarterly*.
 
 Read more about Dr. Ouellet's work at her [personal website](https://ouellet.netlify.app).
