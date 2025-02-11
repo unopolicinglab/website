@@ -9,7 +9,7 @@ authors = ["ouellet","hashimi","Jason Gravel","Dean Dabney"]
 publication_types = ["4"]
 
 # Date this page was created.
-date = 2025-2-8T11:00:00Z
+date = 2025-02-08T11:00:00Z
 
 # Publication
 publication = "National Collaborative for Gun Violence Research"
