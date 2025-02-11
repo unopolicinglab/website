@@ -8,6 +8,9 @@ authors = ["ouellet","hashimi","Jason Gravel","Dean Dabney"]
 # Publication types (2 = Journal article; 3 = preprint; 4 = report; 6 = book chapter)
 publication_types = ["4"]
 
+# Publish date
+publishdate = 2023-01-31T11:00:00z
+
 # Date this page was created.
 date = 2025-02-08T11:00:00Z
 
@@ -43,7 +46,7 @@ url_code = ""
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-links = [{}]
+# links = [{}]
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder. 

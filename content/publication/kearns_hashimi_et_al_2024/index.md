@@ -1,6 +1,6 @@
 +++
 # Paper title
-title = "Screening for insider threats in US law enforcement: A national sample of department policies and practices. State of Practice Guide."
+title = "Screening for insider threats in US law enforcement: A national sample of department policies and practices. State of Practice Guide"
 
 # Authors
 authors = ["kearns","hashimi","huff","nix","cotton"]

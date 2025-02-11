@@ -1,12 +1,15 @@
 +++
 # Paper title
-title = "Transforming, Renewing, Achieving, and Connecting (TRAC), a higher education in prison program (2023)"
+title = "Transforming, Renewing, Achieving, and Connecting (TRAC), a higher education in prison program"
 
 # Authors
 authors = ["hashimi"]
 
 # Publication types (2 = Journal article; 3 = preprint; 4 = report; 6 = book chapter)
 publication_types = ["4"]
+
+# Publish date
+publishdate = 2023-01-01T11:00:00z
 
 # Date this page was created.
 date = 2025-02-08T11:00:00Z
@@ -40,7 +43,7 @@ url_code = ""
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-links = [{}]
+# links = [{}]
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder. 
