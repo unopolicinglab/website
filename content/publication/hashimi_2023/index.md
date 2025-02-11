@@ -9,7 +9,7 @@ authors = ["hashimi"]
 publication_types = ["4"]
 
 # Publish date
-publishdate = 2023-01-01T11:00:00z
+publishdate = 2023-01-01T11:00:00Z
 
 # Date this page was created.
 date = 2025-02-08T11:00:00Z

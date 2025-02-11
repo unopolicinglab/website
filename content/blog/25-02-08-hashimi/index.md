@@ -76,19 +76,19 @@ reading_time: true
 
 ---
 
-# BACKGROUND: WHAT DRIVES OFFICERS TO USE FORCE TOGETHER?
+## BACKGROUND: WHAT DRIVES OFFICERS TO USE FORCE TOGETHER?
 
 Police use of force tends to involve groups of officers rather than individuals acting alone. The impact of individual acts of police use of force is evident, but the way in which groups of abusive officers emerge within police forces is still not fully understood. A key question is what leads some officers to engage in use of force with some colleagues but not others? This study provides a starting point to answer this question by exploring ‘force partnerships’ - the officer characteristics and network dynamics associated with co-involvement in use of force incidents.
 
-# METHOD: USING FORCE REPORTS TO STUDY OFFICER NETWORKS
+## METHOD: USING FORCE REPORTS TO STUDY OFFICER NETWORKS
 
 Drawing from nearly 12,000 use of-force reports across seven New Jersey police departments, we examine the network ties among 1,894 officers involved in at least one instance of force. We operationalize network ties between officers as any instance where a pair of officers were involved in the same use of force incident. We reconstruct a network of force interactions by aggregating this data across all officers and force reports. We then estimate exponential random graph models to examine which officer-level attributes, such as race/ethnicity, rank, and tenure, as well as network structures, are associated with officers’ becoming co-involved in use-of-force incidents.
 
-# RESULTS: CORRELATES OF CO-PARTICIPATION IN USE OF FORCE
+## RESULTS: CORRELATES OF CO-PARTICIPATION IN USE OF FORCE
 
 Our findings reveal that police use of force is concentrated among a small number of officers who drive network connectivity. Nearly all instances of force involved more than one officer (90% of force incidents), and one percent of officers were co-involved in force incidents with 30 or more different colleagues. Further, these use of force ties are not randomly distributed. Officers are more likely to use force together when they share certain characteristics – such as similar years of experience. Additionally, officers embedded in certain network configurations – such as clustering and transitivity – suggest they tend to use force with colleagues who share the same force partners, creating clustering in force-related networks.
 
-# IMPLICATIONS: LEVERAGING FORCE NETWORKS TO DESIGN INTERVENTIONS
+## IMPLICATIONS: LEVERAGING FORCE NETWORKS TO DESIGN INTERVENTIONS
 
 The results suggest that understanding the structural makeup of police departments and the connectivity within force networks can provide insights into reducing the incidence of force. The availability of force reports provides important resources for departments to uncover the networks that drive the use of force. By identifying and disrupting these network connections, police departments can design targeted interventions, such as strategic assignments and partnerships, to mitigate the likelihood of force incidents. Relational methods offer actionable tools for departments seeking to reform use of force networks and decrease such incidents – especially unjustified uses of force - complementing broader policy changes requiring more development and implementation. 
 
