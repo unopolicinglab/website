@@ -92,6 +92,6 @@ Our findings reveal that police use of force is concentrated among a small numbe
 
 The results suggest that understanding the structural makeup of police departments and the connectivity within force networks can provide insights into reducing the incidence of force. The availability of force reports provides important resources for departments to uncover the networks that drive the use of force. By identifying and disrupting these network connections, police departments can design targeted interventions, such as strategic assignments and partnerships, to mitigate the likelihood of force incidents. Relational methods offer actionable tools for departments seeking to reform use of force networks and decrease such incidents – especially unjustified uses of force - complementing broader policy changes requiring more development and implementation. 
 
-{{% alert note %}}
+{{% callout note %}}
 Original blog was first published online in [Research Connections Issue 22](https://www.sfu.ca/content/dam/sfu/criminology/Documents/ResearchConnectionsArchive/20241029_Research_Connections_Ed22_Final.pdf), *School of Criminology, Simon Fraser University.* Burnaby, B.C.
-{{% /alert %}}
+{{% /callout %}}
