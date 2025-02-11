@@ -9,7 +9,7 @@ authors = ["hashimi", "ouellet"]
 publication_types = ["2"]
 
 # Date this page was created.
-date = 2025-2-8T11:00:00Z
+date = "2025-02-08T11:00:00Z"
 
 # Publication
 publication = "*Journal of Criminal Justice*"
