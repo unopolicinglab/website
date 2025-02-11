@@ -3,7 +3,7 @@
 title = "The implications of the COVID-19 pandemic on attempted suicide trends"
 
 # Authors
-authors = ["Sarah Al Falatah","hashimi""]
+authors = ["Sarah Al Falatah","hashimi"]
 
 # Publication types (2 = Journal article; 3 = preprint; 4 = report; 6 = book chapter; 7 = thesis)
 publication_types = ["4"]
