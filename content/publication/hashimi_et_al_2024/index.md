@@ -18,14 +18,7 @@ summary = ""
 publication = "*Journal of Research in Crime and Delinquency*"
 
 # Abstract
-abstract = "**Objectives**:
-The importance of peer relations is rooted in decades of policing research; however, scholars have largely overlooked the role of peers in officers’ use-of-force behaviors. The current study investigates the “connected” nature of police use of force.
-**Methods**:
-Data on officers’ networks are reconstructed from 11,834 use-of-force reports involving 1,894 officers in seven departments in New Jersey. Exponential Random Graph Models evaluate which officer-level attributes and network dependencies are associated with officers’ co-involvement in police use-of-force incidents.
-**Results**:
-Findings indicate the police use of force is not evenly distributed but concentrated on a subset of officers and partnerships. Variation in officers’ likelihood of using force together is driven by individual characteristics, including officer race/ethnicity, rank, and tenure. In addition, co-involvement in force clusters among officers, with officers likely to engage in force together when they share a connection.
-**Conclusion**:
-This study highlights an alternative starting point for understanding police use of force. By paying greater attention to the structural makeup of the department, such as the connectivity of the force network, agencies can design efforts that aim to reduce incidents of force through relational properties such as assignments and partnerships."
+abstract = "**Objectives**: The importance of peer relations is rooted in decades of policing research; however, scholars have largely overlooked the role of peers in officers’ use-of-force behaviors. The current study investigates the “connected” nature of police use of force. **Methods**: Data on officers’ networks are reconstructed from 11,834 use-of-force reports involving 1,894 officers in seven departments in New Jersey. Exponential Random Graph Models evaluate which officer-level attributes and network dependencies are associated with officers’ co-involvement in police use-of-force incidents. **Results**: Findings indicate the police use of force is not evenly distributed but concentrated on a subset of officers and partnerships. Variation in officers’ likelihood of using force together is driven by individual characteristics, including officer race/ethnicity, rank, and tenure. In addition, co-involvement in force clusters among officers, with officers likely to engage in force together when they share a connection. **Conclusion**: This study highlights an alternative starting point for understanding police use of force. By paying greater attention to the structural makeup of the department, such as the connectivity of the force network, agencies can design efforts that aim to reduce incidents of force through relational properties such as assignments and partnerships."
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
