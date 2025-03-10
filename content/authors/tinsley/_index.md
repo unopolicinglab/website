@@ -29,7 +29,7 @@ interests:
 
 education:
   courses:
-  - course: MS in Criminology & Criminal Justice
+  - course: MA in Criminology & Criminal Justice
     institution: University of Nebraska Omaha
     year: "Anticipated 2026"
   - course: BA in Criminal Justice & Political Science
