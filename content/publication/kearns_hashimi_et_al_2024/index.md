@@ -3,7 +3,7 @@
 title = "Screening for insider threats in US law enforcement: A national sample of department policies and practices. State of Practice Guide"
 
 # Authors
-authors = ["kearns","hashimi","huff","nix","cotton"]
+authors = ["kearns","hashimi","huff","admin","cotton"]
 
 # Publication types (2 = Journal article; 3 = preprint; 4 = report; 6 = book chapter)
 publication_types = ["4"]
