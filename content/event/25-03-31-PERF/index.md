@@ -1,7 +1,7 @@
 ---
-title: "We Provide Progress In Policing: Careers in Research and Policy at the Police Executive Research Forum"
+title: "We Provide Progress in Policing: Careers in Research and Policy at the Police Executive Research Forum"
 
-event: Guest Speaker Event
+event: SCCJ Speaker Series
 event_url: 
 
 location: TBD
