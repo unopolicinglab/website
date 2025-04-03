@@ -1,6 +1,6 @@
 +++
 # Paper title
-title = "The Prevalence of Subgroups Within a Police Department"
+title = "Invite Only: The Prevalence of Subgroups Within a Police Department"
 
 # Authors
 authors = ["hashimi", "ouellet"]
