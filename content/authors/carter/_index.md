@@ -15,7 +15,7 @@ role: Assistant Professor
 # Organizations/Affiliations
 organizations:
 - name: University of Nebraska Omaha
-  url: "https://www.sadafhashimi.com/"
+  url: "https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/new-fall25-faculty.php"
   
 
 # Short bio (displayed in user profile at end of posts)
