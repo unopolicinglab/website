@@ -18,11 +18,11 @@ interval: 5000
 height: '500px; background-position:center; background-repeat: no-repeat; background-size: contain'
 
 item: 
-  - title: "VIPR/VVSRL Spring Social at Fat Putter"
+  - title: ""
     align: center
     overlay_color: '#000000'
     overlay_img: fat_putter_2025.jpg
-  - title: "Duck Bowling 🎳"
+  - title: ""
     align: center
     overlay_color: '#000000'
     overlay_img: duck_bowling.png
