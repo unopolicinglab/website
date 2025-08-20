@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Distinguished Associate Professor
+role: Distinguished Professor
 
 # Organizations/Affiliations
 organizations:
@@ -77,6 +77,6 @@ user_groups:
 - Co-Directors
 ---
 
-Dr. Nix’s research centers on policing with emphases on procedural justice, legitimacy, and police shootings. He has recently co-authored articles appearing in *Justice Quarterly*, *Criminology & Public Policy*, and *Journal of Research in Crime and Delinquency*. He has also served as co-principal investigator on projects funded by the National Institute of Justice and the Department of Homeland Security. In 2020, he was the recipient of the Early Career Award from the American Society of Criminology’s [Division of Policing](https://ascpolicing.org/). In 2021, he received the Outstanding Young Experimental Criminologist award from the [Division of Experimental Criminology](https://www.experimentalcrim.org/decaec2020awards).
+Dr. Nix is a Distinguished Professor in the School of Criminology and Criminal Justice, where he teaches classes on policing and research methods, co-directs the VIPR Lab, and coordinates the Master of Arts degree program. His research centers on policing with emphases on procedural justice, legitimacy, and police shootings. Since 2015, he has co-authored more than 50 peer-reviewed articles, often for the discipline's top journals (e.g., *Criminology*, *Justice Quarterly*, *Criminology & Public Policy*, and *Journal of Research in Crime and Delinquency*). As a co-principal investigator, he has secured >$2.5 million in [extramural funding](https://jnix.netlify.app/project/) from the National Institute of Justice, the Department of Homeland Security, and the National Highway Traffic Safety Administration. In 2020, he was the recipient of the Early Career Award from the American Society of Criminology’s [Division of Policing](https://ascpolicing.org/). In 2021, he received the Outstanding Young Experimental Criminologist award from the [Division of Experimental Criminology](https://www.experimentalcrim.org/decaec2020awards).
 
 Learn more about Dr. Nix's research and check out his blog at his [personal website](https://jnix.netlify.app). 
