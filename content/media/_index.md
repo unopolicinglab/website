@@ -17,6 +17,26 @@ header:
 
 [^1]: If a link is broken, please [let us know!](https://www.viprlab.org/contact/)
 
+## 2025
+
+### August
+
+📰 *The Milwaukee Journal Sentinel* interviewed Dr. Nix about policing and public trust. Read it [here](https://www.jsonline.com/story/news/investigations/2025/08/20/milwaukee-police-officer-was-on-brady-list-twice-before-he-was-fired/85364335007/).
+
+### June
+
+📰 *Mother Jones* interviewed Dr. Nix about federal agents wearing masks to conceal their identity. Read it [here](https://www.motherjones.com/politics/2025/06/ice-immigration-agents-masks-masking-concealing-faces-legal/).
+
+### May
+
+📰 *The New York Times* interviewed Dr. Nix about police killing data since 2020. Read it [here](https://www.nytimes.com/2025/05/24/us/police-killings-george-floyd.html).
+
+📺 *KETV Omaha* interviewed Dr. Nix about recent crime trends in the city. Watch it [here](https://www.ketv.com/article/ketv-investigates-exclusive-omaha-police-department-shares-new-look-at-overall-crime/64786856).
+
+### April
+
+📰 *The Denver Post* interviewed Dr. Nix about the dangers of high speed police pursuits. Read it [here](https://www.denverpost.com/2025/04/20/colorado-police-chases-deaths-injuries-westminster-aurora/).
+
 ## 2024
 
 ### January
