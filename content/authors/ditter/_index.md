@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position
-role: M.S. Student
+role: Alumna
 
 # Organizations/Affiliations
 organizations:
@@ -59,4 +59,4 @@ user_groups:
 - Grad Students
 ---
 
-Loganne Ditter is a M.S. student in the school of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests include rural crime, intimate partner violence and juvenile justice. Loganne currently has a B.S. in psychology and criminal justice from Fort Hays State University. Currently, she is working with Dr. Nix alongside other students on police involved shooting data. 
+Loganne Ditter earned her M.S. from the School of Criminology and Criminal Justice at the University of Nebraska Omaha in 2025. She also holds a B.S. in psychology and criminal justice from Fort Hays State University. Her research interests include rural crime, intimate partner violence and juvenile justice. 
