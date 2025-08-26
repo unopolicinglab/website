@@ -56,7 +56,7 @@ social:
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Grad Students
+- Alumni
 ---
 
 Loganne Ditter earned her M.S. from the School of Criminology and Criminal Justice at the University of Nebraska Omaha in 2025. She also holds a B.S. in psychology and criminal justice from Fort Hays State University. Her research interests include rural crime, intimate partner violence and juvenile justice. 
