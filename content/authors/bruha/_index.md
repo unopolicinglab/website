@@ -14,7 +14,7 @@ role: M.A. Student
 
 # Organizations/Affiliations
 organizations:
-- name: University of Nebraska Omaha
+- name: University of Nebraska at Omaha
   url: "https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/funded-graduate-students.php#Masters%20Students%20(funded%20on%20graduate%20assistantships)-main"
 
 # Short bio (displayed in user profile at end of posts)
@@ -28,7 +28,7 @@ interests:
 education:
   courses:
   - course: MA in Criminology & Criminal Justice
-    institution: University of Nebraska Omaha
+    institution: University of Nebraska at Omaha
     year: "Anticipated 2027"
   - course: BS in Criminology and Criminal Justice
     institution: University of Nebraska Lincoln

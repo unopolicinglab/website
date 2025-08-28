@@ -14,8 +14,8 @@ role: Alumnus
 
 # Organizations/Affiliations
 organizations:
-- name: University of Texas at San Antonio
-  url: "https://hcap.utsa.edu/faculty/profiles/tregle-brandon.html"
+- name: University of South Carolina Joseph F. Rice School of Law
+  url: "https://sc.edu/study/colleges_schools/law/centers/epps/epps_team.php"
 
 # Short bio (displayed in user profile at end of posts)
 bio: 
@@ -28,7 +28,7 @@ interests:
 education:
   courses:
   - course: PhD in Criminology and Criminal Justice
-    institution: University of Nebraska Omaha
+    institution: University of Nebraska at Omaha
     year: "2022"
   - course: JD/DCL
     institution: Louisiana State University, Law Center
@@ -67,4 +67,4 @@ user_groups:
 - Alumni
 ---
 
-Brandon is an alumnus of the SCCJ PhD program. He is a former police officer, and he received his Juris Doctor from Louisiana State University in 2016. His research is focused on evidence-based policing, use of force, and disparities. Since August 2022, he has been an Assistant Professor in the [Department of Criminology & Criminal Justice](https://hcap.utsa.edu/criminal-justice/) at UTSA. 
+Brandon is an alumnus of the SCCJ PhD program. He is a former police officer, and he received his Juris Doctor from Louisiana State University in 2016. His research is focused on evidence-based policing, use of force, and disparities. From 2022 to 2025, he was an Assistant Professor in the [Department of Criminology & Criminal Justice](https://hcap.utsa.edu/criminal-justice/) at UTSA. Since August 2025, he has been the Director of Research for the Excellence in Policing and Public Safety (EPPS) Program at the University of South Carolina Joseph F. Rice School of Law. 

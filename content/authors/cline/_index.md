@@ -14,7 +14,7 @@ role: M.A. Student
 
 # Organizations/Affiliations
 organizations:
-- name: University of Nebraska Omaha
+- name: University of Nebraska at Omaha
   url: "https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/funded-graduate-students.php#Masters%20Students%20(funded%20on%20graduate%20assistantships)-main"
 
 # Short bio (displayed in user profile at end of posts)
@@ -29,7 +29,7 @@ interests:
 education:
   courses:
   - course: MA in Criminology & Criminal Justice
-    institution: University of Nebraska Omaha
+    institution: University of Nebraska at Omaha
     year: "Anticipated 2026"
   - course: BS in Criminal Justice
     institution: Wichita State University
@@ -68,4 +68,4 @@ user_groups:
 - Grad Students
 ---
 
-Jordan Cline is a Master's student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. His research interests include policing methods, public sentiment, and data analysis. He also studies philosophy, particularly the ancient Greeks, quantum mechanics, and how it all may apply to social networks. Jordan holds a B.S. in Criminal Justice with minors in philosophy and political science from Wichita State University. Currently, he is working with Dr. Nix alongside other students studying police uses of deadly force.
+Jordan Cline is a Master's student in the School of Criminology and Criminal Justice at the University of Nebraska at Omaha. His research interests include policing methods, public sentiment, and data analysis. He also studies philosophy, particularly the ancient Greeks, quantum mechanics, and how it all may apply to social networks. Jordan holds a B.S. in Criminal Justice with minors in philosophy and political science from Wichita State University. Currently, he is working with Dr. Nix alongside other students studying police uses of deadly force.

@@ -14,7 +14,7 @@ role: Professor
 
 # Organizations/Affiliations
 organizations:
-- name: University of Nebraska Omaha
+- name: University of Nebraska at Omaha
   url: "https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/samantha-clinkinbeard.php"
 
 # Short bio (displayed in user profile at end of posts)
@@ -68,4 +68,4 @@ user_groups:
 - SCCJ Faculty Affiliates
 ---
 
-Samantha Clinkinbeard  is an Associate Professor and the Undergraduate Program Coordinator (Lincoln & Omaha campus) in the School of Criminology and Criminal Justice. Currently, her research is focused on women in policing, including the presence of masculinity and issues surrounding recruitment and retention. Much of her previous research has focused on motivation, self-control, and health as related to delinquency and risky behavior. She was awarded honorable mention by ASC’s Division of Women and Crime for the best Article of the Year in Feminist Criminology for 2017. Dr. Clinkinbeard’s work appears in *Criminal Justice & Behavior*, *Feminist Criminology*, *Journal of Criminal Justice*, *Journal of Youth & Adolescence*, *Youth & Society*, and *Justice Quarterly*. She has taught a variety of courses though most often teaches research methods courses at all levels (undergraduate, masters, doctoral). She was recognized with the CPACS Alumni Outstanding Teaching Award in 2020.
+Samantha Clinkinbeard  is a Professor and the PhD Program Coordinator in the School of Criminology and Criminal Justice. Currently, her research is focused on women in policing, including the presence of masculinity and issues surrounding recruitment and retention. Much of her previous research has focused on motivation, self-control, and health as related to delinquency and risky behavior. She was awarded honorable mention by ASC’s Division of Women and Crime for the best Article of the Year in Feminist Criminology for 2017. Dr. Clinkinbeard’s work appears in *Criminal Justice & Behavior*, *Feminist Criminology*, *Journal of Criminal Justice*, *Journal of Youth & Adolescence*, *Youth & Society*, and *Justice Quarterly*. She has taught a variety of courses though most often teaches research methods courses at all levels (undergraduate, masters, doctoral). She was recognized with the CPACS Alumni Outstanding Teaching Award in 2020.

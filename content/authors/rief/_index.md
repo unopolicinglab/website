@@ -14,7 +14,7 @@ role: Alumna
 
 # Organizations/Affiliations
 organizations:
-- name: University of Nebraska Omaha
+- name: University of Nebraska at Omaha
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
@@ -28,13 +28,13 @@ interests:
 education:
   courses:
   - course: PhD in Criminology and Criminal Justice
-    institution: University of Nebraska Omaha
+    institution: University of Nebraska at Omaha
     year: "2023"
   - course: MA in Criminology and Criminal Justice
-    institution: University of Nebraska Omaha
+    institution: University of Nebraska at Omaha
     year: "2019"
   - course: BS in Criminology and Criminal Justice
-    institution: University of Nebraska Omaha
+    institution: University of Nebraska at Omaha
     year: "2017"
 
 # Social/Academic Networking
@@ -67,4 +67,4 @@ user_groups:
 - Alumni
 ---
 
-Rachael Rief is an alumna of the B.S., M.A., and Ph.D programs in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research focuses on women in policing, police culture, occupational outcomes, and officer well-being. Among other topics, she has examined the role of gender in individuals' decisions to enter the field and the effect of officers’ perceived fit in their work environment on outcomes like interactions with co-workers, tenure, and stress. Her work has appeared in *Police Quarterly*, *Feminist Criminology*, *Criminal Justice & Behavior*, *Policing: An International Journal*, and *Police Chief Magazine*. Rachael is currently an assistant professor in the College of Health and Public Service at the [University of North Texas](https://hps.unt.edu/people/rachael-rief-phd.html). 
+Rachael Rief is an alumna of the B.S., M.A., and Ph.D programs in the School of Criminology and Criminal Justice at the University of Nebraska at Omaha. Her research focuses on women in policing, police culture, occupational outcomes, and officer well-being. Among other topics, she has examined the role of gender in individuals' decisions to enter the field and the effect of officers’ perceived fit in their work environment on outcomes like interactions with co-workers, tenure, and stress. Her work has appeared in *Police Quarterly*, *Feminist Criminology*, *Criminal Justice & Behavior*, *Policing: An International Journal*, and *Police Chief Magazine*. Rachael is currently an assistant professor in the College of Health and Public Service at the [University of North Texas](https://hps.unt.edu/people/rachael-rief-phd.html). 

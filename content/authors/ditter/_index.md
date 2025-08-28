@@ -14,7 +14,7 @@ role: Alumna
 
 # Organizations/Affiliations
 organizations:
-- name: University of Nebraska Omaha
+- name: University of Nebraska at Omaha
   url: "https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/funded-graduate-students.php#Masters%20Students%20(funded%20on%20graduate%20assistantships)-main"
 
 # Short bio (displayed in user profile at end of posts)
@@ -29,7 +29,7 @@ interests:
 education:
   courses:
   - course: MS in Criminology & Criminal Justice
-    institution: University of Nebraska Omaha
+    institution: University of Nebraska at Omaha
     year: "Anticipated 2025"
   - course: BS in Criminal Justice & Psychology
     institution: Fort Hays State University
@@ -59,4 +59,4 @@ user_groups:
 - Alumni
 ---
 
-Loganne Ditter earned her M.S. from the School of Criminology and Criminal Justice at the University of Nebraska Omaha in 2025. She also holds a B.S. in psychology and criminal justice from Fort Hays State University. Her research interests include rural crime, intimate partner violence and juvenile justice. 
+Loganne Ditter earned her M.S. from the School of Criminology and Criminal Justice at the University of Nebraska at Omaha in 2025. She also holds a B.S. in psychology and criminal justice from Fort Hays State University. Her research interests include rural crime, intimate partner violence and juvenile justice. 

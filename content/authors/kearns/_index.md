@@ -14,7 +14,7 @@ role: Associate Professor
 
 # Organizations/Affiliations
 organizations:
-- name: University of Nebraska Omaha
+- name: University of Nebraska at Omaha
   url: "https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/erin-kearns.php"
 - name: National Counterterrorism Innovation, Technology, and Education Center
   url: https://www.unomaha.edu/ncite/index.php
