@@ -1,7 +1,9 @@
----
-title: "An Assessment of Labor Trafficking in Nebraska"
-authors:
-- ["Teresa Kulig","hashimi","Valeria Torres-Rivera","Kaitlyn Swanberg","Morgan Goslar"]
++++
+# Paper title
+title = "An Assessment of Labor Trafficking in Nebraska"
+
+# Authors
+authors = ["Teresa Kulig", "hashimi", "Valeria Torres-Rivera", "Kaitlyn Swanberg", "Morgan Goslar"]
 
 # Publication types (2 = Journal article; 3 = preprint; 4 = report; 6 = book chapter)
 publication_types = ["4"]
