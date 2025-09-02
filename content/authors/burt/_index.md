@@ -30,7 +30,7 @@ education:
   - course: MA in Criminology & Criminal Justice
     institution: University of Nebraska at Omaha
     year: "Anticipated 2027"
-  - course: BA in Legal Studies
+  - course: BA in Criminal Justice
     institution: University of South Dakota
     year: "2025"
 
