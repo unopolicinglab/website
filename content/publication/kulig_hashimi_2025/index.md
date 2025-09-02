@@ -15,7 +15,8 @@ date = 2025-09-01T11:00:00Z
 summary = ""
 
 # Abstract
-abstract = "Labor trafficking victimization is a public health concern that requires a coordinated societal response to guide victim services and support, ensure offender accountability, and promote broader community safety (Greenbaum, 2020). In order to implement effective prevention and intervention strategies, we need to deepen our understanding of the pathways that lead to labor trafficking—a crime for which the nature and scope remain largely unknown (Dank et al., 2021; Franchino-Olsen et al., 2022; Zhang, 2012b). To address these gaps, the current study conducted an assessment of labor trafficking in Nebraska, where knowledge about these events is elusive.
+abstract = "Labor trafficking victimization is a public health concern that requires a coordinated societal response to guide victim services and support, ensure offender accountability, and promote broader community safety (Greenbaum, 2020). In order to implement effective prevention and intervention strategies, we need to deepen our understanding of the pathways that lead to labor trafficking—a crime for which the nature and scope remain largely unknown (Dank et al., 2021; Franchino-Olsen et al., 2022; Zhang, 2012b). To address these gaps, the current study conducted an assessment of labor trafficking in Nebraska, where knowledge about these events is elusive."
+
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
 tags = ["Labor trafficking", "Nebraska", "Investigations", "Service providers"]
