@@ -23,8 +23,8 @@ bio: My research interests lie in policing methods, public perception of authori
 interests:
 - Police use of force
 - Public sentiment
-- Quantum social holography
-- Ancient Greek philosophy
+- Quantitative methods
+- Philosophy
 
 education:
   courses:
@@ -68,4 +68,4 @@ user_groups:
 - Grad Students
 ---
 
-Jordan Cline is a Master's student in the School of Criminology and Criminal Justice at the University of Nebraska at Omaha. His research interests include policing methods, public sentiment, and data analysis. He also studies philosophy, particularly the ancient Greeks, quantum mechanics, and how it all may apply to social networks. Jordan holds a B.S. in Criminal Justice with minors in philosophy and political science from Wichita State University. Currently, he is working with Dr. Nix alongside other students studying police uses of deadly force.
+Jordan Cline is a master of arts student in the School of Criminology and Criminal Justice at the University of Nebraska at Omaha. He also enjoys studying philosophy, physics, art, and everything in between. Jordan holds a B.S. in Criminal Justice with minors in philosophy and political science from Wichita State University. Currently, he works in the VIPR Lab on projects involving police shootings and traffic stops.
