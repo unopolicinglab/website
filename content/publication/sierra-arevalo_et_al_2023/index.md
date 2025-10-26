@@ -37,7 +37,7 @@ featured: false
 # links:
 # - name: ""
 #   url: ""
-url_pdf: "https://jnix.netlify.app/files/pdfs/crim_war_on_cops.pdf"
+url_pdf: "https://digitalcommons.unomaha.edu/cgi/viewcontent.cgi?article=1194&context=criminaljusticefacpub"
 url_code: ""
 url_dataset: ''
 url_poster: ''
