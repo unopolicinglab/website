@@ -40,7 +40,7 @@ url_code = ""
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-links = [{name = "Report", url="https://www.viprlab.org/publication/kulig_hashimi_2025/Kulig et al (2025) An Assessment of Labor Trafficking in Nebraska.pdf"}]
+links = [{name = "Report", url = "https://www.viprlab.org/publication/kulig_hashimi_2025/Kulig_et_al_(2026)_An_Assessment_of_Labor_Trafficking_in_Nebraska.pdf"}]
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder. 
