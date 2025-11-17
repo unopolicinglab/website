@@ -19,15 +19,19 @@ header:
 
 ## 2025
 
+### November
+
+📰 *USA Today* interviewed Dr. Nix about community policing and its potential effects on crime in Birmingham, AL. Read it [here](https://www.usatoday.com/story/news/politics/2025/11/16/michael-pickett-birmingham-alabama-police-chief/87114615007/).
+
 ### August
 
-📰 *KETV* featured Dr.'s Kulig and Hashimi's study on labor trafficking in Nebraska. Read it [here](https://www.ketv.com/article/uno-presents-labor-trafficking-in-nebraska-report/65926117)
+📰 *KETV* featured Dr.'s Kulig and Hashimi's study on labor trafficking in Nebraska. Read it [here](https://www.ketv.com/article/uno-presents-labor-trafficking-in-nebraska-report/65926117).
 
-📰 *First Alert 6* featured a study on labor trafficking in Nebraska by Dr. Kulig and Dr. Hashimi. Read it [here](https://www.wowt.com/2025/08/28/university-nebraska-omaha-seeking-help-labor-trafficking-victims/)
+📰 *First Alert 6* featured a study on labor trafficking in Nebraska by Dr. Kulig and Dr. Hashimi. Read it [here](https://www.wowt.com/2025/08/28/university-nebraska-omaha-seeking-help-labor-trafficking-victims/).
 
-📰 *The Omaha World Herald* featured Dr. Kulig's and Dr. Hashimi's study on labor trafficking in Nebraska. Read it [here](https://omaha.com/news/local/crime-courts/article_6710c35f-5534-41a9-af74-f42d355afb1a.html)
+📰 *The Omaha World Herald* featured Dr. Kulig's and Dr. Hashimi's study on labor trafficking in Nebraska. Read it [here](https://omaha.com/news/local/crime-courts/article_6710c35f-5534-41a9-af74-f42d355afb1a.html).
 
-📰 *UNO Press Release* featured a community event on labor trafficking hosted by Dr.'s Kulig and Hashimi. Read it [here](https://www.unomaha.edu/news/2025/08/uno-study-offers-first-ever-look-into-labor-trafficking-in-nebraska.php)
+📰 *UNO Press Release* featured a community event on labor trafficking hosted by Dr.'s Kulig and Hashimi. Read it [here](https://www.unomaha.edu/news/2025/08/uno-study-offers-first-ever-look-into-labor-trafficking-in-nebraska.php).
 
 📰 *The Milwaukee Journal Sentinel* interviewed Dr. Nix about policing and public trust. Read it [here](https://www.jsonline.com/story/news/investigations/2025/08/20/milwaukee-police-officer-was-on-brady-list-twice-before-he-was-fired/85364335007/).
 
