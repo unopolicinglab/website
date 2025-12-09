@@ -8,6 +8,9 @@ authors = ["ouellet", "hashimi", "Jason Gravel", "Dean Dabney"]
 # Publication types (2 = Journal article; 3 = preprint; 4 = report; 6 = book chapter)
 publication_types = ["2"]
 
+# Publication
+publication = "*Police Chief Magazine*"
+
 # Date this page was created.
 date = "2025-12-02T11:00:00Z"
 
