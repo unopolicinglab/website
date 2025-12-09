@@ -15,10 +15,10 @@ publication = "*Police Chief Magazine*"
 date = "2025-12-02T11:00:00Z"
 
 # Project summary to display on homepage.
-summary = "This article argues that many persistent policing challenges are driven less by formal rules than by informal social networks among officers. Using network science, departments can map hidden relationships within their workforce to identify influential officers, isolated individuals, and tightly knit subgroups that shape behavior and norms. Leveraging existing administrative data, this approach allows leaders to intervene earlier, improve policy adoption, reduce problematic behaviors such as excessive force, and manage culture more effectively by addressing how officers actually connect and influence one another in daily practice."
+summary = ""
 
 # Abstract
-abstract = ""
+abstract = "This article argues that many persistent policing challenges are driven less by formal rules than by informal social networks among officers. Using network science, departments can map hidden relationships within their workforce to identify influential officers, isolated individuals, and tightly knit subgroups that shape behavior and norms. Leveraging existing administrative data, this approach allows leaders to intervene earlier, improve policy adoption, reduce problematic behaviors such as excessive force, and manage culture more effectively by addressing how officers actually connect and influence one another in daily practice."
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
