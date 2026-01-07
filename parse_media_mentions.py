@@ -2,13 +2,14 @@
 """
 Media Mentions Parser for UNO Policing Lab
 Parses markdown media mentions and generates JSON and RSS feeds
+Enhanced to extract article titles from URLs
 """
 
 import json
 import re
 from datetime import datetime
 from typing import List, Dict, Optional
-from urllib.parse import urlparse
+from urllib.parse import urlparse, unquote
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 
@@ -98,6 +99,46 @@ class MediaMentionsParser:
     def __init__(self):
         self.mentions: List[MediaMention] = []
     
+    @staticmethod
+    def extract_title_from_url(url: str) -> Optional[str]:
+        """Extract a readable title from URL slug"""
+        try:
+            # Parse URL
+            parsed = urlparse(url)
+            path = parsed.path
+            
+            # Get the last meaningful part of the path
+            parts = [p for p in path.split('/') if p]
+            if not parts:
+                return None
+            
+            # Get last part (usually the slug)
+            slug = parts[-1]
+            
+            # Clean up common patterns
+            slug = slug.replace('.html', '').replace('.php', '')
+            
+            # Split on hyphens and capitalize
+            words = slug.split('-')
+            # Filter out common short words
+            title_words = []
+            for word in words:
+                if word.lower() not in ['the', 'a', 'an', 'and', 'or', 'in', 'on', 'at', 'to', 'for']:
+                    title_words.append(word)
+                elif len(title_words) == 0:  # Keep first article
+                    title_words.append(word)
+            
+            # Remove numbers and common fragments
+            title_words = [w for w in title_words if not w.isdigit() and len(w) > 2]
+            
+            if not title_words:
+                return None
+            
+            title = ' '.join(title_words).title()
+            return title if len(title) > 5 else None
+        except:
+            return None
+    
     def parse_markdown(self, markdown_text: str) -> None:
         """Parse markdown format: * YYYY: [Outlet](url), [Outlet](url), ..."""
         
@@ -124,19 +165,24 @@ class MediaMentionsParser:
                 # Extract source name (remove "The" if present)
                 source = outlet.replace('The ', '').strip()
                 
-                # Generate date (use last day of year if specific date unknown)
-                date = f"{year}-12-01"
+                # Generate date (use first day of year for simplicity)
+                date = f"{year}-01-01"
                 
                 # Get topics from mapping, default to generic topics
                 topics = self.OUTLET_TOPICS.get(source, ["police", "news"])
                 
-                # Create mention
+                # Extract title from URL or use a default
+                article_title = self.extract_title_from_url(url)
+                if not article_title:
+                    article_title = f"{source} ({year})"
+                
+                # Create mention with extracted title as summary
                 mention = MediaMention(
                     title=f"{source} - {year}",
                     url=url,
                     source=source,
                     date=date,
-                    summary=f"Media coverage in {source} featuring lab research on policing",
+                    summary=article_title,  # Use extracted title as summary
                     mention_type="referenced",
                     topics=topics,
                     featured=False
@@ -216,7 +262,7 @@ class MediaMentionsParser:
         xml_str = '\n'.join([line for line in xml_str.split('\n') if line.strip()])
         # Remove XML declaration line if duplicate
         lines = xml_str.split('\n')
-        if lines[0].startswith('<?xml') and lines[1].startswith('<?xml'):
+        if lines[0].startswith('<?xml') and len(lines) > 1 and lines[1].startswith('<?xml'):
             xml_str = '\n'.join(lines[1:])
         
         return xml_str
@@ -251,10 +297,10 @@ def main():
     rss_output = parser.generate_rss()
     
     print("Generated JSON:")
-    print(json_output)
+    print(json_output[:500] + "...")
     print("\n" + "="*80 + "\n")
-    print("Generated RSS:")
-    print(rss_output)
+    print("Generated RSS (first 500 chars):")
+    print(rss_output[:500] + "...")
     
     # Write to files
     with open('media-mentions.json', 'w') as f:
