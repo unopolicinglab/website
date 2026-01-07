@@ -2,7 +2,7 @@ name: Update Media Mentions
 
 on:
   schedule:
-    - cron: '0 9 * * MON'  # Run every Monday at 9 AM
+    - cron: '0 9 * * MON'  # Every Monday at 9 AM
   workflow_dispatch:
 
 jobs:
@@ -26,3 +26,8 @@ jobs:
           git add static/data/media-mentions.json static/data/media-mentions.xml
           git commit -m "Update media mentions [automated]" || exit 0
           git push
+      
+      - name: Trigger Netlify Deploy
+        if: success()
+        run: |
+          curl -X POST ${{ secrets.NETLIFY_BUILD_HOOK }}
