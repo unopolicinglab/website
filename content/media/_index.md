@@ -9,7 +9,7 @@ profile: false
 comments: false
 ---
 
-This page automatically tracks media coverage, interviews, and mentions of research by the VIPR Lab on policing and public safety. The feed aggregates stories where our Co-Direcotrs—Justin Nix, Sadaf Hashimi, and Travis Carter—have been quoted, cited, or featured as expert sources.
+This page automatically tracks media coverage, interviews, and mentions of research by the VIPR Lab on policing and public safety. The feed aggregates stories where our Co-Directors—Justin Nix, Sadaf Hashimi, and Travis Carter—have been quoted, cited, or featured as expert sources.
 
 **Research Areas Covered:**
 - Police use of force and accountability
