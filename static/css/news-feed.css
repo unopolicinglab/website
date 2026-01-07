@@ -1,13 +1,46 @@
-/**
- * News Feed Stylesheet
- * Version: 2.0.0 - January 2025 Update
- * Theme: Crimson Red (#DC143C)
- */
+/* News Feed Stylesheet - Crimson Red Theme Override
+   Overrides Wowchemy default colors for media mentions cards
+   Primary color: #DC143C (Crimson Red) */
 
-/* ========================================
-   Container & Loading States
-   ======================================== */
+/* STRONG OVERRIDES FOR BUTTONS */
+.filter-btn,
+.pagination-btn {
+  border-color: #DC143C !important;
+  color: #DC143C !important;
+  background-color: white !important;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
 
+.filter-btn:hover:not(.active),
+.pagination-btn:hover:not(:disabled):not(.active) {
+  background-color: #DC143C !important;
+  color: white !important;
+  border-color: #DC143C !important;
+  box-shadow: 0 2px 8px rgba(220, 20, 60, 0.2);
+}
+
+.filter-btn.active,
+.pagination-btn.active {
+  background-color: #DC143C !important;
+  color: white !important;
+  border-color: #DC143C !important;
+  font-weight: 600;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #ccc !important;
+  color: #ccc !important;
+  background-color: white !important;
+}
+
+/* News Feed Container */
 .news-feed-container {
   margin-top: 2rem;
 }
@@ -18,10 +51,7 @@
   color: var(--text-muted, #666);
 }
 
-/* ========================================
-   Controls Bar (Stats + Filters)
-   ======================================== */
-
+/* Controls Bar */
 .news-controls {
   display: flex;
   justify-content: space-between;
@@ -46,47 +76,7 @@
   flex-wrap: wrap;
 }
 
-/* ========================================
-   Buttons - Crimson Red Theme
-   ======================================== */
-
-.filter-btn,
-.pagination-btn {
-  padding: 0.5rem 1rem;
-  border: 2px solid #DC143C;
-  background: white;
-  color: #DC143C;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.85rem;
-  font-weight: 600;
-  transition: all 0.2s ease;
-}
-
-.filter-btn:hover,
-.pagination-btn:hover:not(:disabled) {
-  background: #DC143C;
-  color: white;
-  box-shadow: 0 2px 8px rgba(220, 20, 60, 0.3);
-}
-
-.filter-btn.active {
-  background: #DC143C;
-  color: white;
-}
-
-.pagination-btn:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-  border-color: #ccc;
-  color: #999;
-  background: #f5f5f5;
-}
-
-/* ========================================
-   Featured Section
-   ======================================== */
-
+/* Featured Section */
 .featured-section {
   margin-bottom: 2rem;
 }
@@ -111,10 +101,7 @@
   font-size: 1.2rem;
 }
 
-/* ========================================
-   Card Grid Layout
-   ======================================== */
-
+/* Card Grid Layout */
 .news-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -135,10 +122,7 @@
   }
 }
 
-/* ========================================
-   News Card
-   ======================================== */
-
+/* Individual Card Styling */
 .news-card {
   display: flex;
   flex-direction: column;
@@ -147,6 +131,8 @@
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  text-decoration: none;
+  color: inherit;
   min-height: 180px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
@@ -171,26 +157,17 @@
   outline-offset: 2px;
 }
 
-.news-card:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.news-card:focus-visible {
-  outline: 2px solid #DC143C;
-  outline-offset: 2px;
-}
-
-/* ========================================
-   Card Header (Source)
-   ======================================== */
-
+/* Card Header - Source */
 .card-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.5rem;
   padding: 0.75rem 1rem;
   background: var(--card-header-bg, #fafafa);
   border-bottom: 1px solid var(--border-color, #eee);
+  font-size: 0.8rem;
+  color: var(--text-muted, #666);
 }
 
 .dark .card-header {
@@ -209,22 +186,35 @@
 }
 
 .source-icon {
-  width: 20px;
-  height: 20px;
-  border-radius: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
   background: #DC143C;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
+  font-size: 10px;
   color: white;
+  flex-shrink: 0;
   font-weight: bold;
 }
 
-/* ========================================
-   Card Body (Title + Topics)
-   ======================================== */
+/* Featured Badge */
+.featured-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.15rem 0.4rem;
+  background: #fff0f5;
+  border: 1px solid #DC143C;
+  border-radius: 8px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #DC143C;
+  text-transform: uppercase;
+}
 
+/* Card Body */
 .card-body {
   flex: 1;
   padding: 1rem;
@@ -244,6 +234,15 @@
   overflow: hidden;
 }
 
+/* HIDE SUMMARY - DO NOT DISPLAY */
+.card-summary {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 /* Topic Tags */
 .card-topics {
   display: flex;
@@ -254,7 +253,7 @@
 
 .topic-tag {
   display: inline-block;
-  padding: 0.2rem 0.5rem;
+  padding: 0.15rem 0.4rem;
   background: #fce4ec;
   color: #DC143C;
   border-radius: 4px;
@@ -262,10 +261,7 @@
   font-weight: 500;
 }
 
-/* ========================================
-   Card Footer (Date, Badge, Link)
-   ======================================== */
-
+/* Card Footer */
 .card-footer {
   display: flex;
   align-items: center;
@@ -296,27 +292,23 @@
   opacity: 0.7;
 }
 
-/* Read Article Link */
+/* "Read More" Link */
 .card-footer a {
-  color: #DC143C;
+  color: #DC143C !important;
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.2s ease;
+  transition: all 0.2s;
   white-space: nowrap;
 }
 
 .card-footer a:hover {
-  color: white;
-  background: #DC143C;
-  padding: 0.25rem 0.5rem;
+  color: white !important;
+  background: #DC143C !important;
+  padding: 0.2rem 0.4rem;
   border-radius: 3px;
-  margin: -0.25rem -0.5rem;
 }
 
-/* ========================================
-   Mention Type Badges
-   ======================================== */
-
+/* Mention Type Badge */
 .mention-type-badge {
   display: inline-block;
   padding: 0.2rem 0.5rem;
@@ -328,58 +320,27 @@
   white-space: nowrap;
 }
 
-.mention-type-quoted {
-  background: #e8f5e9;
-  color: #2e7d32;
+.mention-type-quoted { 
+  background: #e8f5e9; 
+  color: #2e7d32; 
 }
 
-.mention-type-cited {
-  background: #e3f2fd;
-  color: #1565c0;
+.mention-type-cited { 
+  background: #e3f2fd; 
+  color: #1565c0; 
 }
 
-.mention-type-referenced {
-  background: #f3e5f5;
-  color: #7b1fa2;
+.mention-type-referenced { 
+  background: #f3e5f5; 
+  color: #7b1fa2; 
 }
 
-.mention-type-byline {
-  background: #fff3e0;
-  color: #ef6c00;
+.mention-type-byline { 
+  background: #fff3e0; 
+  color: #ef6c00; 
 }
 
-/* ========================================
-   Confidence Badges (if used)
-   ======================================== */
-
-.confidence-badge {
-  display: inline-block;
-  padding: 0.15rem 0.4rem;
-  border-radius: 8px;
-  font-size: 0.65rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.confidence-high {
-  background: #c8e6c9;
-  color: #2e7d32;
-}
-
-.confidence-medium {
-  background: #fff9c4;
-  color: #f9a825;
-}
-
-.confidence-low {
-  background: #ffcdd2;
-  color: #c62828;
-}
-
-/* ========================================
-   Pagination
-   ======================================== */
-
+/* Pagination */
 .pagination {
   display: flex;
   justify-content: center;
@@ -390,29 +351,14 @@
   flex-wrap: wrap;
 }
 
-.pagination-btn {
-  min-width: 44px;
-  min-height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.pagination-btn.active {
-  background: #DC143C;
-  color: white;
-}
-
 .pagination-info {
   font-size: 0.9rem;
   color: var(--text-muted, #666);
-  margin: 0 0.5rem;
+  margin: 0 1rem;
+  min-width: max-content;
 }
 
-/* ========================================
-   Empty State
-   ======================================== */
-
+/* No Stories Message */
 .no-stories {
   text-align: center;
   padding: 3rem;
@@ -421,10 +367,7 @@
   grid-column: 1 / -1;
 }
 
-/* ========================================
-   Dark Mode Support
-   ======================================== */
-
+/* Dark mode support */
 @media (prefers-color-scheme: dark) {
   .card-date::before {
     filter: invert(1);
@@ -435,10 +378,7 @@
   filter: invert(1);
 }
 
-/* ========================================
-   Responsive Adjustments
-   ======================================== */
-
+/* Responsive adjustments */
 @media (max-width: 480px) {
   .news-controls {
     flex-direction: column;
@@ -452,7 +392,6 @@
   .filter-btn {
     flex: 1;
     min-width: 80px;
-    text-align: center;
   }
 
   .pagination {
@@ -466,17 +405,18 @@
     font-size: 0.8rem;
   }
 
+  .pagination-info {
+    margin: 0 0.5rem;
+    font-size: 0.8rem;
+  }
+
   .card-footer {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem;
   }
 }
 
-/* ========================================
-   Print Styles
-   ======================================== */
-
+/* Print styles */
 @media print {
   .news-controls,
   .pagination,

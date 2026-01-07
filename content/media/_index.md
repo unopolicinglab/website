@@ -61,6 +61,7 @@ This page automatically tracks media coverage, interviews, and mentions of resea
 .news-stats {
   font-size: 0.95rem;
   color: var(--text-muted, #666);
+  font-weight: 500;
 }
 
 .news-filters {
@@ -71,23 +72,25 @@ This page automatically tracks media coverage, interviews, and mentions of resea
 
 .filter-btn {
   padding: 0.4rem 0.8rem;
-  border: 1px solid var(--btn-default-border, #ddd);
-  background: var(--btn-default-bg, white);
-  color: var(--body-color, #333);
+  border: 1px solid #DC143C;
+  background: white;
+  color: #DC143C;
   border-radius: 4px;
   cursor: pointer;
   font-size: 0.85rem;
   transition: all 0.2s;
+  font-weight: 500;
 }
 
 .filter-btn:hover {
-  background: var(--btn-hover-bg, #e9ecef);
+  background: #DC143C;
+  color: white;
 }
 
 .filter-btn.active {
-  background: #0066cc;
+  background: #DC143C;
   color: white;
-  border-color: #0066cc;
+  border-color: #DC143C;
 }
 
 /* Featured Section */
@@ -101,7 +104,7 @@ This page automatically tracks media coverage, interviews, and mentions of resea
   gap: 0.5rem;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #0066cc;
+  border-bottom: 2px solid #DC143C;
 }
 
 .featured-header h3 {
@@ -111,7 +114,7 @@ This page automatically tracks media coverage, interviews, and mentions of resea
 }
 
 .featured-icon {
-  color: #f4c430;
+  color: #DC143C;
   font-size: 1.2rem;
 }
 
@@ -143,38 +146,30 @@ This page automatically tracks media coverage, interviews, and mentions of resea
   border: 1px solid var(--border-color, #e0e0e0);
   border-radius: 8px;
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   text-decoration: none;
   color: inherit;
   min-height: 180px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .news-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-color: #DC143C;
 }
 
 .news-card.featured {
-  border: 2px solid #f4c430;
-  box-shadow: 0 2px 8px rgba(244, 196, 48, 0.2);
+  border: 2px solid #DC143C;
+  box-shadow: 0 2px 8px rgba(220, 20, 60, 0.2);
 }
 
 .news-card.featured:hover {
-  box-shadow: 0 8px 24px rgba(244, 196, 48, 0.3);
+  box-shadow: 0 8px 24px rgba(220, 20, 60, 0.3);
 }
 
 .news-card:focus {
-  outline: 2px solid #0066cc;
-  outline-offset: 2px;
-}
-
-.news-card:focus:not(:focus-visible) {
-  outline: none;
-}
-
-.news-card:focus-visible {
-  outline: 2px solid #0066cc;
+  outline: 2px solid #DC143C;
   outline-offset: 2px;
 }
 
@@ -191,30 +186,29 @@ This page automatically tracks media coverage, interviews, and mentions of resea
   color: var(--text-muted, #666);
 }
 
-.dark .card-header {
-  background: rgba(255, 255, 255, 0.05);
-}
-
 .card-source {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: #DC143C;
 }
 
 .source-icon {
   width: 16px;
   height: 16px;
   border-radius: 2px;
-  background: var(--text-muted, #999);
+  background: #DC143C;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 10px;
   color: white;
   flex-shrink: 0;
+  font-weight: bold;
 }
 
 /* Featured Badge */
@@ -223,32 +217,16 @@ This page automatically tracks media coverage, interviews, and mentions of resea
   align-items: center;
   gap: 0.25rem;
   padding: 0.15rem 0.4rem;
-  background: #fff8dc;
-  border: 1px solid #f4c430;
+  background: #fff0f5;
+  border: 1px solid #DC143C;
   border-radius: 8px;
   font-size: 0.65rem;
   font-weight: 600;
-  color: #b8860b;
+  color: #DC143C;
   text-transform: uppercase;
 }
 
-/* Confidence Badge */
-.confidence-badge {
-  display: inline-block;
-  padding: 0.15rem 0.4rem;
-  border-radius: 8px;
-  font-size: 0.65rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-}
-
-.confidence-high { background: #c8e6c9; color: #2e7d32; }
-.confidence-medium { background: #fff9c4; color: #f9a825; }
-.confidence-low { background: #ffcdd2; color: #c62828; }
-.confidence-unknown { background: #e0e0e0; color: #666; }
-
-/* Card Body - Headline */
+/* Card Body - Title Only */
 .card-body {
   flex: 1;
   padding: 1rem;
@@ -260,7 +238,7 @@ This page automatically tracks media coverage, interviews, and mentions of resea
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.4;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.75rem 0;
   color: var(--heading-color, #1a1a1a);
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -268,16 +246,9 @@ This page automatically tracks media coverage, interviews, and mentions of resea
   overflow: hidden;
 }
 
+/* Hide the summary field */
 .card-summary {
-  font-size: 0.875rem;
-  color: var(--text-muted, #666);
-  line-height: 1.5;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  margin: 0;
-  flex: 1;
+  display: none;
 }
 
 /* Topic Tags */
@@ -285,20 +256,20 @@ This page automatically tracks media coverage, interviews, and mentions of resea
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem;
-  margin-top: 0.5rem;
+  margin-top: auto;
 }
 
 .topic-tag {
   display: inline-block;
   padding: 0.15rem 0.4rem;
-  background: #e3f2fd;
-  color: #1565c0;
+  background: #fce4ec;
+  color: #DC143C;
   border-radius: 4px;
   font-size: 0.7rem;
   font-weight: 500;
 }
 
-/* Card Footer - Metadata */
+/* Card Footer - Metadata and Link */
 .card-footer {
   display: flex;
   align-items: center;
@@ -315,6 +286,8 @@ This page automatically tracks media coverage, interviews, and mentions of resea
   display: flex;
   align-items: center;
   gap: 0.35rem;
+  white-space: nowrap;
+  font-size: 0.75rem;
 }
 
 .card-date::before {
@@ -327,6 +300,22 @@ This page automatically tracks media coverage, interviews, and mentions of resea
   opacity: 0.7;
 }
 
+/* "Read More" Link */
+.card-footer a {
+  color: #DC143C;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.card-footer a:hover {
+  color: white;
+  background: #DC143C;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+}
+
 /* Mention Type Badge */
 .mention-type-badge {
   display: inline-block;
@@ -336,30 +325,28 @@ This page automatically tracks media coverage, interviews, and mentions of resea
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
-.mention-type-quoted { background: #e8f5e9; color: #2e7d32; }
-.mention-type-cited { background: #e3f2fd; color: #1565c0; }
-.mention-type-referenced { background: #f3e5f5; color: #7b1fa2; }
-.mention-type-byline { background: #fff3e0; color: #ef6c00; }
-
-/* Story Type Badge */
-.story-type-badge {
-  display: inline-block;
-  padding: 0.2rem 0.5rem;
-  border-radius: 10px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
+.mention-type-quoted { 
+  background: #e8f5e9; 
+  color: #2e7d32; 
 }
 
-.story-type-news { background: #f5f5f5; color: #666; }
-.story-type-research { background: #e8f5e9; color: #2e7d32; }
-.story-type-interview { background: #e3f2fd; color: #1565c0; }
-.story-type-opinion { background: #fff8e1; color: #ff8f00; }
-.story-type-policy { background: #fce4ec; color: #ad1457; }
-.story-type-feature { background: #ede7f6; color: #5e35b1; }
+.mention-type-cited { 
+  background: #e3f2fd; 
+  color: #1565c0; 
+}
+
+.mention-type-referenced { 
+  background: #f3e5f5; 
+  color: #7b1fa2; 
+}
+
+.mention-type-byline { 
+  background: #fff3e0; 
+  color: #ef6c00; 
+}
 
 /* Pagination */
 .pagination {
@@ -374,9 +361,9 @@ This page automatically tracks media coverage, interviews, and mentions of resea
 
 .pagination-btn {
   padding: 0.5rem 1rem;
-  border: 1px solid var(--border-color, #ddd);
-  background: var(--btn-default-bg, white);
-  color: var(--body-color, #333);
+  border: 1px solid #DC143C;
+  background: white;
+  color: #DC143C;
   border-radius: 4px;
   cursor: pointer;
   font-size: 0.9rem;
@@ -386,21 +373,25 @@ This page automatically tracks media coverage, interviews, and mentions of resea
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 500;
 }
 
 .pagination-btn:hover:not(:disabled) {
-  background: var(--btn-hover-bg, #e9ecef);
+  background: #DC143C;
+  color: white;
 }
 
 .pagination-btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+  border-color: #ccc;
+  color: #ccc;
 }
 
 .pagination-btn.active {
-  background: #0066cc;
+  background: #DC143C;
   color: white;
-  border-color: #0066cc;
+  border-color: #DC143C;
 }
 
 .pagination-info {
@@ -418,15 +409,23 @@ This page automatically tracks media coverage, interviews, and mentions of resea
   grid-column: 1 / -1;
 }
 
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  .card-date::before {
-    filter: invert(1);
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .news-controls {
+    flex-direction: column;
+    align-items: flex-start;
   }
-}
 
-.dark .card-date::before {
-  filter: invert(1);
+  .pagination {
+    gap: 0.25rem;
+  }
+
+  .pagination-btn {
+    padding: 0.4rem 0.6rem;
+    min-width: 40px;
+    min-height: 40px;
+    font-size: 0.8rem;
+  }
 }
 </style>
 
@@ -437,14 +436,13 @@ This page automatically tracks media coverage, interviews, and mentions of resea
   function renderMediaCard(story, isFeatured) {
     var mentionType = story.mention_type || 'referenced';
     var sourceInitial = (story.source || 'N')[0].toUpperCase();
-    var confidence = story.relevance_confidence || 'unknown';
 
     // Build topics HTML
     var topicsHTML = '';
     if (story.topics && story.topics.length > 0) {
       topicsHTML = '<div class="card-topics">';
       var topics = Array.isArray(story.topics) ? story.topics : [story.topics];
-      topics.slice(0, 3).forEach(function(topic) {
+      topics.slice(0, 4).forEach(function(topic) {
         topicsHTML += '<span class="topic-tag">' + escapeHtml(topic) + '</span>';
       });
       topicsHTML += '</div>';
@@ -452,10 +450,7 @@ This page automatically tracks media coverage, interviews, and mentions of resea
 
     var cardClass = 'news-card' + (isFeatured ? ' featured' : '');
 
-    var html = '<article class="' + cardClass + '" role="listitem" tabindex="0" ' +
-      'onclick="window.open(\'' + escapeHtml(story.url) + '\', \'_blank\', \'noopener\')" ' +
-      'onkeydown="if(event.key===\'Enter\')window.open(\'' + escapeHtml(story.url) + '\', \'_blank\', \'noopener\')" ' +
-      'aria-label="' + escapeHtml(story.title) + '">' +
+    var html = '<article class="' + cardClass + '" role="listitem" tabindex="0">' +
       '<div class="card-header">' +
       '<div class="card-source">' +
       '<span class="source-icon" aria-hidden="true">' + sourceInitial + '</span>' +
@@ -464,19 +459,17 @@ This page automatically tracks media coverage, interviews, and mentions of resea
 
     if (isFeatured) {
       html += '<span class="featured-badge">&#9733; Featured</span>';
-    } else {
-      html += '<span class="confidence-badge confidence-' + confidence + '">' + confidence + '</span>';
     }
 
     html += '</div>' +
       '<div class="card-body">' +
       '<h3 class="card-title">' + escapeHtml(story.title) + '</h3>' +
-      '<p class="card-summary">' + escapeHtml(stripHtml(story.snippet || story.summary || '')) + '</p>' +
       topicsHTML +
       '</div>' +
       '<div class="card-footer">' +
       '<span class="card-date">' + formatDate(story.date || story.date_discovered) + '</span>' +
       '<span class="mention-type-badge mention-type-' + mentionType + '">' + capitalize(mentionType) + '</span>' +
+      '<a href="' + escapeHtml(story.url) + '" target="_blank" rel="noopener">Read Full Article →</a>' +
       '</div>' +
       '</article>';
 
@@ -495,23 +488,10 @@ This page automatically tracks media coverage, interviews, and mentions of resea
     return div.innerHTML.replace(/'/g, '&#39;').replace(/"/g, '&quot;');
   }
 
-  function stripHtml(html) {
-    var tmp = document.createElement('div');
-    tmp.innerHTML = html;
-    return tmp.textContent || tmp.innerText || '';
-  }
-
   function formatDate(dateStr) {
     if (!dateStr) return 'Unknown';
     var date = new Date(dateStr);
     if (isNaN(date.getTime())) return dateStr;
-
-    var now = new Date();
-    var diffDays = Math.floor((now - date) / (1000 * 60 * 60 * 24));
-
-    if (diffDays === 0) return 'Today';
-    if (diffDays === 1) return 'Yesterday';
-    if (diffDays < 7) return diffDays + ' days ago';
 
     return date.toLocaleDateString('en-US', {
       year: 'numeric',
