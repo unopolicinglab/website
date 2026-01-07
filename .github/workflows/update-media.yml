@@ -1,0 +1,28 @@
+name: Update Media Mentions
+
+on:
+  schedule:
+    - cron: '0 9 * * MON'  # Run every Monday at 9 AM
+  workflow_dispatch:
+
+jobs:
+  update-media:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      
+      - name: Run media mentions parser
+        run: python3 parse_media_mentions.py
+      
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add static/data/media-mentions.json static/data/media-mentions.xml
+          git commit -m "Update media mentions [automated]" || exit 0
+          git push
