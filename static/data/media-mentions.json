@@ -255,7 +255,7 @@
       "source": "Omaha World-Herald",
       "date": "2023-03-21",
       "summary": "Article_19B630De Bea5 11Ed B07C 9B7F82541A13",
-      "mention_type": ["quoted", "cited"]
+      "mention_type": ["quoted", "cited"],
       "topics": [
         "police",
         "regional",
@@ -827,7 +827,7 @@
       "source": "Phoenix New Times",
       "date": "2019-04-19",
       "summary": "Report Single Answer Spike Phoenix Police Shootings",
-      "mention_type": ["quoted", "cited"]
+      "mention_type": ["quoted", "cited"],
       "topics": [
         "police",
         "regional",
