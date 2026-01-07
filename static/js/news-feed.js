@@ -262,22 +262,68 @@ class NewsFeed {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
-  defaultRenderCard(story) {
-    return `
-      <article class="news-card" role="listitem" tabindex="0">
+  formatDate(dateStr) {
+    if (!dateStr) return 'Unknown';
+    try {
+      const date = new Date(dateStr);
+      return date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+      });
+    } catch {
+      return dateStr;
+    }
+  }
+
+  defaultRenderCard(story, isFeatured = false) {
+    // Build topics HTML
+    let topicsHTML = '';
+    if (story.topics && story.topics.length > 0) {
+      topicsHTML = '<div class="card-topics">';
+      const topics = Array.isArray(story.topics) ? story.topics : [story.topics];
+      topics.slice(0, 4).forEach(topic => {
+        topicsHTML += `<span class="topic-tag">${this.escapeHtml(topic)}</span>`;
+      });
+      topicsHTML += '</div>';
+    }
+
+    // Card class
+    const cardClass = isFeatured ? 'news-card featured' : 'news-card';
+    
+    // Mention type badge
+    const mentionType = story.mention_type || 'referenced';
+    const mentionBadge = `<span class="mention-type-badge mention-type-${mentionType}">${this.capitalize(mentionType)}</span>`;
+
+    // Build the card HTML
+    const html = `
+      <article class="${cardClass}" role="listitem" tabindex="0">
         <div class="card-header">
-          <div class="card-source">${story.source || 'Unknown'}</div>
+          <div class="card-source">
+            <span class="source-icon">${(story.source || 'N')[0].toUpperCase()}</span>
+            <span>${this.escapeHtml(story.source || 'Unknown')}</span>
+          </div>
         </div>
         <div class="card-body">
-          <h3 class="card-title">${story.title}</h3>
-          <p class="card-summary">${story.title || ''}</p>
+          <h3 class="card-title">${this.escapeHtml(story.title)}</h3>
+          ${topicsHTML}
         </div>
         <div class="card-footer">
-          <span class="card-date">${story.date}</span>
-          <a href="${story.url}" target="_blank" rel="noopener">Read More →</a>
+          <span class="card-date">${this.formatDate(story.date)}</span>
+          <span>${mentionBadge}</span>
+          <a href="${this.escapeHtml(story.url)}" target="_blank" rel="noopener">Read Full Article →</a>
         </div>
       </article>
     `;
+
+    return html;
+  }
+
+  escapeHtml(text) {
+    if (!text) return '';
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML.replace(/'/g, '&#39;').replace(/"/g, '&quot;');
   }
 }
 
