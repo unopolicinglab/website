@@ -1,8 +1,13 @@
-/* News Feed Stylesheet
-   Styles for media mentions cards, grid layout, and interactive elements
-   Color theme: Crimson Red (#DC143C) to match Strawberry theme */
+/**
+ * News Feed Stylesheet
+ * Version: 2.0.0 - January 2025 Update
+ * Theme: Crimson Red (#DC143C)
+ */
 
-/* News Feed Container */
+/* ========================================
+   Container & Loading States
+   ======================================== */
+
 .news-feed-container {
   margin-top: 2rem;
 }
@@ -13,7 +18,10 @@
   color: var(--text-muted, #666);
 }
 
-/* Controls Bar */
+/* ========================================
+   Controls Bar (Stats + Filters)
+   ======================================== */
+
 .news-controls {
   display: flex;
   justify-content: space-between;
@@ -38,43 +46,47 @@
   flex-wrap: wrap;
 }
 
-/* Filter and Pagination Buttons - Crimson Red Theme */
+/* ========================================
+   Buttons - Crimson Red Theme
+   ======================================== */
+
 .filter-btn,
 .pagination-btn {
-  padding: 0.4rem 0.8rem;
-  border: 1px solid #DC143C;
+  padding: 0.5rem 1rem;
+  border: 2px solid #DC143C;
   background: white;
   color: #DC143C;
   border-radius: 4px;
   cursor: pointer;
   font-size: 0.85rem;
-  transition: all 0.2s;
-  font-weight: 500;
+  font-weight: 600;
+  transition: all 0.2s ease;
 }
 
 .filter-btn:hover,
 .pagination-btn:hover:not(:disabled) {
   background: #DC143C;
   color: white;
-  box-shadow: 0 2px 8px rgba(220, 20, 60, 0.2);
+  box-shadow: 0 2px 8px rgba(220, 20, 60, 0.3);
 }
 
-.filter-btn.active,
-.pagination-btn.active {
+.filter-btn.active {
   background: #DC143C;
   color: white;
-  border-color: #DC143C;
-  font-weight: 600;
 }
 
 .pagination-btn:disabled {
-  opacity: 0.5;
+  opacity: 0.4;
   cursor: not-allowed;
   border-color: #ccc;
-  color: #ccc;
+  color: #999;
+  background: #f5f5f5;
 }
 
-/* Featured Section */
+/* ========================================
+   Featured Section
+   ======================================== */
+
 .featured-section {
   margin-bottom: 2rem;
 }
@@ -99,7 +111,10 @@
   font-size: 1.2rem;
 }
 
-/* Card Grid Layout */
+/* ========================================
+   Card Grid Layout
+   ======================================== */
+
 .news-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -120,7 +135,10 @@
   }
 }
 
-/* Individual Card Styling */
+/* ========================================
+   News Card
+   ======================================== */
+
 .news-card {
   display: flex;
   flex-direction: column;
@@ -129,9 +147,6 @@
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
   min-height: 180px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
@@ -165,17 +180,17 @@
   outline-offset: 2px;
 }
 
-/* Card Header - Source and Date */
+/* ========================================
+   Card Header (Source)
+   ======================================== */
+
 .card-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.5rem;
   padding: 0.75rem 1rem;
   background: var(--card-header-bg, #fafafa);
   border-bottom: 1px solid var(--border-color, #eee);
-  font-size: 0.8rem;
-  color: var(--text-muted, #666);
 }
 
 .dark .card-header {
@@ -194,66 +209,22 @@
 }
 
 .source-icon {
-  width: 16px;
-  height: 16px;
-  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
   background: #DC143C;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 10px;
+  font-size: 11px;
   color: white;
-  flex-shrink: 0;
   font-weight: bold;
 }
 
-/* Featured Badge */
-.featured-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-  padding: 0.15rem 0.4rem;
-  background: #fff0f5;
-  border: 1px solid #DC143C;
-  border-radius: 8px;
-  font-size: 0.65rem;
-  font-weight: 600;
-  color: #DC143C;
-  text-transform: uppercase;
-}
+/* ========================================
+   Card Body (Title + Topics)
+   ======================================== */
 
-/* Confidence Badge */
-.confidence-badge {
-  display: inline-block;
-  padding: 0.15rem 0.4rem;
-  border-radius: 8px;
-  font-size: 0.65rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-}
-
-.confidence-high { 
-  background: #c8e6c9; 
-  color: #2e7d32; 
-}
-
-.confidence-medium { 
-  background: #fff9c4; 
-  color: #f9a825; 
-}
-
-.confidence-low { 
-  background: #ffcdd2; 
-  color: #c62828; 
-}
-
-.confidence-unknown { 
-  background: #e0e0e0; 
-  color: #666; 
-}
-
-/* Card Body - Title Only (No Summary) */
 .card-body {
   flex: 1;
   padding: 1rem;
@@ -273,11 +244,6 @@
   overflow: hidden;
 }
 
-/* Hide the summary field */
-.card-summary {
-  display: none;
-}
-
 /* Topic Tags */
 .card-topics {
   display: flex;
@@ -288,7 +254,7 @@
 
 .topic-tag {
   display: inline-block;
-  padding: 0.15rem 0.4rem;
+  padding: 0.2rem 0.5rem;
   background: #fce4ec;
   color: #DC143C;
   border-radius: 4px;
@@ -296,7 +262,10 @@
   font-weight: 500;
 }
 
-/* Card Footer - Metadata and Link */
+/* ========================================
+   Card Footer (Date, Badge, Link)
+   ======================================== */
+
 .card-footer {
   display: flex;
   align-items: center;
@@ -327,23 +296,27 @@
   opacity: 0.7;
 }
 
-/* "Read More" Link */
+/* Read Article Link */
 .card-footer a {
   color: #DC143C;
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
   white-space: nowrap;
 }
 
 .card-footer a:hover {
   color: white;
   background: #DC143C;
-  padding: 0.2rem 0.4rem;
+  padding: 0.25rem 0.5rem;
   border-radius: 3px;
+  margin: -0.25rem -0.5rem;
 }
 
-/* Mention Type Badge */
+/* ========================================
+   Mention Type Badges
+   ======================================== */
+
 .mention-type-badge {
   display: inline-block;
   padding: 0.2rem 0.5rem;
@@ -355,27 +328,58 @@
   white-space: nowrap;
 }
 
-.mention-type-quoted { 
-  background: #e8f5e9; 
-  color: #2e7d32; 
+.mention-type-quoted {
+  background: #e8f5e9;
+  color: #2e7d32;
 }
 
-.mention-type-cited { 
-  background: #e3f2fd; 
-  color: #1565c0; 
+.mention-type-cited {
+  background: #e3f2fd;
+  color: #1565c0;
 }
 
-.mention-type-referenced { 
-  background: #f3e5f5; 
-  color: #7b1fa2; 
+.mention-type-referenced {
+  background: #f3e5f5;
+  color: #7b1fa2;
 }
 
-.mention-type-byline { 
-  background: #fff3e0; 
-  color: #ef6c00; 
+.mention-type-byline {
+  background: #fff3e0;
+  color: #ef6c00;
 }
 
-/* Pagination */
+/* ========================================
+   Confidence Badges (if used)
+   ======================================== */
+
+.confidence-badge {
+  display: inline-block;
+  padding: 0.15rem 0.4rem;
+  border-radius: 8px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.confidence-high {
+  background: #c8e6c9;
+  color: #2e7d32;
+}
+
+.confidence-medium {
+  background: #fff9c4;
+  color: #f9a825;
+}
+
+.confidence-low {
+  background: #ffcdd2;
+  color: #c62828;
+}
+
+/* ========================================
+   Pagination
+   ======================================== */
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -392,17 +396,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 500;
+}
+
+.pagination-btn.active {
+  background: #DC143C;
+  color: white;
 }
 
 .pagination-info {
   font-size: 0.9rem;
   color: var(--text-muted, #666);
-  margin: 0 1rem;
-  min-width: max-content;
+  margin: 0 0.5rem;
 }
 
-/* No Stories Message */
+/* ========================================
+   Empty State
+   ======================================== */
+
 .no-stories {
   text-align: center;
   padding: 3rem;
@@ -411,7 +421,10 @@
   grid-column: 1 / -1;
 }
 
-/* Dark mode support */
+/* ========================================
+   Dark Mode Support
+   ======================================== */
+
 @media (prefers-color-scheme: dark) {
   .card-date::before {
     filter: invert(1);
@@ -422,7 +435,10 @@
   filter: invert(1);
 }
 
-/* Responsive adjustments */
+/* ========================================
+   Responsive Adjustments
+   ======================================== */
+
 @media (max-width: 480px) {
   .news-controls {
     flex-direction: column;
@@ -436,6 +452,7 @@
   .filter-btn {
     flex: 1;
     min-width: 80px;
+    text-align: center;
   }
 
   .pagination {
@@ -449,18 +466,17 @@
     font-size: 0.8rem;
   }
 
-  .pagination-info {
-    margin: 0 0.5rem;
-    font-size: 0.8rem;
-  }
-
   .card-footer {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.5rem;
   }
 }
 
-/* Print styles */
+/* ========================================
+   Print Styles
+   ======================================== */
+
 @media print {
   .news-controls,
   .pagination,
