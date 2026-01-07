@@ -1,0 +1,1205 @@
+{
+  "metadata": {
+    "total_mentions": 72,
+    "last_updated": "2026-01-07T15:44:41.521722",
+    "sources": [
+      "Wall Street Journal",
+      "NBC News",
+      "Buzzfeed News",
+      "Minneapolis Star Tribune",
+      "NPR",
+      "Salt Lake Tribune",
+      "Wichita Eagle",
+      "Lincoln Journal Star",
+      "Omaha World-Herald",
+      "Washington Post",
+      "LA Times",
+      "Omaha World Herald",
+      "Newsy",
+      "USA Today",
+      "American Psychological Association",
+      "Phoenix New Times",
+      "Reader",
+      "Reuters",
+      "Tampa Bay Times",
+      "Boise State Public Radio",
+      "Nature",
+      "Topeka Capital Journal",
+      "New York Times",
+      "Milwaukee Journal Sentinel",
+      "Dallas Morning News",
+      "Globe and Mail",
+      "KETV",
+      "Die Welt",
+      "ABC News",
+      "New York Magazine",
+      "Santa Fe Reporter",
+      "Wyoming Public Media",
+      "WIRED",
+      "Cronkite News",
+      "Baltimore Sun",
+      "Mother Jones",
+      "Texas Tribune",
+      "Arizona Republic",
+      "Trace",
+      "Fox News",
+      "Indianapolis Star",
+      "Healthline",
+      "CityLab",
+      "Huffington Post",
+      "Denver Post",
+      "Cruso\u00e9",
+      "Houston Chronicle"
+    ],
+    "date_range": {
+      "earliest": "2015-12-01",
+      "latest": "2025-12-01"
+    }
+  },
+  "stories": [
+    {
+      "title": "USA Today - 2025",
+      "url": "https://www.usatoday.com/story/news/politics/2025/11/16/michael-pickett-birmingham-alabama-police-chief/87114615007/",
+      "source": "USA Today",
+      "date": "2025-12-01",
+      "summary": "Media coverage in USA Today featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "national news",
+        "policy"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2025-12-01"
+    },
+    {
+      "title": "Denver Post - 2025",
+      "url": "https://www.denverpost.com/2025/04/20/colorado-police-chases-deaths-injuries-westminster-aurora/",
+      "source": "Denver Post",
+      "date": "2025-12-01",
+      "summary": "Media coverage in Denver Post featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "Colorado"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2025-12-01"
+    },
+    {
+      "title": "Milwaukee Journal Sentinel - 2025",
+      "url": "https://www.jsonline.com/story/news/investigations/2025/08/20/milwaukee-police-officer-was-on-brady-list-twice-before-he-was-fired/85364335007/",
+      "source": "Milwaukee Journal Sentinel",
+      "date": "2025-12-01",
+      "summary": "Media coverage in Milwaukee Journal Sentinel featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2025-12-01"
+    },
+    {
+      "title": "KETV - 2025",
+      "url": "https://www.ketv.com/article/ketv-investigates-exclusive-omaha-police-department-shares-new-look-at-overall-crime/64786856",
+      "source": "KETV",
+      "date": "2025-12-01",
+      "summary": "Media coverage in KETV featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "local",
+        "Nebraska"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2025-12-01"
+    },
+    {
+      "title": "New York Times - 2025",
+      "url": "https://www.nytimes.com/2025/05/24/us/police-killings-george-floyd.html",
+      "source": "New York Times",
+      "date": "2025-12-01",
+      "summary": "Media coverage in New York Times featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "national news",
+        "use of force"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2025-12-01"
+    },
+    {
+      "title": "Mother Jones - 2025",
+      "url": "https://www.motherjones.com/politics/2025/06/ice-immigration-agents-masks-masking-concealing-faces-legal/",
+      "source": "Mother Jones",
+      "date": "2025-12-01",
+      "summary": "Media coverage in Mother Jones featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "civil liberties",
+        "policy"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2025-12-01"
+    },
+    {
+      "title": "Washington Post - 2024",
+      "url": "https://www.washingtonpost.com/dc-md-va/2024/10/09/dc-audits-mpd-extremism/",
+      "source": "Washington Post",
+      "date": "2024-12-01",
+      "summary": "Media coverage in Washington Post featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "national news",
+        "accountability"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2024-12-01"
+    },
+    {
+      "title": "USA Today - 2024",
+      "url": "https://www.usatoday.com/story/news/nation/2024/01/11/police-officer-killings-2023/72152566007/",
+      "source": "USA Today",
+      "date": "2024-12-01",
+      "summary": "Media coverage in USA Today featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "national news",
+        "policy"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2024-12-01"
+    },
+    {
+      "title": "Wyoming Public Media - 2024",
+      "url": "https://www.wyomingpublicmedia.org/2024-08-05/violent-crime-is-down-across-the-country-but-rates-are-mixed-in-the-mountain-west",
+      "source": "Wyoming Public Media",
+      "date": "2024-12-01",
+      "summary": "Media coverage in Wyoming Public Media featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "Mountain West"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2024-12-01"
+    },
+    {
+      "title": "Tampa Bay Times - 2024",
+      "url": "https://www.tampabay.com/news/crime/2024/08/15/hillsborough-state-attorney-election-race/",
+      "source": "Tampa Bay Times",
+      "date": "2024-12-01",
+      "summary": "Media coverage in Tampa Bay Times featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "accountability"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2024-12-01"
+    },
+    {
+      "title": "NPR - 2023",
+      "url": "https://www.npr.org/2023/10/20/1207276234/fbi-crime-report-takeaways",
+      "source": "NPR",
+      "date": "2023-12-01",
+      "summary": "Media coverage in NPR featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "national news",
+        "research"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2023-12-01"
+    },
+    {
+      "title": "Washington Post - 2023",
+      "url": "https://www.unionleader.com/news/safety/fatal-police-shootings-are-still-going-up-and-nobody-knowswhy/article_121cc480-7ac6-57a6-8b84-5ef735ecfe6b.html",
+      "source": "Washington Post",
+      "date": "2023-12-01",
+      "summary": "Media coverage in Washington Post featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "national news",
+        "accountability"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2023-12-01"
+    },
+    {
+      "title": "Omaha World-Herald - 2023",
+      "url": "https://omaha.com/news/local/staffing-woes-continue-to-plague-omaha-police-department/article_19b630de-bea5-11ed-b07c-9b7f82541a13.html",
+      "source": "Omaha World-Herald",
+      "date": "2023-12-01",
+      "summary": "Media coverage in Omaha World-Herald featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "Nebraska",
+        "local"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2023-12-01"
+    },
+    {
+      "title": "NBC News - 2022",
+      "url": "https://www.nbcnews.com/news/us-news/gonna-lose-gun-idaho-deputy-said-minutes-fatally-shooting-man-mental-h-rcna33601",
+      "source": "NBC News",
+      "date": "2022-12-01",
+      "summary": "Media coverage in NBC News featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "national news",
+        "use of force"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2022-12-01"
+    },
+    {
+      "title": "Salt Lake Tribune - 2022",
+      "url": "https://www.sltrib.com/news/2022/01/21/utah-broke-record-most/",
+      "source": "Salt Lake Tribune",
+      "date": "2022-12-01",
+      "summary": "Media coverage in Salt Lake Tribune featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "Mountain West"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2022-12-01"
+    },
+    {
+      "title": "USA Today - 2022",
+      "url": "https://www.usatoday.com/story/news/nation/2022/01/29/police-attacked-4-us-cities-within-week-amid-violent-crime-spike/9248049002/?gnt-cfr=1",
+      "source": "USA Today",
+      "date": "2022-12-01",
+      "summary": "Media coverage in USA Today featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "national news",
+        "policy"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2022-12-01"
+    },
+    {
+      "title": "Fox News - 2022",
+      "url": "https://www.foxnews.com/politics/washington-d-c-police-withhold-key-details-about-homicide-unit-amid-murder-surge",
+      "source": "Fox News",
+      "date": "2022-12-01",
+      "summary": "Media coverage in Fox News featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "national news",
+        "accountability"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2022-12-01"
+    },
+    {
+      "title": "Denver Post - 2022",
+      "url": "https://www.denverpost.com/2022/07/20/denver-police-shooting-lodo-injuries/",
+      "source": "Denver Post",
+      "date": "2022-12-01",
+      "summary": "Media coverage in Denver Post featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "Colorado"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2022-12-01"
+    },
+    {
+      "title": "Reuters - 2021",
+      "url": "https://www.reuters.com/legal/government/after-floyds-killing-minneapolis-police-retreated-data-shows-2021-09-13/",
+      "source": "Reuters",
+      "date": "2021-12-01",
+      "summary": "Media coverage in Reuters featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "national news",
+        "research"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2021-12-01"
+    },
+    {
+      "title": "Salt Lake Tribune - 2021",
+      "url": "https://www.sltrib.com/news/2021/09/20/new-data-utah-police/",
+      "source": "Salt Lake Tribune",
+      "date": "2021-12-01",
+      "summary": "Media coverage in Salt Lake Tribune featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "Mountain West"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2021-12-01"
+    },
+    {
+      "title": "New York Times - 2021",
+      "url": "https://www.nytimes.com/2021/07/23/upshot/murder-crime-solving.html",
+      "source": "New York Times",
+      "date": "2021-12-01",
+      "summary": "Media coverage in New York Times featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "national news",
+        "use of force"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2021-12-01"
+    },
+    {
+      "title": "Washington Post - 2021",
+      "url": "https://www.washingtonpost.com/investigations/interactive/2021/police-shootings-since-2015/",
+      "source": "Washington Post",
+      "date": "2021-12-01",
+      "summary": "Media coverage in Washington Post featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "national news",
+        "accountability"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2021-12-01"
+    },
+    {
+      "title": "Houston Chronicle - 2021",
+      "url": "https://www.houstonchronicle.com/news/article/Domestic-violence-calls-for-help-increased-during-16114201.php",
+      "source": "Houston Chronicle",
+      "date": "2021-12-01",
+      "summary": "Media coverage in Houston Chronicle featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "crime"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2021-12-01"
+    },
+    {
+      "title": "Omaha World-Herald - 2021",
+      "url": "https://omaha.com/news/local/crime-and-courts/violent-crime-rose-in-2020-while-property-crime-dropped-a-look-at-omaha-during-the/article_97ab10ee-963a-11eb-88d2-631cd75b0b83.html",
+      "source": "Omaha World-Herald",
+      "date": "2021-12-01",
+      "summary": "Media coverage in Omaha World-Herald featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "Nebraska",
+        "local"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2021-12-01"
+    },
+    {
+      "title": "USA Today - 2021",
+      "url": "https://www.usatoday.com/story/news/factcheck/2021/04/28/fact-check-posts-days-without-police-killings-2021-true/7332866002/",
+      "source": "USA Today",
+      "date": "2021-12-01",
+      "summary": "Media coverage in USA Today featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "national news",
+        "policy"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2021-12-01"
+    },
+    {
+      "title": "Reader - 2021",
+      "url": "https://thereader.com/news/its-evil-its-ruthless-five-months-after-omaha-police-shooting-questions-remain",
+      "source": "Reader",
+      "date": "2021-12-01",
+      "summary": "Media coverage in Reader featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "news"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2021-12-01"
+    },
+    {
+      "title": "Boise State Public Radio - 2021",
+      "url": "https://www.boisestatepublicradio.org/news/2021-01-25/mountain-west-has-the-highest-rate-of-people-killed-by-police-in-the-nation",
+      "source": "Boise State Public Radio",
+      "date": "2021-12-01",
+      "summary": "Media coverage in Boise State Public Radio featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "Mountain West"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2021-12-01"
+    },
+    {
+      "title": "Cronkite News - 2020",
+      "url": "https://cronkitenews.azpbs.org/2020/01/03/phoenix-police-shootings-dropped-in-2019-after-sharp-spike-in-2018/",
+      "source": "Cronkite News",
+      "date": "2020-12-01",
+      "summary": "Media coverage in Cronkite News featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "Arizona"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2020-12-01"
+    },
+    {
+      "title": "Baltimore Sun - 2020",
+      "url": "https://www.baltimoresun.com/maryland/baltimore-city/bs-md-ci-police-overtime-20200207-z43l2amv3vf3lb4rtgsvfeye6i-story.html",
+      "source": "Baltimore Sun",
+      "date": "2020-12-01",
+      "summary": "Media coverage in Baltimore Sun featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "accountability"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2020-12-01"
+    },
+    {
+      "title": "Healthline - 2020",
+      "url": "https://www.healthline.com/health-news/what-do-we-do-if-our-police-firefighters-and-paramedics-all-get-sick-with-covid-19",
+      "source": "Healthline",
+      "date": "2020-12-01",
+      "summary": "Media coverage in Healthline featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "health",
+        "police",
+        "COVID"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2020-12-01"
+    },
+    {
+      "title": "Dallas Morning News - 2020",
+      "url": "https://www.dallasnews.com/news/crime/2020/06/02/dallas-police-chief-renee-hall-says-demonstrators-broke-law-when-they-walked-onto-margaret-hunt-hill-bridge/",
+      "source": "Dallas Morning News",
+      "date": "2020-12-01",
+      "summary": "Media coverage in Dallas Morning News featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "protests"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2020-12-01"
+    },
+    {
+      "title": "ABC News - 2020",
+      "url": "https://abcnews.go.com/US/latest-research-tells-us-racial-bias-policing/story?id=70994421",
+      "source": "ABC News",
+      "date": "2020-12-01",
+      "summary": "Media coverage in ABC News featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "national news",
+        "bias"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2020-12-01"
+    },
+    {
+      "title": "Wall Street Journal - 2020",
+      "url": "https://www.wsj.com/articles/a-minneapolis-police-chief-promised-change-george-floyds-death-shows-hurdles-11590971860",
+      "source": "Wall Street Journal",
+      "date": "2020-12-01",
+      "summary": "Media coverage in Wall Street Journal featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "national news",
+        "reform"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2020-12-01"
+    },
+    {
+      "title": "Reader - 2020",
+      "url": "https://thereader.com/news/black-drivers-more-likely-to-receive-harsh-outcomes-in-traffic-stops",
+      "source": "Reader",
+      "date": "2020-12-01",
+      "summary": "Media coverage in Reader featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "news"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2020-12-01"
+    },
+    {
+      "title": "Denver Post - 2020",
+      "url": "https://www.denverpost.com/2020/06/13/colorado-police-reform-bill-passes-legislature/",
+      "source": "Denver Post",
+      "date": "2020-12-01",
+      "summary": "Media coverage in Denver Post featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "Colorado"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2020-12-01"
+    },
+    {
+      "title": "Cruso\u00e9 - 2020",
+      "url": "https://crusoe.com.br/edicoes/111/americanos-contra-os-tiras/",
+      "source": "Cruso\u00e9",
+      "date": "2020-12-01",
+      "summary": "Media coverage in Cruso\u00e9 featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "news"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2020-12-01"
+    },
+    {
+      "title": "LA Times - 2020",
+      "url": "https://www.latimes.com/opinion/story/2020-06-17/police-shootings-data",
+      "source": "LA Times",
+      "date": "2020-12-01",
+      "summary": "Media coverage in LA Times featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "California",
+        "use of force"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2020-12-01"
+    },
+    {
+      "title": "Nature - 2020",
+      "url": "https://www.nature.com/articles/d41586-020-01846-z",
+      "source": "Nature",
+      "date": "2020-12-01",
+      "summary": "Media coverage in Nature featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "research",
+        "police",
+        "science"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2020-12-01"
+    },
+    {
+      "title": "Omaha World Herald - 2020",
+      "url": "https://www.omaha.com/news/local/what-went-wrong-at-72nd-and-dodge-the-anatomy-of-omahas-may-29-street-conflict/article_d943cc78-52a3-5f67-8f43-ac642922e5bc.html",
+      "source": "Omaha World Herald",
+      "date": "2020-12-01",
+      "summary": "Media coverage in Omaha World Herald featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "news"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2020-12-01"
+    },
+    {
+      "title": "Lincoln Journal Star - 2020",
+      "url": "https://journalstar.com/news/local/crime-and-courts/protesters-describe-being-shot-gassed-during-black-lives-matter-rallies/article_dadfbf6c-1649-54ad-8e43-67e48e174dcb.html",
+      "source": "Lincoln Journal Star",
+      "date": "2020-12-01",
+      "summary": "Media coverage in Lincoln Journal Star featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "Nebraska",
+        "local"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2020-12-01"
+    },
+    {
+      "title": "Newsy - 2020",
+      "url": "https://www.newsy.com/stories/police-can-ignore-fbi-request-for-use-of-force-data/",
+      "source": "Newsy",
+      "date": "2020-12-01",
+      "summary": "Media coverage in Newsy featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "national news"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2020-12-01"
+    },
+    {
+      "title": "Die Welt - 2020",
+      "url": "https://www.welt.de/wissenschaft/article210167603/Polizeigewalt-in-USA-Neue-Strategien-zur-Deeskalation.html",
+      "source": "Die Welt",
+      "date": "2020-12-01",
+      "summary": "Media coverage in Die Welt featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "international"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2020-12-01"
+    },
+    {
+      "title": "Texas Tribune - 2020",
+      "url": "https://www.texastribune.org/2020/07/02/texas-police-george-floyd/",
+      "source": "Texas Tribune",
+      "date": "2020-12-01",
+      "summary": "Media coverage in Texas Tribune featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "policy"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2020-12-01"
+    },
+    {
+      "title": "Trace - 2020",
+      "url": "https://www.thetrace.org/2020/07/guns-policing-how-many-deaths-data-statistics/",
+      "source": "Trace",
+      "date": "2020-12-01",
+      "summary": "Media coverage in Trace featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "news"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2020-12-01"
+    },
+    {
+      "title": "Arizona Republic - 2020",
+      "url": "https://www.azcentral.com/restricted/?return=https%3A%2F%2Fwww.azcentral.com%2Fin-depth%2Fnews%2Flocal%2Fphoenix%2F2020%2F08%2F10%2Fphoenix-police-use-force-data-black-latino-native-impact%2F5407299002%2F",
+      "source": "Arizona Republic",
+      "date": "2020-12-01",
+      "summary": "Media coverage in Arizona Republic featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "use of force"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2020-12-01"
+    },
+    {
+      "title": "Tampa Bay Times - 2020",
+      "url": "https://www.tampabay.com/news/crime/2020/10/13/has-crime-gone-up-or-down-in-tampa-state-attorney-candidates-differ/?utm_source=twitter&utm_content=%40tbtnewspaper&utm_campaign=SocialFlow&utm_medium=social",
+      "source": "Tampa Bay Times",
+      "date": "2020-12-01",
+      "summary": "Media coverage in Tampa Bay Times featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "accountability"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2020-12-01"
+    },
+    {
+      "title": "Santa Fe Reporter - 2020",
+      "url": "https://www.sfreporter.com/news/2020/10/22/us-versus-them/",
+      "source": "Santa Fe Reporter",
+      "date": "2020-12-01",
+      "summary": "Media coverage in Santa Fe Reporter featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2020-12-01"
+    },
+    {
+      "title": "ABC News - 2019",
+      "url": "https://abcnews.go.com/Health/fatal-police-shootings-race-officer-predictive-civilians-race/story?id=64563567",
+      "source": "ABC News",
+      "date": "2019-12-01",
+      "summary": "Media coverage in ABC News featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "national news",
+        "bias"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2019-12-01"
+    },
+    {
+      "title": "Washington Post - 2019",
+      "url": "https://www.washingtonpost.com/investigations/four-years-in-a-row-police-nationwide-fatally-shoot-nearly-1000-people/2019/02/07/0cb3b098-020f-11e9-9122-82e98f91ee6f_story.html?noredirect=on&utm_term=.8beeba6c1f0b",
+      "source": "Washington Post",
+      "date": "2019-12-01",
+      "summary": "Media coverage in Washington Post featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "national news",
+        "accountability"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2019-12-01"
+    },
+    {
+      "title": "Phoenix New Times - 2019",
+      "url": "https://www.phoenixnewtimes.com/news/report-no-single-answer-for-2018-spike-in-phoenix-police-shootings-11273431",
+      "source": "Phoenix New Times",
+      "date": "2019-12-01",
+      "summary": "Media coverage in Phoenix New Times featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "Arizona"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2019-12-01"
+    },
+    {
+      "title": "CityLab - 2019",
+      "url": "https://www.citylab.com/equity/2019/08/police-officer-shootings-gun-violence-racial-bias-crime-data/595528/",
+      "source": "CityLab",
+      "date": "2019-12-01",
+      "summary": "Media coverage in CityLab featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "policy",
+        "equity"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2019-12-01"
+    },
+    {
+      "title": "Nature - 2019",
+      "url": "https://www.nature.com/articles/d41586-019-02601-9",
+      "source": "Nature",
+      "date": "2019-12-01",
+      "summary": "Media coverage in Nature featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "research",
+        "police",
+        "science"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2019-12-01"
+    },
+    {
+      "title": "Indianapolis Star - 2019",
+      "url": "https://www.indystar.com/story/news/crime/2019/09/18/how-indianapolis-reduced-fatal-police-shootings-compared-new-york-chicago/1943601001/",
+      "source": "Indianapolis Star",
+      "date": "2019-12-01",
+      "summary": "Media coverage in Indianapolis Star featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "shooting"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2019-12-01"
+    },
+    {
+      "title": "Washington Post - 2018",
+      "url": "https://www.washingtonpost.com/investigations/fatal-police-shootings-of-unarmed-people-have-significantly-declined-experts-say/2018/05/03/d5eab374-4349-11e8-8569-26fda6b404c7_story.html?noredirect=on&utm_term=.d2800bfb4d4f",
+      "source": "Washington Post",
+      "date": "2018-12-01",
+      "summary": "Media coverage in Washington Post featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "national news",
+        "accountability"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2018-12-01"
+    },
+    {
+      "title": "Wall Street Journal - 2018",
+      "url": "https://www.wsj.com/articles/federal-count-of-deadly-police-shootings-is-slow-to-get-going-1522494001",
+      "source": "Wall Street Journal",
+      "date": "2018-12-01",
+      "summary": "Media coverage in Wall Street Journal featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "national news",
+        "reform"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2018-12-01"
+    },
+    {
+      "title": "New York Times - 2018",
+      "url": "https://www.nytimes.com/2018/03/30/us/stephon-clark-independent-autopsy.html",
+      "source": "New York Times",
+      "date": "2018-12-01",
+      "summary": "Media coverage in New York Times featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "national news",
+        "use of force"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2018-12-01"
+    },
+    {
+      "title": "Huffington Post - 2018",
+      "url": "https://www.huffingtonpost.com/entry/gun-deaths-car-deaths_us_5b6b3337e4b0530743c676c8",
+      "source": "Huffington Post",
+      "date": "2018-12-01",
+      "summary": "Media coverage in Huffington Post featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "news"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2018-12-01"
+    },
+    {
+      "title": "Minneapolis Star Tribune - 2018",
+      "url": "http://www.startribune.com/after-charges-in-damond-killing-racial-dynamic-remains-a-focal-point/477827553/",
+      "source": "Minneapolis Star Tribune",
+      "date": "2018-12-01",
+      "summary": "Media coverage in Minneapolis Star Tribune featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "Minnesota"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2018-12-01"
+    },
+    {
+      "title": "Wichita Eagle - 2018",
+      "url": "http://www.kansas.com/news/local/article194338784.html",
+      "source": "Wichita Eagle",
+      "date": "2018-12-01",
+      "summary": "Media coverage in Wichita Eagle featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "Kansas"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2018-12-01"
+    },
+    {
+      "title": "Topeka Capital Journal - 2018",
+      "url": "http://cjonline.com/news/local/crime-courts/2018-01-04/criminal-justice-professor-topeka-police-officers-had-authority",
+      "source": "Topeka Capital Journal",
+      "date": "2018-12-01",
+      "summary": "Media coverage in Topeka Capital Journal featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "Kansas"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2018-12-01"
+    },
+    {
+      "title": "USA Today - 2017",
+      "url": "https://www.usatoday.com/story/news/2017/12/28/number-officers-killed-2017-hits-nearly-50-year-low/984477001/",
+      "source": "USA Today",
+      "date": "2017-12-01",
+      "summary": "Media coverage in USA Today featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "national news",
+        "policy"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2017-12-01"
+    },
+    {
+      "title": "WIRED - 2017",
+      "url": "https://www.wired.com/2017/02/us-needs-real-data-confront-bias-police-shootings",
+      "source": "WIRED",
+      "date": "2017-12-01",
+      "summary": "Media coverage in WIRED featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "technology",
+        "data"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2017-12-01"
+    },
+    {
+      "title": "CityLab - 2017",
+      "url": "http://www.citylab.com/crime/2017/02/is-reverse-racism-among-police-real/513503/",
+      "source": "CityLab",
+      "date": "2017-12-01",
+      "summary": "Media coverage in CityLab featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "policy",
+        "equity"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2017-12-01"
+    },
+    {
+      "title": "Omaha World-Herald - 2017",
+      "url": "http://www.omaha.com/news/nebraska/video-shows-use-of-force-after-sioux-county-chase-raises/article_50d3bc92-e2de-5fd8-a4ab-a9a6966a1d63.html",
+      "source": "Omaha World-Herald",
+      "date": "2017-12-01",
+      "summary": "Media coverage in Omaha World-Herald featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "Nebraska",
+        "local"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2017-12-01"
+    },
+    {
+      "title": "Lincoln Journal Star - 2017",
+      "url": "http://journalstar.com/news/local/911/a-persisting-problem-lpd-probes-into-the-racial-disparities-in/article_30cc2fce-1e97-5362-9777-63ca24ed029a.html",
+      "source": "Lincoln Journal Star",
+      "date": "2017-12-01",
+      "summary": "Media coverage in Lincoln Journal Star featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "Nebraska",
+        "local"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2017-12-01"
+    },
+    {
+      "title": "Buzzfeed News - 2016",
+      "url": "https://www.buzzfeed.com/peteraldhous/race-and-police-force?utm_term=.to1jrQ82x#.ke9mzqjgZ",
+      "source": "Buzzfeed News",
+      "date": "2016-12-01",
+      "summary": "Media coverage in Buzzfeed News featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "news"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2016-12-01"
+    },
+    {
+      "title": "Washington Post - 2016",
+      "url": "https://www.washingtonpost.com/national/study-finds-police-fatally-shoot-unarmed-black-men-at-disproportionate-rates/2016/04/06/e494563e-fa74-11e5-80e4-c381214de1a3_story.html?tid=sm_tw",
+      "source": "Washington Post",
+      "date": "2016-12-01",
+      "summary": "Media coverage in Washington Post featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "national news",
+        "accountability"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2016-12-01"
+    },
+    {
+      "title": "Denver Post - 2016",
+      "url": "http://www.denverpost.com/2016/07/27/commerce-city-asks-feds-for-help-with-police/",
+      "source": "Denver Post",
+      "date": "2016-12-01",
+      "summary": "Media coverage in Denver Post featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "regional",
+        "Colorado"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2016-12-01"
+    },
+    {
+      "title": "Globe and Mail - 2016",
+      "url": "http://www.theglobeandmail.com/news/world/after-a-violent-week-two-measures-to-make-policing-better/article30873038/?cmpid=rss1&click=sf_globe",
+      "source": "Globe and Mail",
+      "date": "2016-12-01",
+      "summary": "Media coverage in Globe and Mail featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "news"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2016-12-01"
+    },
+    {
+      "title": "Huffington Post - 2015",
+      "url": "http://www.huffingtonpost.com/entry/ferguson-effect-police-study_us_5630d33ee4b0c66bae5a41ab",
+      "source": "Huffington Post",
+      "date": "2015-12-01",
+      "summary": "Media coverage in Huffington Post featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "news"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2015-12-01"
+    },
+    {
+      "title": "New York Magazine - 2015",
+      "url": "http://nymag.com/scienceofus/2015/10/research-rebuts-the-idea-of-a-ferguson-effect.html",
+      "source": "New York Magazine",
+      "date": "2015-12-01",
+      "summary": "Media coverage in New York Magazine featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "police",
+        "research"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2015-12-01"
+    },
+    {
+      "title": "American Psychological Association - 2015",
+      "url": "http://www.apa.org/news/press/releases/2015/10/police-motivation.aspx",
+      "source": "American Psychological Association",
+      "date": "2015-12-01",
+      "summary": "Media coverage in American Psychological Association featuring lab research on policing",
+      "mention_type": "referenced",
+      "topics": [
+        "research",
+        "police"
+      ],
+      "featured": false,
+      "relevance_confidence": "high",
+      "date_discovered": "2015-12-01"
+    }
+  ]
+}
