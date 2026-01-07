@@ -226,7 +226,7 @@ This page automatically tracks media coverage, interviews, and mentions of resea
   text-transform: uppercase;
 }
 
-/* Card Body - Title Only */
+/* Card Body */
 .card-body {
   flex: 1;
   padding: 1rem;
@@ -246,9 +246,13 @@ This page automatically tracks media coverage, interviews, and mentions of resea
   overflow: hidden;
 }
 
-/* Hide the summary field */
+/* HIDE SUMMARY - DO NOT DISPLAY */
 .card-summary {
-  display: none;
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* Topic Tags */
@@ -269,7 +273,7 @@ This page automatically tracks media coverage, interviews, and mentions of resea
   font-weight: 500;
 }
 
-/* Card Footer - Metadata and Link */
+/* Card Footer */
 .card-footer {
   display: flex;
   align-items: center;
@@ -302,7 +306,7 @@ This page automatically tracks media coverage, interviews, and mentions of resea
 
 /* "Read More" Link */
 .card-footer a {
-  color: #DC143C;
+  color: #DC143C !important;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.2s;
@@ -310,13 +314,13 @@ This page automatically tracks media coverage, interviews, and mentions of resea
 }
 
 .card-footer a:hover {
-  color: white;
-  background: #DC143C;
+  color: white !important;
+  background: #DC143C !important;
   padding: 0.2rem 0.4rem;
   border-radius: 3px;
 }
 
-/* Mention Type Badge */
+/* Mention Type Badges */
 .mention-type-badge {
   display: inline-block;
   padding: 0.2rem 0.5rem;
@@ -326,6 +330,10 @@ This page automatically tracks media coverage, interviews, and mentions of resea
   text-transform: uppercase;
   letter-spacing: 0.02em;
   white-space: nowrap;
+}
+
+.mention-type-badge + .mention-type-badge {
+  margin-left: 0.25rem;
 }
 
 .mention-type-quoted { 
@@ -434,7 +442,14 @@ This page automatically tracks media coverage, interviews, and mentions of resea
 // Media Mentions Feed Configuration
 (function() {
   function renderMediaCard(story, isFeatured) {
-    var mentionType = story.mention_type || 'referenced';
+    // Handle mention_type as either string or array
+    var mentionTypes = story.mention_type;
+    if (typeof mentionTypes === 'string') {
+      mentionTypes = [mentionTypes];
+    } else if (!Array.isArray(mentionTypes)) {
+      mentionTypes = ['referenced'];
+    }
+
     var sourceInitial = (story.source || 'N')[0].toUpperCase();
 
     // Build topics HTML
@@ -447,6 +462,12 @@ This page automatically tracks media coverage, interviews, and mentions of resea
       });
       topicsHTML += '</div>';
     }
+
+    // Build mention type badges HTML (handles multiple types)
+    var badgesHTML = '';
+    mentionTypes.forEach(function(type) {
+      badgesHTML += '<span class="mention-type-badge mention-type-' + escapeHtml(type) + '">' + capitalize(type) + '</span>';
+    });
 
     var cardClass = 'news-card' + (isFeatured ? ' featured' : '');
 
@@ -468,7 +489,7 @@ This page automatically tracks media coverage, interviews, and mentions of resea
       '</div>' +
       '<div class="card-footer">' +
       '<span class="card-date">' + formatDate(story.date || story.date_discovered) + '</span>' +
-      '<span class="mention-type-badge mention-type-' + mentionType + '">' + capitalize(mentionType) + '</span>' +
+      badgesHTML +
       '<a href="' + escapeHtml(story.url) + '" target="_blank" rel="noopener">Read Full Article →</a>' +
       '</div>' +
       '</article>';
@@ -478,6 +499,7 @@ This page automatically tracks media coverage, interviews, and mentions of resea
 
   // Helper functions
   function capitalize(str) {
+    if (!str) return '';
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
