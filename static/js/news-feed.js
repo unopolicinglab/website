@@ -1,7 +1,9 @@
 /**
  * News Feed JavaScript Component
- * Loads and renders media mentions from JSON data
- * Used by media page to display cards with search/filter capabilities
+ * Version: 2.0.0 - January 2025 Update
+ * - Removed card summaries
+ * - Added topic tags, mention badges, article links
+ * - Crimson Red (#DC143C) theme
  */
 
 class NewsFeed {
@@ -14,15 +16,17 @@ class NewsFeed {
     this.filterField = config.filterField || 'mention_type';
     this.filterTypes = config.filterTypes || [];
     this.dateField = config.dateField || 'date';
-    this.renderCard = config.renderCard || this.defaultRenderCard;
+    this.renderCard = config.renderCard || this.defaultRenderCard.bind(this);
     this.hasFeatured = config.hasFeatured !== false;
+    
+    // Log version to console for debugging
+    console.log('NewsFeed v2.0.0 loaded');
     
     this.init();
   }
 
   async init() {
     try {
-      // Load JSON data
       const response = await fetch(this.config.jsonPath);
       if (!response.ok) {
         throw new Error(`Failed to load ${this.config.jsonPath}: ${response.statusText}`);
@@ -43,7 +47,6 @@ class NewsFeed {
         return dateB - dateA;
       });
       
-      // Initial render
       this.filteredStories = [...this.allStories];
       this.render();
       
@@ -60,7 +63,6 @@ class NewsFeed {
       return;
     }
 
-    // Separate featured and regular stories
     const featured = this.filteredStories.filter(s => s.featured);
     const regular = this.filteredStories.filter(s => !s.featured);
 
@@ -81,7 +83,7 @@ class NewsFeed {
       html += '</div>';
     }
 
-    // Stats bar
+    // Stats and filters bar
     html += '<div class="news-controls">';
     html += `<div class="news-stats">${this.filteredStories.length} stories found</div>`;
     
@@ -95,7 +97,7 @@ class NewsFeed {
     }
     html += '</div>';
 
-    // Regular stories grid
+    // Regular stories grid with pagination
     const startIdx = (this.currentPage - 1) * this.cardsPerPage;
     const endIdx = startIdx + this.cardsPerPage;
     const paginated = regular.slice(startIdx, endIdx);
@@ -117,21 +119,16 @@ class NewsFeed {
     }
 
     container.innerHTML = html;
-
-    // Attach event listeners AFTER rendering
-    this.attachEventListeners(regular.length);
+    this.attachEventListeners();
   }
 
   renderPagination(totalPages) {
     let html = '<div class="pagination">';
     
-    // Previous button
     html += `<button class="pagination-btn pagination-prev" ${this.currentPage === 1 ? 'disabled' : ''}>← Previous</button>`;
 
-    // Page buttons
     for (let i = 1; i <= Math.min(totalPages, 7); i++) {
-      const isActive = i === this.currentPage;
-      const activeClass = isActive ? ' active' : '';
+      const activeClass = i === this.currentPage ? ' active' : '';
       html += `<button class="pagination-btn pagination-page${activeClass}" data-page="${i}">${i}</button>`;
     }
 
@@ -140,86 +137,66 @@ class NewsFeed {
       html += `<button class="pagination-btn pagination-page" data-page="${totalPages}">${totalPages}</button>`;
     }
 
-    // Page info
     html += `<span class="pagination-info">Page ${this.currentPage} of ${totalPages}</span>`;
-
-    // Next button
     html += `<button class="pagination-btn pagination-next" ${this.currentPage === totalPages ? 'disabled' : ''}>Next →</button>`;
 
     html += '</div>';
     return html;
   }
 
-  attachEventListeners(regularCount) {
-    // Make this instance globally available
-    window.newsFeed = this;
-
+  attachEventListeners() {
     // Filter buttons
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    filterBtns.forEach(btn => {
+    document.querySelectorAll('.filter-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
         const filter = e.target.getAttribute('data-filter');
-        this.applyFilter(filter);
+        this.applyFilter(filter, e.target);
       });
     });
 
-    // Pagination: Previous button
+    // Pagination buttons
     const prevBtn = document.querySelector('.pagination-prev');
     if (prevBtn) {
-      prevBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        this.previousPage();
-      });
+      prevBtn.addEventListener('click', () => this.previousPage());
     }
 
-    // Pagination: Next button
     const nextBtn = document.querySelector('.pagination-next');
     if (nextBtn) {
-      nextBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        this.nextPage();
-      });
+      nextBtn.addEventListener('click', () => this.nextPage());
     }
 
-    // Pagination: Page number buttons
-    const pageButtons = document.querySelectorAll('.pagination-page');
-    pageButtons.forEach(btn => {
+    document.querySelectorAll('.pagination-page').forEach(btn => {
       btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const pageNum = parseInt(btn.getAttribute('data-page'));
+        const pageNum = parseInt(e.target.getAttribute('data-page'));
         this.goToPage(pageNum);
       });
     });
   }
 
-  applyFilter(filterValue) {
+  applyFilter(filterValue, clickedBtn) {
     if (filterValue === 'all') {
       this.filteredStories = [...this.allStories];
     } else {
       this.filteredStories = this.allStories.filter(story => {
-        const fieldValue = story[this.filterField];
-        return fieldValue === filterValue;
+        return story[this.filterField] === filterValue;
       });
     }
 
     this.currentPage = 1;
     this.render();
 
-    // Update active button
+    // Update active state after re-render
     document.querySelectorAll('.filter-btn').forEach(btn => {
       btn.classList.remove('active');
+      if (btn.getAttribute('data-filter') === filterValue) {
+        btn.classList.add('active');
+      }
     });
-    event.target.classList.add('active');
   }
 
   goToPage(pageNum) {
     this.currentPage = pageNum;
     this.render();
-    // Scroll to top of page
-    const container = document.getElementById(this.config.containerId);
-    if (container) {
-      container.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    this.scrollToTop();
   }
 
   nextPage() {
@@ -228,11 +205,7 @@ class NewsFeed {
     if (this.currentPage < totalPages) {
       this.currentPage++;
       this.render();
-      // Scroll to top of page
-      const container = document.getElementById(this.config.containerId);
-      if (container) {
-        container.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      this.scrollToTop();
     }
   }
 
@@ -240,25 +213,33 @@ class NewsFeed {
     if (this.currentPage > 1) {
       this.currentPage--;
       this.render();
-      // Scroll to top of page
-      const container = document.getElementById(this.config.containerId);
-      if (container) {
-        container.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      this.scrollToTop();
+    }
+  }
+
+  scrollToTop() {
+    const container = document.getElementById(this.config.containerId);
+    if (container) {
+      container.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 
   showNoStories() {
     const container = document.getElementById(this.config.containerId);
-    container.innerHTML = '<div class="no-stories">No media mentions found.</div>';
+    if (container) {
+      container.innerHTML = '<div class="no-stories">No media mentions found.</div>';
+    }
   }
 
   showError(message) {
     const container = document.getElementById(this.config.containerId);
-    container.innerHTML = `<div class="no-stories">Error loading media feed: ${message}</div>`;
+    if (container) {
+      container.innerHTML = `<div class="no-stories">Error loading media feed: ${message}</div>`;
+    }
   }
 
   capitalize(str) {
+    if (!str) return '';
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
@@ -276,58 +257,68 @@ class NewsFeed {
     }
   }
 
+  escapeHtml(text) {
+    if (!text) return '';
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
   defaultRenderCard(story, isFeatured = false) {
-    // Build topics HTML
+    const cardClass = isFeatured ? 'news-card featured' : 'news-card';
+    
+    // Source icon (first letter)
+    const sourceInitial = (story.source || 'N')[0].toUpperCase();
+    const sourceName = this.escapeHtml(story.source || 'Unknown');
+    
+    // Title
+    const title = this.escapeHtml(story.title || 'Untitled');
+    
+    // Topic tags (up to 4)
     let topicsHTML = '';
     if (story.topics && story.topics.length > 0) {
-      topicsHTML = '<div class="card-topics">';
       const topics = Array.isArray(story.topics) ? story.topics : [story.topics];
+      topicsHTML = '<div class="card-topics">';
       topics.slice(0, 4).forEach(topic => {
         topicsHTML += `<span class="topic-tag">${this.escapeHtml(topic)}</span>`;
       });
       topicsHTML += '</div>';
     }
-
-    // Card class
-    const cardClass = isFeatured ? 'news-card featured' : 'news-card';
+    
+    // Date
+    const formattedDate = this.formatDate(story.date);
     
     // Mention type badge
     const mentionType = story.mention_type || 'referenced';
     const mentionBadge = `<span class="mention-type-badge mention-type-${mentionType}">${this.capitalize(mentionType)}</span>`;
+    
+    // Article URL
+    const articleUrl = this.escapeHtml(story.url || '#');
 
-    // Build the card HTML
-    const html = `
+    return `
       <article class="${cardClass}" role="listitem" tabindex="0">
         <div class="card-header">
           <div class="card-source">
-            <span class="source-icon">${(story.source || 'N')[0].toUpperCase()}</span>
-            <span>${this.escapeHtml(story.source || 'Unknown')}</span>
+            <span class="source-icon">${sourceInitial}</span>
+            <span>${sourceName}</span>
           </div>
         </div>
         <div class="card-body">
-          <h3 class="card-title">${this.escapeHtml(story.title)}</h3>
+          <h3 class="card-title">${title}</h3>
           ${topicsHTML}
         </div>
         <div class="card-footer">
-          <span class="card-date">${this.formatDate(story.date)}</span>
-          <span>${mentionBadge}</span>
-          <a href="${this.escapeHtml(story.url)}" target="_blank" rel="noopener">Read Full Article →</a>
+          <span class="card-date">${formattedDate}</span>
+          ${mentionBadge}
+          <a href="${articleUrl}" target="_blank" rel="noopener noreferrer">Read Full Article →</a>
         </div>
       </article>
     `;
-
-    return html;
-  }
-
-  escapeHtml(text) {
-    if (!text) return '';
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML.replace(/'/g, '&#39;').replace(/"/g, '&quot;');
   }
 }
 
-// Initialize on page load
+// Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
-  // Instantiated by inline script in media_index.md
+  // NewsFeed will be instantiated by inline script in media_index.md
+  console.log('NewsFeed script loaded and ready');
 });
