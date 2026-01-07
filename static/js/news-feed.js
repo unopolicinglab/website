@@ -118,7 +118,7 @@ class NewsFeed {
 
     container.innerHTML = html;
 
-    // Attach event listeners
+    // Attach event listeners AFTER rendering
     this.attachEventListeners(regular.length);
   }
 
@@ -126,33 +126,34 @@ class NewsFeed {
     let html = '<div class="pagination">';
     
     // Previous button
-    html += `<button class="pagination-btn" ${this.currentPage === 1 ? 'disabled' : ''} 
-             onclick="window.newsFeed.previousPage()">← Previous</button>`;
+    html += `<button class="pagination-btn pagination-prev" ${this.currentPage === 1 ? 'disabled' : ''}>← Previous</button>`;
 
     // Page buttons
     for (let i = 1; i <= Math.min(totalPages, 7); i++) {
       const isActive = i === this.currentPage;
-      html += `<button class="pagination-btn ${isActive ? 'active' : ''}" 
-               onclick="window.newsFeed.goToPage(${i})">${i}</button>`;
+      const activeClass = isActive ? ' active' : '';
+      html += `<button class="pagination-btn pagination-page${activeClass}" data-page="${i}">${i}</button>`;
     }
 
     if (totalPages > 7) {
       html += '<span class="pagination-info">...</span>';
-      html += `<button class="pagination-btn" onclick="window.newsFeed.goToPage(${totalPages})">${totalPages}</button>`;
+      html += `<button class="pagination-btn pagination-page" data-page="${totalPages}">${totalPages}</button>`;
     }
 
     // Page info
     html += `<span class="pagination-info">Page ${this.currentPage} of ${totalPages}</span>`;
 
     // Next button
-    html += `<button class="pagination-btn" ${this.currentPage === totalPages ? 'disabled' : ''} 
-             onclick="window.newsFeed.nextPage()">Next →</button>`;
+    html += `<button class="pagination-btn pagination-next" ${this.currentPage === totalPages ? 'disabled' : ''}>Next →</button>`;
 
     html += '</div>';
     return html;
   }
 
   attachEventListeners(regularCount) {
+    // Make this instance globally available
+    window.newsFeed = this;
+
     // Filter buttons
     const filterBtns = document.querySelectorAll('.filter-btn');
     filterBtns.forEach(btn => {
@@ -161,11 +162,37 @@ class NewsFeed {
         this.applyFilter(filter);
       });
     });
+
+    // Pagination: Previous button
+    const prevBtn = document.querySelector('.pagination-prev');
+    if (prevBtn) {
+      prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.previousPage();
+      });
+    }
+
+    // Pagination: Next button
+    const nextBtn = document.querySelector('.pagination-next');
+    if (nextBtn) {
+      nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.nextPage();
+      });
+    }
+
+    // Pagination: Page number buttons
+    const pageButtons = document.querySelectorAll('.pagination-page');
+    pageButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const pageNum = parseInt(btn.getAttribute('data-page'));
+        this.goToPage(pageNum);
+      });
+    });
   }
 
   applyFilter(filterValue) {
-    const featured = this.allStories.filter(s => s.featured);
-    
     if (filterValue === 'all') {
       this.filteredStories = [...this.allStories];
     } else {
@@ -188,13 +215,24 @@ class NewsFeed {
   goToPage(pageNum) {
     this.currentPage = pageNum;
     this.render();
+    // Scroll to top of page
+    const container = document.getElementById(this.config.containerId);
+    if (container) {
+      container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
   nextPage() {
-    const totalPages = Math.ceil(this.filteredStories.length / this.cardsPerPage);
+    const regular = this.filteredStories.filter(s => !s.featured);
+    const totalPages = Math.ceil(regular.length / this.cardsPerPage);
     if (this.currentPage < totalPages) {
       this.currentPage++;
       this.render();
+      // Scroll to top of page
+      const container = document.getElementById(this.config.containerId);
+      if (container) {
+        container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   }
 
@@ -202,6 +240,11 @@ class NewsFeed {
     if (this.currentPage > 1) {
       this.currentPage--;
       this.render();
+      // Scroll to top of page
+      const container = document.getElementById(this.config.containerId);
+      if (container) {
+        container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   }
 
@@ -227,7 +270,7 @@ class NewsFeed {
         </div>
         <div class="card-body">
           <h3 class="card-title">${story.title}</h3>
-          <p class="card-summary">${story.summary || ''}</p>
+          <p class="card-summary">${story.title || ''}</p>
         </div>
         <div class="card-footer">
           <span class="card-date">${story.date}</span>
@@ -238,12 +281,7 @@ class NewsFeed {
   }
 }
 
-// Make globally available
-window.NewsFeed = NewsFeed;
-window.newsFeed = null;
-
-// Initialize on page load if data is present
+// Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
-  // This will be called by the inline script in media_index.md
-  // which instantiates NewsFeed with proper configuration
+  // Instantiated by inline script in media_index.md
 });
