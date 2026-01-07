@@ -1,0 +1,274 @@
+# Configuration for UNO Policing Lab Media Mentions Aggregator
+# Tracks media coverage and interviews featuring Justin Nix, Sadaf Hashimi, and Travis Carter
+# on policing, criminal justice, and related research topics
+
+# RSS Feeds from relevant sources
+# Includes major national outlets plus regional sources relevant to Nebraska/Mountain West
+rss_feeds:
+  # Major national news
+  - name: "NPR"
+    url: "https://feeds.npr.org/1001/rss.xml"
+
+  - name: "PBS NewsHour"
+    url: "https://www.pbs.org/newshour/feeds/rss/headlines"
+
+  - name: "New York Times"
+    url: "https://rss.nytimes.com/services/xml/rss/nyt/US.xml"
+
+  - name: "Washington Post"
+    url: "https://feeds.washingtonpost.com/rss/national"
+
+  - name: "Associated Press"
+    url: "https://rsshub.app/apnews/topics/politics"
+
+  - name: "Reuters"
+    url: "https://www.reutersagency.com/feed/"
+
+  # Regional Nebraska/Midwest news
+  - name: "Omaha World-Herald"
+    url: "https://www.omaha.com/search/?f=rss&t=article&c=news/local&l=50&s=start_time&sd=desc"
+
+  - name: "Lincoln Journal Star"
+    url: "https://journalstar.com/news/local/rss_feed.xml"
+
+  - name: "The Reader (Omaha)"
+    url: "https://thereader.com/rss/"
+
+  # Denver/Colorado
+  - name: "Denver Post"
+    url: "https://www.denverpost.com/feed/"
+
+  # Minneapolis/Minnesota
+  - name: "Minneapolis Star Tribune"
+    url: "https://www.startribune.com/feed/"
+
+  # Criminal Justice focused outlets
+  - name: "The Marshall Project"
+    url: "https://www.themarshallproject.org/rss/all"
+
+  - name: "The Appeal"
+    url: "https://theappeal.org/feed/"
+
+  # Trade/specialized publications
+  - name: "Police1"
+    url: "https://www.police1.com/rss/"
+
+  - name: "GovTech"
+    url: "https://www.govtech.com/rss/"
+
+  # Academic and research news
+  - name: "The Conversation"
+    url: "https://theconversation.com/us/articles.atom"
+
+  - name: "EurekAlert"
+    url: "https://www.eurekalert.org/rss/social_science.xml"
+
+  # Technology news (for AI/policing coverage)
+  - name: "Wired"
+    url: "https://www.wired.com/feed/rss"
+
+  - name: "MIT Technology Review"
+    url: "https://www.technologyreview.com/feed/"
+
+  - name: "Ars Technica"
+    url: "https://feeds.arstechnica.com/arstechnica/index"
+
+  # Civil Liberties
+  - name: "ACLU"
+    url: "https://www.aclu.org/rss.xml"
+
+  - name: "EFF"
+    url: "https://www.eff.org/rss/updates.xml"
+
+# Search terms for Google News and NewsAPI
+# Grouped by confidence level for the aggregator
+search_terms:
+  # Primary search queries for Justin Nix (high confidence - explicit affiliation)
+  - "\"Justin Nix\" \"University of Nebraska Omaha\""
+  - "\"Justin Nix\" criminology"
+  - "\"Justin Nix\" criminologist"
+  - "\"Justin Nix\" policing"
+  - "\"Dr. Justin Nix\" police"
+  - "\"Justin Nix\" \"police research\""
+  - "\"Justin Nix\" \"assistant professor\" police"
+
+  # Primary search queries for Sadaf Hashimi (high confidence)
+  - "\"Sadaf Hashimi\" \"University of Nebraska Omaha\""
+  - "\"Sadaf Hashimi\" criminology"
+  - "\"Sadaf Hashimi\" criminologist"
+  - "\"Sadaf Hashimi\" policing"
+  - "\"Dr. Sadaf Hashimi\" police"
+
+  # Primary search queries for Travis Carter (high confidence)
+  - "\"Travis Carter\" \"University of Nebraska Omaha\""
+  - "\"Travis Carter\" criminology"
+  - "\"Travis Carter\" criminologist"
+  - "\"Travis Carter\" policing"
+  - "\"Dr. Travis Carter\" police"
+
+  # Lab-level searches (high confidence)
+  - "\"UNO Policing Lab\""
+  - "\"University of Nebraska Omaha\" policing research
+  - "UNO police research
+
+  # Secondary search queries (require stricter filtering)
+  - "\"Justin Nix\" \"body camera\""
+  - "\"Justin Nix\" \"body-worn camera\""
+  - "\"Justin Nix\" \"use of force\""
+  - "\"Sadaf Hashimi\" \"use of force\""
+  - "\"Travis Carter\" \"use of force\""
+  - "\"Nix\" \"Hashimi\" policing
+  - "\"Nix\" \"Carter\" police
+
+# Keywords for relevance scoring and filtering
+# Articles with researcher name + 2 or more of these terms are likely relevant
+relevance_keywords:
+  policing_context:
+    - police
+    - policing
+    - law enforcement
+    - officer
+    - department
+    - chief
+    - deputy
+    - sheriff
+
+  academic_context:
+    - criminology
+    - criminal justice
+    - criminologist
+    - researcher
+    - professor
+    - study
+    - research
+    - academic
+    - university
+
+  location_context:
+    - Nebraska
+    - Omaha
+    - UNO
+    - "University of Nebraska"
+    - university
+
+  research_topics:
+    - body camera
+    - body-worn camera
+    - use of force
+    - police violence
+    - lethal force
+    - training
+    - policy
+    - reform
+    - accountability
+    - legitimacy
+    - trust
+    - community
+    - officer
+    - shooting
+
+# Exclusion patterns to filter out false positives
+exclusions:
+  # Sports context (athletes named Justin Nix, Travis Carter, etc.)
+  sports_terms:
+    - scored
+    - match
+    - tournament
+    - season
+    - team roster
+    - rugby
+    - cricket
+    - football
+    - basketball
+    - soccer
+    - goalkeeper
+    - midfielder
+    - striker
+    - batting
+    - league table
+    - draft
+    - trade
+
+  # Entertainment context (musicians, actors)
+  entertainment_terms:
+    - album
+    - concert
+    - film
+    - starring
+    - cast
+    - movie
+    - song
+    - track
+    - band
+    - tour
+    - gig
+    - release date
+    - streaming
+
+  # Corporate context (unless policing-related)
+  corporate_terms:
+    - CEO
+    - appointed
+    - board of directors
+    - shareholders
+    - quarterly earnings
+    - stock price
+    - IPO
+    - merger
+    - acquisition
+
+  # Wrong person indicators
+  wrong_person_indicators:
+    - Travis Carter musician
+    - Justin Nix NFL
+    - Sadaf Hashimi actor
+
+# NewsAPI configuration
+newsapi:
+  enabled: false  # Set to true once API key is configured
+  days_back: 14   # How many days back to search
+
+# Filtering settings
+filtering:
+  min_relevance_score: 0.4  # Minimum score to include (0-1) - higher due to multiple name disambiguation
+  review_threshold_low: 0.4
+  review_threshold_high: 0.6
+
+# Output settings
+output:
+  max_stories_json: 200      # Max stories in JSON output
+  max_stories_rss: 50        # Max stories in RSS feed
+  json_path: "static/data/media-mentions.json"
+  rss_path: "static/data/media-mentions.xml"
+
+# Logging
+logging:
+  level: "INFO"  # INFO, WARN, ERROR
+  retention_days: 30  # Keep logs for this many days
+
+# Source prioritization (informational - used in manual review)
+source_priority:
+  tier1:
+    - "NPR"
+    - "New York Times"
+    - "Washington Post"
+    - "Associated Press"
+    - "Reuters"
+    - "Wired"
+    - "MIT Technology Review"
+  tier2:
+    - "Omaha World-Herald"
+    - "Denver Post"
+    - "Minneapolis Star Tribune"
+    - "Lincoln Journal Star"
+    - "The Marshall Project"
+    - "The Conversation"
+    - "GovTech"
+  tier3:
+    - "Police1"
+    - "The Reader"
+    - "EurekAlert"
+    - "Local TV stations"
+  deprioritize:
+    - "Press release aggregators"
+    - "Content farms"
