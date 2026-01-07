@@ -1,146 +1,536 @@
 ---
-title: Media
-
-# View.
-#   1 = List
-#   2 = Compact
-#   3 = Card
-view: 1
-
-# Optional header image (relative to `static/media/` folder).
-header:
-  caption: ""
-  image: ""
+title: "In the Media"
+summary: "Media coverage and interviews featuring VIPR Lab research on policing and public safety"
+date: 2026-01-07
+type: page
+reading_time: false
+share: false
+profile: false
+comments: false
 ---
 
-## Our co-directors frequently share their expertise with local and national journalists covering topics related to policing and public safety. We've compiled the resulting stories below.[^1]
-
-[^1]: If a link is broken, please [let us know!](https://www.viprlab.org/contact/)
-
-## 2025
-
-### November
-
-📰 *USA Today* interviewed Dr. Nix about community policing and its potential effects on crime in Birmingham, AL. Read it [here](https://www.usatoday.com/story/news/politics/2025/11/16/michael-pickett-birmingham-alabama-police-chief/87114615007/).
-
-### August
-
-📰 *KETV* featured Dr.'s Kulig and Hashimi's study on labor trafficking in Nebraska. Read it [here](https://www.ketv.com/article/uno-presents-labor-trafficking-in-nebraska-report/65926117).
-
-📰 *First Alert 6* featured a study on labor trafficking in Nebraska by Dr. Kulig and Dr. Hashimi. Read it [here](https://www.wowt.com/2025/08/28/university-nebraska-omaha-seeking-help-labor-trafficking-victims/).
-
-📰 *The Omaha World Herald* featured Dr. Kulig's and Dr. Hashimi's study on labor trafficking in Nebraska. Read it [here](https://omaha.com/news/local/crime-courts/article_6710c35f-5534-41a9-af74-f42d355afb1a.html).
-
-📰 *UNO Press Release* featured a community event on labor trafficking hosted by Dr.'s Kulig and Hashimi. Read it [here](https://www.unomaha.edu/news/2025/08/uno-study-offers-first-ever-look-into-labor-trafficking-in-nebraska.php).
-
-📰 *The Milwaukee Journal Sentinel* interviewed Dr. Nix about policing and public trust. Read it [here](https://www.jsonline.com/story/news/investigations/2025/08/20/milwaukee-police-officer-was-on-brady-list-twice-before-he-was-fired/85364335007/).
-
-### June
-
-📰 *Mother Jones* interviewed Dr. Nix about federal agents wearing masks to conceal their identity. Read it [here](https://www.motherjones.com/politics/2025/06/ice-immigration-agents-masks-masking-concealing-faces-legal/).
-
-### May
-
-📰 *The New York Times* interviewed Dr. Nix about police killing data since 2020. Read it [here](https://www.nytimes.com/2025/05/24/us/police-killings-george-floyd.html).
-
-📺 *KETV Omaha* interviewed Dr. Nix about recent crime trends in the city. Watch it [here](https://www.ketv.com/article/ketv-investigates-exclusive-omaha-police-department-shares-new-look-at-overall-crime/64786856).
-
-### April
-
-📰 *The Denver Post* interviewed Dr. Nix about the dangers of high speed police pursuits. Read it [here](https://www.denverpost.com/2025/04/20/colorado-police-chases-deaths-injuries-westminster-aurora/).
-
-## 2024
-
-### January
-
-📰 *USA Today* interviewed Dr. Nix about recent trends in killings by police. Read it [here](https://www.usatoday.com/story/news/nation/2024/01/17/police-killings-record-2023/72174081007/).
-
-📰 *USA Today* interviewed Dr. Nix about data showing a year-over-year decline in police line-of-duty deaths. Read it [here](https://www.usatoday.com/story/news/nation/2024/01/11/police-officer-killings-2023/72152566007/).
-
-## 2023
-
-### October
-
-📰 *NPR* interviewed Dr. Nix about the latest FBI [crime data](https://www.fbi.gov/news/press-releases/fbi-releases-2022-crime-in-the-nation-statistics). Read it [here](https://www.npr.org/2023/10/20/1207276234/fbi-crime-report-takeaways).
-
-### August
-
-📰 *Newsweek* interviewed Dr. Nix about the "15 least safest towns and cities in America." Read it [here](https://www.newsweek.com/least-safe-towns-cities-america-1813017). 
-
-### June
-
-📰 *The Lincoln Journal-Star* interviewed Dr. Huff about body-worn cameras in policing. Read it [here](https://journalstar.com/news/state-regional/crime-courts/dashcam-body-camera-use-police-accountability/article_5f287043-b5f2-54ee-8c2f-57637ef297d9.html).
-
-📰 *Louisville Public Media* interviewed Dr. Nix about LMPD's new Nonfatal Shooting Squad. Read it [here](https://www.lpm.org/news/2023-06-23/experts-say-louisvilles-new-nonfatal-shootings-unit-needs-resources-community-trust-to-succeed).
-
-📰 The University of Texas at Austin did a press release about [this article](https://onlinelibrary.wiley.com/doi/10.1111/1745-9125.12334) in *Criminology* by Dr. Sierra-Arévalo and team. Read it [here](https://liberalarts.utexas.edu/news/study-police-murder-of-george-floyd-associated-with-short-term-spike-in-firearm-assaults-on-u-s-police-officers). 
-
-### May
-
-📰 *The Pioneer Press* interviewed Dr. Nix about a surge in assaults on officers in Minnesota. Read it [here](https://www.twincities.com/2023/05/17/police-week-concern-over-increased-assaults-on-minnesota-cops/).
-
-### March
-
-📰 *The Omaha World-Herald* interviewed Dr. Nix about recruitment and retention in policing, generally, and OPD, specifically. Read it [here](https://omaha.com/news/local/staffing-woes-continue-to-plague-omaha-police-department/article_19b630de-bea5-11ed-b07c-9b7f82541a13.html). 
-
-### February
-
-📻 *PolitiFact* interviewed Dr. Huff about how often police officers are indicted following uses of deadly force. Read it [here](https://www.politifact.com/article/2023/feb/10/statistic-house-democrat-cited-police-indictments/). 
-
-📻 *Nebraska Public Media* interviewed Dr. Nix about the police murder of Tyre Nichols and how it influenced U.S. policing. Listen to it [here](https://nebraskapublicmedia.org/en/news/news-articles/how-the-murder-of-tyre-nichols-is-influencing-policing-in-america/).
-
-📰 *The Washington Post* interviewed Dr. Nix about U.S. police reform since the murder of George Floyd. Read it [here](https://www.washingtonpost.com/national-security/2023/02/02/memphis-tyre-nichols-police-reform/).
-
-📰 *The Washington Post* interviewed Dr. Nix about why fatal police shootings seem to have risen over the last 5 years. Read it [here](https://www.unionleader.com/news/safety/fatal-police-shootings-are-still-going-up-and-nobody-knows-why/article_121cc480-7ac6-57a6-8b84-5ef735ecfe6b.html); Dr. Nix wrote a follow-up blog about it [here](https://jnix.netlify.app/post/post23-are-ois-increasing/). 
-
-### January
-
-📺 *KMTV News Now* interviewed Dr. Huff about recruitment and retention struggles in policing, including locally. Watch it [here](https://www.3newsnow.com/news/local-news/omaha-police-department-says-its-pulling-out-all-the-stops-this-recruitment-season).
-
-📰 *The Omaha World-Herald* interviewed Dr. Nix about a federal investigation of PACE, a local nonprofit. Read it [here](https://omaha.com/news/local/crime-and-courts/omahas-pace-lpoa-restructure-amid-federalinvestigation/article_668a7a7c-92af-11ed-9d84-9be32a0e7a72.html).
-
-***
-
-## 2022
-
-### September
-
-📺 *KMTV News Now* interviewed Dr. Nix about a local homicide spike in August 2022. Watch it [here](https://www.3newsnow.com/news/local-news/the-month-of-august-sees-high-number-of-omaha-homicides-were-killing-ourselves-killing-one-another).
-
-### July
-
-📰 *The Denver Post* interviewed Dr. Nix about a police shooting in LoDo that injured five bystanders. Read it [here](https://www.denverpost.com/2022/07/20/denver-police-shooting-lodo-injuries/).
-
-### June
-
-📰 *NBC News* interviewed Dr. Nix about a fatal police shooting in Idaho. Read it [here](https://www.nbcnews.com/news/us-news/gonna-lose-gun-idaho-deputy-said-minutes-fatally-shooting-man-mental-h-rcna33601).
-
-### May
-
-📺 *KLKN TV* interviewed Dr. Nix about the correlation between warm weather and violent crime. Watch it [here](https://www.klkntv.com/does-warm-weather-lead-to-increase-in-violent-crime/).
-
-### January
-
-📰 *USA Today* interviewed Dr. Nix about the recent upward trend in gun violence against U.S. police officers. Read it [here](https://www.usatoday.com/story/news/nation/2022/01/29/police-attacked-4-us-cities-within-week-amid-violent-crime-spike/9248049002/?gnt-cfr=1).
-
-📰 *The Salt Lake Tribune* interviewed Dr. Nix about an increase in violence against police in Utah. Read it [here](https://www.sltrib.com/news/2022/01/21/utah-broke-record-most/). 
-
-***
-
-## 2021
-
-### December
-
-📺 *KMTV News Now Omaha* interviewed Dr. Huff and Dr. Nix about the FBI's use of force reporting system. Watch it [here](https://www.3newsnow.com/news/investigations/nebraska-iowa-have-drastically-different-participation-rates-in-use-of-force-reporting-program).
-
-### September
-
-📰 *Reuters* interviewed Dr. Nix about de-policing in Minneapolis after the murder of George Floyd. Read it [here](https://www.reuters.com/legal/government/after-floyds-killing-minneapolis-police-retreated-data-shows-2021-09-13/).
-
-### July
-
-📰 *The Washington Post* interviewed Dr. Nix about racial disparities in fatal police shootings. Read it [here](https://www.washingtonpost.com/investigations/interactive/2021/police-shootings-since-2015/).
-
-### April
-
-📰 *NBC News* interviewed Dr. Huff about police use of force against juveniles. Read it [here](https://www.nbcnews.com/news/nbcblk/beaten-i-was-adult-police-violence-against-kids-spark-demand-n1265535). 
+This page automatically tracks media coverage, interviews, and mentions of research by the VIPR Lab on policing and public safety. The feed aggregates stories where our Co-Direcotrs—Justin Nix, Sadaf Hashimi, and Travis Carter—have been quoted, cited, or featured as expert sources.
+
+**Research Areas Covered:**
+- Police use of force and accountability
+- Body-worn cameras and police technology
+- Community-police relations and procedural justice
+- Police legitimacy and public trust
+- Policing reform and evidence-based practice
+- Criminal justice policy and outcomes
+
+**Lab Members Featured:** Justin Nix, Sadaf Hashimi, Travis Carter
+
+**Subscribe:** [RSS Feed](/data/media-mentions.xml). Feed began active tracking on January 7, 2026.
+
+---
+
+<link rel="stylesheet" href="/css/news-feed.css">
+
+<div id="media-feed" class="news-feed-container">
+  <div class="news-loading">
+    <p>Loading media coverage...</p>
+  </div>
+</div>
+
+<style>
+/* News Feed Container */
+.news-feed-container {
+  margin-top: 2rem;
+}
+
+.news-loading {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-muted, #666);
+}
+
+/* Controls Bar */
+.news-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--article-bg-color, #f8f9fa);
+  border-radius: 8px;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.news-stats {
+  font-size: 0.95rem;
+  color: var(--text-muted, #666);
+}
+
+.news-filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--btn-default-border, #ddd);
+  background: var(--btn-default-bg, white);
+  color: var(--body-color, #333);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  background: var(--btn-hover-bg, #e9ecef);
+}
+
+.filter-btn.active {
+  background: #0066cc;
+  color: white;
+  border-color: #0066cc;
+}
+
+/* Featured Section */
+.featured-section {
+  margin-bottom: 2rem;
+}
+
+.featured-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #0066cc;
+}
+
+.featured-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--heading-color, #1a1a1a);
+}
+
+.featured-icon {
+  color: #f4c430;
+  font-size: 1.2rem;
+}
+
+/* Card Grid Layout */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 1200px) {
+  .news-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Individual Card Styling */
+.news-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--article-bg-color, white);
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  min-height: 180px;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.news-card.featured {
+  border: 2px solid #f4c430;
+  box-shadow: 0 2px 8px rgba(244, 196, 48, 0.2);
+}
+
+.news-card.featured:hover {
+  box-shadow: 0 8px 24px rgba(244, 196, 48, 0.3);
+}
+
+.news-card:focus {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+.news-card:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.news-card:focus-visible {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+/* Card Header - Source */
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--card-header-bg, #fafafa);
+  border-bottom: 1px solid var(--border-color, #eee);
+  font-size: 0.8rem;
+  color: var(--text-muted, #666);
+}
+
+.dark .card-header {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.card-source {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-weight: 500;
+}
+
+.source-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  background: var(--text-muted, #999);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: white;
+  flex-shrink: 0;
+}
+
+/* Featured Badge */
+.featured-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.15rem 0.4rem;
+  background: #fff8dc;
+  border: 1px solid #f4c430;
+  border-radius: 8px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #b8860b;
+  text-transform: uppercase;
+}
+
+/* Confidence Badge */
+.confidence-badge {
+  display: inline-block;
+  padding: 0.15rem 0.4rem;
+  border-radius: 8px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.confidence-high { background: #c8e6c9; color: #2e7d32; }
+.confidence-medium { background: #fff9c4; color: #f9a825; }
+.confidence-low { background: #ffcdd2; color: #c62828; }
+.confidence-unknown { background: #e0e0e0; color: #666; }
+
+/* Card Body - Headline */
+.card-body {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 0.5rem 0;
+  color: var(--heading-color, #1a1a1a);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-summary {
+  font-size: 0.875rem;
+  color: var(--text-muted, #666);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+  flex: 1;
+}
+
+/* Topic Tags */
+.card-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+}
+
+.topic-tag {
+  display: inline-block;
+  padding: 0.15rem 0.4rem;
+  background: #e3f2fd;
+  color: #1565c0;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+/* Card Footer - Metadata */
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--border-color, #eee);
+  font-size: 0.8rem;
+  color: var(--text-muted, #666);
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.card-date {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.card-date::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z'/%3E%3C/svg%3E");
+  background-size: contain;
+  opacity: 0.7;
+}
+
+/* Mention Type Badge */
+.mention-type-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.mention-type-quoted { background: #e8f5e9; color: #2e7d32; }
+.mention-type-cited { background: #e3f2fd; color: #1565c0; }
+.mention-type-referenced { background: #f3e5f5; color: #7b1fa2; }
+.mention-type-byline { background: #fff3e0; color: #ef6c00; }
+
+/* Story Type Badge */
+.story-type-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.story-type-news { background: #f5f5f5; color: #666; }
+.story-type-research { background: #e8f5e9; color: #2e7d32; }
+.story-type-interview { background: #e3f2fd; color: #1565c0; }
+.story-type-opinion { background: #fff8e1; color: #ff8f00; }
+.story-type-policy { background: #fce4ec; color: #ad1457; }
+.story-type-feature { background: #ede7f6; color: #5e35b1; }
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.pagination-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color, #ddd);
+  background: var(--btn-default-bg, white);
+  color: var(--body-color, #333);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: var(--btn-hover-bg, #e9ecef);
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-btn.active {
+  background: #0066cc;
+  color: white;
+  border-color: #0066cc;
+}
+
+.pagination-info {
+  font-size: 0.9rem;
+  color: var(--text-muted, #666);
+  margin: 0 1rem;
+}
+
+/* No Stories Message */
+.no-stories {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-muted, #999);
+  font-size: 1.1rem;
+  grid-column: 1 / -1;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .card-date::before {
+    filter: invert(1);
+  }
+}
+
+.dark .card-date::before {
+  filter: invert(1);
+}
+</style>
+
+<script src="/js/news-feed.js"></script>
+<script>
+// Media Mentions Feed Configuration
+(function() {
+  function renderMediaCard(story, isFeatured) {
+    var mentionType = story.mention_type || 'referenced';
+    var sourceInitial = (story.source || 'N')[0].toUpperCase();
+    var confidence = story.relevance_confidence || 'unknown';
+
+    // Build topics HTML
+    var topicsHTML = '';
+    if (story.topics && story.topics.length > 0) {
+      topicsHTML = '<div class="card-topics">';
+      var topics = Array.isArray(story.topics) ? story.topics : [story.topics];
+      topics.slice(0, 3).forEach(function(topic) {
+        topicsHTML += '<span class="topic-tag">' + escapeHtml(topic) + '</span>';
+      });
+      topicsHTML += '</div>';
+    }
+
+    var cardClass = 'news-card' + (isFeatured ? ' featured' : '');
+
+    var html = '<article class="' + cardClass + '" role="listitem" tabindex="0" ' +
+      'onclick="window.open(\'' + escapeHtml(story.url) + '\', \'_blank\', \'noopener\')" ' +
+      'onkeydown="if(event.key===\'Enter\')window.open(\'' + escapeHtml(story.url) + '\', \'_blank\', \'noopener\')" ' +
+      'aria-label="' + escapeHtml(story.title) + '">' +
+      '<div class="card-header">' +
+      '<div class="card-source">' +
+      '<span class="source-icon" aria-hidden="true">' + sourceInitial + '</span>' +
+      '<span>' + escapeHtml(story.source || 'Unknown') + '</span>' +
+      '</div>';
+
+    if (isFeatured) {
+      html += '<span class="featured-badge">&#9733; Featured</span>';
+    } else {
+      html += '<span class="confidence-badge confidence-' + confidence + '">' + confidence + '</span>';
+    }
+
+    html += '</div>' +
+      '<div class="card-body">' +
+      '<h3 class="card-title">' + escapeHtml(story.title) + '</h3>' +
+      '<p class="card-summary">' + escapeHtml(stripHtml(story.snippet || story.summary || '')) + '</p>' +
+      topicsHTML +
+      '</div>' +
+      '<div class="card-footer">' +
+      '<span class="card-date">' + formatDate(story.date || story.date_discovered) + '</span>' +
+      '<span class="mention-type-badge mention-type-' + mentionType + '">' + capitalize(mentionType) + '</span>' +
+      '</div>' +
+      '</article>';
+
+    return html;
+  }
+
+  // Helper functions
+  function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+
+  function escapeHtml(text) {
+    if (!text) return '';
+    var div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML.replace(/'/g, '&#39;').replace(/"/g, '&quot;');
+  }
+
+  function stripHtml(html) {
+    var tmp = document.createElement('div');
+    tmp.innerHTML = html;
+    return tmp.textContent || tmp.innerText || '';
+  }
+
+  function formatDate(dateStr) {
+    if (!dateStr) return 'Unknown';
+    var date = new Date(dateStr);
+    if (isNaN(date.getTime())) return dateStr;
+
+    var now = new Date();
+    var diffDays = Math.floor((now - date) / (1000 * 60 * 60 * 24));
+
+    if (diffDays === 0) return 'Today';
+    if (diffDays === 1) return 'Yesterday';
+    if (diffDays < 7) return diffDays + ' days ago';
+
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    });
+  }
+
+  // Initialize the feed
+  new NewsFeed({
+    containerId: 'media-feed',
+    jsonPath: '/data/media-mentions.json',
+    cardsPerPage: 12,
+    filterField: 'mention_type',
+    filterTypes: ['quoted', 'cited', 'referenced', 'byline'],
+    dateField: 'date',
+    prefix: 'media',
+    renderCard: renderMediaCard,
+    hasFeatured: true
+  });
+})();
+</script>
