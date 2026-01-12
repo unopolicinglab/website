@@ -7,4 +7,4 @@ header:
   image: ""
 ---
 
-## This page provides links to our various publications. If you have trouble accessing something, please [let us know](https://www.viprlab.org/contact/).
+## This page provides links to our various publications. It is updated every Monday. If you have trouble accessing something, please [let us know](https://www.viprlab.org/contact/).
