@@ -25,7 +25,7 @@ url_video: ''
 tags:
 - lab-member:justin-nix
 links:
-- name: DOI
-  url: https://doi.org/10.1080/24751979.2025.2517545
+- name: Postprint
+  url: https://assets.pubpub.org/y8znc9pm/Richards%20et%20al%20%28Postprint%29%20Minnesota%20SAKI%20-%20Lessons%20learned-51748967076417.pdf
 ---
 

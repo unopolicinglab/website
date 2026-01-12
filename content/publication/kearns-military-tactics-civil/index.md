@@ -19,8 +19,6 @@ url_project: ''
 url_slides: ''
 url_source: ''
 url_video: ''
-links:
-- name: DOI
-  url: https://doi.org/10.4324/9780203105962.ch20
+
 ---
 

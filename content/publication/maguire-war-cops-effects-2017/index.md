@@ -22,8 +22,5 @@ url_source: ''
 url_video: ''
 tags:
 - lab-member:justin-nix
-links:
-- name: DOI
-  url: https://doi.org/10.1080/07418825.2016.1236205
 ---
 

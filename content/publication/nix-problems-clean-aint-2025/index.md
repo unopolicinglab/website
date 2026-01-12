@@ -11,7 +11,7 @@ publication_types:
 publication: CrimRxiv
 abstract: ''
 featured: false
-doi: 10.21428/cb6ab371.8b17fd57
+doi: ''
 url_pdf: ''
 url_code: ''
 url_dataset: ''
@@ -23,7 +23,7 @@ url_video: ''
 tags:
 - lab-member:justin-nix
 links:
-- name: DOI
+- name: Preprint
   url: https://doi.org/10.21428/cb6ab371.8b17fd57
 ---
 

@@ -9,11 +9,11 @@ authors:
 date: '2025-04-04'
 publishDate: '2025-04-04'
 publication_types:
-- '3'
+- '2'
 publication: ''
 abstract: ''
 featured: false
-doi: 10.31235/osf.io/54dyh_v2
+doi: 10.1111/1745-9125.12363
 url_pdf: ''
 url_code: ''
 url_dataset: ''
@@ -25,7 +25,11 @@ url_video: ''
 tags:
 - lab-member:justin-nix
 links:
-- name: DOI
+- name: Preprint
   url: https://doi.org/10.31235/osf.io/54dyh_v2
+- name: Slides
+  url: https://jnix.netlify.app/slides/acjs22/#1
+- name: Replication Materials
+  url: https://doi.org/10.7910/DVN/HNFQSP
 ---
 

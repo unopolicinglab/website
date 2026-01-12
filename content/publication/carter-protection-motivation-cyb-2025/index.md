@@ -21,8 +21,5 @@ url_source: ''
 url_video: ''
 tags:
 - lab-member:travis-carter
-links:
-- name: DOI
-  url: https://doi.org/10.1007/s11292-025-09717-1
 ---
 

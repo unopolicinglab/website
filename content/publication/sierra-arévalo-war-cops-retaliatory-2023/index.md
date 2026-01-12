@@ -23,7 +23,9 @@ url_video: ''
 tags:
 - lab-member:justin-nix
 links:
-- name: DOI
-  url: https://doi.org/10.21428/cb6ab371.433179df
+- name: Postprint
+  url: https://digitalcommons.unomaha.edu/cgi/viewcontent.cgi?article=1194&context=criminaljusticefacpub
+- name: Slides
+  url: https://jnix.netlify.app/publication/51-crim-war-on-cops-george-floyd/asc_2022_presentation.pdf
 ---
 

@@ -23,8 +23,6 @@ url_project: ''
 url_slides: ''
 url_source: ''
 url_video: ''
-links:
-- name: DOI
-  url: https://doi.org/10.1080/17467586.2021.1895261
+
 ---
 

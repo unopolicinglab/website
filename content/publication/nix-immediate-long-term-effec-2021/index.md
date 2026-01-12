@@ -22,7 +22,9 @@ url_video: ''
 tags:
 - lab-member:justin-nix
 links:
-- name: DOI
-  url: https://doi.org/10.1080/15614263.2021.1883018
+- name: Postprint
+  url: https://assets.pubpub.org/oibiaw6d/71636036997434.pdf
+- name: Replication Materials
+  url: https://github.com/jnixy/replication-materials/tree/master/nix_richards_PPR_InPress
 ---
 

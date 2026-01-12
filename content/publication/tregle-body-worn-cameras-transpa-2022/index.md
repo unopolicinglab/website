@@ -23,7 +23,9 @@ url_video: ''
 tags:
 - lab-member:justin-nix
 links:
-- name: DOI
-  url: https://doi.org/10.1080/07418825.2020.1821086
+- name: Postprint
+  url: https://jnix.netlify.app/files/pdfs/jq_bwc_transparency.pdf
+- name: Replication Materials
+  url: https://github.com/jnixy/replication-materials/tree/master/tregle_et_al_JQ_InPress
 ---
 

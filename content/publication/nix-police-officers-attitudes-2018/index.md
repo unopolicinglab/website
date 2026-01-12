@@ -23,7 +23,7 @@ url_video: ''
 tags:
 - lab-member:justin-nix
 links:
-- name: DOI
-  url: https://doi.org/10.1108/PIJPSM-01-2018-0019
+- name: Postprint
+  url: https://jnix.netlify.app/files/pdfs/pijpsm_CACs.pdf
 ---
 

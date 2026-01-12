@@ -23,7 +23,7 @@ url_video: ''
 tags:
 - lab-member:justin-nix
 links:
-- name: DOI
-  url: https://doi.org/10.1080/15614263.2022.2036611
+- name: Postprint
+  url: https://jnix.netlify.app/files/pdfs/ppr_trauma_proximity.pdf
 ---
 

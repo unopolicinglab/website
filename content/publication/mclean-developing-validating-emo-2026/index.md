@@ -27,7 +27,7 @@ url_video: ''
 tags:
 - lab-member:justin-nix
 links:
-- name: DOI
-  url: https://doi.org/10.1108/PIJPSM-04-2025-0072
+- name: Preprint
+  url: https://open.clemson.edu/cgi/viewcontent.cgi?article=1000&context=soc_pubs
 ---
 

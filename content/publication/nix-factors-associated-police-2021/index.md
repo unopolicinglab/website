@@ -23,7 +23,11 @@ url_video: ''
 tags:
 - lab-member:justin-nix
 links:
-- name: DOI
-  url: https://doi.org/10.1371/journal.pone.0259024
+- name: Postprint
+  url: https://www.crimrxiv.com/pub/xdeitfix/release/3?readingCollection=6c7c25ac
+- name: Replication Materials
+  url: https://github.com/jnixy/replication-materials/tree/master/nix_shjarback_PONE_2021
+- name: Slides
+  url: https://jnix.netlify.app/slides/asc21_pone_paper
 ---
 

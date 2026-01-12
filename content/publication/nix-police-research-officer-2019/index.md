@@ -24,7 +24,7 @@ url_video: ''
 tags:
 - lab-member:justin-nix
 links:
-- name: DOI
-  url: https://doi.org/10.1080/10439463.2017.1394300
+- name: Postprint
+  url: https://jnix.netlify.app/files/pdfs/p&s_responserates.pdf
 ---
 

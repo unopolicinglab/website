@@ -20,8 +20,6 @@ url_project: ''
 url_slides: ''
 url_source: ''
 url_video: ''
-links:
-- name: DOI
-  url: https://doi.org/10.1007/s12103-019-09501-8
+
 ---
 

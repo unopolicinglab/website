@@ -22,7 +22,9 @@ url_video: ''
 tags:
 - lab-member:justin-nix
 links:
-- name: DOI
-  url: https://doi.org/10.1080/15614263.2021.1878894
+- name: Postprint
+  url: https://assets.pubpub.org/q5ubf3i9/51636042065128.pdf
+- name: Data
+  url: https://doi.org/10.7910/DVN/VGYI0E
 ---
 

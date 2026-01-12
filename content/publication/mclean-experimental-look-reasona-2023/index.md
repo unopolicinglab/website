@@ -25,7 +25,9 @@ url_video: ''
 tags:
 - lab-member:justin-nix
 links:
-- name: DOI
-  url: https://doi.org/10.1108/PIJPSM-01-2023-0002
+- name: Postprint
+  url: https://jnix.netlify.app/files/pdfs/pij_rs_experiments.pdf
+- name: Slides
+  url: https://jnix.netlify.app/publication/52-rs-experiments/asc_2022_presentation.pdf
 ---
 

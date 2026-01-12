@@ -23,7 +23,7 @@ url_video: ''
 tags:
 - lab-member:justin-nix
 links:
-- name: DOI
-  url: https://doi.org/10.1080/07418825.2017.1338743
+- name: Postprint
+  url: https://jnix.netlify.app/files/pdfs/jq_perceived_waroncops.pdf
 ---
 

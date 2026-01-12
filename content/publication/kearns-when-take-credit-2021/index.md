@@ -18,8 +18,5 @@ url_project: ''
 url_slides: ''
 url_source: ''
 url_video: ''
-links:
-- name: DOI
-  url: https://doi.org/10.1080/09546553.2018.1540982
 ---
 

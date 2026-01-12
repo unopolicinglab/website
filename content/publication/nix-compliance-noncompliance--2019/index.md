@@ -23,7 +23,7 @@ url_video: ''
 tags:
 - lab-member:justin-nix
 links:
-- name: DOI
-  url: https://doi.org/10.1007/s11292-019-09363-4
+- name: Replication Materials
+  url: https://github.com/jnixy/replication-materials/tree/master/nix_et_al_JOEX_2019
 ---
 

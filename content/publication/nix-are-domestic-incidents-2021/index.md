@@ -24,7 +24,7 @@ url_video: ''
 tags:
 - lab-member:justin-nix
 links:
-- name: DOI
-  url: https://doi.org/10.1080/07418825.2019.1675748
+- name: Postprint
+  url: https://jnix.netlify.app/files/pdfs/jq_domestics.pdf
 ---
 

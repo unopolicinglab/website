@@ -23,8 +23,5 @@ url_source: ''
 url_video: ''
 tags:
 - lab-member:travis-carter
-links:
-- name: DOI
-  url: https://doi.org/10.1108/PIJPSM-06-2023-0076
 ---
 
