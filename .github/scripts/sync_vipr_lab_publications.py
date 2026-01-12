@@ -194,21 +194,24 @@ class VIPRLabORCIDSync:
                 # Remove any non-alphanumeric characters
                 first_author_slug = re.sub(r'[^\w\s-]', '', first_author_slug)
         
-        # Build slug based on convention
-        if self.naming_convention == "firstauthor-year":
-            slug = f"{first_author_slug}-{year}" if year else first_author_slug
-        elif self.naming_convention == "firstauthor-et-al-year":
-            if len(authors) > 1:
-                slug = f"{first_author_slug}-et-al-{year}" if year else f"{first_author_slug}-et-al"
-            else:
-                slug = f"{first_author_slug}-{year}" if year else first_author_slug
-        else:
-            # firstauthor-shortname-year
-            short_title = title.lower()
-            short_title = re.sub(r'[^\w\s-]', '', short_title)
-            short_title = re.sub(r'[-\s]+', '-', short_title)
-            short_title = short_title[:30]  # Limit length
+        # Create a short title snippet (2-3 meaningful words)
+        short_title = title.lower()
+        # Remove common words
+        stop_words = {'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by', 'from'}
+        words = short_title.split()
+        meaningful_words = [w for w in words if w not in stop_words and len(w) > 2][:3]
+        short_title = '-'.join(meaningful_words)
+        # Clean up
+        short_title = re.sub(r'[^\w\s-]', '', short_title)
+        short_title = re.sub(r'[-\s]+', '-', short_title)
+        short_title = short_title[:25]  # Limit length
+        
+        # Build slug - ALWAYS include short title to avoid collisions
+        if short_title:
             slug = f"{first_author_slug}-{short_title}-{year}" if year else f"{first_author_slug}-{short_title}"
+        else:
+            # Fallback if no meaningful words
+            slug = f"{first_author_slug}-{year}" if year else first_author_slug
         
         # Clean up and limit length
         slug = slug.strip('-')
@@ -349,14 +352,22 @@ class VIPRLabORCIDSync:
                 if not work_detail:
                     error_msg = f"Could not fetch details for work {put_code} ({member_name})"
                     results["errors"].append(error_msg)
+                    print(f"[{i}/{len(all_works)}] ⚠️  {error_msg}")
                     continue
                 
                 # Extract metadata
-                metadata = self.extract_metadata(work_detail, member_name)
+                try:
+                    metadata = self.extract_metadata(work_detail, member_name)
+                except Exception as e:
+                    error_msg = f"Error extracting metadata for work {put_code} ({member_name}): {str(e)}"
+                    results["errors"].append(error_msg)
+                    print(f"[{i}/{len(all_works)}] ⚠️  {error_msg}")
+                    continue
                 
                 if not metadata["title"]:
-                    error_msg = f"No title found for work {put_code} ({member_name})"
+                    error_msg = f"No title found for work {put_code} ({member_name}) - skipping"
                     results["errors"].append(error_msg)
+                    print(f"[{i}/{len(all_works)}] ⚠️  {error_msg}")
                     continue
                 
                 # Check for duplicate by DOI
@@ -472,9 +483,8 @@ def main():
     # Run sync
     results = syncer.sync(dry_run=args.dry_run)
     
-    # Exit with error code if there were errors
-    if results["errors"]:
-        exit(1)
+    # Don't exit with error code - errors are expected for malformed ORCID works
+    # They're logged in the results and user can review them
 
 
 if __name__ == "__main__":
