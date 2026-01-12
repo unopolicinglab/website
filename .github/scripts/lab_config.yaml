@@ -12,14 +12,16 @@ lab_members:
     orcid: "0000-0001-5793-4451"
     author_slug: "carter"  # Matches content/authors/carter/
     
+  - name: "Sadaf Hashimi"
+    orcid: "0000-0003-2050-1032"
+    author_slug: "hashimi"  # Matches content/authors/hashimi/
+    
   - name: "Erin Kearns"
     orcid: "0000-0002-7895-9129"
     author_slug: "kearns"  # Matches content/authors/kearns/
     
   # Add ORCIDs when available:
-  # - name: "Sadaf Hashimi"
-  #   orcid: "0000-0000-0000-0000"
-  #   author_slug: "hashimi"
+
   #
   # - name: "Sam Clinkinbeard"
   #   orcid: "0000-0000-0000-0000"
