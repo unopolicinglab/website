@@ -33,6 +33,19 @@ class VIPRLabORCIDSync:
         self.lab_members = self.config.get('lab_members', [])
         self.naming_convention = self.config.get('naming_convention', 'firstauthor-year')
         
+        # Build author name -> slug mapping
+        self.author_slug_map = {}
+        for member in self.lab_members:
+            member_name = member['name']
+            author_slug = member.get('author_slug', member.get('slug', ''))
+            if author_slug:
+                self.author_slug_map[member_name.lower()] = author_slug
+        
+        # Add additional author mappings if provided
+        additional_mappings = self.config.get('author_mappings', {})
+        for name, slug in additional_mappings.items():
+            self.author_slug_map[name.lower()] = slug
+        
         # Track publications by DOI to avoid duplicates
         self.publications_by_doi = {}
         self.publications_without_doi = []
@@ -177,6 +190,24 @@ class VIPRLabORCIDSync:
         
         return metadata
     
+    def map_authors_to_slugs(self, authors: List[str]) -> List[str]:
+        """Map author full names to Hugo author page slugs where possible"""
+        mapped_authors = []
+        for author in authors:
+            author_lower = author.lower()
+            
+            # Check if this author has a slug mapping
+            slug = None
+            for mapped_name, mapped_slug in self.author_slug_map.items():
+                if mapped_name in author_lower:
+                    slug = mapped_slug
+                    break
+            
+            # Use slug if found, otherwise use full name
+            mapped_authors.append(slug if slug else author)
+        
+        return mapped_authors
+    
     def create_slug(self, metadata: Dict) -> str:
         """Create a URL-friendly slug based on lab naming convention"""
         title = metadata["title"]
@@ -238,10 +269,13 @@ class VIPRLabORCIDSync:
         
         pub_type = type_mapping.get(metadata["publication_type"].lower(), "0")
         
+        # Map author names to slugs for proper linking
+        mapped_authors = self.map_authors_to_slugs(metadata["authors"])
+        
         # Build frontmatter dictionary
         frontmatter = {
             "title": metadata["title"],
-            "authors": metadata["authors"],
+            "authors": mapped_authors,  # Use mapped slugs instead of full names
             "date": metadata["publication_date"],
             "publishDate": metadata["publication_date"],
             "publication_types": [pub_type],
@@ -264,11 +298,8 @@ class VIPRLabORCIDSync:
             frontmatter["tags"] = [f"lab-member:{name.lower().replace(' ', '-')}" 
                                    for name in metadata["lab_member_authors"]]
         
-        # Add DOI link if available
-        if metadata["doi"]:
-            frontmatter["links"] = [
-                {"name": "DOI", "url": f"https://doi.org/{metadata['doi']}"}
-            ]
+        # Note: DOI is already in the 'doi' field above, which Hugo Academic renders as a DOI button
+        # No need to add it to 'links' - that would create a duplicate button
         
         # Convert to YAML
         yaml_str = yaml.dump(frontmatter, default_flow_style=False, sort_keys=False, 
