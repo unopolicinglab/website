@@ -1,5 +1,5 @@
 ---
-title: "Drs. Hashimi, Ouellet, and Ledford: Partners in Force? Understanding Police use of Force from a Network Perspective"
+title: "Partners in Force? Understanding Police use of Force from a Network Perspective"
 
 authors:
 - hashimi

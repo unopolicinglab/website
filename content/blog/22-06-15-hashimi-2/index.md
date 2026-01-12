@@ -1,5 +1,5 @@
 ---
-title: "Dr. Hashimi: Officer Networks and Firearm Behaviors: Assessing the Social Transmission of Weapon-Use"
+title: "Officer Networks and Firearm Behaviors: Assessing the Social Transmission of Weapon-Use"
 authors:
 - hashimi
 date: "2022-06-15T10:00:00Z"

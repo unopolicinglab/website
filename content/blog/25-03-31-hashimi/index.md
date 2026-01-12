@@ -1,5 +1,5 @@
 ---
-title: "Drs. Hashimi and Ouellet: Invite Only: The Prevalence of Subgroups Within A Police Department"
+title: "Invite Only: The Prevalence of Subgroups Within A Police Department"
 
 authors:
 - hashimi

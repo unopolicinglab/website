@@ -1,5 +1,5 @@
 ---
-title: "Drs. Kearns and Nix: How Generalizable are Findings from Police Surveys? (Re-Blog)"
+title: "How Generalizable are Findings from Police Surveys? (Re-Blog)"
 authors:
 - kearns
 - admin

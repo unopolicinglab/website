@@ -1,5 +1,5 @@
 ---
-title: "Dr. Huff: Wrapping up my first year as an AC/DC instructor"
+title: "Wrapping up my first year as an AC/DC instructor"
 categories: []
 date: "2023-11-22T11:00:00Z"
 publishdate: "2023-11-22T11:00:00z"
@@ -18,8 +18,6 @@ draft: false
 ---
 
 Over the past year, I've been a founding instructor for the American Society of Evidence-Based Policing (ASEBP) Applied Criminology & Data Management Course (AC/DC), funded by the National Institute of Justice. The AC/DC course was created to bring research-oriented police practitioners and academics together to conduct research projects that were valuable to the practitioners’ police agency. The requirement to complete a research project over the course of the program separates AC/DC from any other conference, working group, or training course. 
-
-![everyone](everyone.jpg)
 
 Participants represented fifteen police agencies and several universities from across the U.S. and Canada. The studies they produced have had direct benefits for the practitioners' police agencies. A brief of each study conducted can be found on the ASEBP [website](https://www.americansebp.org/ac_dc_course.php). 
 
