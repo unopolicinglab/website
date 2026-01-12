@@ -1,0 +1,12 @@
+lab_members:
+  - name: "Justin Nix"
+    orcid: "0000-0002-3812-8590"
+    slug: "justin-nix"
+    
+  - name: "Travis Carter"
+    orcid: "0000-0001-5793-4451"
+    slug: "travis-carter"
+    
+  - name: "Erin Kearns"
+    orcid: "0000-0002-7895-9129"
+    slug: "erin-kearns"
