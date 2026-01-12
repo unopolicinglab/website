@@ -1,7 +1,7 @@
 ---
 title: 'Navigating Entry: The Role of Exposure and Career Fit Negotiation in Women’s Pathways to Policing in the United States'
 authors:
-- Sam S. Clinkinbeard
+- clinkinbeard
 - Rachael M. Rief
 - Trisha N. Rhodes
 - Lexi E. Goodijohn
