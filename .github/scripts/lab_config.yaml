@@ -6,24 +6,34 @@
 lab_members:
   - name: "Justin Nix"
     orcid: "0000-0002-3812-8590"
-    slug: "justin-nix"
+    author_slug: "admin"  # Matches content/authors/admin/
     
   - name: "Travis Carter"
     orcid: "0000-0001-5793-4451"
-    slug: "travis-carter"
+    author_slug: "carter"  # Matches content/authors/carter/
     
   - name: "Erin Kearns"
     orcid: "0000-0002-7895-9129"
-    slug: "erin-kearns"
+    author_slug: "kearns"  # Matches content/authors/kearns/
     
   # Add ORCIDs when available:
   # - name: "Sadaf Hashimi"
   #   orcid: "0000-0000-0000-0000"
-  #   slug: "sadaf-hashimi"
+  #   author_slug: "hashimi"
   #
   # - name: "Sam Clinkinbeard"
   #   orcid: "0000-0000-0000-0000"
-  #   slug: "sam-clinkinbeard"
+  #   author_slug: "clinkinbeard"
+
+# Additional author mappings for common co-authors
+# Maps their ORCID name to your author page slug
+# This allows their names to link properly when they co-author with lab members
+author_mappings:
+  # Add external collaborators who have author pages on your site
+  # Format: "Full Name in ORCID": "author-slug"
+  # Example:
+  # "Jessie Huff": "huff"
+  # "Marie Ouellet": "ouellet"
 
 # Naming convention for publication folders
 # Options: "firstauthor-year", "firstauthor-et-al-year", "firstauthor-shortname-year"
