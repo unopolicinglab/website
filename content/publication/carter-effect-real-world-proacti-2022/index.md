@@ -1,7 +1,7 @@
 ---
 title: The effect of real-world proactive policing on crime
 authors:
-- Travis Carter
+- carter
 - Scott Wolfe
 date: '2022-11-29'
 publishDate: '2022-11-29'

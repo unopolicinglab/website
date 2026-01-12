@@ -1,7 +1,7 @@
 ---
 title: 'Front porch roll calls: an innovative approach to community-oriented policing in Saginaw, MI'
 authors:
-- Travis Carter
+- carter
 - Scott E. Wolfe
 - Yongjae Nam
 - Spencer G. Lawson

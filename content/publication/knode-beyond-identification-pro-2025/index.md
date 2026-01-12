@@ -2,7 +2,7 @@
 title: 'Beyond Identification: A Problem-Oriented Approach to Diagnosing Racial Disparities in Policing'
 authors:
 - Jedidiah L. Knode
-- Travis M. Carter
+- carter
 - Scott E. Wolfe
 date: '2025-06-20'
 publishDate: '2025-06-20'

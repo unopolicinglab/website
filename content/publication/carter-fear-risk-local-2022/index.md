@@ -1,7 +1,7 @@
 ---
 title: 'Fear, risk, and local control: Testing the generality of Ferraro’s risk interpretation framework'
 authors:
-- Travis Carter
+- carter
 - Chris Melde
 date: '2022-12-24'
 publishDate: '2022-12-24'

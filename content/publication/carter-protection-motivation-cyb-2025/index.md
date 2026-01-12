@@ -1,7 +1,7 @@
 ---
 title: 'Protection motivation and cybersecurity intentions: a visual conjoint experiment'
 authors:
-- Travis Carter
+- carter
 - Rachel L. McNealey
 date: '2025-12-03'
 publishDate: '2025-12-03'

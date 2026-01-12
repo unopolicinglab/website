@@ -2,7 +2,7 @@
 title: 'Driving While Broke: The Role of Class Signals in Police Discretion'
 authors:
 - Jedidiah L. Knode
-- Travis M. Carter
+- carter
 - Scott E. Wolfe
 date: '2024-09-04'
 publishDate: '2024-09-04'
