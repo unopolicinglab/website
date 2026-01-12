@@ -374,13 +374,45 @@ class VIPRLabORCIDSync:
                 doi = metadata["doi"]
                 if doi:
                     if doi in self.publications_by_doi:
-                        # Duplicate found - add this member to the list of authors
+                        # Duplicate found - we need to decide which version to keep
                         existing = self.publications_by_doi[doi]
+                        
+                        # Add this member to the list of authors if not already there
                         if member_name not in existing["lab_member_authors"]:
                             existing["lab_member_authors"].append(member_name)
+                        
+                        # Prefer published version over preprint
+                        # Check publication type - prefer journal-article over preprint
+                        existing_is_preprint = existing["publication_type"].lower() == "preprint"
+                        new_is_preprint = metadata["publication_type"].lower() == "preprint"
+                        
+                        should_replace = False
+                        if existing_is_preprint and not new_is_preprint:
+                            # New version is published, replace preprint
+                            should_replace = True
+                            reason = "published version"
+                        elif not existing_is_preprint and new_is_preprint:
+                            # Keep existing published version
+                            should_replace = False
+                            reason = "keeping published version"
+                        else:
+                            # Both same type - prefer more recent date
+                            if metadata["publication_date"] > existing["publication_date"]:
+                                should_replace = True
+                                reason = "more recent date"
+                            else:
+                                reason = "keeping existing"
+                        
+                        if should_replace:
+                            # Update with newer/better version, but keep lab member list
+                            lab_members = existing["lab_member_authors"]
+                            self.publications_by_doi[doi] = metadata
+                            self.publications_by_doi[doi]["lab_member_authors"] = lab_members
+                            print(f"[{i}/{len(all_works)}] 🔄 Updating: {title[:50]}... ({reason})")
+                        else:
+                            print(f"[{i}/{len(all_works)}] ⚡ Duplicate: {title[:50]}... ({reason})")
+                        
                         results["duplicates_found"] += 1
-                        print(f"[{i}/{len(all_works)}] ⚡ Duplicate: {title[:60]}... "
-                              f"(also by {member_name})")
                         continue
                     else:
                         # New unique publication
