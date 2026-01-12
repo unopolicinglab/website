@@ -19,13 +19,22 @@
     {{ range $posts }}
     <div class="col-12 col-md-6 col-lg-4 mb-4">
       <div class="card h-100 shadow-sm hover-shadow-lg">
-        {{ if .Params.image.filename }}
-        <a href="{{ .RelPermalink }}">
-          {{ $image := .Resources.GetMatch .Params.image.filename }}
-          {{ if $image }}
-            {{ $image := $image.Fill "600x300 Center" }}
-            <img src="{{ $image.RelPermalink }}" class="card-img-top" alt="{{ .Title }}" style="object-fit: cover; height: 200px;">
+        <!-- Featured Image -->
+        {{ $image := "" }}
+        {{ if .Params.image }}
+          {{ if .Params.image.filename }}
+            {{ $image = .Resources.GetMatch .Params.image.filename }}
+          {{ else if reflect.IsMap .Params.image }}
+            {{ $image = .Resources.GetMatch "featured.*" }}
           {{ end }}
+        {{ else }}
+          {{ $image = .Resources.GetMatch "featured.*" }}
+        {{ end }}
+        
+        {{ if $image }}
+        <a href="{{ .RelPermalink }}">
+          {{ $image := $image.Fill "600x300 Center" }}
+          <img src="{{ $image.RelPermalink }}" class="card-img-top" alt="{{ .Title }}" style="object-fit: cover; height: 200px;">
         </a>
         {{ end }}
         
@@ -45,7 +54,13 @@
               <span class="mx-1">·</span>
               {{ range $index, $author := .Params.authors }}
                 {{ if gt $index 0 }}, {{ end }}
-                {{ $author }}
+                <!-- Try to get author's display name from their page -->
+                {{ $authorPage := site.GetPage (printf "/authors/%s" $author) }}
+                {{ if $authorPage }}
+                  {{ $authorPage.Title }}
+                {{ else }}
+                  {{ $author }}
+                {{ end }}
               {{ end }}
             {{ end }}
           </div>
