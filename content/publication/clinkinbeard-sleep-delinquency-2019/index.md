@@ -1,12 +1,12 @@
 ---
 title: Sleep and Delinquency
 authors:
-- Samantha S. Clinkinbeard
+- clinkinbeard
 - Pete Simi
 date: '2019-08-08'
 publishDate: '2019-08-08'
 publication_types:
-- '0'
+- '6'
 publication: Routledge International Handbook of Delinquency and Health
 abstract: ''
 featured: false
