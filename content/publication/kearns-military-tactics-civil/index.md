@@ -3,10 +3,10 @@ title: Military Tactics in Civil War
 authors:
 - kearns
 - Joseph K. Young
-date: ''
-publishDate: ''
+date: '2014-02-17'
+publishDate: '2014-02-17'
 publication_types:
-- '0'
+- '6'
 publication: Routledge Handbook of Civil Wars
 abstract: ''
 featured: false
