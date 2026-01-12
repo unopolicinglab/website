@@ -43,8 +43,9 @@ class VIPRLabORCIDSync:
         
         # Add additional author mappings if provided
         additional_mappings = self.config.get('author_mappings', {})
-        for name, slug in additional_mappings.items():
-            self.author_slug_map[name.lower()] = slug
+        if additional_mappings:  # Check if not None
+            for name, slug in additional_mappings.items():
+                self.author_slug_map[name.lower()] = slug
         
         # Track publications by DOI to avoid duplicates
         self.publications_by_doi = {}

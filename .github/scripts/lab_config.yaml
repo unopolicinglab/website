@@ -30,7 +30,7 @@ lab_members:
 # Additional author mappings for common co-authors
 # Maps their ORCID name to your author page slug
 # This allows their names to link properly when they co-author with lab members
-author_mappings:
+author_mappings: {}
   # Add external collaborators who have author pages on your site
   # Format: "Full Name in ORCID": "author-slug"
   # Example:
