@@ -1,0 +1,96 @@
+{{- define "main" -}}
+
+<!-- Page Header -->
+<div class="universal-wrapper pt-3">
+  <h1>{{ .Title }}</h1>
+  
+  {{ with .Params.subtitle }}
+  <p class="page-subtitle">{{ . | markdownify | emojify }}</p>
+  {{ end }}
+</div>
+
+<!-- Blog Posts in Card Grid -->
+<div class="universal-wrapper">
+  <div class="row">
+    {{ $posts := where site.RegularPages "Type" "blog" }}
+    {{ $posts := where $posts "Params.draft" "!=" true }}
+    {{ $posts := $posts.ByPublishDate.Reverse }}
+    
+    {{ range $posts }}
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+      <div class="card h-100 shadow-sm hover-shadow-lg">
+        {{ if .Params.image.filename }}
+        <a href="{{ .RelPermalink }}">
+          {{ $image := .Resources.GetMatch .Params.image.filename }}
+          {{ if $image }}
+            {{ $image := $image.Fill "600x300 Center" }}
+            <img src="{{ $image.RelPermalink }}" class="card-img-top" alt="{{ .Title }}" style="object-fit: cover; height: 200px;">
+          {{ end }}
+        </a>
+        {{ end }}
+        
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title mb-2">
+            <a href="{{ .RelPermalink }}" class="text-decoration-none text-dark">
+              {{ .Title }}
+            </a>
+          </h5>
+          
+          <div class="mb-2 text-muted small">
+            <i class="far fa-calendar-alt"></i>
+            <time datetime="{{ .Date.Format "2006-01-02" }}">
+              {{ .Date.Format "January 2, 2006" }}
+            </time>
+            {{ if .Params.authors }}
+              <span class="mx-1">·</span>
+              {{ range $index, $author := .Params.authors }}
+                {{ if gt $index 0 }}, {{ end }}
+                {{ $author }}
+              {{ end }}
+            {{ end }}
+          </div>
+          
+          {{ with .Summary }}
+          <p class="card-text text-muted flex-grow-1">
+            {{ . | truncate 150 }}
+          </p>
+          {{ end }}
+          
+          <a href="{{ .RelPermalink }}" class="btn btn-outline-primary btn-sm mt-auto">
+            Read more →
+          </a>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+<!-- Custom CSS for hover effects -->
+<style>
+.hover-shadow-lg {
+  transition: all 0.3s ease;
+}
+
+.hover-shadow-lg:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+}
+
+.card-title a:hover {
+  color: var(--primary) !important;
+}
+
+.btn-outline-primary {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+</style>
+
+{{- end -}}
