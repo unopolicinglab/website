@@ -1,8 +1,8 @@
 ---
 title: 'Examining police officers’ perceptions of stress: the role of Person−environment fit'
 authors:
-- Rachael Rief
-- Samantha Clinkinbeard
+- rief
+- clinkinbeard
 date: '2021-10-22'
 publishDate: '2021-10-22'
 publication_types:
