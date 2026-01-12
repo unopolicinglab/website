@@ -2,11 +2,11 @@
 title: Parole
 authors:
 - Monica K. Miller
-- Samantha S. Clinkinbeard
+- clinkinbeard
 date: ''
 publishDate: ''
 publication_types:
-- '0'
+- '6'
 publication: 'Encyclopedia of Law & Society: American and Global Perspectives'
 abstract: ''
 featured: false
