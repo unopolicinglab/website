@@ -1,7 +1,7 @@
 ---
 title: 'Sleep and Delinquency: Does the Amount of Sleep Matter?'
 authors:
-- Samantha S. Clinkinbeard
+- clinkinbeard
 - Pete Simi
 - Mary K. Evans
 - Amy L. Anderson
