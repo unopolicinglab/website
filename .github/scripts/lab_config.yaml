@@ -1,3 +1,8 @@
+# VIPR Lab Members Configuration
+# 
+# Add lab members whose publications should be automatically synced from ORCID.
+# When multiple lab members co-author a paper, it will only appear once (deduplicated by DOI).
+
 lab_members:
   - name: "Justin Nix"
     orcid: "0000-0002-3812-8590"
@@ -10,3 +15,24 @@ lab_members:
   - name: "Erin Kearns"
     orcid: "0000-0002-7895-9129"
     slug: "erin-kearns"
+    
+  # Add ORCIDs when available:
+  # - name: "Sadaf Hashimi"
+  #   orcid: "0000-0000-0000-0000"
+  #   slug: "sadaf-hashimi"
+  #
+  # - name: "Sam Clinkinbeard"
+  #   orcid: "0000-0000-0000-0000"
+  #   slug: "sam-clinkinbeard"
+
+# Naming convention for publication folders
+# Options: "firstauthor-year", "firstauthor-et-al-year", "firstauthor-shortname-year"
+naming_convention: "firstauthor-year"
+
+# How to handle co-authored papers with multiple lab members
+# "first-author" - use the first author's name in the slug
+# "all-lab-members" - include all lab member names (can get long)
+coauthor_handling: "first-author"
+
+# Maximum slug length (to avoid very long folder names)
+max_slug_length: 60
