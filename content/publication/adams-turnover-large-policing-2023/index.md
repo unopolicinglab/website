@@ -23,7 +23,9 @@ url_video: ''
 tags:
 - lab-member:justin-nix
 links:
-- name: DOI
+- name: Postprint
   url: https://doi.org/10.21428/cb6ab371.4a588631
+- name: Replication Materials
+  url: https://github.com/ian-adams/police_turnover_public
 ---
 
