@@ -1,7 +1,7 @@
 ---
 title: Racial Differences in Conceptualizing Legitimacy and Trust in Police
 authors:
-- Erin M. Kearns
+- kearns
 - Emma Ashooh
 - Belén Lowrey-Kinberg
 date: '2020-04-22'

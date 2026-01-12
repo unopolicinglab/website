@@ -2,7 +2,7 @@
 title: How Do Offender Ideology and Offense Severity Impact Punitive Attitudes Toward Politically Motivated Offenders in the U.S.?
 authors:
 - Isaac J. Moelter
-- Erin M. Kearns
+- kearns
 date: '2024-04-14'
 publishDate: '2024-04-14'
 publication_types:

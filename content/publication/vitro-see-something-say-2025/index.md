@@ -2,7 +2,7 @@
 title: See something, say something? Examining variation in willingness to report suspicious activity to police across racial and ethnic groups
 authors:
 - Callie Vitro
-- Erin M. Kearns
+- kearns
 - Isaac J. Moelter
 date: '2025-12-16'
 publishDate: '2025-12-16'

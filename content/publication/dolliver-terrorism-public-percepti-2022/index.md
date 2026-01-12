@@ -2,7 +2,7 @@
 title: 'Is It Terrorism?: Public Perceptions, Media, and Labeling the Las Vegas Shooting'
 authors:
 - Matthew J. Dolliver
-- Erin M. Kearns
+- kearns
 date: '2022-01-02'
 publishDate: '2022-01-02'
 publication_types:

@@ -1,7 +1,7 @@
 ---
 title: How generalizable are findings from police surveys? A review of multi-agency studies
 authors:
-- Erin M. Kearns
+- kearns
 - admin
 date: '2023-09-03'
 publishDate: '2023-09-03'

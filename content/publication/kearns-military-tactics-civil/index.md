@@ -1,7 +1,7 @@
 ---
 title: Military Tactics in Civil War
 authors:
-- Erin M. Kearns
+- kearns
 - Joseph K. Young
 date: ''
 publishDate: ''

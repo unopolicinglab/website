@@ -1,7 +1,7 @@
 ---
 title: Intergroup images mediate the relationships between government abuse, sociopolitical orientations, and political action
 authors:
-- Erin M. Kearns
+- kearns
 - Christopher Federico
 - Victor Asal
 - James Igoe Walsh

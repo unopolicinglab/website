@@ -2,7 +2,7 @@
 title: 'Biased Coverage of Bias Crime: Examining Differences in Media Coverage of Hate Crimes and Terrorism'
 authors:
 - Adam Ghazi-Tehrani
-- Erin M. Kearns
+- kearns
 date: '2023-08-03'
 publishDate: '2023-08-03'
 publication_types:

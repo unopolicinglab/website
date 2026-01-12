@@ -1,7 +1,7 @@
 ---
 title: When to Take Credit for Terrorism? A Cross-National Examination of Claims and Attributions
 authors:
-- Erin M. Kearns
+- kearns
 date: '2021-01-02'
 publishDate: '2021-01-02'
 publication_types:

@@ -2,7 +2,7 @@
 title: 'When it matters what you call it: The relation between willingness to call a description of forced sex "rape" and attributions of responsibility'
 authors:
 - Amy Brown
-- Erin Kearns
+- kearns
 date: ''
 publishDate: ''
 publication_types:

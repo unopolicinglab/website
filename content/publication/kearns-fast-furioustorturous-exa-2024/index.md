@@ -1,7 +1,7 @@
 ---
 title: 'The Fast & The Furious…Torturous? : Examining the Impact of Torture Scenes in Popular Films on Public Perceptions of Torture Policy'
 authors:
-- Erin M. Kearns
+- kearns
 - Casey Delehanty
 date: '2024-06-02'
 publishDate: '2024-06-02'
