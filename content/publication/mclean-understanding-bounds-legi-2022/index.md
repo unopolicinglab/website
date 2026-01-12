@@ -2,7 +2,7 @@
 title: 'Understanding the Bounds of Legitimacy: Weber’s Facets of Legitimacy and the Police Empowerment Hypothesis'
 authors:
 - Kyle McLean
-- Justin Nix
+- admin
 date: '2022-09-19'
 publishDate: '2022-09-19'
 publication_types:

@@ -3,7 +3,7 @@ title: Staffing Levels are the Most Important Factor Influencing Police Response
 authors:
 - Scott M. Mourtgos
 - Ian T. Adams
-- Justin Nix
+- admin
 date: '2024-02-20'
 publishDate: '2024-02-20'
 publication_types:

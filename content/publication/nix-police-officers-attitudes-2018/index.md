@@ -1,7 +1,7 @@
 ---
 title: Police officers’ attitudes toward citizen advisory councils
 authors:
-- Justin Nix
+- admin
 - Scott E. Wolfe
 - Brandon Tregle
 date: '2018-07-26'

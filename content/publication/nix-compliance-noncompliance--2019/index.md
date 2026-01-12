@@ -1,7 +1,7 @@
 ---
 title: 'Compliance, noncompliance, and the in-between: causal effects of civilian demeanor on police officers’ cognitions and emotions'
 authors:
-- Justin Nix
+- admin
 - Justin T. Pickett
 - Renée J. Mitchell
 date: '2019-12-02'

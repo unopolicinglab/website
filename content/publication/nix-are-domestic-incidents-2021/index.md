@@ -1,7 +1,7 @@
 ---
 title: Are Domestic Incidents Really More Dangerous to Police? Findings from the 2016 National Incident Based Reporting System
 authors:
-- Justin Nix
+- admin
 - Tara N. Richards
 - Gillian M. Pinchevsky
 - Emily M. Wright

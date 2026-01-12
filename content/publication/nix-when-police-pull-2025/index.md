@@ -1,7 +1,7 @@
 ---
 title: 'When police pull back: Neighborhood-level effects of de-policing on violent and property crime'
 authors:
-- Justin Nix
+- admin
 - Jessica Huff
 - Scott Wolfe
 - David Pyrooz

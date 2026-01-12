@@ -1,7 +1,7 @@
 ---
 title: Command-level Police Officers’ Perceptions of the “War on Cops” and De-policing
 authors:
-- Justin Nix
+- admin
 - Scott E. Wolfe
 - Bradley A. Campbell
 date: '2018-01-02'

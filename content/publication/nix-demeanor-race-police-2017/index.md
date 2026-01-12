@@ -1,7 +1,7 @@
 ---
 title: 'Demeanor, Race, and Police Perceptions of Procedural Justice: Evidence from Two Randomized Experiments'
 authors:
-- Justin Nix
+- admin
 - Justin T. Pickett
 - Scott E. Wolfe
 - Bradley A. Campbell

@@ -2,7 +2,7 @@
 title: Demeanor and police culture
 authors:
 - Justin Pickett
-- Justin Nix
+- admin
 date: '2019-08-12'
 publishDate: '2019-08-12'
 publication_types:

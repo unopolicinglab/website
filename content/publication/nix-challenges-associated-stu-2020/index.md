@@ -1,7 +1,7 @@
 ---
 title: 'On the challenges associated with the study of police use of deadly force in the United States: A response to Schwartz & Jahn'
 authors:
-- Justin Nix
+- admin
 - Jonathan Jackson
 date: '2020-07-28'
 publishDate: '2020-07-28'

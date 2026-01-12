@@ -2,7 +2,7 @@
 title: A War on Cops? The Effects of Ferguson on the Number of U.S. Police Officers Murdered in the Line of Duty
 authors:
 - Edward R. Maguire
-- Justin Nix
+- admin
 - Bradley A. Campbell
 date: '2017-07-29'
 publishDate: '2017-07-29'

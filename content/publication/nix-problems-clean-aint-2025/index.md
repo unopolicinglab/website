@@ -1,7 +1,7 @@
 ---
 title: '99 Problems but a Clean IV Ain’t One: Measuring and Studying Officer-Involved Shootings'
 authors:
-- Justin Nix
+- admin
 - Ian T. Adams
 - Josh McCrain
 date: '2025-04-07'

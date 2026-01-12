@@ -1,7 +1,7 @@
 ---
 title: Police research, officer surveys, and response rates
 authors:
-- Justin Nix
+- admin
 - Justin T. Pickett
 - Hyunin Baek
 - Geoffrey P. Alpert

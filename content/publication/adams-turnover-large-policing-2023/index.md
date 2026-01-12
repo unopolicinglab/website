@@ -3,7 +3,7 @@ title: Turnover in Large US Policing Agencies Following the George Floyd Protest
 authors:
 - Ian T. Adams
 - Scott Mourtgos
-- Justin Nix
+- admin
 date: '2023-08-05'
 publishDate: '2023-08-05'
 publication_types:

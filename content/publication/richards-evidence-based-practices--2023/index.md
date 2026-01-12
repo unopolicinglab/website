@@ -3,7 +3,7 @@ title: Evidence-Based Practices for Policing Domestic Violence
 authors:
 - Tara N. Richards
 - Gillian M. Pinchevsky
-- Justin Nix
+- admin
 date: '2023-09-13'
 publishDate: '2023-09-13'
 publication_types:

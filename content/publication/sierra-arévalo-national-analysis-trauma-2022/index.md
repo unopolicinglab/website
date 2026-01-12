@@ -2,7 +2,7 @@
 title: A national analysis of trauma care proximity and firearm assault survival among U.S. police
 authors:
 - Michael Sierra-Arévalo
-- Justin Nix
+- admin
 - Bradley O’Guinn
 date: '2022-05-04'
 publishDate: '2022-05-04'

@@ -3,7 +3,7 @@ title: 'Police de-escalation training and its effects on communication: Evidence
 authors:
 - Kyle McLean
 - Trey Bussey
-- Justin Nix
+- admin
 - Jeffrey Rojek
 - Geoffrey P. Alpert
 date: '2025-09-29'

@@ -1,7 +1,7 @@
 ---
 title: Management-level officers’ experiences with the Ferguson effect
 authors:
-- Justin Nix
+- admin
 - Scott E. Wolfe
 date: '2018-04-09'
 publishDate: '2018-04-09'

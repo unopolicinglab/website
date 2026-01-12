@@ -1,7 +1,7 @@
 ---
 title: Responding to Kang-Brown (again)
 authors:
-- Justin Nix
+- admin
 date: '2025-05-09'
 publishDate: '2025-05-09'
 publication_types:

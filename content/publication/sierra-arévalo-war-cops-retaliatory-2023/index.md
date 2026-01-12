@@ -2,7 +2,7 @@
 title: The "War on Cops," Retaliatory Violence, and the Murder of George Floyd
 authors:
 - Michael Sierra-Arévalo
-- Justin Nix
+- admin
 - Scott M. Mourtgos
 date: '2023-02-27'
 publishDate: '2023-02-27'

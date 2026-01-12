@@ -2,7 +2,7 @@
 title: 'Body-Worn Cameras and Transparency: Experimental Evidence of Inconsistency in Police Executive Decision-Making'
 authors:
 - Brandon Tregle
-- Justin Nix
+- admin
 - Justin T. Pickett
 date: '2022-04-16'
 publishDate: '2022-04-16'

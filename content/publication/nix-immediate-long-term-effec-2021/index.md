@@ -1,7 +1,7 @@
 ---
 title: The immediate and long-term effects of COVID-19 stay-at-home orders on domestic violence calls for service across six U.S. jurisdictions
 authors:
-- Justin Nix
+- admin
 - Tara N. Richards
 date: '2021-05-25'
 publishDate: '2021-05-25'

@@ -1,7 +1,7 @@
 ---
 title: 'Police killings of unarmed black Americans: a reassessment of community mental health spillover effects'
 authors:
-- Justin Nix
+- admin
 - M. J. Lozada
 date: '2021-03-26'
 publishDate: '2021-03-26'

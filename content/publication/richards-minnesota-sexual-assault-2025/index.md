@@ -2,7 +2,7 @@
 title: 'The Minnesota Sexual Assault Kit Initiative (SAKI): Lessons Learned from a Decade of SAKI Evaluations'
 authors:
 - Tara N. Richards
-- Justin Nix
+- admin
 - Emily Wright
 - Caralin Branscum
 - Bradley A. Campbell

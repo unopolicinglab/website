@@ -2,7 +2,7 @@
 title: An experimental look at reasonable suspicion and police discretion
 authors:
 - Kyle McLean
-- Justin Nix
+- admin
 - Seth W. Stoughton
 - Ian T. Adams
 - Geoffrey P. Alpert

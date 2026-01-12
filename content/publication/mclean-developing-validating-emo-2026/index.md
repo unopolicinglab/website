@@ -3,7 +3,7 @@ title: Developing and validating an emotion recognition test for policing
 authors:
 - Kyle McLean
 - Trey Bussey
-- Justin Nix
+- admin
 - Jeff Rojek
 - Abigail Curran
 - Vivian Ta-Johnson

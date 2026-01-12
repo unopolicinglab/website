@@ -1,7 +1,7 @@
 ---
 title: 'Factors associated with police shooting mortality: A focus on race and a plea for more comprehensive data'
 authors:
-- Justin Nix
+- admin
 - Jonathan Jackson
 - John A. Shjarback
 date: '2021-11-10'
