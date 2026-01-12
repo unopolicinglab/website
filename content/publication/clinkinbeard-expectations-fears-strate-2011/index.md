@@ -1,7 +1,7 @@
 ---
 title: Expectations, Fears, and Strategies
 authors:
-- Samantha S. Clinkinbeard
+- clinkinbeard
 - Tusty Zohra
 date: '2011-04-08'
 publishDate: '2011-04-08'
