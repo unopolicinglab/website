@@ -20,12 +20,10 @@ lab_members:
     orcid: "0000-0002-7895-9129"
     author_slug: "kearns"  # Matches content/authors/kearns/
     
-  # Add ORCIDs when available:
 
-  #
-  # - name: "Sam Clinkinbeard"
-  #   orcid: "0000-0000-0000-0000"
-  #   author_slug: "clinkinbeard"
+  - name: "Sam Clinkinbeard"
+    orcid: "0000-0003-1839-2877"
+    author_slug: "clinkinbeard"  # Matches content/authors/clinkinbeard/
 
 # Additional author mappings for common co-authors
 # Maps their ORCID name to your author page slug
