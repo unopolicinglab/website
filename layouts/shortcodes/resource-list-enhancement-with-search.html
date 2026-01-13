@@ -263,23 +263,27 @@ body.dark .article-container h3 {
 }
 
 /* Hide social share buttons and extra author elements */
-.article-container .share,
-.page-footer .share,
-.article-footer .share,
-.article-style .share {
+/* Only hide share buttons that are for sharing the page, not author social links */
+.article-style > .share,
+.page-footer > .share,
+.article-footer > .share {
   display: none !important;
 }
 
-/* Hide large social button grids above author card */
-.page-body > .row.justify-content-center,
-.page-body > div[class*="btn-group"] {
+/* Target only large social button grids that appear as separate sections */
+/* These appear as standalone button groups, not within author cards */
+.page-body .btn-group.btn-group-lg {
   display: none !important;
 }
 
-/* Keep author card compact */
-.article-container .author-card .network-icon {
-  display: inline-block;
-  margin: 0 0.25rem;
+/* Hide any .row with many social buttons that's not part of author card */
+.page-body > .row.justify-content-center:has(.btn-group-lg) {
+  display: none !important;
+}
+
+/* Alternative: hide first large button group before author section */
+.article-container ~ .row:first-of-type:has(> .btn-group) {
+  display: none !important;
 }
 </style>
 
@@ -428,14 +432,39 @@ document.addEventListener('DOMContentLoaded', function() {
           items.forEach(item => item.classList.add('hidden'));
           sections.forEach(section => section.style.display = 'none');
           
-          // Find and show items in the selected category
+          // Find matching section(s) - could be H2 or H3
+          let foundParentSection = false;
+          
           sections.forEach(section => {
-            if (section.textContent.toLowerCase().includes(filter)) {
+            const sectionText = section.textContent.toLowerCase();
+            
+            if (sectionText.includes(filter)) {
               section.style.display = '';
-              const nextEl = section.nextElementSibling;
-              if (nextEl && nextEl.tagName === 'UL') {
-                const liItems = Array.from(nextEl.children);
-                liItems.forEach(li => li.classList.remove('hidden'));
+              
+              // If this is an H2, also show all H3s and lists under it
+              if (section.tagName === 'H2') {
+                foundParentSection = true;
+                let nextEl = section.nextElementSibling;
+                
+                // Show all following H3s and ULs until we hit another H2
+                while (nextEl && nextEl.tagName !== 'H2') {
+                  if (nextEl.tagName === 'H3' || nextEl.tagName === 'UL') {
+                    nextEl.style.display = '';
+                    
+                    if (nextEl.tagName === 'UL') {
+                      const liItems = Array.from(nextEl.children);
+                      liItems.forEach(li => li.classList.remove('hidden'));
+                    }
+                  }
+                  nextEl = nextEl.nextElementSibling;
+                }
+              } else if (section.tagName === 'H3') {
+                // Show the H3 and its immediate following UL
+                const nextEl = section.nextElementSibling;
+                if (nextEl && nextEl.tagName === 'UL') {
+                  const liItems = Array.from(nextEl.children);
+                  liItems.forEach(li => li.classList.remove('hidden'));
+                }
               }
             }
           });
