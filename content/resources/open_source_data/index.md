@@ -58,13 +58,9 @@ A running list of open source data related to policing and other violence interv
 ## **Network Data**
 
 * [Colorado Index of Complex Networks](https://icon.colorado.edu/#!/)
-  - ICON is a comprehensive index of research-quality network data sets from all domains of network science, including social, web, information, biological, ecological, connectome, transportation, and technological networks.
 * [Katya Ognyanova's blog](https://kateto.net/2016/05/network-datasets/)
-  - A helpful list of repositories containing network data, compiled by Katya Ognyanova
 
 ## **Miscellaneous**
 
 * [Police Data Initiative](https://www.policedatainitiative.org/datasets/)
-  - 200+ data sets (including traffic stops, uses of force, calls for service, hate crimes, and more) uploaded by 120+ police departments 
 * [Police Scorecard Data](https://drive.google.com/drive/folders/1iivJXgHgyXF9RR-wKYLnpXwXRCGVXlpE)
-  - A Google Drive folder with several datasets (e.g., arrests, police funding, use of force, complaints, homicide clearance rates) compiled for [Police Scorecard](https://policescorecard.org/)
