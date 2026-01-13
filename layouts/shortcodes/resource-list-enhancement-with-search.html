@@ -262,28 +262,30 @@ body.dark .article-container h3 {
   }
 }
 
-/* Hide social share buttons and extra author elements */
-/* Only hide share buttons that are for sharing the page, not author social links */
-.article-style > .share,
-.page-footer > .share,
-.article-footer > .share {
+/* Hide the page sharing social buttons */
+/* Target the share-box that appears after article content */
+div.share-box {
   display: none !important;
 }
 
-/* Target only large social button grids that appear as separate sections */
-/* These appear as standalone button groups, not within author cards */
-.page-body .btn-group.btn-group-lg {
+/* Also hide any standalone share elements */
+ul.share,
+.share {
   display: none !important;
 }
 
-/* Hide any .row with many social buttons that's not part of author card */
-.page-body > .row.justify-content-center:has(.btn-group-lg) {
-  display: none !important;
+/* BUT preserve author card social links - override the above */
+.author-card,
+.author-card *,
+.author-card .network-icon,
+.media.author-card * {
+  display: revert !important;
 }
 
-/* Alternative: hide first large button group before author section */
-.article-container ~ .row:first-of-type:has(> .btn-group) {
-  display: none !important;
+/* Ensure author card social icons are inline */
+.author-card a.network-icon {
+  display: inline-block !important;
+  margin: 0 0.3rem !important;
 }
 </style>
 
