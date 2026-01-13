@@ -261,6 +261,26 @@ body.dark .article-container h3 {
     width: 100%;
   }
 }
+
+/* Hide social share buttons and extra author elements */
+.article-container .share,
+.page-footer .share,
+.article-footer .share,
+.article-style .share {
+  display: none !important;
+}
+
+/* Hide large social button grids above author card */
+.page-body > .row.justify-content-center,
+.page-body > div[class*="btn-group"] {
+  display: none !important;
+}
+
+/* Keep author card compact */
+.article-container .author-card .network-icon {
+  display: inline-block;
+  margin: 0 0.25rem;
+}
 </style>
 
 <div class="resource-controls">
@@ -278,14 +298,22 @@ body.dark .article-container h3 {
 </div>
 
 <script>
-(function() {
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
   const searchInput = document.getElementById('resourceSearch');
   const noResults = document.getElementById('noResults');
   const resultsCount = document.getElementById('resultsCount');
   const filterContainer = document.getElementById('filterButtons');
   
-  // Get all list items (but not nested ones)
-  const items = document.querySelectorAll('.article-container > ul > li, .article-container > h2 ~ ul > li');
+  if (!searchInput) return; // Exit if elements not found
+  
+  // Get all list items - use more flexible selector
+  const items = Array.from(document.querySelectorAll('.article-container ul li')).filter(li => {
+    // Exclude nested list items (keep only top-level ones)
+    return !li.parentElement.closest('li');
+  });
+  
+  console.log('Found items:', items.length); // Debug
   
   // Get all section headings
   const sections = document.querySelectorAll('.article-container h2, .article-container h3');
@@ -299,8 +327,10 @@ body.dark .article-container h3 {
     }
   });
   
+  console.log('Found categories:', Array.from(categories)); // Debug
+  
   // Create filter buttons if categories exist
-  if (categories.size > 0) {
+  if (categories.size > 0 && filterContainer) {
     const allBtn = document.createElement('button');
     allBtn.className = 'filter-btn active';
     allBtn.textContent = 'All';
@@ -318,84 +348,107 @@ body.dark .article-container h3 {
   
   // Update results count
   function updateCount() {
-    const visible = Array.from(items).filter(item => !item.classList.contains('hidden')).length;
-    resultsCount.textContent = `Showing ${visible} of ${items.length} resources`;
+    const visible = items.filter(item => !item.classList.contains('hidden')).length;
+    if (resultsCount) {
+      resultsCount.textContent = `Showing ${visible} of ${items.length} resources`;
+    }
     
-    if (visible === 0) {
-      noResults.classList.add('show');
-    } else {
-      noResults.classList.remove('show');
+    if (noResults) {
+      if (visible === 0) {
+        noResults.classList.add('show');
+      } else {
+        noResults.classList.remove('show');
+      }
     }
   }
   
   // Search functionality
-  searchInput.addEventListener('input', function() {
-    const searchTerm = this.value.toLowerCase();
-    
-    items.forEach(item => {
-      const text = item.textContent.toLowerCase();
-      if (text.includes(searchTerm)) {
-        item.classList.remove('hidden');
-      } else {
-        item.classList.add('hidden');
-      }
-    });
-    
-    // Also show/hide section headings based on visible items
-    sections.forEach(section => {
-      const nextUl = section.nextElementSibling;
-      if (nextUl && nextUl.tagName === 'UL') {
-        const visibleItems = nextUl.querySelectorAll('li:not(.hidden)');
-        if (visibleItems.length === 0) {
-          section.style.display = 'none';
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      const searchTerm = this.value.toLowerCase();
+      console.log('Searching for:', searchTerm); // Debug
+      
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        if (text.includes(searchTerm)) {
+          item.classList.remove('hidden');
         } else {
-          section.style.display = '';
+          item.classList.add('hidden');
         }
-      }
+      });
+      
+      // Also show/hide section headings based on visible items
+      sections.forEach(section => {
+        const nextEl = section.nextElementSibling;
+        if (nextEl && nextEl.tagName === 'UL') {
+          const visibleItems = Array.from(nextEl.children).filter(li => {
+            return !li.classList.contains('hidden') && !li.parentElement.closest('li');
+          });
+          if (visibleItems.length === 0) {
+            section.style.display = 'none';
+          } else {
+            section.style.display = '';
+          }
+        }
+        
+        // Also check h3 within sections
+        if (section.tagName === 'H3') {
+          const nextUl = section.nextElementSibling;
+          if (nextUl && nextUl.tagName === 'UL') {
+            const visibleItems = Array.from(nextUl.children).filter(li => 
+              !li.classList.contains('hidden')
+            );
+            section.style.display = visibleItems.length > 0 ? '' : 'none';
+          }
+        }
+      });
+      
+      updateCount();
     });
-    
-    updateCount();
-  });
+  }
   
   // Filter functionality
-  filterContainer.addEventListener('click', function(e) {
-    if (e.target.classList.contains('filter-btn')) {
-      // Update active state
-      filterContainer.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.classList.remove('active');
-      });
-      e.target.classList.add('active');
-      
-      const filter = e.target.dataset.filter;
-      
-      if (filter === 'all') {
-        items.forEach(item => item.classList.remove('hidden'));
-        sections.forEach(section => section.style.display = '');
-      } else {
-        // Hide all items first
-        items.forEach(item => item.classList.add('hidden'));
-        sections.forEach(section => section.style.display = 'none');
-        
-        // Find and show items in the selected category
-        sections.forEach(section => {
-          if (section.textContent.toLowerCase().includes(filter)) {
-            section.style.display = '';
-            const nextUl = section.nextElementSibling;
-            if (nextUl && nextUl.tagName === 'UL') {
-              const liItems = nextUl.querySelectorAll('li');
-              liItems.forEach(li => li.classList.remove('hidden'));
-            }
-          }
+  if (filterContainer) {
+    filterContainer.addEventListener('click', function(e) {
+      if (e.target.classList.contains('filter-btn')) {
+        // Update active state
+        filterContainer.querySelectorAll('.filter-btn').forEach(btn => {
+          btn.classList.remove('active');
         });
+        e.target.classList.add('active');
+        
+        const filter = e.target.dataset.filter;
+        console.log('Filter clicked:', filter); // Debug
+        
+        if (filter === 'all') {
+          items.forEach(item => item.classList.remove('hidden'));
+          sections.forEach(section => section.style.display = '');
+        } else {
+          // Hide all items first
+          items.forEach(item => item.classList.add('hidden'));
+          sections.forEach(section => section.style.display = 'none');
+          
+          // Find and show items in the selected category
+          sections.forEach(section => {
+            if (section.textContent.toLowerCase().includes(filter)) {
+              section.style.display = '';
+              const nextEl = section.nextElementSibling;
+              if (nextEl && nextEl.tagName === 'UL') {
+                const liItems = Array.from(nextEl.children);
+                liItems.forEach(li => li.classList.remove('hidden'));
+              }
+            }
+          });
+        }
+        
+        // Clear search when filter changes
+        if (searchInput) searchInput.value = '';
+        updateCount();
       }
-      
-      // Clear search when filter changes
-      searchInput.value = '';
-      updateCount();
-    }
-  });
+    });
+  }
   
   // Initial count
   updateCount();
-})();
+});
 </script>
