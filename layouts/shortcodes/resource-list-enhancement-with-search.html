@@ -1,0 +1,401 @@
+<!-- Resource List Enhancement - With Search/Filter -->
+<style>
+/* Hide featured image */
+.article-header .article-header-caption,
+.article-header img,
+.featured-image {
+  display: none !important;
+}
+
+/* Search and filter controls */
+.resource-controls {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 2px solid #f0f0f0;
+}
+
+.resource-search {
+  flex: 1;
+  min-width: 250px;
+}
+
+.resource-search input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.resource-search input:focus {
+  outline: none;
+  border-color: #DC143C;
+}
+
+.resource-filter {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.filter-btn:hover {
+  border-color: #DC143C;
+  color: #DC143C;
+}
+
+.filter-btn.active {
+  background: #DC143C;
+  color: #fff;
+  border-color: #DC143C;
+}
+
+.results-count {
+  width: 100%;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Style the intro text */
+.article-container > p:first-of-type {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Style section headings */
+.article-container h2 {
+  color: #DC143C;
+  font-size: 1.8rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #DC143C;
+}
+
+.article-container h3 {
+  color: #333;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Transform bullet lists into cards */
+.article-container ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.article-container ul li {
+  background: #fff;
+  border: 2px solid #f0f0f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.article-container ul li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(220, 20, 60, 0.1);
+  border-color: #DC143C;
+}
+
+.article-container ul li.hidden {
+  display: none;
+}
+
+.article-container ul li a {
+  color: #DC143C;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.article-container ul li a:hover {
+  color: #B01030;
+}
+
+/* Style nested lists */
+.article-container ul ul {
+  display: block;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding-left: 0;
+}
+
+.article-container ul ul li {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+}
+
+.article-container ul ul li:hover {
+  transform: translateY(-2px);
+  background: #fff;
+}
+
+.article-container ul ul li a {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* No results message */
+.no-results {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+  font-size: 1.1rem;
+  display: none;
+}
+
+.no-results.show {
+  display: block;
+}
+
+/* Style the contact email prompt */
+.article-container > p:has(a[href*="mailto"]) {
+  background: #fff5f5;
+  border-left: 4px solid #DC143C;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  margin: 2rem 0;
+  font-style: italic;
+}
+
+/* Dark mode support */
+[data-theme="dark"] .resource-controls,
+body.dark .resource-controls {
+  background: #1e1e1e;
+  border-color: #333;
+}
+
+[data-theme="dark"] .resource-search input,
+body.dark .resource-search input {
+  background: #252525;
+  border-color: #333;
+  color: #fff;
+}
+
+[data-theme="dark"] .filter-btn,
+body.dark .filter-btn {
+  background: #252525;
+  border-color: #333;
+  color: #ccc;
+}
+
+[data-theme="dark"] .filter-btn.active,
+body.dark .filter-btn.active {
+  background: #DC143C;
+  color: #fff;
+}
+
+[data-theme="dark"] .article-container ul li,
+body.dark .article-container ul li {
+  background: #1e1e1e;
+  border-color: #333;
+}
+
+[data-theme="dark"] .article-container ul li:hover,
+body.dark .article-container ul li:hover {
+  background: #252525;
+  border-color: #DC143C;
+}
+
+[data-theme="dark"] .article-container ul ul li,
+body.dark .article-container ul ul li {
+  background: #252525;
+  border-color: #2a2a2a;
+}
+
+[data-theme="dark"] .article-container h2,
+body.dark .article-container h2 {
+  color: #DC143C;
+}
+
+[data-theme="dark"] .article-container h3,
+body.dark .article-container h3 {
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .article-container ul {
+    grid-template-columns: 1fr;
+  }
+  
+  .resource-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .resource-search {
+    width: 100%;
+  }
+}
+</style>
+
+<div class="resource-controls">
+  <div class="resource-search">
+    <input type="text" id="resourceSearch" placeholder="Search resources...">
+  </div>
+  <div class="resource-filter" id="filterButtons">
+    <!-- Filter buttons will be added by JavaScript if categories detected -->
+  </div>
+  <div class="results-count" id="resultsCount"></div>
+</div>
+
+<div class="no-results" id="noResults">
+  No resources found matching your search.
+</div>
+
+<script>
+(function() {
+  const searchInput = document.getElementById('resourceSearch');
+  const noResults = document.getElementById('noResults');
+  const resultsCount = document.getElementById('resultsCount');
+  const filterContainer = document.getElementById('filterButtons');
+  
+  // Get all list items (but not nested ones)
+  const items = document.querySelectorAll('.article-container > ul > li, .article-container > h2 ~ ul > li');
+  
+  // Get all section headings
+  const sections = document.querySelectorAll('.article-container h2, .article-container h3');
+  
+  // Detect categories from h2/h3 headings
+  const categories = new Set();
+  sections.forEach(section => {
+    const text = section.textContent.trim();
+    if (text && text.length < 50) { // reasonable category name length
+      categories.add(text);
+    }
+  });
+  
+  // Create filter buttons if categories exist
+  if (categories.size > 0) {
+    const allBtn = document.createElement('button');
+    allBtn.className = 'filter-btn active';
+    allBtn.textContent = 'All';
+    allBtn.dataset.filter = 'all';
+    filterContainer.appendChild(allBtn);
+    
+    categories.forEach(cat => {
+      const btn = document.createElement('button');
+      btn.className = 'filter-btn';
+      btn.textContent = cat;
+      btn.dataset.filter = cat.toLowerCase();
+      filterContainer.appendChild(btn);
+    });
+  }
+  
+  // Update results count
+  function updateCount() {
+    const visible = Array.from(items).filter(item => !item.classList.contains('hidden')).length;
+    resultsCount.textContent = `Showing ${visible} of ${items.length} resources`;
+    
+    if (visible === 0) {
+      noResults.classList.add('show');
+    } else {
+      noResults.classList.remove('show');
+    }
+  }
+  
+  // Search functionality
+  searchInput.addEventListener('input', function() {
+    const searchTerm = this.value.toLowerCase();
+    
+    items.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      if (text.includes(searchTerm)) {
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+    
+    // Also show/hide section headings based on visible items
+    sections.forEach(section => {
+      const nextUl = section.nextElementSibling;
+      if (nextUl && nextUl.tagName === 'UL') {
+        const visibleItems = nextUl.querySelectorAll('li:not(.hidden)');
+        if (visibleItems.length === 0) {
+          section.style.display = 'none';
+        } else {
+          section.style.display = '';
+        }
+      }
+    });
+    
+    updateCount();
+  });
+  
+  // Filter functionality
+  filterContainer.addEventListener('click', function(e) {
+    if (e.target.classList.contains('filter-btn')) {
+      // Update active state
+      filterContainer.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      e.target.classList.add('active');
+      
+      const filter = e.target.dataset.filter;
+      
+      if (filter === 'all') {
+        items.forEach(item => item.classList.remove('hidden'));
+        sections.forEach(section => section.style.display = '');
+      } else {
+        // Hide all items first
+        items.forEach(item => item.classList.add('hidden'));
+        sections.forEach(section => section.style.display = 'none');
+        
+        // Find and show items in the selected category
+        sections.forEach(section => {
+          if (section.textContent.toLowerCase().includes(filter)) {
+            section.style.display = '';
+            const nextUl = section.nextElementSibling;
+            if (nextUl && nextUl.tagName === 'UL') {
+              const liItems = nextUl.querySelectorAll('li');
+              liItems.forEach(li => li.classList.remove('hidden'));
+            }
+          }
+        });
+      }
+      
+      // Clear search when filter changes
+      searchInput.value = '';
+      updateCount();
+    }
+  });
+  
+  // Initial count
+  updateCount();
+})();
+</script>

@@ -5,6 +5,8 @@ image:
   focal_point: "top"
 ---
 
+{{< resource-list-enhancement-with-search >}}
+
 A running list of open source data related to policing and other violence interventions.
 
 <!--more-->
