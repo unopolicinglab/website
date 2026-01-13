@@ -8,7 +8,7 @@
 
 .resources-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -89,6 +89,14 @@
   .resource-card {
     padding: 1.5rem;
   }
+}
+
+/* Hide auto-generated Hugo list content */
+.resources-container ~ .article-style,
+.resources-container ~ .stream-container,
+.resources-container ~ ul,
+.resources-container ~ .page-body > *:not(.resources-container) {
+  display: none !important;
 }
 </style>
 
