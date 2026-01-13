@@ -5,6 +5,8 @@ image:
   focal_point: "top"
 ---
 
+{{< resource-list-enhancement-with-search >}}
+
 A running list of major reports published in the last decade.
 
 <!--more-->

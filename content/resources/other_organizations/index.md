@@ -5,6 +5,8 @@ image:
   focal_point: "top"
 ---
 
+{{< resource-list-enhancer >}}
+
 A running list of other groups and organizations working to advance knowledge in the areas of violence reduction and policing.
 
 <!--more-->

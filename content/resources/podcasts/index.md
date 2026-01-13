@@ -5,6 +5,8 @@ image:
   focal_point: "top"
 ---
 
+{{< resource-list-enhancer >}}
+
 A running list of podcasts on policing and criminal justice.
 
 <!--more-->
