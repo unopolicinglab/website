@@ -179,17 +179,46 @@ ul.share,
   display: none !important;
 }
 
-/* BUT preserve author card - override the above */
+/* Force author card to display correctly with compact inline icons */
 .author-card,
-.author-card *,
-.author-card .network-icon,
-.media.author-card * {
-  display: revert !important;
+.media.author-card {
+  display: flex !important;
 }
 
-/* Ensure author card social icons are inline */
-.author-card a.network-icon {
+/* Make sure all author card content is visible */
+.author-card * {
+  display: inline-block !important;
+}
+
+/* Specifically target the social links container in author card */
+.author-card .network-icon,
+.media.author-card .network-icon,
+.author-card a.network-icon,
+.media.author-card a.network-icon {
   display: inline-block !important;
   margin: 0 0.3rem !important;
+  font-size: 1.2rem !important;
+}
+
+/* Hide any large button styling in author card */
+.author-card .btn,
+.author-card .btn-lg,
+.media.author-card .btn {
+  display: inline-block !important;
+  padding: 0 !important;
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  min-height: auto !important;
+}
+
+/* Make author card text elements display properly */
+.author-card p,
+.author-card h1,
+.author-card h2,
+.author-card h3,
+.media.author-card p,
+.media.author-card .portrait-title {
+  display: block !important;
 }
 </style>
