@@ -167,4 +167,29 @@ body.dark .article-container > p:has(a[href*="mailto"]) {
     grid-template-columns: 1fr;
   }
 }
+
+/* Hide the page sharing social buttons */
+div.share-box {
+  display: none !important;
+}
+
+/* Hide share elements */
+ul.share,
+.share {
+  display: none !important;
+}
+
+/* BUT preserve author card - override the above */
+.author-card,
+.author-card *,
+.author-card .network-icon,
+.media.author-card * {
+  display: revert !important;
+}
+
+/* Ensure author card social icons are inline */
+.author-card a.network-icon {
+  display: inline-block !important;
+  margin: 0 0.3rem !important;
+}
 </style>
