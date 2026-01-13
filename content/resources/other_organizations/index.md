@@ -15,7 +15,8 @@ A running list of other groups and organizations working to advance knowledge in
 
 ## Here in SCCJ
 
-* [Crime and Justice Public Opinion Lab](https://cjpolab.wixsite.com/cjpol)
+* [ARC Lab](https://arcorrectionslab.org/)
+* [CROCS Lab](https://crocslab.org/)
 * [Juvenile Justice Institute](https://www.unomaha.edu/college-of-public-affairs-and-community-service/juvenile-justice-institute/index.php)
 * [National Counterterrorism Innovation, Technology, and Education Center (NCITE)](https://www.unomaha.edu/ncite/index.php)
 * [Nebraska Center for Justice Research](https://www.unomaha.edu/college-of-public-affairs-and-community-service/nebraska-center-for-justice-research/index.php)
