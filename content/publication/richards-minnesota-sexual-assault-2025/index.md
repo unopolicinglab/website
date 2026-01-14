@@ -10,7 +10,7 @@ date: '2025-06-14'
 publishDate: '2025-06-14'
 publication_types:
 - '2'
-publication: Justice Evaluation Journal
+publication: '*Justice Evaluation Journal*'
 abstract: ''
 featured: false
 doi: 10.1080/24751979.2025.2517545

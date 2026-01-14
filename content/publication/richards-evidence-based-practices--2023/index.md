@@ -8,7 +8,7 @@ date: '2023-09-13'
 publishDate: '2023-09-13'
 publication_types:
 - '6'
-publication: ''
+publication: '*Handbook of Evidence-Based Criminal Justice Practices*, pp. 203-210'
 abstract: ''
 featured: false
 doi: 10.4324/9781003219286-26

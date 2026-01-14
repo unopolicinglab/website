@@ -12,7 +12,7 @@ date: '2026-01-13'
 publishDate: '2026-01-13'
 publication_types:
 - '2'
-publication: 'Policing: An International Journal'
+publication: '*Policing: An International Journal*, 49(1), 52-72'
 abstract: ''
 featured: false
 doi: 10.1108/PIJPSM-04-2025-0072

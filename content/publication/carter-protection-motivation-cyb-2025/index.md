@@ -7,7 +7,7 @@ date: '2025-12-03'
 publishDate: '2025-12-03'
 publication_types:
 - '2'
-publication: Journal of Experimental Criminology
+publication: *Journal of Experimental Criminology*
 abstract: ''
 featured: false
 doi: 10.1007/s11292-025-09717-1

@@ -8,7 +8,7 @@ date: '2024-09-04'
 publishDate: '2024-09-04'
 publication_types:
 - '2'
-publication: Justice Quarterly
+publication: *Justice Quarterly*
 abstract: ''
 featured: false
 doi: 10.1080/07418825.2024.2398543

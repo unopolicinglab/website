@@ -1,5 +1,5 @@
 ---
-title: '99 Problems but a Clean IV Ain’t One: Measuring and Studying Officer-Involved Shootings'
+title: 'Measuring and studying officer-involved shootings in the U.S.: Comparing estimates from multiple open-source registries'
 authors:
 - admin
 - Ian T. Adams
@@ -8,7 +8,7 @@ date: '2025-04-07'
 publishDate: '2025-04-07'
 publication_types:
 - '2'
-publication: CrimRxiv
+publication: '*Gun violence-Statistical issues*, pp. TBD'
 abstract: ''
 featured: false
 doi: ''

@@ -9,7 +9,7 @@ date: '2021-11-10'
 publishDate: '2021-11-10'
 publication_types:
 - '2'
-publication: Justice Quarterly
+publication: '*Justice Quarterly*, 38(7), 1405-1427'
 abstract: ''
 featured: false
 doi: 10.1080/07418825.2019.1675748

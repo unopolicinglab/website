@@ -2,13 +2,12 @@
 title: 'Factors associated with police shooting mortality: A focus on race and a plea for more comprehensive data'
 authors:
 - admin
-- Jonathan Jackson
 - John A. Shjarback
 date: '2021-11-10'
 publishDate: '2021-11-10'
 publication_types:
 - '2'
-publication: PLOS ONE
+publication: '*PLOS ONE*, 16(11), e0259024'
 abstract: ''
 featured: false
 doi: 10.1371/journal.pone.0259024
