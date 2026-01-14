@@ -2,9 +2,7 @@
 
 <article class="article">
 
-  <h1 style="background: yellow; padding: 20px;">TEST - If you see this, Hugo is using the custom template!</h1>
-
-  {{ partial "page_header" . }}
+  {{ partial "page_header.html" . }}
 
   <div class="article-container">
 
@@ -12,8 +10,23 @@
       {{ .Content }}
     </div>
 
-    {{ partial "page_footer" . }}
+    {{/* Wowchemy uses page_metadata.html for author info */}}
+    {{ partial "page_metadata.html" . }}
     
+    {{/* This renders the author profile card */}}
+    {{ if site.Params.section_pager }}
+      <div class="article-widget">
+        {{ partial "page_author_card.html" . }}
+      </div>
+    {{ else }}
+      {{ partial "page_author_card.html" . }}
+    {{ end }}
+
+    {{/* Share buttons - you can remove this if you don't want them */}}
+    <div class="share-box" aria-hidden="true">
+      {{ partial "share.html" . }}
+    </div>
+
   </div>
 
 </article>
