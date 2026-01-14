@@ -8,7 +8,7 @@ date: '2017-07-29'
 publishDate: '2017-07-29'
 publication_types:
 - '2'
-publication: Justice Quarterly
+publication: '*Justice Quarterly*, 34(5), 739-758'
 abstract: ''
 featured: false
 doi: 10.1080/07418825.2016.1236205

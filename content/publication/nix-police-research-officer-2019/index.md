@@ -9,7 +9,7 @@ date: '2019-06-13'
 publishDate: '2019-06-13'
 publication_types:
 - '2'
-publication: Policing and Society
+publication: '*Policing and Society*, 29(5), 530-550'
 abstract: ''
 featured: false
 doi: 10.1080/10439463.2017.1394300

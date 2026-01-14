@@ -8,7 +8,7 @@ date: '2024-02-20'
 publishDate: '2024-02-20'
 publication_types:
 - '2'
-publication: CrimRxiv
+publication: '*Policing: A Journal of Policy and Practice*, 18, paae002'
 abstract: ''
 featured: false
 doi: https://doi.org/10.1093/police/paae002

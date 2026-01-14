@@ -8,7 +8,7 @@ date: '2018-01-02'
 publishDate: '2018-01-02'
 publication_types:
 - '2'
-publication: Justice Quarterly
+publication: '*Justice Quarterly*, 35(1), 33-54'
 abstract: ''
 featured: false
 doi: 10.1080/07418825.2017.1338743

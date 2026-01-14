@@ -8,7 +8,7 @@ date: '2022-05-04'
 publishDate: '2022-05-04'
 publication_types:
 - '2'
-publication: Police Practice and Research
+publication: '*Police Practice and Research*, 23(3), 388-396'
 abstract: ''
 featured: false
 doi: 10.1080/15614263.2022.2036611

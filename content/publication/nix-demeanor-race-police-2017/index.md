@@ -9,7 +9,7 @@ date: '2017-11-10'
 publishDate: '2017-11-10'
 publication_types:
 - '2'
-publication: Justice Quarterly
+publication: '*Justice Quarterly*, 34(7), 1154-1183'
 abstract: ''
 featured: false
 doi: 10.1080/07418825.2017.1334808

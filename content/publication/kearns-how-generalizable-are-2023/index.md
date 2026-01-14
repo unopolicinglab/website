@@ -7,7 +7,7 @@ date: '2023-09-03'
 publishDate: '2023-09-03'
 publication_types:
 - '2'
-publication: Police Practice and Research
+publication: '*Police Practice and Research*, 24, 597-611'
 abstract: ''
 featured: false
 doi: 10.1080/15614263.2023.2214282

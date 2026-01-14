@@ -8,7 +8,7 @@ date: '2022-04-16'
 publishDate: '2022-04-16'
 publication_types:
 - '2'
-publication: Justice Quarterly
+publication: '*Justice Quarterly*, 39(3), 455-477'
 abstract: ''
 featured: false
 doi: 10.1080/07418825.2020.1821086

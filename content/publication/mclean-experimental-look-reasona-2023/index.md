@@ -10,7 +10,7 @@ date: '2023-06-30'
 publishDate: '2023-06-30'
 publication_types:
 - '2'
-publication: 'Policing: An International Journal'
+publication: '*Policing: An International Journal*, 46(3), 503-520'
 abstract: ''
 featured: false
 doi: 10.1108/PIJPSM-01-2023-0002

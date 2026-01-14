@@ -7,7 +7,7 @@ date: '2021-05-25'
 publishDate: '2021-05-25'
 publication_types:
 - '2'
-publication: Police Practice and Research
+publication: '*Police Practice and Research*, 22(4), 1443-1451'
 abstract: ''
 featured: false
 doi: 10.1080/15614263.2021.1883018

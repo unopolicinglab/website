@@ -9,7 +9,7 @@ date: '2022-08-27'
 publishDate: '2022-08-27'
 publication_types:
 - '2'
-publication: ''
+publication: '*Criminology*, 62(1), 35-63'
 abstract: ''
 featured: false
 doi: 10.1111/1745-9125.12360

@@ -10,7 +10,7 @@ date: '2025-04-04'
 publishDate: '2025-04-04'
 publication_types:
 - '2'
-publication: ''
+publication: '*Criminology*, 62(1), 156-171'
 abstract: ''
 featured: false
 doi: 10.1111/1745-9125.12363

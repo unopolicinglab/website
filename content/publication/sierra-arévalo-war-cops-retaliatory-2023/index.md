@@ -8,10 +8,10 @@ date: '2023-02-27'
 publishDate: '2023-02-27'
 publication_types:
 - '3'
-publication: ''
+publication: '*Criminology*, 61(3), 389-420'
 abstract: ''
 featured: false
-doi: 10.21428/cb6ab371.433179df
+doi: 10.1111/1745-9125.12334
 url_pdf: ''
 url_code: ''
 url_dataset: ''

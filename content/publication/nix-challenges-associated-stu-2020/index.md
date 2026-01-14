@@ -2,12 +2,11 @@
 title: 'On the challenges associated with the study of police use of deadly force in the United States: A response to Schwartz & Jahn'
 authors:
 - admin
-- Jonathan Jackson
 date: '2020-07-28'
 publishDate: '2020-07-28'
 publication_types:
 - '2'
-publication: PLOS ONE
+publication: '*PLOS ONE*, 15(7), e0236158'
 abstract: ''
 featured: false
 doi: 10.1371/journal.pone.0236158

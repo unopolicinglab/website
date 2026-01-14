@@ -8,10 +8,10 @@ date: '2023-08-05'
 publishDate: '2023-08-05'
 publication_types:
 - '3'
-publication: ''
+publication: '*Journal of Criminal Justice*, 88(102105), 1-16'
 abstract: ''
 featured: false
-doi: 10.21428/cb6ab371.4a588631
+doi: 10.1016/j.jcrimjus.2023.102105
 url_pdf: ''
 url_code: ''
 url_dataset: ''

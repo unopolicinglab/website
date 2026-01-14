@@ -1,13 +1,13 @@
 ---
-title: Demeanor and police culture
+title: 'Demeanor and police culture: Theorizing how civilian cooperation influences police officers'
 authors:
-- Justin Pickett
+- Justin T. Pickett
 - admin
 date: '2019-08-12'
 publishDate: '2019-08-12'
 publication_types:
 - '2'
-publication: 'Policing: An International Journal'
+publication: '*Policing: An International Journal*, 42(4), 537-555'
 abstract: ''
 featured: false
 doi: 10.1108/PIJPSM-09-2018-0133

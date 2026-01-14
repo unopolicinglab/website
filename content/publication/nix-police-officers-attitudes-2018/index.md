@@ -8,7 +8,7 @@ date: '2018-07-26'
 publishDate: '2018-07-26'
 publication_types:
 - '2'
-publication: 'Policing: An International Journal'
+publication: '*Policing: An International Journal*, 41(4), 418-434'
 abstract: ''
 featured: false
 doi: 10.1108/PIJPSM-01-2018-0019
