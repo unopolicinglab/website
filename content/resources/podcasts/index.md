@@ -3,6 +3,9 @@ title: Podcasts
 date: 2021-12-18
 image:
   focal_point: "top"
+authors:
+  - admin
+profile: true
 ---
 
 {{< resource-list-enhancer >}}
