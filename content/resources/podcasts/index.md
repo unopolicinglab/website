@@ -6,6 +6,8 @@ image:
 authors:
   - admin
 profile: true
+type: post
+show_author_byline: true
 ---
 
 {{< resource-list-enhancer >}}
