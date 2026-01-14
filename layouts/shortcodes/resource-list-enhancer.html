@@ -33,8 +33,8 @@
   font-weight: 600;
 }
 
-/* Transform bullet lists into cards */
-.article-container ul {
+/* Transform bullet lists into cards - but NOT author bio lists */
+.article-container .article-style ul:not(.network-icon) {
   list-style: none;
   padding: 0;
   display: grid;
@@ -43,7 +43,7 @@
   margin-bottom: 2rem;
 }
 
-.article-container ul li {
+.article-container .article-style ul:not(.network-icon) li {
   background: #fff;
   border: 2px solid #f0f0f0;
   border-radius: 8px;
@@ -52,13 +52,13 @@
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-.article-container ul li:hover {
+.article-container .article-style ul:not(.network-icon) li:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 16px rgba(220, 20, 60, 0.1);
   border-color: #DC143C;
 }
 
-.article-container ul li a {
+.article-container .article-style ul:not(.network-icon) li a {
   color: #DC143C;
   text-decoration: none;
   font-weight: 600;
@@ -67,12 +67,12 @@
   margin-bottom: 0.5rem;
 }
 
-.article-container ul li a:hover {
+.article-container .article-style ul:not(.network-icon) li a:hover {
   color: #B01030;
 }
 
 /* Style nested lists (like in open source data page) */
-.article-container ul ul {
+.article-container .article-style ul:not(.network-icon) ul {
   display: block;
   grid-template-columns: 1fr;
   gap: 0.75rem;
@@ -80,35 +80,35 @@
   padding-left: 0;
 }
 
-.article-container ul ul li {
+.article-container .article-style ul:not(.network-icon) ul li {
   background: #f9f9f9;
   border: 1px solid #e0e0e0;
   padding: 0.75rem 1rem;
   border-radius: 4px;
 }
 
-.article-container ul ul li:hover {
+.article-container .article-style ul:not(.network-icon) ul li:hover {
   transform: translateY(-2px);
   background: #fff;
 }
 
-.article-container ul ul li a {
+.article-container .article-style ul:not(.network-icon) ul li a {
   font-size: 1rem;
   font-weight: 500;
 }
 
 /* Style the "by" text in podcast listings */
-.article-container ul li:not(ul ul li) {
+.article-container .article-style ul:not(.network-icon) li:not(ul ul li) {
   min-height: 100px;
 }
 
 /* Style any descriptive text after links */
-.article-container ul li + li {
+.article-container .article-style ul:not(.network-icon) li + li {
   margin-top: 0;
 }
 
 /* Better spacing for sections */
-.article-container > ul:first-of-type {
+.article-container .article-style > ul:first-of-type:not(.network-icon) {
   margin-top: 2rem;
 }
 
@@ -123,26 +123,26 @@
 }
 
 /* Dark mode support */
-[data-theme="dark"] .article-container ul li,
-body.dark .article-container ul li {
+[data-theme="dark"] .article-container .article-style ul:not(.network-icon) li,
+body.dark .article-container .article-style ul:not(.network-icon) li {
   background: #1e1e1e;
   border-color: #333;
 }
 
-[data-theme="dark"] .article-container ul li:hover,
-body.dark .article-container ul li:hover {
+[data-theme="dark"] .article-container .article-style ul:not(.network-icon) li:hover,
+body.dark .article-container .article-style ul:not(.network-icon) li:hover {
   background: #252525;
   border-color: #DC143C;
 }
 
-[data-theme="dark"] .article-container ul ul li,
-body.dark .article-container ul ul li {
+[data-theme="dark"] .article-container .article-style ul:not(.network-icon) ul li,
+body.dark .article-container .article-style ul:not(.network-icon) ul li {
   background: #252525;
   border-color: #2a2a2a;
 }
 
-[data-theme="dark"] .article-container ul ul li:hover,
-body.dark .article-container ul ul li:hover {
+[data-theme="dark"] .article-container .article-style ul:not(.network-icon) ul li:hover,
+body.dark .article-container .article-style ul:not(.network-icon) ul li:hover {
   background: #2a2a2a;
 }
 
@@ -163,9 +163,8 @@ body.dark .article-container > p:has(a[href*="mailto"]) {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .article-container ul {
+  .article-container .article-style ul:not(.network-icon) {
     grid-template-columns: 1fr;
   }
 }
-
 </style>
