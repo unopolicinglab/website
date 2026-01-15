@@ -8,7 +8,7 @@ date: '2025-06-20'
 publishDate: '2025-06-20'
 publication_types:
 - '2'
-publication: *Journal of Quantitative Criminology*
+publication: '*Journal of Quantitative Criminology*'
 abstract: ''
 featured: false
 doi: 10.1007/s10940-025-09618-6
