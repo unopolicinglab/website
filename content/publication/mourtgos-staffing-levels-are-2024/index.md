@@ -25,5 +25,7 @@ tags:
 links:
 - name: Postprint
   url: https://doi.org/10.21428/cb6ab371.893efeb7
+  icon_pack: ai
+  icon: open-access
 ---
 

@@ -27,5 +27,7 @@ tags:
 links:
 - name: Preprint
   url: https://doi.org/10.21428/cb6ab371.fe9287ce
+  icon_pack: ai
+  icon: open-access
 ---
 
