@@ -24,7 +24,11 @@ tags:
 links:
 - name: Postprint
   url: https://assets.pubpub.org/oibiaw6d/71636036997434.pdf
+  icon_pack: ai
+  icon: open-access
 - name: Replication Materials
   url: https://github.com/jnixy/replication-materials/tree/master/nix_richards_PPR_InPress
+  icon_pack: fab
+  icon: github
 ---
 

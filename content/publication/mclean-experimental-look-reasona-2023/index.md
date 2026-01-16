@@ -27,7 +27,11 @@ tags:
 links:
 - name: Postprint
   url: https://jnix.netlify.app/files/pdfs/pij_rs_experiments.pdf
+  icon_pack: ai
+  icon: open-access
 - name: Slides
   url: https://jnix.netlify.app/publication/52-rs-experiments/asc_2022_presentation.pdf
+  icon_pack: fas
+  icon: file-powerpoint
 ---
 

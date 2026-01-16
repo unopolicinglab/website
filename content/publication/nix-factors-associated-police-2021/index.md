@@ -24,9 +24,15 @@ tags:
 links:
 - name: Postprint
   url: https://www.crimrxiv.com/pub/xdeitfix/release/3?readingCollection=6c7c25ac
+  icon_pack: ai
+  icon: open-access
 - name: Replication Materials
   url: https://github.com/jnixy/replication-materials/tree/master/nix_shjarback_PONE_2021
+  icon_pack: fab
+  icon: github
 - name: Slides
   url: https://jnix.netlify.app/slides/asc21_pone_paper
+  icon_pack: fas
+  icon: file-powerpoint
 ---
 

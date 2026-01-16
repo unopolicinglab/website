@@ -25,5 +25,7 @@ tags:
 links:
 - name: Postprint
   url: https://jnix.netlify.app/files/pdfs/jq_perceived_waroncops.pdf
+  icon_pack: ai
+  icon: open-access
 ---
 

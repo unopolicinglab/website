@@ -26,6 +26,8 @@ tags:
 links:
 - name: Preprint
   url: https://doi.org/10.31235/osf.io/7mrgp
+  icon_pack: ai
+  icon: open-access
 - name: Replication Materials
   url: https://osf.io/ephst/
 ---

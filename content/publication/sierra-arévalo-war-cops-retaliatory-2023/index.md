@@ -25,7 +25,11 @@ tags:
 links:
 - name: Postprint
   url: https://digitalcommons.unomaha.edu/cgi/viewcontent.cgi?article=1194&context=criminaljusticefacpub
+  icon_pack: ai
+  icon: open-access
 - name: Slides
   url: https://jnix.netlify.app/publication/51-crim-war-on-cops-george-floyd/asc_2022_presentation.pdf
+  icon_pack: fas
+  icon: file-powerpoint
 ---
 

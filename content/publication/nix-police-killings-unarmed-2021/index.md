@@ -24,6 +24,8 @@ tags:
 links:
 - name: Postprint
   url: https://assets.pubpub.org/q5ubf3i9/51636042065128.pdf
+  icon_pack: ai
+  icon: open-access
 - name: Data
   url: https://doi.org/10.7910/DVN/VGYI0E
 ---

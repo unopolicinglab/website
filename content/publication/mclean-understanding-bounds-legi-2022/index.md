@@ -24,5 +24,7 @@ tags:
 links:
 - name: Postprint
   url: https://assets.pubpub.org/dlf7pauk/61635084936784.pdf
+  icon_pack: ai
+  icon: open-access
 ---
 

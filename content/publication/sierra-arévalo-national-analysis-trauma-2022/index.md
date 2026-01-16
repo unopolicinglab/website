@@ -25,5 +25,7 @@ tags:
 links:
 - name: Postprint
   url: https://jnix.netlify.app/files/pdfs/ppr_trauma_proximity.pdf
+  icon_pack: ai
+  icon: open-access
 ---
 

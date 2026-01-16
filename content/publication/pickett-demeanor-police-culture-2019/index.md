@@ -24,5 +24,7 @@ tags:
 links:
 - name: Postprint
   url: https://jnix.netlify.app/files/pdfs/pijpsm_demeanor_culture.pdf
+  icon_pack: ai
+  icon: open-access
 ---
 

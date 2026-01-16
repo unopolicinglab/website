@@ -29,5 +29,7 @@ tags:
 links:
 - name: Preprint
   url: https://open.clemson.edu/cgi/viewcontent.cgi?article=1000&context=soc_pubs
+  icon_pack: ai
+  icon: open-access
 ---
 

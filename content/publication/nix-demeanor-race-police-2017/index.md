@@ -26,5 +26,7 @@ tags:
 links:
 - name: Postprint
   url: https://jnix.netlify.app/files/pdfs/jq_demeanor_pj.pdf
+  icon_pack: ai
+  icon: open-access
 ---
 

@@ -25,5 +25,7 @@ tags:
 links:
 - name: Postprint
   url: https://jnix.netlify.app/files/pdfs/ebp_DV_book_chapter.pdf
+  icon_pack: ai
+  icon: open-access
 ---
 

@@ -26,5 +26,7 @@ tags:
 links:
 - name: Postprint
   url: https://jnix.netlify.app/files/pdfs/jq_domestics.pdf
+  icon_pack: ai
+  icon: open-access
 ---
 

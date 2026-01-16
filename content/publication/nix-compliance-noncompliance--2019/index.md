@@ -25,5 +25,7 @@ tags:
 links:
 - name: Replication Materials
   url: https://github.com/jnixy/replication-materials/tree/master/nix_et_al_JOEX_2019
+  icon_pack: fab
+  icon: github
 ---
 

@@ -25,7 +25,11 @@ tags:
 links:
 - name: Postprint
   url: https://doi.org/10.21428/cb6ab371.4a588631
+  icon_pack: ai
+  icon: open-access
 - name: Replication Materials
   url: https://github.com/ian-adams/police_turnover_public
+  icon_pack: fab
+  icon: github
 ---
 

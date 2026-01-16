@@ -27,8 +27,12 @@ tags:
 links:
 - name: Preprint
   url: https://doi.org/10.31235/osf.io/54dyh_v2
+  icon_pack: ai
+  icon: open-access
 - name: Slides
   url: https://jnix.netlify.app/slides/acjs22/#1
+  icon_pack: fas
+  icon: file-powerpoint
 - name: Replication Materials
   url: https://doi.org/10.7910/DVN/HNFQSP
 ---

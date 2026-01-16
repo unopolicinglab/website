@@ -27,5 +27,7 @@ tags:
 links:
 - name: Postprint
   url: https://assets.pubpub.org/y8znc9pm/Richards%20et%20al%20%28Postprint%29%20Minnesota%20SAKI%20-%20Lessons%20learned-51748967076417.pdf
+  icon_pack: ai
+  icon: open-access
 ---
 

@@ -24,5 +24,7 @@ tags:
 links:
 - name: Postprint
   url: https://jnix.netlify.app/files/pdfs/pijpsm_mgmt_fergefx.pdf
+  icon_pack: ai
+  icon: open-access
 ---
 

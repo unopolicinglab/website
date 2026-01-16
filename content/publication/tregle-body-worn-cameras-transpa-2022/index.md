@@ -25,7 +25,11 @@ tags:
 links:
 - name: Postprint
   url: https://jnix.netlify.app/files/pdfs/jq_bwc_transparency.pdf
+  icon_pack: ai
+  icon: open-access
 - name: Replication Materials
   url: https://github.com/jnixy/replication-materials/tree/master/tregle_et_al_JQ_InPress
+  icon_pack: fab
+  icon: github
 ---
 
