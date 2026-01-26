@@ -8,10 +8,17 @@
   justify-content: center;
 }
 
-// Enlarge the hero media image on desktop
+// Enlarge the hero media image on desktop - adjust column proportions
 @media (min-width: 768px) {
-  .wg-hero .hero-media {
-    width: 100%;
+  // Give more width to the image column (default is ~33%, this makes it ~50%)
+  .wg-hero .col-12.col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  // Reduce text column accordingly
+  .wg-hero .col-12.mx-auto.col-md-8 {
+    flex: 0 0 50%;
+    max-width: 50%;
   }
   .wg-hero .hero-media img {
     max-width: none;
