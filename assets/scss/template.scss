@@ -10,8 +10,12 @@
 
 // Enlarge the hero media image on desktop
 @media (min-width: 768px) {
+  .wg-hero .hero-media {
+    width: 100%;
+  }
   .wg-hero .hero-media img {
-    max-width: 100%;
-    width: 500px;  // Adjust this value as needed (default is ~300px)
+    max-width: none;
+    width: 100%;
+    height: auto;
   }
 }
