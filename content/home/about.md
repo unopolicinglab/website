@@ -7,7 +7,7 @@ widget: hero  # See https://wowchemy.com/docs/page-builder/
 headless: true  # This file represents a page section.
 weight: 20  # Order that this section will appear.
 title: ""
-hero_media: sadaf_website_1.png
+hero_media: VIPR_Logo.jpg
 design:
   # Choose how many columns the section has. Valid values: 1 or 2.
   columns: '1'
