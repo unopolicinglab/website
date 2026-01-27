@@ -6,7 +6,7 @@ authors:
 date: '2026-01-23'
 publishDate: '2026-01-23'
 publication_types:
-- '2'
+- '3'
 publication: CrimRxiv
 abstract: ''
 featured: false
