@@ -23,7 +23,7 @@ tags:
 - lab-member:justin-nix
 links:
 - name: Postprint
-  url: https://jnix.netlify.app/files/pdfs/ppr_generalizability.pdf
+  url: https://doi.org/10.21428/cb6ab371.944a0a6c
   icon_pack: ai
   icon: open-access
 ---
