@@ -10,10 +10,10 @@ date: '2025-09-29'
 publishDate: '2025-09-29'
 publication_types:
 - '2'
-publication: CrimRxiv
+publication: '*Journal of Criminal Justice*'
 abstract: ''
 featured: false
-doi: ''
+doi: '10.1016/j.jcrimjus.2026.102598'
 url_pdf: ''
 url_code: ''
 url_dataset: ''
