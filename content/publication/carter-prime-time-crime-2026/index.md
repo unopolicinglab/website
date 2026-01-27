@@ -22,6 +22,7 @@ url_source: ''
 url_video: ''
 tags:
 - lab-member:travis-carter
+links:
 - name: Preprint
   url: https://doi.org/10.21428/cb6ab371.ae80e397
   icon_pack: ai
