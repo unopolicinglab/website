@@ -22,8 +22,12 @@ url_video: ''
 tags:
 - lab-member:justin-nix
 links:
+- name: Preprint
+  url: https://doi.org/10.31235/osf.io/ajz2q
+  icon_pack: ai
+  icon: open-access
 - name: Postprint
-  url: https://assets.pubpub.org/q5ubf3i9/51636042065128.pdf
+  url: https://doi.org/10.21428/cb6ab371.4366368b
   icon_pack: ai
   icon: open-access
 - name: Data
