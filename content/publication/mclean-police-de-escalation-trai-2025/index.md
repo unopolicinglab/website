@@ -6,8 +6,8 @@ authors:
 - admin
 - Jeffrey Rojek
 - Geoffrey P. Alpert
-date: '2025-09-29'
-publishDate: '2025-09-29'
+date: '2026-01-15'
+publishDate: '2026-01-15'
 publication_types:
 - '2'
 publication: '*Journal of Criminal Justice*'
