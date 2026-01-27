@@ -7,11 +7,11 @@ authors:
 date: '2026-01-19'
 publishDate: '2026-01-19'
 publication_types:
-- '2'
+- '3'
 publication: CrimRxiv
 abstract: ''
 featured: false
-doi: 10.21428/cb6ab371.ae80e397
+doi: ''
 url_pdf: ''
 url_code: ''
 url_dataset: ''
@@ -22,5 +22,9 @@ url_source: ''
 url_video: ''
 tags:
 - lab-member:travis-carter
+- name: Preprint
+  url: https://doi.org/10.21428/cb6ab371.ae80e397
+  icon_pack: ai
+  icon: open-access
 ---
 
