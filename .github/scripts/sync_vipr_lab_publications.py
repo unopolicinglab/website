@@ -47,6 +47,9 @@ class VIPRLabORCIDSync:
             for name, slug in additional_mappings.items():
                 self.author_slug_map[name.lower()] = slug
         
+        # Load excluded DOIs (case-insensitive)
+        self.excluded_dois = {d.lower() for d in self.config.get('excluded_dois', [])}
+
         # Track publications by DOI to avoid duplicates
         self.publications_by_doi = {}
         self.publications_without_doi = []
@@ -348,6 +351,7 @@ class VIPRLabORCIDSync:
             "total_works": 0,
             "unique_publications": 0,
             "duplicates_found": 0,
+            "excluded": 0,
             "new_publications": [],
             "existing_publications": [],
             "errors": [],
@@ -402,8 +406,14 @@ class VIPRLabORCIDSync:
                     print(f"[{i}/{len(all_works)}] ⚠️  {error_msg}")
                     continue
                 
-                # Check for duplicate by DOI
+                # Check if DOI is in the exclusion list
                 doi = metadata["doi"]
+                if doi and doi.lower() in self.excluded_dois:
+                    print(f"[{i}/{len(all_works)}] 🚫 Excluded: {title[:50]}... (DOI: {doi})")
+                    results["excluded"] += 1
+                    continue
+
+                # Check for duplicate by DOI
                 if doi:
                     if doi in self.publications_by_doi:
                         # Duplicate found - we need to decide which version to keep
@@ -487,6 +497,7 @@ class VIPRLabORCIDSync:
         print(f"Co-authored papers (duplicates removed): {results['duplicates_found']}")
         print(f"New publications created: {len(results['new_publications'])}")
         print(f"Existing publications: {len(results['existing_publications'])}")
+        print(f"Excluded by DOI: {results['excluded']}")
         print(f"Errors: {len(results['errors'])}")
         
         if results["new_publications"]:

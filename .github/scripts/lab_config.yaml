@@ -46,3 +46,14 @@ coauthor_handling: "first-author"
 
 # Maximum slug length (to avoid very long folder names)
 max_slug_length: 60
+
+# DOIs to permanently exclude from sync
+# These will be skipped even if they appear on a member's ORCID profile
+excluded_dois:
+  - "10.31219/osf.io/r9mjf"       # Turnover in Large US Police Agencies...
+  - "10.1037/e633962013-792"       # When it matters what you call it...
+  - "10.4324/9780429289194-10"     # Sleep and Delinquency
+  - "10.4324/9781032712130-6"      # How generalizable are findings from police surveys?
+  - "10.4135/9781412952637.n506"   # Parole
+  - "10.31235/osf.io/ajz2q"       # Police killings of unarmed Black Americans...
+  - "10.1080/07418825.2025.2520545" # The Influence of Workplace Friendships...
