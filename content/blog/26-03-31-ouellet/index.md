@@ -22,8 +22,8 @@ image:
   caption: ""
   focal_point: "smart"
 links:
-- name: Preprint
-  url: https://doi.org/10.1146/annurev-criminol-032924-115731
+- name: Postprint
+  url: https://www.researchgate.net/publication/392149651_The_Role_of_Networks_in_Policing
   icon_pack: ai
   icon: open-access
 summary: "Drawing on recent studies using social network analysis, this review details how inter-policing connections influence a variety of outcomes, from misconduct and use of force to officer well-being and retention."

@@ -23,8 +23,8 @@ image:
   caption: ""
   focal_point: "smart"
 links:
-- name: Preprint
-  url: https://www.tandfonline.com/doi/abs/10.1080/07418825.2025.2520545
+- name: Postprint
+  url: https://www.researchgate.net/publication/392889178_The_influence_of_workplace_friendships_on_police_firearm_use
   icon_pack: ai
   icon: open-access
 summary: "We found that firearm behaviours clustered within workplace friendship networks, with officers’ firearm use closely aligning with that of their friends."
