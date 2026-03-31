@@ -17,7 +17,19 @@ interval: 5000
 # Specify a height to ensure a consistent height for each slide.
 height: '500px; background-position:center; background-repeat: no-repeat; background-size: contain'
 
-item: 
+item:
+  - title: ""
+    align: center
+    overlay_color: '#000000'
+    overlay_img: arcade_time.jpg
+  - title: ""
+    align: center
+    overlay_color: '#000000'
+    overlay_img: acjs_2026.jpg
+  - title: ""
+    align: center
+    overlay_color: '#000000'
+    overlay_img: carter_acjs.jpg
   - title: ""
     align: center
     overlay_color: '#000000'
@@ -62,5 +74,4 @@ item:
     align: center
     overlay_color: '#000000'
     overlay_img: jessie_website_3.jpg
-    
 ---
