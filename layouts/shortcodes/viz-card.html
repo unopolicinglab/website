@@ -1,0 +1,142 @@
+<!-- Visualization Card Shortcode -->
+<!-- Parameters: title, description, url, authors, journal, badge -->
+<div class="viz-card">
+  <div class="viz-card-body">
+    <div class="viz-card-header">
+      {{ if .Get "badge" }}
+        <span class="viz-badge">{{ .Get "badge" }}</span>
+      {{ end }}
+      <h3 class="viz-card-title">{{ .Get "title" }}</h3>
+    </div>
+    <p class="viz-card-authors">{{ .Get "authors" }}</p>
+    {{ if .Get "journal" }}
+      <p class="viz-card-journal"><em>{{ .Get "journal" }}</em></p>
+    {{ end }}
+    <p class="viz-card-description">{{ .Get "description" }}</p>
+  </div>
+  <div class="viz-card-footer">
+    <a href="{{ .Get "url" }}" class="viz-launch-btn" target="_blank" rel="noopener">Launch Tool &rarr;</a>
+  </div>
+</div>
+
+<style>
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.viz-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.viz-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  border-color: #DC143C;
+}
+
+.viz-card-body {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.viz-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.viz-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.35;
+  flex: 1;
+}
+
+.viz-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  background: #DC143C;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.viz-card-authors {
+  font-size: 0.88rem;
+  color: #555;
+  margin: 0.25rem 0 0.15rem 0;
+}
+
+.viz-card-journal {
+  font-size: 0.85rem;
+  color: #DC143C;
+  margin: 0 0 0.75rem 0;
+}
+
+.viz-card-description {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+  margin: 0.5rem 0 0 0;
+}
+
+.viz-card-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #eee;
+  background: #fafafa;
+}
+
+.viz-launch-btn {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  background: #DC143C;
+  color: #fff !important;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.viz-launch-btn:hover {
+  background: #B01030;
+  text-decoration: none;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .viz-card {
+    background: #1e1e1e;
+    border-color: #333;
+  }
+  .viz-card-title { color: #fff; }
+  .viz-card-authors { color: #aaa; }
+  .viz-card-description { color: #ccc; }
+  .viz-card-footer { background: #252525; border-color: #333; }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .viz-card-body { padding: 1.25rem; }
+  .viz-card-footer { padding: 0.75rem 1.25rem; }
+}
+</style>

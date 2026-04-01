@@ -22,6 +22,9 @@ main:
   - name: Media
     url: media
     weight: 70
+  - name: Visualizations
+    url: visualizations
+    weight: 75
   - name: Other Resources
     url: resources
     weight: 80

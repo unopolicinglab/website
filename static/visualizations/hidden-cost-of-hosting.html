@@ -1,0 +1,1791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Hidden Cost of Hosting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<style>
+:root {
+  --navy:   #f7f3ee;
+  --navy2:  #ede8e0;
+  --navy3:  #e2dbd0;
+  --amber:  #D71920;
+  --amber2: #ff3a42;
+  --teal:   #8B1A1F;
+  --tan:    #b08060;
+  --cream:  #1a1a1a;
+  --gray:   #6b6560;
+  --light:  #3a3530;
+  --white:  #1a1a1a;
+  --red:    #D71920;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--navy);
+  color: #1a1a1a;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ── HEADER ── */
+header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6rem 2rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 20% 50%, rgba(215,25,32,0.06) 0%, transparent 60%),
+              radial-gradient(ellipse 60% 80% at 80% 20%, rgba(215,25,32,0.04) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: #D71920;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.2s forwards;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.4s forwards;
+}
+
+h1 em {
+  font-style: italic;
+  color: var(--amber);
+}
+
+.subtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.1rem;
+  color: #5a6358;
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.6s forwards;
+}
+
+.hero-carousel {
+  margin-bottom: 3rem;
+  position: relative;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.8s forwards;
+}
+
+.hero-stat {
+  display: none;
+  flex-direction: column;
+  background: rgba(215,25,32,0.05);
+  border: 1px solid rgba(215,25,32,0.2);
+  border-left: 4px solid var(--amber);
+  padding: 1.5rem 2rem;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hero-stat.active {
+  display: inline-flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-stat.exiting {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.hero-stat .big-num {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 900;
+  color: var(--amber);
+  line-height: 1;
+}
+
+.hero-stat .big-label {
+  font-size: 0.9rem;
+  color: var(--light);
+  margin-top: 0.4rem;
+  max-width: 380px;
+}
+
+.hero-stat .big-label em {
+  color: var(--amber);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.carousel-dot {
+  width: 24px;
+  height: 3px;
+  border: none;
+  background: rgba(215,25,32,0.2);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s ease, width 0.3s ease;
+  border-radius: 2px;
+}
+
+.carousel-dot.active {
+  background: var(--amber);
+  width: 36px;
+}
+
+.carousel-dot:hover {
+  background: rgba(215,25,32,0.6);
+}
+
+.scroll-cue {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+  color: #5a6358;
+  letter-spacing: 0.1em;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 1s forwards;
+}
+
+.scroll-cue::before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, var(--amber));
+}
+
+/* ── SECTIONS ── */
+section {
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+.section-inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: #8B1A1F;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+h2 em { font-style: italic; color: var(--amber); }
+
+.body-text {
+  font-size: 1.05rem;
+  color: var(--light);
+  margin-bottom: 1.2rem;
+  max-width: 680px;
+}
+
+.body-text strong { color: var(--white); font-weight: 500; }
+
+.divider {
+  width: 60px;
+  height: 2px;
+  background: var(--amber);
+  margin: 3rem auto;
+  opacity: 0.4;
+}
+
+/* ── CHART CONTAINERS ── */
+.chart-wrap {
+  margin: 3rem 0;
+  background: #ffffff;
+  border: 1px solid rgba(26,26,26,0.1);
+  border-radius: 4px;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.chart-wrap.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.chart-title {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: #D71920;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.chart-subtitle {
+  font-size: 0.88rem;
+  color: #5a6358;
+  margin-bottom: 1.5rem;
+}
+
+/* ── CALLOUT BOXES ── */
+.callout {
+  border-left: 3px solid #D71920;
+  background: rgba(215,25,32,0.05);
+  padding: 1.2rem 1.5rem;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+  color: var(--light);
+}
+
+.callout strong { color: var(--teal); }
+
+.callout.amber {
+  border-color: var(--amber);
+  background: rgba(215,25,32,0.05);
+}
+
+.callout.amber strong { color: var(--amber); }
+
+/* ── DESIGN DIAGRAM ── */
+.diagram-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+/* ── SECTION ALT BG ── */
+.section-alt {
+  background: #ede8e0;
+}
+
+/* ── EXPLORER ── */
+#explorer {
+  background: #ede8e0;
+  border-top: 1px solid rgba(26,26,26,0.1);
+}
+
+.explorer-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  background: #e2dbd0;
+  padding: 1.5rem;
+  border-radius: 4px;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+  min-width: 140px;
+}
+
+.control-group label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  color: var(--amber);
+  text-transform: uppercase;
+}
+
+.control-group select {
+  background: #ffffff;
+  color: #1a1a1a;
+  border: 1px solid rgba(26,26,26,0.2);
+  padding: 0.5rem 0.75rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  border-radius: 2px;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%236b6560'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2rem;
+}
+
+.control-group select:focus {
+  outline: none;
+  border-color: #D71920;
+}
+
+.result-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 640px) {
+  .result-panel { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 420px) {
+  .axis text {
+    font-size: 9px;
+  }
+  .chart-wrap {
+    padding: 1.25rem;
+  }
+  .toggle-btn {
+    padding: 0.3rem 0.6rem !important;
+    font-size: 0.65rem !important;
+  }
+}
+
+  .axis text {
+    font-size: 9px;
+  }
+  .chart-wrap {
+    padding: 1.25rem;
+  }
+  .toggle-btn {
+    padding: 0.3rem 0.6rem !important;
+    font-size: 0.65rem !important;
+  }
+}
+
+
+
+.result-card {
+  background: var(--navy);
+  border: 1px solid rgba(26,26,26,0.1);
+  padding: 1.5rem;
+  border-radius: 4px;
+}
+
+.result-card .irr-val {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #D71920;
+}
+
+.result-card.insig .irr-val { color: var(--gray); }
+
+.result-card .irr-label {
+  font-size: 0.8rem;
+  color: var(--gray);
+  margin-top: 0.3rem;
+  font-family: 'DM Mono', monospace;
+}
+
+.result-card .irr-ci {
+  font-size: 0.85rem;
+  color: var(--light);
+  margin-top: 0.5rem;
+}
+
+.result-card .irr-interp {
+  font-size: 0.9rem;
+  color: var(--light);
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(27,67,50,0.12);
+  line-height: 1.5;
+}
+
+.sig-badge {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+.sig-badge.sig { background: rgba(215,25,32,0.12); color: var(--teal); }
+.sig-badge.insig { background: rgba(138,155,176,0.15); color: var(--gray); }
+
+/* ── FOOTER ── */
+footer {
+  background: #e2dbd0;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.footer-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.footer-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.footer-text {
+  font-size: 0.88rem;
+  color: #6b6560;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+.footer-text a {
+  color: #D71920;
+  text-decoration: none;
+}
+
+/* ── TOGGLE BUTTONS ── */
+.toggle-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.toggle-btn {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba(26,26,26,0.2);
+  background: transparent;
+  color: #6b6560;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.toggle-btn.active {
+  background: var(--amber);
+  color: var(--navy);
+  border-color: var(--amber);
+  font-weight: 500;
+}
+
+/* ── TOOLTIPS ── */
+.tooltip {
+  position: fixed;
+  background: #1a1a1a;
+  border: 1px solid rgba(26,26,26,0.2);
+  padding: 0.6rem 0.9rem;
+  font-size: 0.82rem;
+  color: #f7f3ee;
+  pointer-events: none;
+  z-index: 1000;
+  border-radius: 2px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  display: none;
+}
+
+/* ── AUTHOR STRIP ── */
+.author-strip {
+  background: #e2dbd0;
+  border-top: 1px solid rgba(26,26,26,0.1);
+  border-bottom: 1px solid rgba(26,26,26,0.1);
+  padding: 1.75rem 2rem;
+}
+
+.author-strip-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 1.5rem;
+}
+
+.author-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.author-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 0.02em;
+}
+
+.author-aff {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  color: #6b6560;
+  line-height: 1.4;
+}
+
+.author-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(26,26,26,0.15);
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .author-divider { display: none; }
+  .author-block { min-width: 100%; padding: 0.4rem 0; }
+  .author-block + .author-block { border-top: 1px solid rgba(26,26,26,0.08); }
+}
+
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── SVG AXES ── */
+.axis text {
+  fill: #6b6560;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+}
+
+.axis line, .axis path {
+  stroke: rgba(26,26,26,0.15);
+}
+
+.grid line {
+  stroke: rgba(26,26,26,0.06);
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(248,244,236,0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(26,26,26,0.1);
+}
+
+.nav-brand {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: var(--amber);
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.82rem;
+  color: #6b6560;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: #1a1a1a; }
+
+@media (max-width: 600px) {
+  .nav-links { display: none; }
+}
+
+/* venue caterpillar layout */
+.caterpillar-controls {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  align-items: flex-start;
+}
+
+.control-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.control-block-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+/* Sport toggle — fully rounded pills */
+.toggle-pill {
+  border-radius: 999px !important;
+  padding: 0.35rem 1.1rem !important;
+  min-width: 64px;
+}
+
+.toggle-pill.active {
+  background: var(--amber) !important;
+  color: #F8F4EC !important;
+  border-color: var(--amber) !important;
+}
+
+/* Crime type toggle — small square chips with colored left border */
+.toggle-chip {
+  border-radius: 2px !important;
+  padding: 0.3rem 0.8rem !important;
+  border-left-width: 3px !important;
+  font-size: 0.68rem !important;
+}
+
+.toggle-chip.active {
+  background: rgba(215,25,32,0.08) !important;
+  color: #1a1a1a !important;
+  border-color: var(--amber) !important;
+  border-left-color: var(--amber) !important;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-brand">Hidden Cost of Hosting</span>
+  <ul class="nav-links">
+    <li><a href="#findings">Findings</a></li>
+    <li><a href="#venues">Venues</a></li>
+    <li><a href="#explorer">Explorer</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════════════════════════════
+     HEADER
+══════════════════════════════════════ -->
+<header>
+  <div class="header-inner">
+    <p class="eyebrow">A Criminological Perspective</p>
+    <h1>The <em>Hidden Cost</em><br>of Hosting</h1>
+    <p class="subtitle">What happens to crime near stadiums on game day?<br>21 U.S. cities · MLB &amp; NFL · 2015–2023</p>
+    <div class="hero-carousel">
+      <div class="hero-stat active" data-index="0">
+        <span class="big-num">×8.7</span>
+        <span class="big-label">More assaults near NFL stadiums in the hour <em>after</em> a home game ends, compared to away game days at the same venue.</span>
+      </div>
+      <div class="hero-stat" data-index="1">
+        <span class="big-num">+593%</span>
+        <span class="big-label">More larceny thefts near NFL stadiums in the hour <em>before</em> kickoff — the crowd arrives, and so do the opportunities.</span>
+      </div>
+      <div class="hero-stat" data-index="2">
+        <span class="big-num">+44%</span>
+        <span class="big-label">More larceny near MLB stadiums on home game days — a consistent pattern across <em>21 cities and 8 seasons</em>.</span>
+      </div>
+      <div class="carousel-dots">
+        <button class="carousel-dot active" onclick="goToSlide(0)"></button>
+        <button class="carousel-dot" onclick="goToSlide(1)"></button>
+        <button class="carousel-dot" onclick="goToSlide(2)"></button>
+      </div>
+    </div>
+    <p class="scroll-cue">Scroll to explore the findings</p>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════
+     AUTHOR STRIP
+══════════════════════════════════════ -->
+<div class="author-strip">
+  <div class="author-strip-inner">
+    <div class="author-block">
+      <span class="author-name">Travis M. Carter</span>
+      <span class="author-aff">School of Criminology and Criminal Justice · University of Nebraska at Omaha</span>
+    </div>
+    <div class="author-divider"></div>
+    <div class="author-block">
+      <span class="author-name">Richard K. Moule Jr.</span>
+      <span class="author-aff">Department of Criminology · University of South Florida</span>
+    </div>
+    <div class="author-divider"></div>
+    <div class="author-block">
+      <span class="author-name">Jed Knode</span>
+      <span class="author-aff">School of Criminal Justice · Michigan State University</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SECTION 1 — THE RULE
+══════════════════════════════════════ -->
+<section id="findings">
+  <div class="section-inner">
+    <p class="section-label">Section 01 — The Pattern</p>
+    <h2>Crime rises near stadiums<br>when games are <em>here</em></h2>
+    <p class="body-text">
+      This is not a comparison between busy game days and quiet off-days. Every result here compares the <strong>same venue, same time of day, same day of week</strong> — on days when the team plays at home versus days when the team is playing away. What changes is whether tens of thousands of people show up.
+    </p>
+    <p class="body-text">
+      Across 21 U.S. cities and eight seasons, larceny and assault consistently increase within one kilometer of stadiums on home game days. The pattern is clear — but its magnitude varies dramatically by sport, crime type, and timing.
+    </p>
+
+    <div class="callout amber">
+      <strong>How to read these charts:</strong> Each point shows the Incidence Rate Ratio (IRR) for home vs. away games. An IRR of 2.0 means twice as many incidents on home game days. The horizontal line at 1.0 is the null — no difference. Error bars are 95% confidence intervals.
+    </div>
+
+    <!-- Chart 1: MLB vs NFL spatial comparison -->
+    <div class="chart-wrap" id="chart-spatial">
+      <p class="chart-title">Spatial Results — Within 1km of Stadium</p>
+      <p class="chart-subtitle">IRR for home vs. away games · MLB (top) and NFL (bottom)</p>
+      <div class="toggle-group">
+        <button class="toggle-btn active" data-band="Within 1 km" onclick="updateSpatialChart('Within 1 km', this)">Within 1km</button>
+        <button class="toggle-btn" data-band="1-2 km" onclick="updateSpatialChart('1-2 km', this)">1–2km</button>
+        <button class="toggle-btn" data-band="2-3 km" onclick="updateSpatialChart('2-3 km', this)">2–3km</button>
+      </div>
+      <svg id="svg-spatial" style="width:100%;overflow:visible;"></svg>
+    </div>
+
+    <p class="body-text">
+      NFL effects are dramatically larger than MLB across every crime type — likely because NFL games draw an average of <strong>69,641 fans</strong> compared to <strong>29,557 for MLB</strong>. More people, more opportunity.
+    </p>
+    <p class="body-text">
+      Robbery is the exception in both sports: no significant difference on home game days, regardless of distance or timing. The pattern is concentrated in larceny and assault — opportunistic theft and interpersonal violence, both of which scale with crowd size and alcohol.
+    </p>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SECTION 2 — DESIGN EXPLAINER
+══════════════════════════════════════ -->
+<section class="section-alt">
+  <div class="section-inner">
+    <p class="section-label">Section 02 — The Method</p>
+    <h2>How we <em>measured</em> this</h2>
+    <p class="body-text">
+      The core challenge is identifying a valid counterfactual. We solve it by comparing home games to away games at the <em>same venue</em>. When the Dodgers play in San Francisco, Dodger Stadium still exists — it's just empty. That empty stadium day is the baseline.
+    </p>
+
+    <!-- Static design diagram -->
+    <div class="chart-wrap" id="chart-diagram">
+      <p class="chart-title">Study Design</p>
+      <p class="chart-subtitle">Spatial bands and temporal windows</p>
+      <svg id="svg-diagram" style="width:100%; height:260px; overflow:visible;"></svg>
+    </div>
+
+    <p class="body-text">
+      Crime counts are aggregated within three concentric distance bands around each venue centroid, and within three temporal windows relative to the game clock. A difference-in-differences model then estimates the effect of hosting a home game, controlling for venue fixed effects, day of week, time of day, and season.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SECTION 3 — TEMPORAL
+══════════════════════════════════════ -->
+<section>
+  <div class="section-inner">
+    <p class="section-label">Section 03 — Timing</p>
+    <h2>Two crimes,<br>two <em>different stories</em></h2>
+    <p class="body-text">
+      Larceny and assault don't follow the same clock. Property crime starts <strong>before</strong> the game begins — as crowds gather, so do opportunities for theft. Assault concentrates <strong>after</strong> the final whistle, when alcohol has accumulated over hours and emotions run high.
+    </p>
+
+    <div class="chart-wrap" id="chart-temporal">
+      <p class="chart-title">Temporal Results — Within 1km</p>
+      <p class="chart-subtitle">IRR by time window for home vs. away games</p>
+      <div class="toggle-group">
+        <button class="toggle-btn active" data-league="MLB" onclick="updateTemporalChart('MLB', this)">MLB</button>
+        <button class="toggle-btn" data-league="NFL" onclick="updateTemporalChart('NFL', this)">NFL</button>
+      </div>
+      <svg id="svg-temporal" style="width:100%;overflow:visible;"></svg>
+    </div>
+
+    <div class="callout" id="callout-nfl" style="display:none;">
+      <strong>NFL post-game assault:</strong> In the hour after an NFL home game ends, assaults near the stadium are <strong>8.7× more common</strong> than on away game days at the same venue. This is one of the most striking findings in the study — and it holds even after controlling for time of day, day of week, and season.
+    </div>
+    <div class="callout" id="callout-mlb">
+      <strong>MLB larceny peaks before first pitch:</strong> Larceny near MLB stadiums is <strong>80.5% higher</strong> in the hour before a home game begins compared to away game days — as crowds gather, so do opportunities for theft. Assault tells a different story, concentrating during and after the game rather than before.
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SECTION 4 — VENUE HETEROGENEITY
+══════════════════════════════════════ -->
+<section class="section-alt" id="venues">
+  <div class="section-inner">
+    <p class="section-label">Section 04 — Venue Variation</p>
+    <h2>The rule — and<br>the <em>exception</em></h2>
+    <p class="body-text">
+      The national pattern is consistent, but its magnitude varies substantially across venues. At <strong>Dodger Stadium</strong>, assaults jumped 751% above the away-game baseline — the largest increase of any MLB venue. Among NFL stadiums, <strong>Acrisure Stadium</strong> in Pittsburgh showed the largest larceny increase.
+    </p>
+    <p class="body-text">
+      Then there is <strong>Wrigley Field</strong> — the sole MLB venue where assault was <em>lower</em> on home game days than on away game days. The only exception in the entire dataset. Why? The built environment around Wrigley, the density of bars in Wrigleyville, the composition of the neighborhood — all remain open questions for future research.
+    </p>
+
+    <div class="chart-wrap" id="chart-venues">
+      <p class="chart-title">Venue-Specific Deviations from Average Effect</p>
+      <p class="chart-subtitle">Random slope deviations · Teal = above average · Tan = below average · Bars are 95% credible intervals</p>
+      <div class="caterpillar-controls">
+        <div class="control-block">
+          <p class="control-block-label">Sport</p>
+          <div class="toggle-group" id="league-toggle">
+            <button class="toggle-btn toggle-pill active" onclick="updateCaterpillar('MLB','Larceny',this,'league')">MLB</button>
+            <button class="toggle-btn toggle-pill" onclick="updateCaterpillar('NFL','Larceny',this,'league')">NFL</button>
+          </div>
+        </div>
+        <div class="control-block">
+          <p class="control-block-label">Crime Type</p>
+          <div class="toggle-group" id="outcome-toggle">
+            <button class="toggle-btn toggle-chip active" onclick="updateCaterpillar(currentLeague,'Larceny',this,'outcome')">Larceny</button>
+            <button class="toggle-btn toggle-chip" onclick="updateCaterpillar(currentLeague,'Assault',this,'outcome')">Assault</button>
+            <button class="toggle-btn toggle-chip" onclick="updateCaterpillar(currentLeague,'AutoTheft',this,'outcome')">Auto Theft</button>
+            <button class="toggle-btn toggle-chip" onclick="updateCaterpillar(currentLeague,'Robbery',this,'outcome')">Robbery</button>
+          </div>
+        </div>
+      </div>
+      <svg id="svg-venues" style="width:100%;overflow:visible;"></svg>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SECTION 5 — WHAT THIS MEANS
+══════════════════════════════════════ -->
+<section>
+  <div class="section-inner">
+    <p class="section-label">Section 05 — Implications</p>
+    <h2>What this means<br>for <em>cities and venues</em></h2>
+    <p class="body-text">
+      The concentration of crime near stadiums on home game days is not incidental. It is a predictable, measurable consequence of how large-scale public events reshape the opportunity structure for crime — and it falls most heavily on the neighborhoods immediately surrounding these venues.
+    </p>
+    <p class="body-text">
+      Stadiums are frequently built with public subsidies. If they also generate measurable increases in nearby crime — and the associated public safety costs — that is relevant to how cities weigh the costs and benefits of hosting professional sports. Police deployment, event security protocols, and urban planning around venues all have a role to play.
+    </p>
+    <div class="callout">
+      <strong>This is an observational study.</strong> The quasi-experimental design establishes a strong association, not definitive causation. Sensitivity analyses using randomization inference and alternative model specifications are consistent with the main findings.
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     EXPLORER
+══════════════════════════════════════ -->
+<section id="explorer">
+  <div class="section-inner">
+    <div class="explorer-header">
+      <p class="section-label">Interactive Explorer</p>
+      <h2>Explore the full<br><em>dataset</em> yourself</h2>
+      <p class="body-text" style="margin:0 auto; text-align:center; max-width:520px;">
+        Select a league, crime type, distance band, and time window to see the result from the main models.
+      </p>
+    </div>
+
+    <div class="controls">
+      <div class="control-group">
+        <label>League</label>
+        <select id="exp-league" onchange="updateExplorer()">
+          <option value="MLB">MLB</option>
+          <option value="NFL">NFL</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label>Crime Type</label>
+        <select id="exp-crime" onchange="updateExplorer()">
+          <option value="Larceny">Larceny</option>
+          <option value="Assault">Assault</option>
+          <option value="Auto Theft">Auto Theft</option>
+          <option value="Robbery">Robbery</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label>Distance Band</label>
+        <select id="exp-band" onchange="updateExplorer()">
+          <option value="spatial">All distances (spatial)</option>
+          <option value="Within 1 km">Within 1km</option>
+          <option value="1-2 km">1–2km</option>
+          <option value="2-3 km">2–3km</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label>Time Window</label>
+        <select id="exp-time" onchange="updateExplorer()">
+          <option value="temporal">All periods (temporal)</option>
+          <option value="Pre">Pre-game</option>
+          <option value="During">During game</option>
+          <option value="Post">Post-game</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="explorer-chart-wrap" class="chart-wrap" style="opacity:1;transform:none;">
+      <p class="chart-title" id="exp-chart-title">Explorer Results</p>
+      <p class="chart-subtitle" id="exp-chart-sub"></p>
+      <svg id="svg-explorer" style="width:100%;overflow:visible;"></svg>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <p class="footer-title">Prime Time for Crime?</p>
+    <p class="footer-text">
+      A Multi-City Analysis of Sporting Events, Sports Venues, and Crime.<br>
+      Accepted for publication in the <em>Journal of Quantitative Criminology</em>, 2026.
+    </p>
+    <p class="footer-text" style="margin-top:1rem;">
+      Data: Open crime records from 21 U.S. city police departments, 2015–2023.<br>
+      Game schedules via <em>baseballr</em> and <em>nflverse</em> R packages.
+    </p>
+    <p class="footer-text" style="margin-top:1.5rem; font-size:0.78rem;">
+      <a href="https://www.viprlab.org/" target="_blank">VIPR Lab</a> · University of Nebraska Omaha
+    </p>
+    <p class="footer-text" style="margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid rgba(26,26,26,0.1); font-size:0.78rem; font-style:italic; color:#666;">
+      Carter, T., Jr., R. K. M., &amp; Knode, J. (2026). Prime Time for Crime? A Multi-City Analysis of Sporting Events, Sports Venues, and Crime. <em>CrimRxiv</em>. <a href="https://doi.org/10.21428/cb6ab371.ae80e397" target="_blank">https://doi.org/10.21428/cb6ab371.ae80e397</a>
+    </p>
+  </div>
+</footer>
+
+<div class="tooltip" id="tooltip"></div>
+
+<!-- ══════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════ -->
+<script>
+const EXPLORER_DATA = [{"distance_band": "Within 1 km", "crime_type": "Larceny", "league": "MLB", "irr": 1.4424, "conf_low": 1.2953, "conf_high": 1.6061, "p_value": 0.0, "time_window": null, "sig": true}, {"distance_band": "Within 1 km", "crime_type": "Auto Theft", "league": "MLB", "irr": 1.1018, "conf_low": 0.8736, "conf_high": 1.3897, "p_value": 0.4036, "time_window": null, "sig": false}, {"distance_band": "Within 1 km", "crime_type": "Assault", "league": "MLB", "irr": 1.41, "conf_low": 1.1153, "conf_high": 1.7825, "p_value": 0.0034, "time_window": null, "sig": true}, {"distance_band": "Within 1 km", "crime_type": "Robbery", "league": "MLB", "irr": 1.0659, "conf_low": 0.9669, "conf_high": 1.175, "p_value": 0.1902, "time_window": null, "sig": false}, {"distance_band": "1-2 km", "crime_type": "Larceny", "league": "MLB", "irr": 1.0207, "conf_low": 0.9667, "conf_high": 1.0777, "p_value": 0.4502, "time_window": null, "sig": false}, {"distance_band": "1-2 km", "crime_type": "Auto Theft", "league": "MLB", "irr": 1.0443, "conf_low": 0.9808, "conf_high": 1.1119, "p_value": 0.1668, "time_window": null, "sig": false}, {"distance_band": "1-2 km", "crime_type": "Assault", "league": "MLB", "irr": 0.9909, "conf_low": 0.9073, "conf_high": 1.0821, "p_value": 0.8353, "time_window": null, "sig": false}, {"distance_band": "1-2 km", "crime_type": "Robbery", "league": "MLB", "irr": 0.9066, "conf_low": 0.8311, "conf_high": 0.989, "p_value": 0.0242, "time_window": null, "sig": true}, {"distance_band": "2-3 km", "crime_type": "Larceny", "league": "MLB", "irr": 1.0366, "conf_low": 0.9485, "conf_high": 1.1327, "p_value": 0.4183, "time_window": null, "sig": false}, {"distance_band": "2-3 km", "crime_type": "Auto Theft", "league": "MLB", "irr": 1.0061, "conf_low": 0.9483, "conf_high": 1.0675, "p_value": 0.8368, "time_window": null, "sig": false}, {"distance_band": "2-3 km", "crime_type": "Assault", "league": "MLB", "irr": 0.9839, "conf_low": 0.9518, "conf_high": 1.0171, "p_value": 0.3285, "time_window": null, "sig": false}, {"distance_band": "2-3 km", "crime_type": "Robbery", "league": "MLB", "irr": 1.0431, "conf_low": 0.9882, "conf_high": 1.101, "p_value": 0.1182, "time_window": null, "sig": false}, {"distance_band": "Within 1 km", "crime_type": "Larceny", "league": "NFL", "irr": 3.1744, "conf_low": 2.0782, "conf_high": 4.8489, "p_value": 0.0, "time_window": null, "sig": true}, {"distance_band": "Within 1 km", "crime_type": "Auto Theft", "league": "NFL", "irr": 2.7582, "conf_low": 1.8026, "conf_high": 4.2204, "p_value": 0.0, "time_window": null, "sig": true}, {"distance_band": "Within 1 km", "crime_type": "Assault", "league": "NFL", "irr": 4.3962, "conf_low": 2.6336, "conf_high": 7.3386, "p_value": 0.0, "time_window": null, "sig": true}, {"distance_band": "Within 1 km", "crime_type": "Robbery", "league": "NFL", "irr": 1.3945, "conf_low": 0.7197, "conf_high": 2.7023, "p_value": 0.3147, "time_window": null, "sig": false}, {"distance_band": "1-2 km", "crime_type": "Larceny", "league": "NFL", "irr": 1.2154, "conf_low": 1.0313, "conf_high": 1.4324, "p_value": 0.0176, "time_window": null, "sig": true}, {"distance_band": "1-2 km", "crime_type": "Auto Theft", "league": "NFL", "irr": 1.2495, "conf_low": 0.8989, "conf_high": 1.7368, "p_value": 0.1761, "time_window": null, "sig": false}, {"distance_band": "1-2 km", "crime_type": "Assault", "league": "NFL", "irr": 1.1625, "conf_low": 0.9605, "conf_high": 1.4069, "p_value": 0.1145, "time_window": null, "sig": false}, {"distance_band": "1-2 km", "crime_type": "Robbery", "league": "NFL", "irr": 0.8326, "conf_low": 0.5345, "conf_high": 1.297, "p_value": 0.4084, "time_window": null, "sig": false}, {"distance_band": "2-3 km", "crime_type": "Larceny", "league": "NFL", "irr": 0.9527, "conf_low": 0.8695, "conf_high": 1.0439, "p_value": 0.289, "time_window": null, "sig": false}, {"distance_band": "2-3 km", "crime_type": "Auto Theft", "league": "NFL", "irr": 1.0151, "conf_low": 0.7799, "conf_high": 1.3214, "p_value": 0.9093, "time_window": null, "sig": false}, {"distance_band": "2-3 km", "crime_type": "Assault", "league": "NFL", "irr": 0.8633, "conf_low": 0.6784, "conf_high": 1.0986, "p_value": 0.2226, "time_window": null, "sig": false}, {"distance_band": "2-3 km", "crime_type": "Robbery", "league": "NFL", "irr": 0.8276, "conf_low": 0.587, "conf_high": 1.1668, "p_value": 0.2706, "time_window": null, "sig": false}, {"distance_band": "Within 1 km", "crime_type": "Larceny", "league": "MLB", "irr": 1.8054, "conf_low": 1.4612, "conf_high": 2.2307, "p_value": 0.0, "time_window": "Pre", "sig": true}, {"distance_band": "Within 1 km", "crime_type": "Auto Theft", "league": "MLB", "irr": 1.3938, "conf_low": 0.9748, "conf_high": 1.9928, "p_value": 0.0633, "time_window": "Pre", "sig": false}, {"distance_band": "Within 1 km", "crime_type": "Assault", "league": "MLB", "irr": 1.0182, "conf_low": 0.8187, "conf_high": 1.2663, "p_value": 0.8685, "time_window": "Pre", "sig": false}, {"distance_band": "Within 1 km", "crime_type": "Robbery", "league": "MLB", "irr": 1.0505, "conf_low": 0.8372, "conf_high": 1.3181, "p_value": 0.6644, "time_window": "Pre", "sig": false}, {"distance_band": "Within 1 km", "crime_type": "Larceny", "league": "MLB", "irr": 1.2962, "conf_low": 1.1668, "conf_high": 1.4399, "p_value": 0.0, "time_window": "During", "sig": true}, {"distance_band": "Within 1 km", "crime_type": "Auto Theft", "league": "MLB", "irr": 1.007, "conf_low": 0.7909, "conf_high": 1.2822, "p_value": 0.9537, "time_window": "During", "sig": false}, {"distance_band": "Within 1 km", "crime_type": "Assault", "league": "MLB", "irr": 1.3966, "conf_low": 1.0864, "conf_high": 1.7954, "p_value": 0.0078, "time_window": "During", "sig": true}, {"distance_band": "Within 1 km", "crime_type": "Robbery", "league": "MLB", "irr": 1.1182, "conf_low": 0.9766, "conf_high": 1.2802, "p_value": 0.0989, "time_window": "During", "sig": false}, {"distance_band": "Within 1 km", "crime_type": "Larceny", "league": "MLB", "irr": 1.5239, "conf_low": 1.3342, "conf_high": 1.7406, "p_value": 0.0, "time_window": "Post", "sig": true}, {"distance_band": "Within 1 km", "crime_type": "Auto Theft", "league": "MLB", "irr": 1.0852, "conf_low": 0.7652, "conf_high": 1.5391, "p_value": 0.6399, "time_window": "Post", "sig": false}, {"distance_band": "Within 1 km", "crime_type": "Assault", "league": "MLB", "irr": 1.7551, "conf_low": 1.2904, "conf_high": 2.3872, "p_value": 0.0003, "time_window": "Post", "sig": true}, {"distance_band": "Within 1 km", "crime_type": "Robbery", "league": "MLB", "irr": 0.9523, "conf_low": 0.7296, "conf_high": 1.2429, "p_value": 0.7135, "time_window": "Post", "sig": false}, {"distance_band": "Within 1 km", "crime_type": "Larceny", "league": "NFL", "irr": 6.9315, "conf_low": 3.8507, "conf_high": 12.4769, "p_value": 0.0, "time_window": "Pre", "sig": true}, {"distance_band": "Within 1 km", "crime_type": "Auto Theft", "league": "NFL", "irr": 4.6629, "conf_low": 1.7704, "conf_high": 12.2811, "p_value": 0.0015, "time_window": "Pre", "sig": true}, {"distance_band": "Within 1 km", "crime_type": "Assault", "league": "NFL", "irr": 1.9216, "conf_low": 0.9518, "conf_high": 3.8797, "p_value": 0.063, "time_window": "Pre", "sig": false}, {"distance_band": "Within 1 km", "crime_type": "Robbery", "league": "NFL", "irr": 1.1686, "conf_low": 0.5551, "conf_high": 2.4599, "p_value": 0.6755, "time_window": "Pre", "sig": false}, {"distance_band": "Within 1 km", "crime_type": "Larceny", "league": "NFL", "irr": 2.1884, "conf_low": 1.3669, "conf_high": 3.5038, "p_value": 0.0009, "time_window": "During", "sig": true}, {"distance_band": "Within 1 km", "crime_type": "Auto Theft", "league": "NFL", "irr": 1.788, "conf_low": 1.159, "conf_high": 2.7584, "p_value": 0.0074, "time_window": "During", "sig": true}, {"distance_band": "Within 1 km", "crime_type": "Assault", "league": "NFL", "irr": 4.161, "conf_low": 2.4928, "conf_high": 6.9457, "p_value": 0.0, "time_window": "During", "sig": true}, {"distance_band": "Within 1 km", "crime_type": "Robbery", "league": "NFL", "irr": 1.4583, "conf_low": 0.5353, "conf_high": 3.9724, "p_value": 0.4515, "time_window": "During", "sig": false}, {"distance_band": "Within 1 km", "crime_type": "Larceny", "league": "NFL", "irr": 3.3989, "conf_low": 1.7973, "conf_high": 6.4277, "p_value": 0.0001, "time_window": "Post", "sig": true}, {"distance_band": "Within 1 km", "crime_type": "Auto Theft", "league": "NFL", "irr": 7.9456, "conf_low": 1.815, "conf_high": 34.7833, "p_value": 0.005, "time_window": "Post", "sig": true}, {"distance_band": "Within 1 km", "crime_type": "Assault", "league": "NFL", "irr": 8.6859, "conf_low": 3.4415, "conf_high": 21.9221, "p_value": 0.0, "time_window": "Post", "sig": true}, {"distance_band": "Within 1 km", "crime_type": "Robbery", "league": "NFL", "irr": 1.4515, "conf_low": 0.3764, "conf_high": 5.5971, "p_value": 0.5808, "time_window": "Post", "sig": false}];
+const VENUE_MLB = [{"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Dodger Stadium", "Fixed_Home": 0.350683034710497, "Random_Slope": 0.59969095723983, "Total_Effect": 0.950373991950327, "SE": 0.210365009802739, "Lower": 0.187375538026462, "Upper": 1.0120063764532}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "American Family Field", "Fixed_Home": 0.350683034710497, "Random_Slope": 0.263592701915134, "Total_Effect": 0.614275736625632, "SE": 0.299617489415729, "Lower": -0.323657577339694, "Upper": 0.850842981169962}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "T-Mobile Park", "Fixed_Home": 0.350683034710497, "Random_Slope": 0.252471840395183, "Total_Effect": 0.60315487510568, "SE": 0.0858656257687569, "Lower": 0.0841752138884194, "Upper": 0.420768466901946}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Great American Ball Park", "Fixed_Home": 0.350683034710497, "Random_Slope": 0.101712731757776, "Total_Effect": 0.452395766468274, "SE": 0.111716669565061, "Lower": -0.117251940589742, "Upper": 0.320677404105295}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Rate Field", "Fixed_Home": 0.350683034710497, "Random_Slope": 0.0708332809509576, "Total_Effect": 0.421516315661455, "SE": 0.194944419092715, "Lower": -0.311257780470764, "Upper": 0.452924342372679}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Turner Field", "Fixed_Home": 0.350683034710497, "Random_Slope": 0.0329220748269226, "Total_Effect": 0.38360510953742, "SE": 0.156100416640088, "Lower": -0.273034741787651, "Upper": 0.338878891441496}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Daikin Park", "Fixed_Home": 0.350683034710497, "Random_Slope": 0.0162527371811531, "Total_Effect": 0.36693577189165, "SE": 0.0888101287813897, "Lower": -0.157815115230371, "Upper": 0.190320589592677}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Wrigley Field", "Fixed_Home": 0.350683034710497, "Random_Slope": 0.0067682997813644, "Total_Effect": 0.357451334491862, "SE": 0.149477178306193, "Lower": -0.286206969698774, "Upper": 0.299743569261503}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Yankee Stadium", "Fixed_Home": 0.350683034710497, "Random_Slope": -3.94579806739662e-06, "Total_Effect": 0.35067908891243, "SE": 0.13612714263808, "Lower": -0.266813145368705, "Upper": 0.26680525377257}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Coors Field", "Fixed_Home": 0.350683034710497, "Random_Slope": -0.0134921293477598, "Total_Effect": 0.337190905362737, "SE": 0.0814937399579466, "Lower": -0.173219859665335, "Upper": 0.146235600969815}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Oracle Park", "Fixed_Home": 0.350683034710497, "Random_Slope": -0.0175907705580044, "Total_Effect": 0.333092264152493, "SE": 0.0776462710805393, "Lower": -0.169777461875861, "Upper": 0.134595920759853}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Kauffman Stadium", "Fixed_Home": 0.350683034710497, "Random_Slope": -0.019903216601813, "Total_Effect": 0.330779818108684, "SE": 0.217803483687444, "Lower": -0.446798044629203, "Upper": 0.406991611425577}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Target Field", "Fixed_Home": 0.350683034710497, "Random_Slope": -0.0301455079243683, "Total_Effect": 0.320537526786129, "SE": 0.0936439048853778, "Lower": -0.213687561499709, "Upper": 0.153396545650972}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Citizens Bank Park", "Fixed_Home": 0.350683034710497, "Random_Slope": -0.0334143780031701, "Total_Effect": 0.317268656707327, "SE": 0.158633256679511, "Lower": -0.344335561095011, "Upper": 0.277506805088671}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Progressive Field", "Fixed_Home": 0.350683034710497, "Random_Slope": -0.0467992989409445, "Total_Effect": 0.303883735769553, "SE": 0.108961373036157, "Lower": -0.260363590091812, "Upper": 0.166764992209923}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "PNC Park", "Fixed_Home": 0.350683034710497, "Random_Slope": -0.0639171956096845, "Total_Effect": 0.286765839100813, "SE": 0.0920133550644193, "Lower": -0.244263371535946, "Upper": 0.116428980316577}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Nationals Park", "Fixed_Home": 0.350683034710497, "Random_Slope": -0.0867222873999679, "Total_Effect": 0.263960747310529, "SE": 0.103184330249139, "Lower": -0.288963574688281, "Upper": 0.115518999888345}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Citi Field", "Fixed_Home": 0.350683034710497, "Random_Slope": -0.111219545819767, "Total_Effect": 0.23946348889073, "SE": 0.16346708762215, "Lower": -0.431615037559182, "Upper": 0.209175945919647}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Oakland Coliseum", "Fixed_Home": 0.350683034710497, "Random_Slope": -0.11519483741368, "Total_Effect": 0.235488197296818, "SE": 0.134292615482046, "Lower": -0.37840836375849, "Upper": 0.148018688931131}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Fenway Park", "Fixed_Home": 0.350683034710497, "Random_Slope": -0.119643648449959, "Total_Effect": 0.231039386260538, "SE": 0.0984928126396755, "Lower": -0.312689561223723, "Upper": 0.0734022643238045}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Comerica Park", "Fixed_Home": 0.350683034710497, "Random_Slope": -0.145802896333813, "Total_Effect": 0.204880138376684, "SE": 0.0973230575069714, "Lower": -0.336556089047477, "Upper": 0.0449502963798508}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Oriole Park at Camden Yards", "Fixed_Home": 0.350683034710497, "Random_Slope": -0.22035341139687, "Total_Effect": 0.130329623313627, "SE": 0.0891746493467779, "Lower": -0.395135724116555, "Upper": -0.0455710986771856}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Chase Field", "Fixed_Home": 0.350683034710497, "Random_Slope": -0.340929931058521, "Total_Effect": 0.0097531036519761, "SE": 0.144045026381585, "Lower": -0.623258182766428, "Upper": -0.0586016793506143}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Daikin Park", "Fixed_Home": 0.144135546057423, "Random_Slope": 0.430468757278201, "Total_Effect": 0.574604303335624, "SE": 0.181260407500857, "Lower": 0.0751983585765217, "Upper": 0.785739155979881}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Kauffman Stadium", "Fixed_Home": 0.144135546057423, "Random_Slope": 0.196561087208956, "Total_Effect": 0.340696633266378, "SE": 0.272757571925421, "Lower": -0.338043753764869, "Upper": 0.73116592818278}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Citizens Bank Park", "Fixed_Home": 0.144135546057423, "Random_Slope": 0.184820635758536, "Total_Effect": 0.328956181815959, "SE": 0.271981830982174, "Lower": -0.348263752966524, "Upper": 0.717905024483597}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Target Field", "Fixed_Home": 0.144135546057423, "Random_Slope": 0.170703956252698, "Total_Effect": 0.31483950231012, "SE": 0.180646225304536, "Lower": -0.183362645344193, "Upper": 0.524770557849589}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Comerica Park", "Fixed_Home": 0.144135546057423, "Random_Slope": 0.10194393474723, "Total_Effect": 0.246079480804652, "SE": 0.16626297258231, "Lower": -0.223931491514098, "Upper": 0.427819361008557}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Nationals Park", "Fixed_Home": 0.144135546057423, "Random_Slope": 0.0928518390446752, "Total_Effect": 0.236987385102098, "SE": 0.178531951837089, "Lower": -0.257070786556019, "Upper": 0.44277446464537}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Dodger Stadium", "Fixed_Home": 0.144135546057423, "Random_Slope": 0.0808647581480979, "Total_Effect": 0.225000304205521, "SE": 0.21817029713704, "Lower": -0.3467490242405, "Upper": 0.508478540536696}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Turner Field", "Fixed_Home": 0.144135546057423, "Random_Slope": 0.0783788786468591, "Total_Effect": 0.222514424704282, "SE": 0.249992886461153, "Lower": -0.411607178817001, "Upper": 0.568364936110719}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Chase Field", "Fixed_Home": 0.144135546057423, "Random_Slope": 0.0630489950324228, "Total_Effect": 0.207184541089845, "SE": 0.231402284581555, "Lower": -0.390499482747426, "Upper": 0.516597472812271}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Citi Field", "Fixed_Home": 0.144135546057423, "Random_Slope": 0.0445355868339253, "Total_Effect": 0.188671132891348, "SE": 0.284993064082598, "Lower": -0.514050818767966, "Upper": 0.603121992435817}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "American Family Field", "Fixed_Home": 0.144135546057423, "Random_Slope": 0.0326038454642167, "Total_Effect": 0.176739391521639, "SE": 0.294767402444912, "Lower": -0.545140263327812, "Upper": 0.610347954256245}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Wrigley Field", "Fixed_Home": 0.144135546057423, "Random_Slope": 0.0085903322505402, "Total_Effect": 0.152725878307963, "SE": 0.254673097759323, "Lower": -0.490568939357732, "Upper": 0.507749603858813}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Fenway Park", "Fixed_Home": 0.144135546057423, "Random_Slope": -0.0157212052180038, "Total_Effect": 0.128414340839419, "SE": 0.222874908317505, "Lower": -0.452556025520313, "Upper": 0.421113615084305}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "T-Mobile Park", "Fixed_Home": 0.144135546057423, "Random_Slope": -0.0159583996752273, "Total_Effect": 0.128177146382195, "SE": 0.192666845888944, "Lower": -0.393585417617558, "Upper": 0.361668618267103}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Yankee Stadium", "Fixed_Home": 0.144135546057423, "Random_Slope": -0.0267496199683006, "Total_Effect": 0.117385926089122, "SE": 0.249988531932491, "Lower": -0.516727142555984, "Upper": 0.463227902619383}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "PNC Park", "Fixed_Home": 0.144135546057423, "Random_Slope": -0.0329293326102889, "Total_Effect": 0.111206213447134, "SE": 0.238525384584664, "Lower": -0.500439086396231, "Upper": 0.434580421175653}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Rate Field", "Fixed_Home": 0.144135546057423, "Random_Slope": -0.0899854249261393, "Total_Effect": 0.0541501211312834, "SE": 0.262937053501039, "Lower": -0.605342049788175, "Upper": 0.425371199935897}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Oracle Park", "Fixed_Home": 0.144135546057423, "Random_Slope": -0.0958301971438587, "Total_Effect": 0.048305348913564, "SE": 0.164044852649321, "Lower": -0.417358108336529, "Upper": 0.225697714048811}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Coors Field", "Fixed_Home": 0.144135546057423, "Random_Slope": -0.120646151523116, "Total_Effect": 0.0234893945343068, "SE": 0.149414219703885, "Lower": -0.41349802214273, "Upper": 0.172205719096498}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Great American Ball Park", "Fixed_Home": 0.144135546057423, "Random_Slope": -0.12854731722861, "Total_Effect": 0.0155882288288129, "SE": 0.237319204183256, "Lower": -0.593692957427792, "Upper": 0.336598322970573}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Progressive Field", "Fixed_Home": 0.144135546057423, "Random_Slope": -0.142349608456493, "Total_Effect": 0.0017859376009298, "SE": 0.198807146620702, "Lower": -0.532011615833068, "Upper": 0.247312398920082}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Oriole Park at Camden Yards", "Fixed_Home": 0.144135546057423, "Random_Slope": -0.208775197768748, "Total_Effect": -0.0646396517113249, "SE": 0.160256907569594, "Lower": -0.522878736605152, "Upper": 0.105328341067657}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Oakland Coliseum", "Fixed_Home": 0.144135546057423, "Random_Slope": -0.659499022356345, "Total_Effect": -0.515363476298922, "SE": 0.162083055181752, "Lower": -0.977181810512579, "Upper": -0.341816234200111}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Dodger Stadium", "Fixed_Home": 0.327176044452852, "Random_Slope": 1.81491096127539, "Total_Effect": 2.14208700572825, "SE": 0.266645807709093, "Lower": 1.29228517816557, "Upper": 2.33753674438522}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Citi Field", "Fixed_Home": 0.327176044452852, "Random_Slope": 0.296174366626294, "Total_Effect": 0.623350411079146, "SE": 0.374044687989426, "Lower": -0.43695322183298, "Upper": 1.02930195508557}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Oakland Coliseum", "Fixed_Home": 0.327176044452852, "Random_Slope": 0.22527273853088, "Total_Effect": 0.552448782983732, "SE": 0.186179970030518, "Lower": -0.139640002728936, "Upper": 0.590185479790696}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Fenway Park", "Fixed_Home": 0.327176044452852, "Random_Slope": 0.128578819901718, "Total_Effect": 0.45575486435457, "SE": 0.188348561680169, "Lower": -0.240584360991412, "Upper": 0.497742000794849}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Coors Field", "Fixed_Home": 0.327176044452852, "Random_Slope": 0.12356407608699, "Total_Effect": 0.450740120539842, "SE": 0.160695971745596, "Lower": -0.191400028534378, "Upper": 0.438528180708358}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Oracle Park", "Fixed_Home": 0.327176044452852, "Random_Slope": 0.107782334009018, "Total_Effect": 0.43495837846187, "SE": 0.178196371829295, "Lower": -0.241482554776401, "Upper": 0.457047222794436}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Target Field", "Fixed_Home": 0.327176044452852, "Random_Slope": 0.106176837408487, "Total_Effect": 0.433352881861339, "SE": 0.282951296397501, "Lower": -0.448407703530614, "Upper": 0.660761378347589}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Rate Field", "Fixed_Home": 0.327176044452852, "Random_Slope": 0.0557193860391062, "Total_Effect": 0.382895430491958, "SE": 0.364813704367225, "Lower": -0.659315474520655, "Upper": 0.770754246598867}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "T-Mobile Park", "Fixed_Home": 0.327176044452852, "Random_Slope": 0.0454734897810648, "Total_Effect": 0.372649534233917, "SE": 0.16470179898884, "Lower": -0.277342036237062, "Upper": 0.368289015799192}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Turner Field", "Fixed_Home": 0.327176044452852, "Random_Slope": -0.0173591986248106, "Total_Effect": 0.309816845828041, "SE": 0.331437202603901, "Lower": -0.666976115728456, "Upper": 0.632257718478835}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Daikin Park", "Fixed_Home": 0.327176044452852, "Random_Slope": -0.101885084448281, "Total_Effect": 0.225290960004571, "SE": 0.173394710450707, "Lower": -0.441738716931667, "Upper": 0.237968548035104}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Comerica Park", "Fixed_Home": 0.327176044452852, "Random_Slope": -0.121266809558937, "Total_Effect": 0.205909234893915, "SE": 0.168549553399765, "Lower": -0.451623934222476, "Upper": 0.209090315104602}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Kauffman Stadium", "Fixed_Home": 0.327176044452852, "Random_Slope": -0.122918070313345, "Total_Effect": 0.204257974139508, "SE": 0.316977950228844, "Lower": -0.744194852761879, "Upper": 0.49835871213519}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "PNC Park", "Fixed_Home": 0.327176044452852, "Random_Slope": -0.162629688925716, "Total_Effect": 0.164546355527136, "SE": 0.245164699723074, "Lower": -0.64315250038294, "Upper": 0.317893122531509}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Oriole Park at Camden Yards", "Fixed_Home": 0.327176044452852, "Random_Slope": -0.163366493484605, "Total_Effect": 0.163809550968247, "SE": 0.155766237311871, "Lower": -0.468668318615873, "Upper": 0.141935331646662}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Chase Field", "Fixed_Home": 0.327176044452852, "Random_Slope": -0.193108566057281, "Total_Effect": 0.134067478395571, "SE": 0.337598231698923, "Lower": -0.854801100187169, "Upper": 0.468583968072607}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "American Family Field", "Fixed_Home": 0.327176044452852, "Random_Slope": -0.210738975543339, "Total_Effect": 0.116437068909513, "SE": 0.390168288267597, "Lower": -0.97546882054783, "Upper": 0.553990869461152}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Great American Ball Park", "Fixed_Home": 0.327176044452852, "Random_Slope": -0.22257241210744, "Total_Effect": 0.104603632345412, "SE": 0.223027050770531, "Lower": -0.659705431617681, "Upper": 0.214560607402801}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Progressive Field", "Fixed_Home": 0.327176044452852, "Random_Slope": -0.227240113314756, "Total_Effect": 0.0999359311380964, "SE": 0.171677423505288, "Lower": -0.56372786338512, "Upper": 0.109247636755609}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Yankee Stadium", "Fixed_Home": 0.327176044452852, "Random_Slope": -0.278458614059064, "Total_Effect": 0.0487174303937882, "SE": 0.193162921957877, "Lower": -0.657057941096502, "Upper": 0.100140712978374}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Nationals Park", "Fixed_Home": 0.327176044452852, "Random_Slope": -0.286973800113558, "Total_Effect": 0.0402022443392937, "SE": 0.308539500941953, "Lower": -0.891711221959786, "Upper": 0.31776362173267}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Citizens Bank Park", "Fixed_Home": 0.327176044452852, "Random_Slope": -0.316248376515205, "Total_Effect": 0.0109276679376472, "SE": 0.27842275551291, "Lower": -0.861956977320508, "Upper": 0.229460224290098}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Wrigley Field", "Fixed_Home": 0.327176044452852, "Random_Slope": -0.510503770099628, "Total_Effect": -0.183327725646776, "SE": 0.360259361797499, "Lower": -1.21661211922273, "Upper": 0.19560457902347}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Yankee Stadium", "Fixed_Home": 0.167200473499213, "Random_Slope": 0.023559819196483, "Total_Effect": 0.190760292695696, "SE": 0.150264365065299, "Lower": -0.270958336331502, "Upper": 0.318077974724468}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Oriole Park at Camden Yards", "Fixed_Home": 0.167200473499213, "Random_Slope": 0.0226365952141273, "Total_Effect": 0.18983706871334, "SE": 0.144431632486255, "Lower": -0.260449404458932, "Upper": 0.305722594887186}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "PNC Park", "Fixed_Home": 0.167200473499213, "Random_Slope": 0.0101224326074541, "Total_Effect": 0.177322906106667, "SE": 0.0646303639719979, "Lower": -0.116553080777662, "Upper": 0.13679794599257}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Coors Field", "Fixed_Home": 0.167200473499213, "Random_Slope": 0.0087143753212424, "Total_Effect": 0.175914848820455, "SE": 0.0556530439195697, "Lower": -0.100365590761114, "Upper": 0.117794341403599}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Wrigley Field", "Fixed_Home": 0.167200473499213, "Random_Slope": 0.0082034445832322, "Total_Effect": 0.175403918082445, "SE": 0.0525494384109039, "Lower": -0.0947934547021394, "Upper": 0.111200343868604}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Oakland Coliseum", "Fixed_Home": 0.167200473499213, "Random_Slope": 0.007106350436241, "Total_Effect": 0.174306823935454, "SE": 0.0454764332184916, "Lower": -0.0820274586720024, "Upper": 0.0962401595444845}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "T-Mobile Park", "Fixed_Home": 0.167200473499213, "Random_Slope": 0.0070249112945147, "Total_Effect": 0.174225384793727, "SE": 0.0450218201050159, "Lower": -0.0812178561113165, "Upper": 0.0952676787003459}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Target Field", "Fixed_Home": 0.167200473499213, "Random_Slope": 0.0066647872287073, "Total_Effect": 0.17386526072792, "SE": 0.0426548910389072, "Lower": -0.0769387992075507, "Upper": 0.0902683736649654}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Turner Field", "Fixed_Home": 0.167200473499213, "Random_Slope": 0.0064243002999185, "Total_Effect": 0.173624773799131, "SE": 0.041120839284024, "Lower": -0.0741725446967684, "Upper": 0.0870211452966055}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Oracle Park", "Fixed_Home": 0.167200473499213, "Random_Slope": 0.0059493222612709, "Total_Effect": 0.173149795760484, "SE": 0.0381875615940728, "Lower": -0.0688982984631116, "Upper": 0.0807969429856536}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Daikin Park", "Fixed_Home": 0.167200473499213, "Random_Slope": 0.0037353496892444, "Total_Effect": 0.170935823188457, "SE": 0.0241366082529958, "Lower": -0.0435724024866273, "Upper": 0.0510431018651162}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Nationals Park", "Fixed_Home": 0.167200473499213, "Random_Slope": 0.0035902681729796, "Total_Effect": 0.170790741672192, "SE": 0.0232133033945248, "Lower": -0.0419078064802889, "Upper": 0.0490883428262482}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Progressive Field", "Fixed_Home": 0.167200473499213, "Random_Slope": 0.0035798938693913, "Total_Effect": 0.170780367368604, "SE": 0.0231313197062606, "Lower": -0.0417574927548794, "Upper": 0.048917280493662}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Rate Field", "Fixed_Home": 0.167200473499213, "Random_Slope": 0.0029538273767441, "Total_Effect": 0.170154300875957, "SE": 0.0199176519471087, "Lower": -0.0360847704395889, "Upper": 0.0419924251930772}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Comerica Park", "Fixed_Home": 0.167200473499213, "Random_Slope": -0.0028570792929515, "Total_Effect": 0.164343394206261, "SE": 0.0187310324291016, "Lower": -0.0395699028539908, "Upper": 0.0338557442680877}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Chase Field", "Fixed_Home": 0.167200473499213, "Random_Slope": -0.0046950344023238, "Total_Effect": 0.162505439096889, "SE": 0.0302053150908288, "Lower": -0.0638974519803481, "Upper": 0.0545073831757006}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Fenway Park", "Fixed_Home": 0.167200473499213, "Random_Slope": -0.0051140562282281, "Total_Effect": 0.162086417270984, "SE": 0.03295991701415, "Lower": -0.0697154935759622, "Upper": 0.0594873811195059}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Great American Ball Park", "Fixed_Home": 0.167200473499213, "Random_Slope": -0.0097674418418158, "Total_Effect": 0.157433031657397, "SE": 0.0624600671582023, "Lower": -0.132189173471892, "Upper": 0.112654289788261}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Citizens Bank Park", "Fixed_Home": 0.167200473499213, "Random_Slope": -0.0125461315099932, "Total_Effect": 0.154654341989219, "SE": 0.0803339861965306, "Lower": -0.170000744455193, "Upper": 0.144908481435207}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Dodger Stadium", "Fixed_Home": 0.167200473499213, "Random_Slope": -0.013118782805213, "Total_Effect": 0.154081690694, "SE": 0.0835713216812422, "Lower": -0.176918573300448, "Upper": 0.150681007690022}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Citi Field", "Fixed_Home": 0.167200473499213, "Random_Slope": -0.0143277989294908, "Total_Effect": 0.152872674569722, "SE": 0.0918271799011256, "Lower": -0.194309071535697, "Upper": 0.165653473676715}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "American Family Field", "Fixed_Home": 0.167200473499213, "Random_Slope": -0.0227348320614894, "Total_Effect": 0.144465641437723, "SE": 0.144949437714547, "Lower": -0.306835729982002, "Upper": 0.261366065859023}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Kauffman Stadium", "Fixed_Home": 0.167200473499213, "Random_Slope": -0.0253966076059889, "Total_Effect": 0.141803865893224, "SE": 0.162182792574737, "Lower": -0.343274881052474, "Upper": 0.292481665840496}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Kauffman Stadium", "Fixed_Home": 0.0249803976181936, "Random_Slope": 0.0439574834988088, "Total_Effect": 0.0689378811170024, "SE": 0.0347133552442697, "Lower": -0.0240806927799599, "Upper": 0.111995659777578}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "American Family Field", "Fixed_Home": 0.0249803976181936, "Random_Slope": 0.0367217871211693, "Total_Effect": 0.0617021847393629, "SE": 0.029147320387014, "Lower": -0.0204069608373783, "Upper": 0.0938505350797168}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Oakland Coliseum", "Fixed_Home": 0.0249803976181936, "Random_Slope": 0.0165749656057724, "Total_Effect": 0.041555363223966, "SE": 0.0138957639323434, "Lower": -0.0106607317016208, "Upper": 0.0438106629131655}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Progressive Field", "Fixed_Home": 0.0249803976181936, "Random_Slope": 0.0134491153839477, "Total_Effect": 0.0384295130021413, "SE": 0.0116675705298615, "Lower": -0.0094193228545809, "Upper": 0.0363175536224763}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Chase Field", "Fixed_Home": 0.0249803976181936, "Random_Slope": 0.0121480513427748, "Total_Effect": 0.0371284489609684, "SE": 0.010739383638302, "Lower": -0.008901140588297, "Upper": 0.0331972432738466}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "PNC Park", "Fixed_Home": 0.0249803976181936, "Random_Slope": 0.0095481873821327, "Total_Effect": 0.0345285850003264, "SE": 0.0090481590661001, "Lower": -0.0081862043874234, "Upper": 0.0272825791516889}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Dodger Stadium", "Fixed_Home": 0.0249803976181936, "Random_Slope": 0.0066853988248181, "Total_Effect": 0.0316657964430118, "SE": 0.0072986574052343, "Lower": -0.0076199696894411, "Upper": 0.0209907673390775}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Target Field", "Fixed_Home": 0.0249803976181936, "Random_Slope": 0.0032841132293106, "Total_Effect": 0.0282645108475042, "SE": 0.0057649122300524, "Lower": -0.0080151147415922, "Upper": 0.0145833412002135}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Great American Ball Park", "Fixed_Home": 0.0249803976181936, "Random_Slope": 0.0028157743315557, "Total_Effect": 0.0277961719497494, "SE": 0.0056084484843879, "Lower": -0.0081767846978446, "Upper": 0.0138083333609561}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Comerica Park", "Fixed_Home": 0.0249803976181936, "Random_Slope": 0.0011992723911449, "Total_Effect": 0.0261796700093385, "SE": 0.0055977240211596, "Lower": -0.009772266690328, "Upper": 0.0121708114726178}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Citizens Bank Park", "Fixed_Home": 0.0249803976181936, "Random_Slope": 0.0005781049888736, "Total_Effect": 0.0255585026070672, "SE": 0.0051336766539939, "Lower": -0.0094839012529545, "Upper": 0.0106401112307018}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Turner Field", "Fixed_Home": 0.0249803976181936, "Random_Slope": -6.61161063160787e-05, "Total_Effect": 0.0249142815118775, "SE": 0.0051973568714224, "Lower": -0.0102529355743042, "Upper": 0.010120703361672}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Daikin Park", "Fixed_Home": 0.0249803976181936, "Random_Slope": -0.0037488743331929, "Total_Effect": 0.0212315232850006, "SE": 0.0058671536274057, "Lower": -0.0152484954429082, "Upper": 0.0077507467765222}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Nationals Park", "Fixed_Home": 0.0249803976181936, "Random_Slope": -0.0038827905203865, "Total_Effect": 0.0210976070978071, "SE": 0.0059453686678366, "Lower": -0.0155357131093463, "Upper": 0.0077701320685733}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Rate Field", "Fixed_Home": 0.0249803976181936, "Random_Slope": -0.0040111203749019, "Total_Effect": 0.0209692772432916, "SE": 0.0061770520783628, "Lower": -0.0161181424484932, "Upper": 0.0080959016986892}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Fenway Park", "Fixed_Home": 0.0249803976181936, "Random_Slope": -0.0077896814050153, "Total_Effect": 0.0171907162131783, "SE": 0.0079377467560999, "Lower": -0.0233476650469712, "Upper": 0.0077683022369405}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Citi Field", "Fixed_Home": 0.0249803976181936, "Random_Slope": -0.0107714695317008, "Total_Effect": 0.0142089280864929, "SE": 0.009898085937245, "Lower": -0.0301717179687011, "Upper": 0.0086287789052995}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Wrigley Field", "Fixed_Home": 0.0249803976181936, "Random_Slope": -0.0124216122985331, "Total_Effect": 0.0125587853196605, "SE": 0.0110304422306128, "Lower": -0.0340412790705341, "Upper": 0.0091980544734678}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Oriole Park at Camden Yards", "Fixed_Home": 0.0249803976181936, "Random_Slope": -0.0128959124103505, "Total_Effect": 0.0120844852078431, "SE": 0.0112704434914252, "Lower": -0.0349859816535439, "Upper": 0.0091941568328428}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Coors Field", "Fixed_Home": 0.0249803976181936, "Random_Slope": -0.0147051932031799, "Total_Effect": 0.0102752044150137, "SE": 0.0126953811712893, "Lower": -0.039588140298907, "Upper": 0.0101777538925471}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "T-Mobile Park", "Fixed_Home": 0.0249803976181936, "Random_Slope": -0.0192914915784119, "Total_Effect": 0.0056889060397817, "SE": 0.0161684757837725, "Lower": -0.050981704114606, "Upper": 0.0123987209577822}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Yankee Stadium", "Fixed_Home": 0.0249803976181936, "Random_Slope": -0.0201299526371698, "Total_Effect": 0.0048504449810238, "SE": 0.0165177750589719, "Lower": -0.0525047917527546, "Upper": 0.012244886478415}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Oracle Park", "Fixed_Home": 0.0249803976181936, "Random_Slope": -0.0382821261495812, "Total_Effect": -0.0133017285313876, "SE": 0.0299906772403446, "Lower": -0.0970638535406567, "Upper": 0.0204996012414942}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Kauffman Stadium", "Fixed_Home": 0.0436041762460534, "Random_Slope": 0.0001111857758695, "Total_Effect": 0.043715362021923, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "PNC Park", "Fixed_Home": 0.0436041762460534, "Random_Slope": 7.16009252198342e-05, "Total_Effect": 0.0436757771712733, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Citizens Bank Park", "Fixed_Home": 0.0436041762460534, "Random_Slope": 4.86656184170252e-05, "Total_Effect": 0.0436528418644705, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Fenway Park", "Fixed_Home": 0.0436041762460534, "Random_Slope": 4.28889977687113e-05, "Total_Effect": 0.0436470652438222, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Great American Ball Park", "Fixed_Home": 0.0436041762460534, "Random_Slope": 3.75618845103136e-05, "Total_Effect": 0.0436417381305638, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Chase Field", "Fixed_Home": 0.0436041762460534, "Random_Slope": 3.43042716509252e-05, "Total_Effect": 0.0436384805177044, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Progressive Field", "Fixed_Home": 0.0436041762460534, "Random_Slope": 3.00099513605011e-05, "Total_Effect": 0.0436341861974139, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Citi Field", "Fixed_Home": 0.0436041762460534, "Random_Slope": 2.41868697786834e-05, "Total_Effect": 0.0436283631158321, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Nationals Park", "Fixed_Home": 0.0436041762460534, "Random_Slope": 1.50186083233896e-05, "Total_Effect": 0.0436191948543768, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Daikin Park", "Fixed_Home": 0.0436041762460534, "Random_Slope": 8.9603340613633e-06, "Total_Effect": 0.0436131365801148, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "American Family Field", "Fixed_Home": 0.0436041762460534, "Random_Slope": 1.67268258863515e-06, "Total_Effect": 0.0436058489286421, "SE": 0.000104070514832, "Lower": -0.0002023055264822, "Upper": 0.0002056508916594}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Wrigley Field", "Fixed_Home": 0.0436041762460534, "Random_Slope": -1.25705492778777e-05, "Total_Effect": 0.0435916056967756, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Comerica Park", "Fixed_Home": 0.0436041762460534, "Random_Slope": -1.28654506683311e-05, "Total_Effect": 0.0435913107953851, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Target Field", "Fixed_Home": 0.0436041762460534, "Random_Slope": -1.31559878217288e-05, "Total_Effect": 0.0435910202582317, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Dodger Stadium", "Fixed_Home": 0.0436041762460534, "Random_Slope": -1.7911395391346e-05, "Total_Effect": 0.0435862648506621, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "T-Mobile Park", "Fixed_Home": 0.0436041762460534, "Random_Slope": -2.20272435510341e-05, "Total_Effect": 0.0435821490025024, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Rate Field", "Fixed_Home": 0.0436041762460534, "Random_Slope": -2.49108154870075e-05, "Total_Effect": 0.0435792654305664, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Yankee Stadium", "Fixed_Home": 0.0436041762460534, "Random_Slope": -2.56826168111114e-05, "Total_Effect": 0.0435784936292423, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Oriole Park at Camden Yards", "Fixed_Home": 0.0436041762460534, "Random_Slope": -4.82325912128145e-05, "Total_Effect": 0.0435559436548406, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Turner Field", "Fixed_Home": 0.0436041762460534, "Random_Slope": -5.492727627426e-05, "Total_Effect": 0.0435492489697792, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Oracle Park", "Fixed_Home": 0.0436041762460534, "Random_Slope": -6.19532960895721e-05, "Total_Effect": 0.0435422229499639, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Coors Field", "Fixed_Home": 0.0436041762460534, "Random_Slope": -6.86409132240599e-05, "Total_Effect": 0.0435355353328294, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Oakland Coliseum", "Fixed_Home": 0.0436041762460534, "Random_Slope": -7.17636121048976e-05, "Total_Effect": 0.0435324126339485, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Oracle Park", "Fixed_Home": -0.0096325129952883, "Random_Slope": 0.106816693783034, "Total_Effect": 0.097184180787746, "SE": 0.066535838490987, "Lower": -0.0235935496593002, "Upper": 0.237226937225369}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Comerica Park", "Fixed_Home": -0.0096325129952883, "Random_Slope": 0.072614151481587, "Total_Effect": 0.0629816384862986, "SE": 0.0757573512216044, "Lower": -0.0758702569127576, "Upper": 0.221098559875932}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Chase Field", "Fixed_Home": -0.0096325129952883, "Random_Slope": 0.0665660027498517, "Total_Effect": 0.0569334897545634, "SE": 0.0959807853555154, "Lower": -0.121556336546958, "Upper": 0.254688342046662}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Coors Field", "Fixed_Home": -0.0096325129952883, "Random_Slope": 0.0655792918067745, "Total_Effect": 0.0559467788114861, "SE": 0.0730595638747646, "Lower": -0.0776174533877641, "Upper": 0.208776037001313}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Fenway Park", "Fixed_Home": -0.0096325129952883, "Random_Slope": 0.0651369763733873, "Total_Effect": 0.055504463378099, "SE": 0.0742915735222855, "Lower": -0.0804745077302922, "Upper": 0.210748460477067}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Dodger Stadium", "Fixed_Home": -0.0096325129952883, "Random_Slope": 0.0633005875714475, "Total_Effect": 0.0536680745761592, "SE": 0.0740426360349578, "Lower": -0.0818229790570697, "Upper": 0.208424154199965}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Yankee Stadium", "Fixed_Home": -0.0096325129952883, "Random_Slope": 0.0250789034066734, "Total_Effect": 0.015446390411385, "SE": 0.0909768836955838, "Lower": -0.153235788636671, "Upper": 0.203393595450018}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "American Family Field", "Fixed_Home": -0.0096325129952883, "Random_Slope": 0.0153571512597091, "Total_Effect": 0.0057246382644207, "SE": 0.0770983254300775, "Lower": -0.135755566583243, "Upper": 0.166469869102661}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Daikin Park", "Fixed_Home": -0.0096325129952883, "Random_Slope": 0.0105780352117062, "Total_Effect": 0.0009455222164178, "SE": 0.0764954324260412, "Lower": -0.139353012343334, "Upper": 0.160509082766747}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Kauffman Stadium", "Fixed_Home": -0.0096325129952883, "Random_Slope": 0.0079691457552918, "Total_Effect": -0.0016633672399965, "SE": 0.0980426421849324, "Lower": -0.184194432927176, "Upper": 0.200132724437759}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Oakland Coliseum", "Fixed_Home": -0.0096325129952883, "Random_Slope": 0.0070202616827814, "Total_Effect": -0.0026122513125069, "SE": 0.0672494774178522, "Lower": -0.124788714056209, "Upper": 0.138829237421772}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Wrigley Field", "Fixed_Home": -0.0096325129952883, "Random_Slope": 0.0002731368669198, "Total_Effect": -0.0093593761283685, "SE": 0.0900188465351698, "Lower": -0.176163802342013, "Upper": 0.176710076075853}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Nationals Park", "Fixed_Home": -0.0096325129952883, "Random_Slope": -0.0007942071798163, "Total_Effect": -0.0104267201751047, "SE": 0.104001124501432, "Lower": -0.204636411202624, "Upper": 0.203047996842991}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Turner Field", "Fixed_Home": -0.0096325129952883, "Random_Slope": -0.0035124786606042, "Total_Effect": -0.0131449916558926, "SE": 0.0941131358313813, "Lower": -0.187974224890112, "Upper": 0.180949267568903}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "PNC Park", "Fixed_Home": -0.0096325129952883, "Random_Slope": -0.0036321324983855, "Total_Effect": -0.0132646454936739, "SE": 0.102306118763701, "Lower": -0.20415212527524, "Upper": 0.196887860278469}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Citi Field", "Fixed_Home": -0.0096325129952883, "Random_Slope": -0.0092713251708007, "Total_Effect": -0.0189038381660891, "SE": 0.0917194600006097, "Lower": -0.189041466771996, "Upper": 0.170498816430394}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Rate Field", "Fixed_Home": -0.0096325129952883, "Random_Slope": -0.0412381215261424, "Total_Effect": -0.0508706345214308, "SE": 0.0933443463177713, "Lower": -0.224193040308974, "Upper": 0.141716797256689}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Target Field", "Fixed_Home": -0.0096325129952883, "Random_Slope": -0.048548215188789, "Total_Effect": -0.0581807281840774, "SE": 0.0973271560789852, "Lower": -0.2393094411036, "Upper": 0.142213010726022}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Progressive Field", "Fixed_Home": -0.0096325129952883, "Random_Slope": -0.0718608611789199, "Total_Effect": -0.0814933741742083, "SE": 0.0733560870087201, "Lower": -0.215638791716011, "Upper": 0.0719170693581715}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Great American Ball Park", "Fixed_Home": -0.0096325129952883, "Random_Slope": -0.0786383176767229, "Total_Effect": -0.0882708306720113, "SE": 0.086418362734447, "Lower": -0.248018308636239, "Upper": 0.0907416732827931}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "T-Mobile Park", "Fixed_Home": -0.0096325129952883, "Random_Slope": -0.0793356101941285, "Total_Effect": -0.0889681231894168, "SE": 0.0643759789522757, "Lower": -0.205512528940589, "Upper": 0.046841308552332}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Oriole Park at Camden Yards", "Fixed_Home": -0.0096325129952883, "Random_Slope": -0.0843699318446906, "Total_Effect": -0.094002444839979, "SE": 0.0630507646202911, "Lower": -0.207949430500461, "Upper": 0.0392095668110799}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Citizens Bank Park", "Fixed_Home": -0.0096325129952883, "Random_Slope": -0.0845115096053249, "Total_Effect": -0.0941440226006133, "SE": 0.0741686008104533, "Lower": -0.229881967193813, "Upper": 0.0608589479831636}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Yankee Stadium", "Fixed_Home": -0.147188209762931, "Random_Slope": 0.151542592860107, "Total_Effect": 0.0043543830971763, "SE": 0.0863121922781701, "Lower": -0.017629304005106, "Upper": 0.320714489725321}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Oracle Park", "Fixed_Home": -0.147188209762931, "Random_Slope": 0.141023707863784, "Total_Effect": -0.0061645018991474, "SE": 0.0796577495481507, "Lower": -0.0151054812505917, "Upper": 0.297152896978159}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Oriole Park at Camden Yards", "Fixed_Home": -0.147188209762931, "Random_Slope": 0.114637421520281, "Total_Effect": -0.0325507882426504, "SE": 0.0657886022003358, "Lower": -0.0143082387923774, "Upper": 0.243583081832939}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Oakland Coliseum", "Fixed_Home": -0.147188209762931, "Random_Slope": 0.0777290910744647, "Total_Effect": -0.0694591186884664, "SE": 0.0462458653873031, "Lower": -0.0129128050846493, "Upper": 0.168370987233579}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Rate Field", "Fixed_Home": -0.147188209762931, "Random_Slope": 0.0443275680086498, "Total_Effect": -0.102860641754281, "SE": 0.0353266646833605, "Lower": -0.0249126947707367, "Upper": 0.113567830788036}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "T-Mobile Park", "Fixed_Home": -0.147188209762931, "Random_Slope": 0.0397834765985155, "Total_Effect": -0.107404733164416, "SE": 0.0279180786686635, "Lower": -0.014935957592065, "Upper": 0.094502910789096}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Coors Field", "Fixed_Home": -0.147188209762931, "Random_Slope": 0.0239040105361, "Total_Effect": -0.123284199226831, "SE": 0.021940142958049, "Lower": -0.0190986696616759, "Upper": 0.066906690733876}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Turner Field", "Fixed_Home": -0.147188209762931, "Random_Slope": 0.0221577411760532, "Total_Effect": -0.125030468586878, "SE": 0.0245657130725318, "Lower": -0.0259910564461092, "Upper": 0.0703065387982156}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Citi Field", "Fixed_Home": -0.147188209762931, "Random_Slope": 0.0187270774827201, "Total_Effect": -0.128461132280211, "SE": 0.0281080445580912, "Lower": -0.0363646898511387, "Upper": 0.073818844816579}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Nationals Park", "Fixed_Home": -0.147188209762931, "Random_Slope": 0.0125347260030179, "Total_Effect": -0.134653483759913, "SE": 0.0188273632931803, "Lower": -0.0243669060516156, "Upper": 0.0494363580576513}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Dodger Stadium", "Fixed_Home": -0.147188209762931, "Random_Slope": 0.0119047223320505, "Total_Effect": -0.135283487430881, "SE": 0.0188472351354317, "Lower": -0.0250358585333957, "Upper": 0.0488453031974967}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Target Field", "Fixed_Home": -0.147188209762931, "Random_Slope": -0.0009351046926737, "Total_Effect": -0.148123314455605, "SE": 0.0178395574906646, "Lower": -0.0359006373743764, "Upper": 0.0340304279890289}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Daikin Park", "Fixed_Home": -0.147188209762931, "Random_Slope": -0.0094125288574599, "Total_Effect": -0.156600738620391, "SE": 0.018557178597178, "Lower": -0.0457845989079289, "Upper": 0.026959541193009}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Citizens Bank Park", "Fixed_Home": -0.147188209762931, "Random_Slope": -0.0209938409975306, "Total_Effect": -0.168182050760462, "SE": 0.0219641499031231, "Lower": -0.0640435748076519, "Upper": 0.0220558928125907}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Wrigley Field", "Fixed_Home": -0.147188209762931, "Random_Slope": -0.0280495267532754, "Total_Effect": -0.175237736516207, "SE": 0.0336677502603847, "Lower": -0.0940383172636294, "Upper": 0.0379392637570786}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Fenway Park", "Fixed_Home": -0.147188209762931, "Random_Slope": -0.0388529216922534, "Total_Effect": -0.186041131455185, "SE": 0.0286536192082614, "Lower": -0.0950140153404458, "Upper": 0.0173081719559389}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "American Family Field", "Fixed_Home": -0.147188209762931, "Random_Slope": -0.046171573350405, "Total_Effect": -0.193359783113336, "SE": 0.0315745039575803, "Lower": -0.108057601107262, "Upper": 0.0157144544064524}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "PNC Park", "Fixed_Home": -0.147188209762931, "Random_Slope": -0.0534795971382666, "Total_Effect": -0.200667806901198, "SE": 0.0350589908956351, "Lower": -0.122195219293711, "Upper": 0.0152360250171781}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Progressive Field", "Fixed_Home": -0.147188209762931, "Random_Slope": -0.0580708541389457, "Total_Effect": -0.205259063901877, "SE": 0.0378466086907254, "Lower": -0.132250207172767, "Upper": 0.016108498894876}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Great American Ball Park", "Fixed_Home": -0.147188209762931, "Random_Slope": -0.0608575208589081, "Total_Effect": -0.208045730621839, "SE": 0.0397079438855658, "Lower": -0.138685090874617, "Upper": 0.0169700491568008}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Comerica Park", "Fixed_Home": -0.147188209762931, "Random_Slope": -0.0775208017008221, "Total_Effect": -0.224709011463753, "SE": 0.0481581306569928, "Lower": -0.171910737788528, "Upper": 0.0168691343868838}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Chase Field", "Fixed_Home": -0.147188209762931, "Random_Slope": -0.0868319749539097, "Total_Effect": -0.234020184716841, "SE": 0.0524483935880697, "Lower": -0.189630826386526, "Upper": 0.0159668764787069}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Kauffman Stadium", "Fixed_Home": -0.147188209762931, "Random_Slope": -0.156504481940129, "Total_Effect": -0.30369269170306, "SE": 0.0910256455012314, "Lower": -0.334914747122542, "Upper": 0.0219057832422848}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Oracle Park", "Fixed_Home": -0.0315193235090527, "Random_Slope": 0.0978800079731278, "Total_Effect": 0.0663606844640751, "SE": 0.0316295134010709, "Lower": 0.0358861617070287, "Upper": 0.159873854239227}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Fenway Park", "Fixed_Home": -0.0315193235090527, "Random_Slope": 0.0818982836517002, "Total_Effect": 0.0503789601426475, "SE": 0.0491520523442907, "Lower": -0.0144397389431095, "Upper": 0.17823630624651}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Turner Field", "Fixed_Home": -0.0315193235090527, "Random_Slope": 0.0558462449852259, "Total_Effect": 0.0243269214761732, "SE": 0.0584786186598404, "Lower": -0.0587718475880613, "Upper": 0.170464337558513}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Coors Field", "Fixed_Home": -0.0315193235090527, "Random_Slope": 0.047458326590777, "Total_Effect": 0.0159390030817243, "SE": 0.0437067669110308, "Lower": -0.0382069365548434, "Upper": 0.133123589736397}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Target Field", "Fixed_Home": -0.0315193235090527, "Random_Slope": 0.0328422706419648, "Total_Effect": 0.0013229471329121, "SE": 0.0499423913974626, "Lower": -0.0650448164970618, "Upper": 0.130729357780991}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Comerica Park", "Fixed_Home": -0.0315193235090527, "Random_Slope": 0.0179712444347085, "Total_Effect": -0.0135480790743442, "SE": 0.056497558303068, "Lower": -0.0927639698393048, "Upper": 0.128706458708722}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Oakland Coliseum", "Fixed_Home": -0.0315193235090527, "Random_Slope": 0.0169149160334048, "Total_Effect": -0.0146044074756479, "SE": 0.0505118527399637, "Lower": -0.082088315336924, "Upper": 0.115918147403734}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Nationals Park", "Fixed_Home": -0.0315193235090527, "Random_Slope": 0.0132973491113928, "Total_Effect": -0.0182219743976599, "SE": 0.0447738545065027, "Lower": -0.0744594057213525, "Upper": 0.101054103944138}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Yankee Stadium", "Fixed_Home": -0.0315193235090527, "Random_Slope": 0.0051986053013885, "Total_Effect": -0.0263207182076641, "SE": 0.0593246638692477, "Lower": -0.111077735882337, "Upper": 0.121474946485114}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Rate Field", "Fixed_Home": -0.0315193235090527, "Random_Slope": 0.002570697381066, "Total_Effect": -0.0289486261279867, "SE": 0.0615593457017777, "Lower": -0.118085620194418, "Upper": 0.12322701495655}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Citi Field", "Fixed_Home": -0.0315193235090527, "Random_Slope": 0.0023370084187998, "Total_Effect": -0.0291823150902528, "SE": 0.0602936206395719, "Lower": -0.115838488034761, "Upper": 0.120512504872361}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Great American Ball Park", "Fixed_Home": -0.0315193235090527, "Random_Slope": -0.0015585089257065, "Total_Effect": -0.0330778324347593, "SE": 0.0586798533201155, "Lower": -0.116571021433133, "Upper": 0.11345400358172}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Citizens Bank Park", "Fixed_Home": -0.0315193235090527, "Random_Slope": -0.009505683699462, "Total_Effect": -0.0410250072085147, "SE": 0.0420127482549109, "Lower": -0.0918506702790874, "Upper": 0.0728393028801633}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Progressive Field", "Fixed_Home": -0.0315193235090527, "Random_Slope": -0.0114640002090426, "Total_Effect": -0.0429833237180953, "SE": 0.0580600175222782, "Lower": -0.125261634552708, "Upper": 0.102333634134623}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Daikin Park", "Fixed_Home": -0.0315193235090527, "Random_Slope": -0.0163362767962745, "Total_Effect": -0.0478556003053272, "SE": 0.0417273948045853, "Lower": -0.0981219706132616, "Upper": 0.0654494170207127}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Kauffman Stadium", "Fixed_Home": -0.0315193235090527, "Random_Slope": -0.0186731197182888, "Total_Effect": -0.0501924432273415, "SE": 0.0763340738312146, "Lower": -0.168287904427469, "Upper": 0.130941664990892}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "American Family Field", "Fixed_Home": -0.0315193235090527, "Random_Slope": -0.0213230604197586, "Total_Effect": -0.0528423839288113, "SE": 0.0641010813889534, "Lower": -0.146961179942107, "Upper": 0.10431505910259}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Chase Field", "Fixed_Home": -0.0315193235090527, "Random_Slope": -0.0274140059963784, "Total_Effect": -0.0589333295054311, "SE": 0.0530041845715603, "Lower": -0.131302207756637, "Upper": 0.0764741957638797}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Oriole Park at Camden Yards", "Fixed_Home": -0.0315193235090527, "Random_Slope": -0.0294506259135861, "Total_Effect": -0.0609699494226388, "SE": 0.0437664068454109, "Lower": -0.115232783330591, "Upper": 0.0563315315034193}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Wrigley Field", "Fixed_Home": -0.0315193235090527, "Random_Slope": -0.042181926242103, "Total_Effect": -0.0737012497511557, "SE": 0.0637883056279565, "Lower": -0.167207005272898, "Upper": 0.0828431527886917}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "PNC Park", "Fixed_Home": -0.0315193235090527, "Random_Slope": -0.0478147054560635, "Total_Effect": -0.0793340289651162, "SE": 0.0569994477429351, "Lower": -0.159533623032216, "Upper": 0.0639042121200892}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Dodger Stadium", "Fixed_Home": -0.0315193235090527, "Random_Slope": -0.0491861074824224, "Total_Effect": -0.0807054309914751, "SE": 0.0469496923864653, "Lower": -0.141207504559894, "Upper": 0.0428352895950496}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "T-Mobile Park", "Fixed_Home": -0.0315193235090527, "Random_Slope": -0.0989134616909227, "Total_Effect": -0.130432785199975, "SE": 0.0387956388434735, "Lower": -0.174952913824131, "Upper": -0.0228740095577146}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Oracle Park", "Fixed_Home": 0.023584950689105, "Random_Slope": 0.0012161569425592, "Total_Effect": 0.0248011076316643, "SE": 0.0093717993491631, "Lower": -0.0171525697818005, "Upper": 0.0195848836669189}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Oakland Coliseum", "Fixed_Home": 0.023584950689105, "Random_Slope": 0.0012092903182444, "Total_Effect": 0.0247942410073495, "SE": 0.0095298235236889, "Lower": -0.0174691637881859, "Upper": 0.0198877444246748}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Coors Field", "Fixed_Home": 0.023584950689105, "Random_Slope": 0.0007902314598487, "Total_Effect": 0.0243751821489538, "SE": 0.0061559836881811, "Lower": -0.0112754965689863, "Upper": 0.0128559594886838}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Turner Field", "Fixed_Home": 0.023584950689105, "Random_Slope": 0.0007688037386099, "Total_Effect": 0.024353754427715, "SE": 0.0060726234621472, "Lower": -0.0111335382471986, "Upper": 0.0126711457244185}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Oriole Park at Camden Yards", "Fixed_Home": 0.023584950689105, "Random_Slope": 0.0006163370878191, "Total_Effect": 0.0242012877769242, "SE": 0.0048887398281124, "Lower": -0.0089655929752811, "Upper": 0.0101982671509195}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Dodger Stadium", "Fixed_Home": 0.023584950689105, "Random_Slope": 0.0005675475198113, "Total_Effect": 0.0241524982089164, "SE": 0.0045395583087669, "Lower": -0.0083299867653719, "Upper": 0.0094650818049945}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Target Field", "Fixed_Home": 0.023584950689105, "Random_Slope": 0.0004762820197134, "Total_Effect": 0.0240612327088185, "SE": 0.0037822075057686, "Lower": -0.006936844691593, "Upper": 0.0078894087310199}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "T-Mobile Park", "Fixed_Home": 0.023584950689105, "Random_Slope": 0.0004275638306828, "Total_Effect": 0.0240125145197879, "SE": 0.0034655076983762, "Lower": -0.0063648312581344, "Upper": 0.0072199589195002}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "American Family Field", "Fixed_Home": 0.023584950689105, "Random_Slope": 0.0002427567809374, "Total_Effect": 0.0238277074700425, "SE": 0.0020279149111319, "Lower": -0.0037319564448811, "Upper": 0.004217470006756}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Rate Field", "Fixed_Home": 0.023584950689105, "Random_Slope": 0.0001546465460032, "Total_Effect": 0.0237395972351083, "SE": 0.0014387430744315, "Lower": -0.0026652898798825, "Upper": 0.002974582971889}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Yankee Stadium", "Fixed_Home": 0.023584950689105, "Random_Slope": 9.58626379413212e-05, "Total_Effect": 0.0236808133270464, "SE": 0.0010697812003342, "Lower": -0.0020009085147138, "Upper": 0.0021926337905965}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Wrigley Field", "Fixed_Home": 0.023584950689105, "Random_Slope": 9.33327890544932e-05, "Total_Effect": 0.0236782834781595, "SE": 0.0010436313727735, "Lower": -0.0019521847015816, "Upper": 0.0021388502796906}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Nationals Park", "Fixed_Home": 0.023584950689105, "Random_Slope": -0.0001082830586281, "Total_Effect": 0.0234766676304769, "SE": 0.0011054579408831, "Lower": -0.0022749806227592, "Upper": 0.0020584145055028}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Daikin Park", "Fixed_Home": 0.023584950689105, "Random_Slope": -0.000136899735432, "Total_Effect": 0.023448050953673, "SE": 0.001311325552654, "Lower": -0.002707097818634, "Upper": 0.0024332983477699}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Comerica Park", "Fixed_Home": 0.023584950689105, "Random_Slope": -0.0002582227173517, "Total_Effect": 0.0233267279717533, "SE": 0.0021791658026959, "Lower": -0.0045293876906356, "Upper": 0.0040129422559322}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Citi Field", "Fixed_Home": 0.023584950689105, "Random_Slope": -0.0003468574118533, "Total_Effect": 0.0232380932772517, "SE": 0.0028140703111535, "Lower": -0.0058624352217142, "Upper": 0.0051687203980075}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Fenway Park", "Fixed_Home": 0.023584950689105, "Random_Slope": -0.000414602778389, "Total_Effect": 0.023170347910716, "SE": 0.0032957449023234, "Lower": -0.006874262786943, "Upper": 0.006045057230165}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Citizens Bank Park", "Fixed_Home": 0.023584950689105, "Random_Slope": -0.0005512300214884, "Total_Effect": 0.0230337206676166, "SE": 0.0043415440813281, "Lower": -0.0090606564208916, "Upper": 0.0079581963779147}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Progressive Field", "Fixed_Home": 0.023584950689105, "Random_Slope": -0.0005860395124115, "Total_Effect": 0.0229989111766935, "SE": 0.0046521067726999, "Lower": -0.0097041687869035, "Upper": 0.0085320897620804}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Chase Field", "Fixed_Home": 0.023584950689105, "Random_Slope": -0.000739225485105, "Total_Effect": 0.022845725204, "SE": 0.0058350152859836, "Lower": -0.012175855445633, "Upper": 0.0106974044754229}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Great American Ball Park", "Fixed_Home": 0.023584950689105, "Random_Slope": -0.0010383952990394, "Total_Effect": 0.0225465553900656, "SE": 0.0081625398121711, "Lower": -0.0170369733308948, "Upper": 0.014960182732816}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "PNC Park", "Fixed_Home": 0.023584950689105, "Random_Slope": -0.0011615579345352, "Total_Effect": 0.0224233927545698, "SE": 0.0090870634857446, "Lower": -0.0189722023665947, "Upper": 0.0166490864975242}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Kauffman Stadium", "Fixed_Home": 0.023584950689105, "Random_Slope": -0.0012401517051957, "Total_Effect": 0.0223447989839093, "SE": 0.0096943452124923, "Lower": -0.0202410683216807, "Upper": 0.0177607649112893}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Yankee Stadium", "Fixed_Home": -0.0252646738753175, "Random_Slope": 0.0007778782143198, "Total_Effect": -0.0244867956609976, "SE": null, "Lower": null, "Upper": null}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Oracle Park", "Fixed_Home": -0.0252646738753175, "Random_Slope": 0.0004970580417025, "Total_Effect": -0.0247676158336149, "SE": null, "Lower": null, "Upper": null}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Oriole Park at Camden Yards", "Fixed_Home": -0.0252646738753175, "Random_Slope": 0.0004694976884848, "Total_Effect": -0.0247951761868326, "SE": null, "Lower": null, "Upper": null}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "T-Mobile Park", "Fixed_Home": -0.0252646738753175, "Random_Slope": 0.0004554073522777, "Total_Effect": -0.0248092665230398, "SE": null, "Lower": null, "Upper": null}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Citi Field", "Fixed_Home": -0.0252646738753175, "Random_Slope": 0.0003785302741054, "Total_Effect": -0.024886143601212, "SE": null, "Lower": null, "Upper": null}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Oakland Coliseum", "Fixed_Home": -0.0252646738753175, "Random_Slope": 0.0003746414250783, "Total_Effect": -0.0248900324502391, "SE": null, "Lower": null, "Upper": null}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Dodger Stadium", "Fixed_Home": -0.0252646738753175, "Random_Slope": 0.0002687375347991, "Total_Effect": -0.0249959363405184, "SE": null, "Lower": null, "Upper": null}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Fenway Park", "Fixed_Home": -0.0252646738753175, "Random_Slope": 0.0001894605456976, "Total_Effect": -0.0250752133296198, "SE": null, "Lower": null, "Upper": null}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Citizens Bank Park", "Fixed_Home": -0.0252646738753175, "Random_Slope": 0.0001849438525797, "Total_Effect": -0.0250797300227377, "SE": null, "Lower": null, "Upper": null}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "American Family Field", "Fixed_Home": -0.0252646738753175, "Random_Slope": 3.02554671037671e-05, "Total_Effect": -0.0252344184082137, "SE": null, "Lower": null, "Upper": null}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Progressive Field", "Fixed_Home": -0.0252646738753175, "Random_Slope": -5.44129819787986e-06, "Total_Effect": -0.0252701151735154, "SE": null, "Lower": null, "Upper": null}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Rate Field", "Fixed_Home": -0.0252646738753175, "Random_Slope": -2.19018036232263e-05, "Total_Effect": -0.0252865756789407, "SE": null, "Lower": null, "Upper": null}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Daikin Park", "Fixed_Home": -0.0252646738753175, "Random_Slope": -4.25504046025197e-05, "Total_Effect": -0.02530722427992, "SE": null, "Lower": null, "Upper": null}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Coors Field", "Fixed_Home": -0.0252646738753175, "Random_Slope": -6.3773233529737e-05, "Total_Effect": -0.0253284471088472, "SE": null, "Lower": null, "Upper": null}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Wrigley Field", "Fixed_Home": -0.0252646738753175, "Random_Slope": -0.0001207264972222, "Total_Effect": -0.0253854003725398, "SE": null, "Lower": null, "Upper": null}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Comerica Park", "Fixed_Home": -0.0252646738753175, "Random_Slope": -0.000187513396977, "Total_Effect": -0.0254521872722945, "SE": null, "Lower": null, "Upper": null}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Great American Ball Park", "Fixed_Home": -0.0252646738753175, "Random_Slope": -0.0002984759412584, "Total_Effect": -0.0255631498165759, "SE": null, "Lower": null, "Upper": null}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Target Field", "Fixed_Home": -0.0252646738753175, "Random_Slope": -0.0003676984877452, "Total_Effect": -0.0256323723630627, "SE": null, "Lower": null, "Upper": null}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Nationals Park", "Fixed_Home": -0.0252646738753175, "Random_Slope": -0.0004317175797302, "Total_Effect": -0.0256963914550477, "SE": null, "Lower": null, "Upper": null}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Turner Field", "Fixed_Home": -0.0252646738753175, "Random_Slope": -0.0004504564909685, "Total_Effect": -0.025715130366286, "SE": null, "Lower": null, "Upper": null}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Kauffman Stadium", "Fixed_Home": -0.0252646738753175, "Random_Slope": -0.0005278001492143, "Total_Effect": -0.0257924740245318, "SE": null, "Lower": null, "Upper": null}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Chase Field", "Fixed_Home": -0.0252646738753175, "Random_Slope": -0.000530696445868, "Total_Effect": -0.0257953703211856, "SE": null, "Lower": null, "Upper": null}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "PNC Park", "Fixed_Home": -0.0252646738753175, "Random_Slope": -0.0005504797987893, "Total_Effect": -0.0258151536741068, "SE": null, "Lower": null, "Upper": null}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Oracle Park", "Fixed_Home": 0.0423023025463745, "Random_Slope": 0.049818218283917, "Total_Effect": 0.0921205208302915, "SE": 0.0649607010085404, "Lower": -0.0775047556928222, "Upper": 0.177141192260656}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Oakland Coliseum", "Fixed_Home": 0.0423023025463745, "Random_Slope": 0.0486273750095668, "Total_Effect": 0.0909296775559413, "SE": 0.0634590862130468, "Lower": -0.0757524339680049, "Upper": 0.173007183987138}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Yankee Stadium", "Fixed_Home": 0.0423023025463745, "Random_Slope": 0.0470225213793657, "Total_Effect": 0.0893248239257402, "SE": 0.0618822504321084, "Lower": -0.0742666894675668, "Upper": 0.168311732226298}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Oriole Park at Camden Yards", "Fixed_Home": 0.0423023025463745, "Random_Slope": 0.0443366242552827, "Total_Effect": 0.0866389268016572, "SE": 0.0581444867121014, "Lower": -0.0696265697004361, "Upper": 0.158299818211002}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "T-Mobile Park", "Fixed_Home": 0.0423023025463745, "Random_Slope": 0.0257107165620449, "Total_Effect": 0.0680130191084194, "SE": 0.0344256985918918, "Lower": -0.0417636526780631, "Upper": 0.0931850858021529}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Dodger Stadium", "Fixed_Home": 0.0423023025463745, "Random_Slope": 0.0202285529193865, "Total_Effect": 0.062530855465761, "SE": 0.0276296545949377, "Lower": -0.0339255700866913, "Upper": 0.0743826759254644}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Citi Field", "Fixed_Home": 0.0423023025463745, "Random_Slope": 0.0111272037619488, "Total_Effect": 0.0534295063083233, "SE": 0.0185580046047146, "Lower": -0.0252464852632918, "Upper": 0.0475008927871895}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Rate Field", "Fixed_Home": 0.0423023025463745, "Random_Slope": 0.0100875606357382, "Total_Effect": 0.0523898631821128, "SE": 0.0174760252396096, "Lower": -0.0241654488338966, "Upper": 0.0443405701053731}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Nationals Park", "Fixed_Home": 0.0423023025463745, "Random_Slope": 0.0099997259999358, "Total_Effect": 0.0523020285463104, "SE": 0.0158112073602865, "Lower": -0.0209902404262257, "Upper": 0.0409896924260974}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Target Field", "Fixed_Home": 0.0423023025463745, "Random_Slope": 0.0091045121252305, "Total_Effect": 0.051406814671605, "SE": 0.0151890481293235, "Lower": -0.0206660222082436, "Upper": 0.0388750464587047}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Turner Field", "Fixed_Home": 0.0423023025463745, "Random_Slope": 0.0064778410832541, "Total_Effect": 0.0487801436296287, "SE": 0.013123007275125, "Lower": -0.0192432531759907, "Upper": 0.0321989353424991}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Daikin Park", "Fixed_Home": 0.0423023025463745, "Random_Slope": 0.002750416035372, "Total_Effect": 0.0450527185817466, "SE": 0.0097496588309815, "Lower": -0.0163589152733518, "Upper": 0.0218597473440959}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "American Family Field", "Fixed_Home": 0.0423023025463745, "Random_Slope": -0.0001629476973085, "Total_Effect": 0.042139354849066, "SE": 0.0090697332673179, "Lower": -0.0179396249012516, "Upper": 0.0176137295066346}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Fenway Park", "Fixed_Home": 0.0423023025463745, "Random_Slope": -0.0014642156805894, "Total_Effect": 0.0408380868657851, "SE": 0.0092727800514722, "Lower": -0.0196388645814751, "Upper": 0.0167104332202962}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Coors Field", "Fixed_Home": 0.0423023025463745, "Random_Slope": -0.002577279721517, "Total_Effect": 0.0397250228248575, "SE": 0.009720667791081, "Lower": -0.0216297885920359, "Upper": 0.0164752291490018}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Wrigley Field", "Fixed_Home": 0.0423023025463745, "Random_Slope": -0.0034848582837146, "Total_Effect": 0.0388174442626599, "SE": 0.0130997832670891, "Lower": -0.0291604334872093, "Upper": 0.02219071691978}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Citizens Bank Park", "Fixed_Home": 0.0423023025463745, "Random_Slope": -0.0096209052990393, "Total_Effect": 0.0326813972473352, "SE": 0.015425947131953, "Lower": -0.0398557616776671, "Upper": 0.0206139510795885}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "PNC Park", "Fixed_Home": 0.0423023025463745, "Random_Slope": -0.0189277015681228, "Total_Effect": 0.0233746009782517, "SE": 0.0262787222982053, "Lower": -0.0704339972726051, "Upper": 0.0325785941363595}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Progressive Field", "Fixed_Home": 0.0423023025463745, "Random_Slope": -0.0310268947990934, "Total_Effect": 0.0112754077472811, "SE": 0.0411876011317965, "Lower": -0.111754593017414, "Upper": 0.0497008034192277}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Chase Field", "Fixed_Home": 0.0423023025463745, "Random_Slope": -0.0316059059904409, "Total_Effect": 0.0106963965559336, "SE": 0.0420960016153233, "Lower": -0.114114069156475, "Upper": 0.0509022571755927}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Great American Ball Park", "Fixed_Home": 0.0423023025463745, "Random_Slope": -0.0420661342187702, "Total_Effect": 0.0002361683276043, "SE": 0.0555523787495327, "Lower": -0.150948796567854, "Upper": 0.0668165281303138}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Comerica Park", "Fixed_Home": 0.0423023025463745, "Random_Slope": -0.0616994835786036, "Total_Effect": -0.019397181032229, "SE": 0.0808984331081837, "Lower": -0.220260412470644, "Upper": 0.0968614453134364}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Kauffman Stadium", "Fixed_Home": 0.0423023025463745, "Random_Slope": -0.0751805556823842, "Total_Effect": -0.0328782531360097, "SE": 0.098401868167794, "Lower": -0.26804821729126, "Upper": 0.117687105926492}];
+const VENUE_NFL = [{"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Acrisure Stadium", "Fixed_Home": 1.19274253978369, "Random_Slope": 1.49077697397422, "Total_Effect": 2.68351951375791, "SE": 0.624177463901941, "Lower": 0.267389144726415, "Upper": 2.71416480322202}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "GEHA Field at Arrowhead Stadium", "Fixed_Home": 1.19274253978369, "Random_Slope": 1.25644954200598, "Total_Effect": 2.44919208178967, "SE": 0.62922222608587, "Lower": 0.0231739788776764, "Upper": 2.48972510513429}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Soldier Field", "Fixed_Home": 1.19274253978369, "Random_Slope": 0.476011542123619, "Total_Effect": 1.66875408190731, "SE": 0.384650537883631, "Lower": -0.277903512128299, "Upper": 1.22992659637554}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Oakland Coliseum", "Fixed_Home": 1.19274253978369, "Random_Slope": 0.314217068470277, "Total_Effect": 1.50695960825397, "SE": 0.500749543697436, "Lower": -0.667252037176698, "Upper": 1.29568617411725}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Lumen Field", "Fixed_Home": 1.19274253978369, "Random_Slope": 0.285105164305529, "Total_Effect": 1.47784770408922, "SE": 0.326073837827945, "Lower": -0.353999557837243, "Upper": 0.9242098864483}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Huntington Bank Field", "Fixed_Home": 1.19274253978369, "Random_Slope": 0.203879103236663, "Total_Effect": 1.39662164302035, "SE": 0.445026395192555, "Lower": -0.668372631340745, "Upper": 1.07613083781407}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Empower Field at Mile High", "Fixed_Home": 1.19274253978369, "Random_Slope": -0.043223965360297, "Total_Effect": 1.14951857442339, "SE": 0.446484992356172, "Lower": -0.918334550378394, "Upper": 0.8318866196578}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Ford Field", "Fixed_Home": 1.19274253978369, "Random_Slope": -0.0658883116532851, "Total_Effect": 1.12685422813041, "SE": 0.33882867880247, "Lower": -0.729992522106127, "Upper": 0.598215898799557}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "NRG Stadium", "Fixed_Home": 1.19274253978369, "Random_Slope": -0.0750964225663851, "Total_Effect": 1.11764611721731, "SE": 0.491459359215107, "Lower": -1.03835676662799, "Upper": 0.888163921495224}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Georgia Dome", "Fixed_Home": 1.19274253978369, "Random_Slope": -0.34581914373547, "Total_Effect": 0.846923396048222, "SE": 0.531257405614888, "Lower": -1.38708365874065, "Upper": 0.695445371269711}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Mercedes-Benz Stadium", "Fixed_Home": 1.19274253978369, "Random_Slope": -0.441086024536635, "Total_Effect": 0.751656515247057, "SE": 0.40815949126674, "Lower": -1.24107862741945, "Upper": 0.358906578346176}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "U.S. Bank Stadium", "Fixed_Home": 1.19274253978369, "Random_Slope": -0.449315073422738, "Total_Effect": 0.743427466360954, "SE": 0.355195132198541, "Lower": -1.14549753253188, "Upper": 0.246867385686403}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Paycor Stadium", "Fixed_Home": 1.19274253978369, "Random_Slope": -0.464685730927501, "Total_Effect": 0.728056808856191, "SE": 0.349770755223425, "Lower": -1.15023641116541, "Upper": 0.220864949310411}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Lincoln Financial Field", "Fixed_Home": 1.19274253978369, "Random_Slope": -0.489987744542396, "Total_Effect": 0.702754795241296, "SE": 0.710992381606149, "Lower": -1.88353281249045, "Upper": 0.903557323405656}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "Los Angeles Memorial Coliseum", "Fixed_Home": 1.19274253978369, "Random_Slope": -1.04034937207494, "Total_Effect": 0.15239316770875, "SE": 0.508362427356804, "Lower": -2.03673972969428, "Upper": -0.0439590144556065}, {"Band": "Within 1km", "Outcome": "Larceny", "Venue": "M&T Bank Stadium", "Fixed_Home": 1.19274253978369, "Random_Slope": -1.06823775222684, "Total_Effect": 0.124504787556856, "SE": 0.338284889822165, "Lower": -1.73127613627828, "Upper": -0.405199368175393}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Oakland Coliseum", "Fixed_Home": 0.914799547379902, "Random_Slope": 0.49021296840079, "Total_Effect": 1.40501251578069, "SE": 0.521342716098488, "Lower": -0.531618755152247, "Upper": 1.51204469195383}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Georgia Dome", "Fixed_Home": 0.914799547379902, "Random_Slope": 0.407243743692445, "Total_Effect": 1.32204329107235, "SE": 0.433318137547306, "Lower": -0.442059805900274, "Upper": 1.25654729328516}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Mercedes-Benz Stadium", "Fixed_Home": 0.914799547379902, "Random_Slope": 0.388140995649309, "Total_Effect": 1.30294054302921, "SE": 0.428572512506263, "Lower": -0.451861128862967, "Upper": 1.22814312016159}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Ford Field", "Fixed_Home": 0.914799547379902, "Random_Slope": 0.216436495651899, "Total_Effect": 1.1312360430318, "SE": 0.269320928415967, "Lower": -0.311432524043397, "Upper": 0.744305515347195}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "M&T Bank Stadium", "Fixed_Home": 0.914799547379902, "Random_Slope": 0.180349468899228, "Total_Effect": 1.09514901627913, "SE": 0.241809433756344, "Lower": -0.293597021263206, "Upper": 0.654295959061662}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "U.S. Bank Stadium", "Fixed_Home": 0.914799547379902, "Random_Slope": 0.129044296978694, "Total_Effect": 1.0438438443586, "SE": 0.201454884443186, "Lower": -0.265807276529951, "Upper": 0.52389587048734}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Soldier Field", "Fixed_Home": 0.914799547379902, "Random_Slope": 0.0728315680446124, "Total_Effect": 0.987631115424514, "SE": 0.177956000213641, "Lower": -0.275962192374124, "Upper": 0.421625328463349}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Empower Field at Mile High", "Fixed_Home": 0.914799547379902, "Random_Slope": 0.0254189478100253, "Total_Effect": 0.940218495189927, "SE": 0.265125543968357, "Lower": -0.494227118367954, "Upper": 0.545065013988004}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Lumen Field", "Fixed_Home": 0.914799547379902, "Random_Slope": 0.0080284150647162, "Total_Effect": 0.922827962444618, "SE": 0.140006542681889, "Lower": -0.266384408591786, "Upper": 0.282441238721218}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "NRG Stadium", "Fixed_Home": 0.914799547379902, "Random_Slope": -0.0416167187709916, "Total_Effect": 0.87318282860891, "SE": 0.204121159898795, "Lower": -0.44169419217263, "Upper": 0.358460754630647}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Acrisure Stadium", "Fixed_Home": 0.914799547379902, "Random_Slope": -0.1604181634988, "Total_Effect": 0.754381383881102, "SE": 0.202021674661061, "Lower": -0.556380645834479, "Upper": 0.23554431883688}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Huntington Bank Field", "Fixed_Home": 0.914799547379902, "Random_Slope": -0.17928669467797, "Total_Effect": 0.735512852701932, "SE": 0.201563725363408, "Lower": -0.57435159639025, "Upper": 0.215778207034311}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Los Angeles Memorial Coliseum", "Fixed_Home": 0.914799547379902, "Random_Slope": -0.200620804472409, "Total_Effect": 0.714178742907493, "SE": 0.295291829858868, "Lower": -0.77939279099579, "Upper": 0.378151182050972}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "GEHA Field at Arrowhead Stadium", "Fixed_Home": 0.914799547379902, "Random_Slope": -0.238974182095144, "Total_Effect": 0.675825365284758, "SE": 0.324814366939782, "Lower": -0.875610341297117, "Upper": 0.397661977106829}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Paycor Stadium", "Fixed_Home": 0.914799547379902, "Random_Slope": -0.260824575297662, "Total_Effect": 0.65397497208224, "SE": 0.279853963130796, "Lower": -0.809338343034022, "Upper": 0.287689192438698}, {"Band": "Within 1km", "Outcome": "AutoTheft", "Venue": "Lincoln Financial Field", "Fixed_Home": 0.914799547379902, "Random_Slope": -0.492466436726297, "Total_Effect": 0.422333110653605, "SE": 0.514988656535377, "Lower": -1.50184420353564, "Upper": 0.516911330083041}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Oakland Coliseum", "Fixed_Home": 1.32172012650248, "Random_Slope": 1.40131549991248, "Total_Effect": 2.72303562641496, "SE": 0.510199075695873, "Lower": 0.401325311548569, "Upper": 2.40130568827639}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "GEHA Field at Arrowhead Stadium", "Fixed_Home": 1.32172012650248, "Random_Slope": 1.39126495978094, "Total_Effect": 2.71298508628342, "SE": 0.614126428608752, "Lower": 0.187577159707784, "Upper": 2.59495275985409}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Los Angeles Memorial Coliseum", "Fixed_Home": 1.32172012650248, "Random_Slope": 1.15523374171014, "Total_Effect": 2.47695386821262, "SE": 0.512919327630218, "Lower": 0.14991185955491, "Upper": 2.16055562386536}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "NRG Stadium", "Fixed_Home": 1.32172012650248, "Random_Slope": 0.74941846625939, "Total_Effect": 2.07113859276187, "SE": 0.574094072596142, "Lower": -0.375805916029049, "Upper": 1.87464284854783}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Empower Field at Mile High", "Fixed_Home": 1.32172012650248, "Random_Slope": 0.49359357485368, "Total_Effect": 1.81531370135616, "SE": 0.602528388904744, "Lower": -0.687362067399617, "Upper": 1.67454921710698}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "M&T Bank Stadium", "Fixed_Home": 1.32172012650248, "Random_Slope": 0.105567365378785, "Total_Effect": 1.42728749188127, "SE": 0.466624631041102, "Lower": -0.809016911461774, "Upper": 1.02015164221935}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Lumen Field", "Fixed_Home": 1.32172012650248, "Random_Slope": -0.0255307986202003, "Total_Effect": 1.29618932788228, "SE": 0.469621082216012, "Lower": -0.945988119763584, "Upper": 0.894926522523184}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Soldier Field", "Fixed_Home": 1.32172012650248, "Random_Slope": -0.0570016478547813, "Total_Effect": 1.2647184786477, "SE": 0.56353937244161, "Lower": -1.16153881784034, "Upper": 1.04753552213077}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Ford Field", "Fixed_Home": 1.32172012650248, "Random_Slope": -0.204926637290927, "Total_Effect": 1.11679348921155, "SE": 0.487628862279171, "Lower": -1.1606792073581, "Upper": 0.750825932776247}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Paycor Stadium", "Fixed_Home": 1.32172012650248, "Random_Slope": -0.212208239531725, "Total_Effect": 1.10951188697075, "SE": 0.490152747675132, "Lower": -1.17290762497498, "Upper": 0.748491145911533}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "U.S. Bank Stadium", "Fixed_Home": 1.32172012650248, "Random_Slope": -0.56892522179897, "Total_Effect": 0.75279490470351, "SE": 0.725966607967536, "Lower": -1.99181977341534, "Upper": 0.853969329817401}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Lincoln Financial Field", "Fixed_Home": 1.32172012650248, "Random_Slope": -0.721695470950646, "Total_Effect": 0.600024655551834, "SE": 0.561442543160815, "Lower": -1.82212285554584, "Upper": 0.378731913644551}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Acrisure Stadium", "Fixed_Home": 1.32172012650248, "Random_Slope": -0.722002942732299, "Total_Effect": 0.599717183770181, "SE": 0.742795093827821, "Lower": -2.17788132663483, "Upper": 0.733875441170231}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Huntington Bank Field", "Fixed_Home": 1.32172012650248, "Random_Slope": -0.75347729052687, "Total_Effect": 0.568242835975611, "SE": 0.574753336655368, "Lower": -1.87999383037139, "Upper": 0.373039249317652}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Georgia Dome", "Fixed_Home": 1.32172012650248, "Random_Slope": -0.7810274160552, "Total_Effect": 0.540692710447281, "SE": 0.833408480986383, "Lower": -2.41450803878851, "Upper": 0.852453206678111}, {"Band": "Within 1km", "Outcome": "Assault", "Venue": "Mercedes-Benz Stadium", "Fixed_Home": 1.32172012650248, "Random_Slope": -1.01926086142995, "Total_Effect": 0.302459265072534, "SE": 0.652956548992019, "Lower": -2.2990556974543, "Upper": 0.260533974594412}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "M&T Bank Stadium", "Fixed_Home": 0.384768149170676, "Random_Slope": 1.45107749197092e-07, "Total_Effect": 0.384768294278425, "SE": null, "Lower": null, "Upper": null}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Lumen Field", "Fixed_Home": 0.384768149170676, "Random_Slope": 1.35725959824468e-07, "Total_Effect": 0.384768284896636, "SE": null, "Lower": null, "Upper": null}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Los Angeles Memorial Coliseum", "Fixed_Home": 0.384768149170676, "Random_Slope": 1.34560168188184e-07, "Total_Effect": 0.384768283730844, "SE": null, "Lower": null, "Upper": null}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Soldier Field", "Fixed_Home": 0.384768149170676, "Random_Slope": 1.05593649788653e-07, "Total_Effect": 0.384768254764326, "SE": null, "Lower": null, "Upper": null}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "U.S. Bank Stadium", "Fixed_Home": 0.384768149170676, "Random_Slope": 4.14395301145509e-08, "Total_Effect": 0.384768190610206, "SE": null, "Lower": null, "Upper": null}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Acrisure Stadium", "Fixed_Home": 0.384768149170676, "Random_Slope": 4.12662040910147e-09, "Total_Effect": 0.384768153297296, "SE": null, "Lower": null, "Upper": null}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Empower Field at Mile High", "Fixed_Home": 0.384768149170676, "Random_Slope": -3.9145331406841e-09, "Total_Effect": 0.384768145256143, "SE": null, "Lower": null, "Upper": null}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Ford Field", "Fixed_Home": 0.384768149170676, "Random_Slope": -1.50391212464135e-08, "Total_Effect": 0.384768134131555, "SE": null, "Lower": null, "Upper": null}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Georgia Dome", "Fixed_Home": 0.384768149170676, "Random_Slope": -1.89060922057633e-08, "Total_Effect": 0.384768130264584, "SE": null, "Lower": null, "Upper": null}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Paycor Stadium", "Fixed_Home": 0.384768149170676, "Random_Slope": -2.89175502673808e-08, "Total_Effect": 0.384768120253126, "SE": null, "Lower": null, "Upper": null}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "GEHA Field at Arrowhead Stadium", "Fixed_Home": 0.384768149170676, "Random_Slope": -3.25198052570324e-08, "Total_Effect": 0.384768116650871, "SE": null, "Lower": null, "Upper": null}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Oakland Coliseum", "Fixed_Home": 0.384768149170676, "Random_Slope": -5.43486531961105e-08, "Total_Effect": 0.384768094822023, "SE": null, "Lower": null, "Upper": null}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Mercedes-Benz Stadium", "Fixed_Home": 0.384768149170676, "Random_Slope": -5.50404495565415e-08, "Total_Effect": 0.384768094130226, "SE": null, "Lower": null, "Upper": null}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "NRG Stadium", "Fixed_Home": 0.384768149170676, "Random_Slope": -7.44908265222112e-08, "Total_Effect": 0.384768074679849, "SE": null, "Lower": null, "Upper": null}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Lincoln Financial Field", "Fixed_Home": 0.384768149170676, "Random_Slope": -7.51035001804248e-08, "Total_Effect": 0.384768074067176, "SE": null, "Lower": null, "Upper": null}, {"Band": "Within 1km", "Outcome": "Robbery", "Venue": "Huntington Bank Field", "Fixed_Home": 0.384768149170676, "Random_Slope": -8.7685901910637e-08, "Total_Effect": 0.384768061484774, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Ford Field", "Fixed_Home": 0.198962146156239, "Random_Slope": 0.328180140774535, "Total_Effect": 0.527142286930773, "SE": 0.270249075081766, "Lower": -0.201508046385727, "Upper": 0.857868327934797}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Acrisure Stadium", "Fixed_Home": 0.198962146156239, "Random_Slope": 0.276082022033459, "Total_Effect": 0.475044168189697, "SE": 0.240848311350016, "Lower": -0.195980668212574, "Upper": 0.748144712279491}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "U.S. Bank Stadium", "Fixed_Home": 0.198962146156239, "Random_Slope": 0.0830385831308785, "Total_Effect": 0.282000729287117, "SE": 0.174476618740572, "Lower": -0.258935589600642, "Upper": 0.425012755862399}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Lincoln Financial Field", "Fixed_Home": 0.198962146156239, "Random_Slope": 0.0804933920795579, "Total_Effect": 0.279455538235797, "SE": 0.187532334735866, "Lower": -0.28706998400274, "Upper": 0.448056768161856}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "GEHA Field at Arrowhead Stadium", "Fixed_Home": 0.198962146156239, "Random_Slope": 0.0637107243591625, "Total_Effect": 0.262672870515401, "SE": 0.277324073509318, "Lower": -0.4798444597191, "Upper": 0.607265908437425}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Paycor Stadium", "Fixed_Home": 0.198962146156239, "Random_Slope": -0.01354724675662, "Total_Effect": 0.185414899399619, "SE": 0.169207972260139, "Lower": -0.345194872386492, "Upper": 0.318100378873251}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "NRG Stadium", "Fixed_Home": 0.198962146156239, "Random_Slope": -0.0181786155497153, "Total_Effect": 0.180783530606523, "SE": 0.174938502301425, "Lower": -0.361058080060508, "Upper": 0.324700848961077}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "M&T Bank Stadium", "Fixed_Home": 0.198962146156239, "Random_Slope": -0.030935563772399, "Total_Effect": 0.16802658238384, "SE": 0.160184979704451, "Lower": -0.344898123993123, "Upper": 0.283026996448325}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Georgia Dome", "Fixed_Home": 0.198962146156239, "Random_Slope": -0.0364706532105069, "Total_Effect": 0.162491492945732, "SE": 0.19133606154897, "Lower": -0.411489333846487, "Upper": 0.338548027425473}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Mercedes-Benz Stadium", "Fixed_Home": 0.198962146156239, "Random_Slope": -0.0643173798074781, "Total_Effect": 0.134644766348761, "SE": 0.177659253436872, "Lower": -0.412529516543747, "Upper": 0.283894756928791}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Oakland Coliseum", "Fixed_Home": 0.198962146156239, "Random_Slope": -0.0827561775228819, "Total_Effect": 0.116205968633357, "SE": 0.233702124051522, "Lower": -0.540812340663865, "Upper": 0.375299985618101}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Los Angeles Memorial Coliseum", "Fixed_Home": 0.198962146156239, "Random_Slope": -0.0909810158358054, "Total_Effect": 0.107981130320433, "SE": 0.185197210363778, "Lower": -0.453967548148811, "Upper": 0.2720055164772}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Huntington Bank Field", "Fixed_Home": 0.198962146156239, "Random_Slope": -0.0979319606708056, "Total_Effect": 0.101030185485433, "SE": 0.206032269868054, "Lower": -0.501755209612192, "Upper": 0.305891288270581}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Empower Field at Mile High", "Fixed_Home": 0.198962146156239, "Random_Slope": -0.108771912488231, "Total_Effect": 0.0901902336680082, "SE": 0.173280100305701, "Lower": -0.448400909087404, "Upper": 0.230857084110943}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Soldier Field", "Fixed_Home": 0.198962146156239, "Random_Slope": -0.135487938036351, "Total_Effect": 0.0634742081198877, "SE": 0.145679369448451, "Lower": -0.421019502155315, "Upper": 0.150043626082613}, {"Band": "1-2km", "Outcome": "Larceny", "Venue": "Lumen Field", "Fixed_Home": 0.198962146156239, "Random_Slope": -0.17136692262357, "Total_Effect": 0.0275952235326684, "SE": 0.145614488326717, "Lower": -0.456771319743937, "Upper": 0.114037474496796}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Lincoln Financial Field", "Fixed_Home": 0.35465376381156, "Random_Slope": 0.567417601466842, "Total_Effect": 0.922071365278402, "SE": 0.339195498132322, "Lower": -0.0974055748725084, "Upper": 1.23224077780619}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Acrisure Stadium", "Fixed_Home": 0.35465376381156, "Random_Slope": 0.438944876741584, "Total_Effect": 0.793598640553144, "SE": 0.288891261113965, "Lower": -0.127281995041788, "Upper": 1.00517174852496}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Paycor Stadium", "Fixed_Home": 0.35465376381156, "Random_Slope": 0.392920124193808, "Total_Effect": 0.747573888005368, "SE": 0.270226752300354, "Lower": -0.136724310314886, "Upper": 0.922564558702502}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Huntington Bank Field", "Fixed_Home": 0.35465376381156, "Random_Slope": 0.30413669410909, "Total_Effect": 0.65879045792065, "SE": 0.219023073967055, "Lower": -0.125148530866338, "Upper": 0.733421919084518}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "GEHA Field at Arrowhead Stadium", "Fixed_Home": 0.35465376381156, "Random_Slope": 0.233049983352093, "Total_Effect": 0.587703747163653, "SE": 0.232338042980603, "Lower": -0.222332580889889, "Upper": 0.688432547594074}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "NRG Stadium", "Fixed_Home": 0.35465376381156, "Random_Slope": 0.206543036282548, "Total_Effect": 0.561196800094108, "SE": 0.230346825101009, "Lower": -0.24493674091543, "Upper": 0.658022813480527}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Ford Field", "Fixed_Home": 0.35465376381156, "Random_Slope": 0.0161030412023187, "Total_Effect": 0.370756805013879, "SE": 0.152932175119374, "Lower": -0.283644022031655, "Upper": 0.315850104436292}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Georgia Dome", "Fixed_Home": 0.35465376381156, "Random_Slope": -0.0979800872175113, "Total_Effect": 0.256673676594049, "SE": 0.231239114986448, "Lower": -0.55120875259095, "Upper": 0.355248578155927}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Empower Field at Mile High", "Fixed_Home": 0.35465376381156, "Random_Slope": -0.128686773300314, "Total_Effect": 0.225966990511246, "SE": 0.248490687133456, "Lower": -0.615728520081889, "Upper": 0.35835497348126}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Lumen Field", "Fixed_Home": 0.35465376381156, "Random_Slope": -0.139958836776019, "Total_Effect": 0.214694927035541, "SE": 0.179006038035406, "Lower": -0.490810671325414, "Upper": 0.210892997773377}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "M&T Bank Stadium", "Fixed_Home": 0.35465376381156, "Random_Slope": -0.18710635215664, "Total_Effect": 0.16754741165492, "SE": 0.171173508407746, "Lower": -0.522606428635821, "Upper": 0.148393724322542}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Soldier Field", "Fixed_Home": 0.35465376381156, "Random_Slope": -0.188690511489646, "Total_Effect": 0.165963252321914, "SE": 0.196243904040925, "Lower": -0.57332856340986, "Upper": 0.195947540430567}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "U.S. Bank Stadium", "Fixed_Home": 0.35465376381156, "Random_Slope": -0.264770406402214, "Total_Effect": 0.0898833574093457, "SE": 0.216418818258796, "Lower": -0.688951290189454, "Upper": 0.159410477385025}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Mercedes-Benz Stadium", "Fixed_Home": 0.35465376381156, "Random_Slope": -0.446482531927724, "Total_Effect": -0.0918287681161643, "SE": 0.247378855168271, "Lower": -0.931345088057536, "Upper": 0.038380024202087}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Los Angeles Memorial Coliseum", "Fixed_Home": 0.35465376381156, "Random_Slope": -0.454073420963263, "Total_Effect": -0.0994196571517028, "SE": 0.280227327776259, "Lower": -1.00331898340473, "Upper": 0.0951721414782043}, {"Band": "1-2km", "Outcome": "AutoTheft", "Venue": "Oakland Coliseum", "Fixed_Home": 0.35465376381156, "Random_Slope": -0.516315109840598, "Total_Effect": -0.161661346029038, "SE": 0.271720290012139, "Lower": -1.04888687826439, "Upper": 0.0162566585831945}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Acrisure Stadium", "Fixed_Home": 0.218072029601543, "Random_Slope": 0.105459148112541, "Total_Effect": 0.323531177714083, "SE": 0.201817657801234, "Lower": -0.290103461177877, "Upper": 0.501021757402959}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Lincoln Financial Field", "Fixed_Home": 0.218072029601543, "Random_Slope": 0.0791396988635564, "Total_Effect": 0.297211728465099, "SE": 0.150769057431214, "Lower": -0.216367653701624, "Upper": 0.374647051428737}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Paycor Stadium", "Fixed_Home": 0.218072029601543, "Random_Slope": 0.053025808843323, "Total_Effect": 0.271097838444866, "SE": 0.102073357934929, "Lower": -0.147037972709138, "Upper": 0.253089590395784}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "GEHA Field at Arrowhead Stadium", "Fixed_Home": 0.218072029601543, "Random_Slope": 0.0509161621439084, "Total_Effect": 0.268988191745451, "SE": 0.105819458498642, "Lower": -0.156489976513429, "Upper": 0.258322300801246}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Huntington Bank Field", "Fixed_Home": 0.218072029601543, "Random_Slope": 0.0383558715942497, "Total_Effect": 0.256427901195792, "SE": 0.0750194356028944, "Lower": -0.108682222187423, "Upper": 0.185393965375923}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "U.S. Bank Stadium", "Fixed_Home": 0.218072029601543, "Random_Slope": 0.0345021143546446, "Total_Effect": 0.252574143956187, "SE": 0.0776170473619683, "Lower": -0.117627298474813, "Upper": 0.186631527184102}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Georgia Dome", "Fixed_Home": 0.218072029601543, "Random_Slope": 0.0325666839461462, "Total_Effect": 0.250638713547689, "SE": 0.075392441037051, "Lower": -0.115202500486474, "Upper": 0.180335868378766}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Mercedes-Benz Stadium", "Fixed_Home": 0.218072029601543, "Random_Slope": 0.0176113855173838, "Total_Effect": 0.235683415118926, "SE": 0.0435823405861587, "Lower": -0.0678100020314873, "Upper": 0.103032773066255}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "NRG Stadium", "Fixed_Home": 0.218072029601543, "Random_Slope": -0.0114179206822888, "Total_Effect": 0.206654108919254, "SE": 0.0446806220202518, "Lower": -0.0989919398419824, "Upper": 0.0761560984774047}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Empower Field at Mile High", "Fixed_Home": 0.218072029601543, "Random_Slope": -0.0210001978965844, "Total_Effect": 0.197071831704958, "SE": 0.062961851799234, "Lower": -0.144405427423083, "Upper": 0.102405031629914}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Ford Field", "Fixed_Home": 0.218072029601543, "Random_Slope": -0.031527399923627, "Total_Effect": 0.186544629677916, "SE": 0.064995732466513, "Lower": -0.158919035557992, "Upper": 0.0958642357107384}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Los Angeles Memorial Coliseum", "Fixed_Home": 0.218072029601543, "Random_Slope": -0.04861063864024, "Total_Effect": 0.169461390961303, "SE": 0.101657487150707, "Lower": -0.247859313455626, "Upper": 0.150638036175146}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Oakland Coliseum", "Fixed_Home": 0.218072029601543, "Random_Slope": -0.0696108805480652, "Total_Effect": 0.148461149053477, "SE": 0.133073609073204, "Lower": -0.330435154331545, "Upper": 0.191213393235415}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "M&T Bank Stadium", "Fixed_Home": 0.218072029601543, "Random_Slope": -0.0811122222182739, "Total_Effect": 0.136959807383269, "SE": 0.156361629375166, "Lower": -0.387581015793599, "Upper": 0.225356571357051}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Soldier Field", "Fixed_Home": 0.218072029601543, "Random_Slope": -0.0903508911332389, "Total_Effect": 0.127721138468304, "SE": 0.169755015313335, "Lower": -0.423070721147375, "Upper": 0.242368938880897}, {"Band": "1-2km", "Outcome": "Assault", "Venue": "Lumen Field", "Fixed_Home": 0.218072029601543, "Random_Slope": -0.100055905719579, "Total_Effect": 0.118016123881963, "SE": 0.191857134029225, "Lower": -0.47609588841686, "Upper": 0.275984076977701}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "M&T Bank Stadium", "Fixed_Home": -0.574140320083864, "Random_Slope": 0.968792479193577, "Total_Effect": 0.394652159109713, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Lumen Field", "Fixed_Home": -0.574140320083864, "Random_Slope": 0.6771320101552, "Total_Effect": 0.102991690071336, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Oakland Coliseum", "Fixed_Home": -0.574140320083864, "Random_Slope": 0.537713933102708, "Total_Effect": -0.0364263869811566, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Los Angeles Memorial Coliseum", "Fixed_Home": -0.574140320083864, "Random_Slope": 0.497428136745693, "Total_Effect": -0.076712183338171, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Soldier Field", "Fixed_Home": -0.574140320083864, "Random_Slope": 0.494479474100192, "Total_Effect": -0.0796608459836721, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "U.S. Bank Stadium", "Fixed_Home": -0.574140320083864, "Random_Slope": 0.473338064595324, "Total_Effect": -0.10080225548854, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Georgia Dome", "Fixed_Home": -0.574140320083864, "Random_Slope": 0.125280023236989, "Total_Effect": -0.448860296846875, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Empower Field at Mile High", "Fixed_Home": -0.574140320083864, "Random_Slope": 0.0314499681712869, "Total_Effect": -0.542690351912577, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Mercedes-Benz Stadium", "Fixed_Home": -0.574140320083864, "Random_Slope": -0.0160664583124556, "Total_Effect": -0.59020677839632, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Acrisure Stadium", "Fixed_Home": -0.574140320083864, "Random_Slope": -0.0633832701796465, "Total_Effect": -0.637523590263511, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Huntington Bank Field", "Fixed_Home": -0.574140320083864, "Random_Slope": -0.190341070207106, "Total_Effect": -0.764481390290971, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Lincoln Financial Field", "Fixed_Home": -0.574140320083864, "Random_Slope": -0.362572916136542, "Total_Effect": -0.936713236220406, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "NRG Stadium", "Fixed_Home": -0.574140320083864, "Random_Slope": -0.398462827630639, "Total_Effect": -0.972603147714503, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Ford Field", "Fixed_Home": -0.574140320083864, "Random_Slope": -0.405039223746558, "Total_Effect": -0.979179543830422, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "GEHA Field at Arrowhead Stadium", "Fixed_Home": -0.574140320083864, "Random_Slope": -0.740727531583731, "Total_Effect": -1.31486785166759, "SE": null, "Lower": null, "Upper": null}, {"Band": "1-2km", "Outcome": "Robbery", "Venue": "Paycor Stadium", "Fixed_Home": -0.574140320083864, "Random_Slope": -0.898289825014534, "Total_Effect": -1.4724301450984, "SE": null, "Lower": null, "Upper": null}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Empower Field at Mile High", "Fixed_Home": -0.0765061992489296, "Random_Slope": 0.0845354563306014, "Total_Effect": 0.0080292570816718, "SE": 0.119975105812582, "Lower": -0.15061575106206, "Upper": 0.319686663723263}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Lumen Field", "Fixed_Home": -0.0765061992489296, "Random_Slope": 0.0744285473955886, "Total_Effect": -0.0020776518533409, "SE": 0.106275399501975, "Lower": -0.133871235628283, "Upper": 0.28272833041946}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Soldier Field", "Fixed_Home": -0.0765061992489296, "Random_Slope": 0.0705067713046851, "Total_Effect": -0.0059994279442444, "SE": 0.097024698122231, "Lower": -0.119661637014888, "Upper": 0.260675179624258}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Georgia Dome", "Fixed_Home": -0.0765061992489296, "Random_Slope": 0.0586494279331555, "Total_Effect": -0.017856771315774, "SE": 0.0840221613798621, "Lower": -0.106034008371374, "Upper": 0.223332864237685}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "M&T Bank Stadium", "Fixed_Home": -0.0765061992489296, "Random_Slope": 0.0395288541507246, "Total_Effect": -0.036977345098205, "SE": 0.0589785610503953, "Lower": -0.0760691255080502, "Upper": 0.155126833809499}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Mercedes-Benz Stadium", "Fixed_Home": -0.0765061992489296, "Random_Slope": 0.0338819629183697, "Total_Effect": -0.0426242363305598, "SE": 0.0511399768466092, "Lower": -0.0663523917009844, "Upper": 0.134116317537724}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Lincoln Financial Field", "Fixed_Home": -0.0765061992489296, "Random_Slope": 0.0315993644614584, "Total_Effect": -0.0449068347874712, "SE": 0.0480268856070194, "Lower": -0.0625333313282997, "Upper": 0.125732060251216}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Los Angeles Memorial Coliseum", "Fixed_Home": -0.0765061992489296, "Random_Slope": -0.0036328355331237, "Total_Effect": -0.0801390347820533, "SE": 0.0190393485435565, "Lower": -0.0409499586784945, "Upper": 0.0336842876122471}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Oakland Coliseum", "Fixed_Home": -0.0765061992489296, "Random_Slope": -0.0172326315314454, "Total_Effect": -0.093738830780375, "SE": 0.0293184267587849, "Lower": -0.0746967479786639, "Upper": 0.040231484915773}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "U.S. Bank Stadium", "Fixed_Home": -0.0765061992489296, "Random_Slope": -0.0251507994760639, "Total_Effect": -0.101656998724993, "SE": 0.0426705518753974, "Lower": -0.108785081151843, "Upper": 0.0584834821997151}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Acrisure Stadium", "Fixed_Home": -0.0765061992489296, "Random_Slope": -0.0267536659633653, "Total_Effect": -0.103259865212295, "SE": 0.0395976838891209, "Lower": -0.104365126386042, "Upper": 0.0508577944593117}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Ford Field", "Fixed_Home": -0.0765061992489296, "Random_Slope": -0.0297251496918097, "Total_Effect": -0.106231348940739, "SE": 0.0435785127855815, "Lower": -0.115139034751549, "Upper": 0.0556887353679301}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Huntington Bank Field", "Fixed_Home": -0.0765061992489296, "Random_Slope": -0.0437602605792324, "Total_Effect": -0.120266459828162, "SE": 0.0628589828961127, "Lower": -0.166963867055613, "Upper": 0.0794433458971485}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "Paycor Stadium", "Fixed_Home": -0.0765061992489296, "Random_Slope": -0.0462289623339402, "Total_Effect": -0.12273516158287, "SE": 0.0662529801153774, "Lower": -0.17608480336008, "Upper": 0.0836268786921995}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "NRG Stadium", "Fixed_Home": -0.0765061992489296, "Random_Slope": -0.0664588552195398, "Total_Effect": -0.142965054468469, "SE": 0.0980395335565552, "Lower": -0.258616340990388, "Upper": 0.125698630551308}, {"Band": "2-3km", "Outcome": "Larceny", "Venue": "GEHA Field at Arrowhead Stadium", "Fixed_Home": -0.0765061992489296, "Random_Slope": -0.122542361835976, "Total_Effect": -0.199048561084906, "SE": 0.175334792930765, "Lower": -0.466198555980277, "Upper": 0.221113832308324}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Huntington Bank Field", "Fixed_Home": 0.0732216350343825, "Random_Slope": 0.324331468342701, "Total_Effect": 0.397553103377084, "SE": 0.324554040595798, "Lower": -0.311794451225064, "Upper": 0.960457387910466}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Ford Field", "Fixed_Home": 0.0732216350343825, "Random_Slope": 0.267133521626995, "Total_Effect": 0.340355156661377, "SE": 0.308975146028349, "Lower": -0.33845776458857, "Upper": 0.87272480784256}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Acrisure Stadium", "Fixed_Home": 0.0732216350343825, "Random_Slope": 0.26169367473029, "Total_Effect": 0.334915309764672, "SE": 0.382184498573488, "Lower": -0.487387942473746, "Upper": 1.01077529193433}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "GEHA Field at Arrowhead Stadium", "Fixed_Home": 0.0732216350343825, "Random_Slope": 0.176638725529516, "Total_Effect": 0.249860360563899, "SE": 0.291281482129774, "Lower": -0.394272979444841, "Upper": 0.747550430503874}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Lincoln Financial Field", "Fixed_Home": 0.0732216350343825, "Random_Slope": 0.175406634496712, "Total_Effect": 0.248628269531095, "SE": 0.283493762472468, "Lower": -0.380241139949325, "Upper": 0.73105440894275}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Paycor Stadium", "Fixed_Home": 0.0732216350343825, "Random_Slope": 0.161053822060462, "Total_Effect": 0.234275457094845, "SE": 0.303606501048928, "Lower": -0.434014919995436, "Upper": 0.75612256411636}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Mercedes-Benz Stadium", "Fixed_Home": 0.0732216350343825, "Random_Slope": 0.0566333676099642, "Total_Effect": 0.129855002644347, "SE": 0.315491388664698, "Lower": -0.561729754172845, "Upper": 0.674996489392773}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "NRG Stadium", "Fixed_Home": 0.0732216350343825, "Random_Slope": 0.0546567613041899, "Total_Effect": 0.127878396338572, "SE": 0.274303359612153, "Lower": -0.482977823535631, "Upper": 0.592291346144011}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "U.S. Bank Stadium", "Fixed_Home": 0.0732216350343825, "Random_Slope": -0.063598723092918, "Total_Effect": 0.0096229119414644, "SE": 0.258466743764243, "Lower": -0.570193540870834, "Upper": 0.442996094684998}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Lumen Field", "Fixed_Home": 0.0732216350343825, "Random_Slope": -0.0847546749642433, "Total_Effect": -0.0115330399298609, "SE": 0.247753918527356, "Lower": -0.570352355277861, "Upper": 0.400843005349374}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Georgia Dome", "Fixed_Home": 0.0732216350343825, "Random_Slope": -0.107942889863256, "Total_Effect": -0.0347212548288735, "SE": 0.320131187486085, "Lower": -0.735400017335983, "Upper": 0.519514237609471}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Soldier Field", "Fixed_Home": 0.0732216350343825, "Random_Slope": -0.120776134788505, "Total_Effect": -0.0475544997541227, "SE": 0.249636427356155, "Lower": -0.610063532406569, "Upper": 0.368511262829559}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Empower Field at Mile High", "Fixed_Home": 0.0732216350343825, "Random_Slope": -0.159561845943533, "Total_Effect": -0.0863402109091509, "SE": 0.250666630019602, "Lower": -0.650868440781953, "Upper": 0.331744748894886}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Los Angeles Memorial Coliseum", "Fixed_Home": 0.0732216350343825, "Random_Slope": -0.165904551614099, "Total_Effect": -0.092682916579716, "SE": 0.320366696160672, "Lower": -0.793823276089016, "Upper": 0.462014172860819}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "M&T Bank Stadium", "Fixed_Home": 0.0732216350343825, "Random_Slope": -0.423000862958947, "Total_Effect": -0.349779227924565, "SE": 0.418527865726843, "Lower": -1.24331547978356, "Upper": 0.397313753865666}, {"Band": "2-3km", "Outcome": "AutoTheft", "Venue": "Oakland Coliseum", "Fixed_Home": 0.0732216350343825, "Random_Slope": -0.489605524500865, "Total_Effect": -0.416383889466482, "SE": 0.318601694440677, "Lower": -1.11406484560459, "Upper": 0.134853796602863}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Lumen Field", "Fixed_Home": -0.114884668773396, "Random_Slope": 0.155439571893056, "Total_Effect": 0.0405549031196596, "SE": 0.228097511469007, "Lower": -0.291631550586197, "Upper": 0.602510694372309}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Mercedes-Benz Stadium", "Fixed_Home": -0.114884668773396, "Random_Slope": 0.125003579546323, "Total_Effect": 0.0101189107729267, "SE": 0.321498016992091, "Lower": -0.505132533758175, "Upper": 0.755139692850821}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "M&T Bank Stadium", "Fixed_Home": -0.114884668773396, "Random_Slope": 0.114515499764326, "Total_Effect": -0.0003691690090704, "SE": 0.21173471557409, "Lower": -0.300484542760891, "Upper": 0.529515542289543}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Los Angeles Memorial Coliseum", "Fixed_Home": -0.114884668773396, "Random_Slope": 0.110775349879028, "Total_Effect": -0.004109318894368, "SE": 0.239539763294926, "Lower": -0.358722586179026, "Upper": 0.580273285937083}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Empower Field at Mile High", "Fixed_Home": -0.114884668773396, "Random_Slope": 0.0956307951125155, "Total_Effect": -0.019253873660881, "SE": 0.223682718585833, "Lower": -0.342787333315717, "Upper": 0.534048923540748}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Soldier Field", "Fixed_Home": -0.114884668773396, "Random_Slope": 0.0632838301979657, "Total_Effect": -0.0516008385754308, "SE": 0.195638476034899, "Lower": -0.320167582830436, "Upper": 0.446735243226367}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "U.S. Bank Stadium", "Fixed_Home": -0.114884668773396, "Random_Slope": 0.0396418886813168, "Total_Effect": -0.0752427800920797, "SE": 0.19057278707197, "Lower": -0.333880773979745, "Upper": 0.413164551342379}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Lincoln Financial Field", "Fixed_Home": -0.114884668773396, "Random_Slope": -0.0030627284536411, "Total_Effect": -0.117947397227038, "SE": 0.169070962771977, "Lower": -0.334441815486717, "Upper": 0.328316358579435}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "GEHA Field at Arrowhead Stadium", "Fixed_Home": -0.114884668773396, "Random_Slope": -0.0264991495157901, "Total_Effect": -0.141383818289187, "SE": 0.185824871081575, "Lower": -0.390715896835677, "Upper": 0.337717597804096}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Ford Field", "Fixed_Home": -0.114884668773396, "Random_Slope": -0.0391336559925545, "Total_Effect": -0.154018324765951, "SE": 0.179865317994312, "Lower": -0.391669679261405, "Upper": 0.313402367276296}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Huntington Bank Field", "Fixed_Home": -0.114884668773396, "Random_Slope": -0.0555585387658947, "Total_Effect": -0.170443207539291, "SE": 0.185464916629573, "Lower": -0.419069775359858, "Upper": 0.307952697828069}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Paycor Stadium", "Fixed_Home": -0.114884668773396, "Random_Slope": -0.0611786086137753, "Total_Effect": -0.176063277387172, "SE": 0.215320986355296, "Lower": -0.483207741870155, "Upper": 0.360850524642604}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Georgia Dome", "Fixed_Home": -0.114884668773396, "Random_Slope": -0.0874470262465883, "Total_Effect": -0.202331695019985, "SE": 0.225345614719607, "Lower": -0.529124431097018, "Upper": 0.354230378603841}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Acrisure Stadium", "Fixed_Home": -0.114884668773396, "Random_Slope": -0.104046880694943, "Total_Effect": -0.21893154946834, "SE": 0.298871622345507, "Lower": -0.689835260492137, "Upper": 0.481741499102251}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "NRG Stadium", "Fixed_Home": -0.114884668773396, "Random_Slope": -0.135601712943685, "Total_Effect": -0.250486381717082, "SE": 0.268546224591673, "Lower": -0.661952313143364, "Upper": 0.390748887255993}, {"Band": "2-3km", "Outcome": "Assault", "Venue": "Oakland Coliseum", "Fixed_Home": -0.114884668773396, "Random_Slope": -0.153538969518647, "Total_Effect": -0.268423638292044, "SE": 0.368955433886641, "Lower": -0.876691619936463, "Upper": 0.569613680899168}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "NRG Stadium", "Fixed_Home": 0.0187218935406641, "Random_Slope": 0.363904702694485, "Total_Effect": 0.382626596235149, "SE": 0.634695527714363, "Lower": -0.880098531625666, "Upper": 1.60790793701464}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Paycor Stadium", "Fixed_Home": 0.0187218935406641, "Random_Slope": 0.343095765434646, "Total_Effect": 0.36181765897531, "SE": 0.531676198087555, "Lower": -0.698989582816961, "Upper": 1.38518111368625}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "GEHA Field at Arrowhead Stadium", "Fixed_Home": 0.0187218935406641, "Random_Slope": 0.329224122427542, "Total_Effect": 0.347946015968206, "SE": 0.547406186170281, "Lower": -0.743692002466209, "Upper": 1.40214024732129}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Lincoln Financial Field", "Fixed_Home": 0.0187218935406641, "Random_Slope": 0.23965536142797, "Total_Effect": 0.258377254968634, "SE": 0.458493685153519, "Lower": -0.658992261472927, "Upper": 1.13830298432887}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Empower Field at Mile High", "Fixed_Home": 0.0187218935406641, "Random_Slope": 0.233441685412599, "Total_Effect": 0.252163578953263, "SE": 0.473360064302084, "Lower": -0.694344040619485, "Upper": 1.16122741144468}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Lumen Field", "Fixed_Home": 0.0187218935406641, "Random_Slope": 0.208990393567173, "Total_Effect": 0.227712287107837, "SE": 0.534142445089493, "Lower": -0.837928798808234, "Upper": 1.25590958594258}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "U.S. Bank Stadium", "Fixed_Home": 0.0187218935406641, "Random_Slope": 0.191760671770969, "Total_Effect": 0.210482565311634, "SE": 0.487424286862446, "Lower": -0.763590930479425, "Upper": 1.14711227402136}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Ford Field", "Fixed_Home": 0.0187218935406641, "Random_Slope": 0.163931725658675, "Total_Effect": 0.182653619199339, "SE": 0.515739971462455, "Lower": -0.846918618407737, "Upper": 1.17478206972509}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Huntington Bank Field", "Fixed_Home": 0.0187218935406641, "Random_Slope": -0.0217162191281373, "Total_Effect": -0.0029943255874731, "SE": 0.454174527631299, "Lower": -0.911898293285484, "Upper": 0.868465855029209}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Oakland Coliseum", "Fixed_Home": 0.0187218935406641, "Random_Slope": -0.0980744810692753, "Total_Effect": -0.0793525875286112, "SE": 0.499212545150707, "Lower": -1.07653106956466, "Upper": 0.88038210742611}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Acrisure Stadium", "Fixed_Home": 0.0187218935406641, "Random_Slope": -0.177131421168032, "Total_Effect": -0.158409527627368, "SE": 0.41416046998565, "Lower": -0.988885942339906, "Upper": 0.634623100003842}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "M&T Bank Stadium", "Fixed_Home": 0.0187218935406641, "Random_Slope": -0.225891081163117, "Total_Effect": -0.207169187622453, "SE": 0.422524783708058, "Lower": -1.05403965723091, "Upper": 0.602257494904677}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Mercedes-Benz Stadium", "Fixed_Home": 0.0187218935406641, "Random_Slope": -0.314462295744308, "Total_Effect": -0.295740402203644, "SE": 0.542447568590075, "Lower": -1.37765953018086, "Upper": 0.748734938692238}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Georgia Dome", "Fixed_Home": 0.0187218935406641, "Random_Slope": -0.452505864976068, "Total_Effect": -0.433783971435404, "SE": 0.536515270677902, "Lower": -1.50407579550476, "Upper": 0.599064065552619}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Soldier Field", "Fixed_Home": 0.0187218935406641, "Random_Slope": -0.525405662680485, "Total_Effect": -0.506683769139821, "SE": 0.420444656981262, "Lower": -1.34947719036376, "Upper": 0.298665865002788}, {"Band": "2-3km", "Outcome": "Robbery", "Venue": "Los Angeles Memorial Coliseum", "Fixed_Home": 0.0187218935406641, "Random_Slope": -0.55068804128563, "Total_Effect": -0.531966147744965, "SE": 0.491743056923137, "Lower": -1.51450443285498, "Upper": 0.413128350283719}];
+
+// ── SHARED STATE & CONSTANTS (must come before data injection) ──
+let explorerData = [];
+let venueData = { MLB: [], NFL: [] };
+let currentLeague = 'MLB';
+let currentOutcome = 'Larceny';
+let spatialBand = 'Within 1 km';
+let temporalLeague = 'MLB';
+
+const crimeColors = {
+  'Larceny':    '#D71920',
+  'Assault':    '#8B1A1F',
+  'Auto Theft': '#c07030',
+  'Robbery':    '#7a6050',
+  'AutoTheft':  '#c07030'
+};
+
+function normBand(b) {
+  if (!b) return null;
+  return b.replace('Within 1km', 'Within 1 km').trim();
+}
+
+// ── DATA LOAD ──────────────────────────────────────────────────
+
+// ── MOBILE HELPERS ─────────────────────────────────────────────
+function isMobile() { return window.innerWidth < 600; }
+
+function responsiveMarginLeft(defaultVal) {
+  return isMobile() ? Math.round(defaultVal * 0.65) : defaultVal;
+}
+
+function axisTicks(innerW) {
+  if (innerW < 200) return 3;
+  if (innerW < 350) return 4;
+  return 5;
+}
+
+function tickFormat(d) {
+  // Shorten labels on small screens: "1.5×" not "1.50×"
+  return isMobile() ? d.toFixed(1) + '×' : d.toFixed(1) + '×';
+}
+
+// normBand defined above near shared state
+
+// Data embedded inline — no fetch needed
+(function() {
+  // Coerce types on explorer data (already cleaned in Python)
+  EXPLORER_DATA.forEach(d => {
+    d.irr       = +d.irr;
+    d.conf_low  = +d.conf_low;
+    d.conf_high = +d.conf_high;
+    d.p_value   = +d.p_value;
+    // sig already boolean
+    // time_window already null or string
+    d.distance_band = d.distance_band || null;
+  });
+  explorerData = EXPLORER_DATA;
+
+  [VENUE_MLB, VENUE_NFL].forEach((arr, i) => {
+    arr.forEach(d => {
+      d.Random_Slope = +d.Random_Slope;
+      d.Lower = d.Lower !== null ? +d.Lower : null;
+      d.Upper = d.Upper !== null ? +d.Upper : null;
+      d.Fixed_Home = +d.Fixed_Home;
+    });
+    venueData[i === 0 ? 'MLB' : 'NFL'] = arr;
+  });
+
+  // Draw all charts
+  drawSpatialChart('Within 1 km');
+  drawDesignDiagram();
+  drawTemporalChart('MLB');
+  drawCaterpillar('MLB', 'Larceny');
+  updateExplorer();
+  initScrollObserver();
+})();
+
+// ── TOOLTIP ────────────────────────────────────────────────────
+const tooltip = document.getElementById('tooltip');
+
+function showTip(html, event) {
+  tooltip.innerHTML = html;
+  tooltip.style.display = 'block';
+  moveTip(event);
+}
+
+function moveTip(event) {
+  const x = event.clientX + 14;
+  const y = event.clientY - 14;
+  tooltip.style.left = x + 'px';
+  tooltip.style.top  = y + 'px';
+}
+
+function hideTip() {
+  tooltip.style.display = 'none';
+}
+
+// ── SCROLL OBSERVER ────────────────────────────────────────────
+function initScrollObserver() {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !e.target.classList.contains('visible')) {
+        e.target.classList.add('visible');
+        // Trigger animated draw when chart scrolls into view
+        const id = e.target.id;
+        if (id === 'chart-spatial')  drawSpatialChart(spatialBand);
+        if (id === 'chart-temporal') drawTemporalChart(temporalLeague);
+        if (id === 'chart-venues')   drawCaterpillar(currentLeague, currentOutcome);
+      }
+    });
+  }, { threshold: 0.2 });
+  document.querySelectorAll('.chart-wrap').forEach(el => obs.observe(el));
+}
+
+// crimeColors defined above near shared state
+
+// ── CHART 1: SPATIAL ───────────────────────────────────────────
+function drawSpatialChart(band) {
+  const svg = d3.select('#svg-spatial');
+  svg.selectAll('*').remove();
+
+  const container = document.getElementById('chart-spatial');
+  const W = container.clientWidth - 64;
+  const rowH = isMobile() ? 30 : 36;
+  const crimes = ['Larceny', 'Assault', 'Auto Theft', 'Robbery'];
+  const leagues = ['MLB', 'NFL'];
+  const margin = { top: 20, right: 20, bottom: 40, left: responsiveMarginLeft(90) };
+  const innerW = W - margin.left - margin.right;
+  const rowsPerLeague = crimes.length;
+  const leagueH = rowsPerLeague * rowH + 30;
+  const totalH = leagues.length * leagueH + margin.top + margin.bottom;
+
+  svg.attr('height', totalH);
+
+  const data = explorerData.filter(d =>
+    d.distance_band === band && d.time_window === null
+  );
+
+  // x scale across all data
+  const allLow  = d3.min(data, d => d.conf_low)  * 0.9;
+  const allHigh = d3.max(data, d => d.conf_high) * 1.05;
+  const x = d3.scaleLinear().domain([Math.min(allLow, 0.5), allHigh]).range([0, innerW]);
+
+  leagues.forEach((league, li) => {
+    const g = svg.append('g')
+      .attr('transform', `translate(${margin.left},${margin.top + li * leagueH})`);
+
+    // League label
+    g.append('text')
+      .attr('x', -80)
+      .attr('y', 14)
+      .attr('fill', league === 'MLB' ? '#D71920' : '#8B1A1F')
+      .attr('font-family', "'DM Mono', monospace")
+      .attr('font-size', 11)
+      .attr('font-weight', 500)
+      .attr('letter-spacing', '0.1em')
+      .text(league);
+
+    // Null line
+    g.append('line')
+      .attr('x1', x(1)).attr('x2', x(1))
+      .attr('y1', 0).attr('y2', rowsPerLeague * rowH)
+      .attr('stroke', 'rgba(26,26,26,0.2)')
+      .attr('stroke-dasharray', '4,3')
+      .attr('stroke-width', 1);
+
+    // X axis (bottom of each league block)
+    const xAxis = d3.axisBottom(x).ticks(axisTicks(innerW)).tickFormat(d => d.toFixed(1) + '×');
+    g.append('g')
+      .attr('class', 'axis')
+      .attr('transform', `translate(0,${rowsPerLeague * rowH})`)
+      .call(xAxis);
+
+    crimes.forEach((crime, ci) => {
+      const row = g.append('g').attr('transform', `translate(0,${ci * rowH + rowH / 2})`);
+      const d = data.find(r => r.league === league && r.crime_type === crime);
+
+      // Crime label
+      row.append('text')
+        .attr('x', -8).attr('y', 4)
+        .attr('text-anchor', 'end')
+        .attr('fill', 'rgba(40,30,25,0.7)')
+        .attr('font-family', "'DM Sans', sans-serif")
+        .attr('font-size', isMobile() ? 10 : 12)
+        .text(isMobile() ? crime.replace(' ', '\u00A0').replace('Auto Theft', 'Auto') : crime);
+
+      if (!d) return;
+
+      const color = d.sig ? crimeColors[crime] : 'rgba(138,155,176,0.4)';
+      const delay = (li * crimes.length + ci) * 60;
+
+      // CI line — grows from null (x=1) outward
+      row.append('line')
+        .attr('x1', x(1)).attr('x2', x(1))
+        .attr('y1', 0).attr('y2', 0)
+        .attr('stroke', color)
+        .attr('stroke-width', 2)
+        .attr('opacity', 0)
+        .transition().delay(delay).duration(500).ease(d3.easeCubicOut)
+        .attr('x1', x(d.conf_low)).attr('x2', x(d.conf_high))
+        .attr('opacity', 0.7);
+
+      // CI caps
+      [-1, 1].forEach(dir => {
+        const xVal = dir === -1 ? d.conf_low : d.conf_high;
+        row.append('line')
+          .attr('x1', x(1)).attr('x2', x(1))
+          .attr('y1', -5).attr('y2', 5)
+          .attr('stroke', color).attr('stroke-width', 1.5).attr('opacity', 0)
+          .transition().delay(delay + 200).duration(300)
+          .attr('x1', x(xVal)).attr('x2', x(xVal))
+          .attr('opacity', 0.7);
+      });
+
+      // IRR dot — scales up from 0
+      row.append('circle')
+        .attr('cx', x(d.irr)).attr('cy', 0)
+        .attr('r', 0)
+        .attr('fill', color)
+        .attr('stroke', '#ffffff')
+        .attr('stroke-width', 1.5)
+        .style('cursor', 'pointer')
+        .transition().delay(delay + 150).duration(350).ease(d3.easeBackOut)
+        .attr('r', 6)
+        .on('end', function() {
+          d3.select(this)
+            .on('mouseover', (event) => {
+              const pct = ((d.irr - 1) * 100).toFixed(1);
+              const dir = d.irr > 1 ? `+${pct}%` : `${pct}%`;
+              showTip(`<strong>${league} · ${crime}</strong><br>IRR: ${d.irr.toFixed(3)} (${dir})<br>95% CI: [${d.conf_low.toFixed(3)}, ${d.conf_high.toFixed(3)}]<br>${d.sig ? '✓ Significant' : '— Not significant'}`, event);
+            })
+            .on('mousemove', moveTip)
+            .on('mouseout', hideTip);
+        });
+    });
+  });
+}
+
+function updateSpatialChart(band, btn) {
+  document.querySelectorAll('#chart-spatial .toggle-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  spatialBand = band;
+  drawSpatialChart(band);
+}
+
+// ── CHART 2: DESIGN DIAGRAM ─────────────────────────────────────
+function drawDesignDiagram() {
+  const svg = d3.select('#svg-diagram');
+  svg.selectAll('*').remove();
+
+  const W = document.getElementById('chart-diagram').clientWidth - 64;
+  const H = 240;
+  svg.attr('height', H);
+
+  const cx = W / 2;
+  const cy = H / 2 - 10;
+
+  // Rings
+  const rings = [
+    { r: 90, label: '2–3km', color: 'rgba(215,25,32,0.04)', stroke: 'rgba(215,25,32,0.2)',   labelYOffset: -28 },
+    { r: 62, label: '1–2km', color: 'rgba(215,25,32,0.07)', stroke: 'rgba(215,25,32,0.35)',  labelYOffset: -14 },
+    { r: 34, label: '≤1km',  color: 'rgba(215,25,32,0.12)', stroke: 'rgba(215,25,32,0.7)',   labelYOffset:   0 },
+  ];
+
+  rings.forEach(ring => {
+    svg.append('circle').attr('cx', cx).attr('cy', cy)
+      .attr('r', ring.r).attr('fill', ring.color)
+      .attr('stroke', ring.stroke).attr('stroke-width', 1.5).attr('stroke-dasharray', '4,3');
+
+    svg.append('text')
+      .attr('x', cx + ring.r + 5).attr('y', cy + ring.labelYOffset)
+      .attr('fill', 'rgba(215,25,32,0.7)')
+      .attr('font-family', "'DM Mono', monospace")
+      .attr('font-size', 10)
+      .text(ring.label);
+  });
+
+  // Stadium icon
+  svg.append('rect')
+    .attr('x', cx - 10).attr('y', cy - 10)
+    .attr('width', 20).attr('height', 20)
+    .attr('fill', '#D71920').attr('rx', 2);
+
+  svg.append('text')
+    .attr('x', cx).attr('y', cy + 5)
+    .attr('text-anchor', 'middle')
+    .attr('fill', '#ffffff')
+    .attr('font-size', 12)
+    .attr('font-weight', 700)
+    .text('🏟');
+
+  // Time bar
+  const barY = H - 30;
+  const barX = W * 0.05;
+  const barW = W * 0.9;
+  const segments = [
+    { label: 'Pre',    pct: 0.2,  color: '#D71920' },
+    { label: 'During', pct: 0.55, color: '#8B1A1F' },
+    { label: 'Post',   pct: 0.25, color: '#c07030' },
+  ];
+
+  let xCur = barX;
+  segments.forEach(s => {
+    const w = barW * s.pct;
+    svg.append('rect')
+      .attr('x', xCur).attr('y', barY - 10)
+      .attr('width', w).attr('height', 14)
+      .attr('fill', s.color).attr('opacity', 0.25);
+
+    svg.append('rect')
+      .attr('x', xCur).attr('y', barY - 10)
+      .attr('width', w).attr('height', 14)
+      .attr('fill', 'none')
+      .attr('stroke', s.color).attr('stroke-width', 1);
+
+    svg.append('text')
+      .attr('x', xCur + w / 2).attr('y', barY + 10)
+      .attr('text-anchor', 'middle')
+      .attr('fill', s.color)
+      .attr('font-family', "'DM Mono', monospace")
+      .attr('font-size', 9)
+      .attr('letter-spacing', '0.08em')
+      .text(s.label.toUpperCase());
+
+    xCur += w;
+  });
+
+  svg.append('text')
+    .attr('x', barX).attr('y', barY - 16)
+    .attr('fill', 'rgba(40,30,25,0.45)')
+    .attr('font-family', "'DM Mono', monospace")
+    .attr('font-size', 9)
+    .attr('letter-spacing', '0.12em')
+    .text('TEMPORAL WINDOWS');
+}
+
+// ── CHART 3: TEMPORAL ──────────────────────────────────────────
+function drawTemporalChart(league) {
+  const svg = d3.select('#svg-temporal');
+  svg.selectAll('*').remove();
+
+  const container = document.getElementById('chart-temporal');
+  const W = container.clientWidth - 64;
+  const margin = { top: 20, right: 20, bottom: 50, left: responsiveMarginLeft(90) };
+  const innerW = W - margin.left - margin.right;
+  const rowH = isMobile() ? 32 : 40;
+  const crimes = ['Larceny', 'Assault', 'Auto Theft', 'Robbery'];
+  const periods = ['Pre', 'During', 'Post'];
+  const H = crimes.length * rowH + margin.top + margin.bottom;
+
+  svg.attr('height', H);
+
+  const data = explorerData.filter(d =>
+    d.league === league && d.time_window !== null && ['Pre','During','Post'].includes(d.time_window)
+  );
+
+  if (!data.length) return;
+
+  const allLow  = d3.min(data, d => d.conf_low)  * 0.85;
+  const allHigh = d3.max(data, d => d.conf_high) * 1.05;
+  const x = d3.scaleLinear().domain([Math.min(allLow, 0.4), allHigh]).range([0, innerW]);
+
+  const periodColor = { Pre: '#D71920', During: '#8B1A1F', Post: '#c07030' };
+  const periodOffset = { Pre: -10, During: 0, Post: 10 };
+
+  const g = svg.append('g').attr('transform', `translate(${margin.left},${margin.top})`);
+
+  // Null line
+  g.append('line')
+    .attr('x1', x(1)).attr('x2', x(1))
+    .attr('y1', 0).attr('y2', crimes.length * rowH)
+    .attr('stroke', 'rgba(26,26,26,0.2)')
+    .attr('stroke-dasharray', '4,3').attr('stroke-width', 1);
+
+  // X axis
+  g.append('g').attr('class', 'axis')
+    .attr('transform', `translate(0,${crimes.length * rowH})`)
+    .call(d3.axisBottom(x).ticks(axisTicks(innerW)).tickFormat(d => d.toFixed(1) + '×'));
+
+  // Legend
+  const leg = g.append('g').attr('transform', `translate(0,${crimes.length * rowH + 30})`);
+  periods.forEach((p, i) => {
+    leg.append('circle').attr('cx', i * 90).attr('cy', 0).attr('r', 5).attr('fill', periodColor[p]);
+    leg.append('text').attr('x', i * 90 + 10).attr('y', 4)
+      .attr('fill', periodColor[p])
+      .attr('font-family', "'DM Mono', monospace")
+      .attr('font-size', 10)
+      .text(p);
+  });
+
+  crimes.forEach((crime, ci) => {
+    const row = g.append('g').attr('transform', `translate(0,${ci * rowH + rowH / 2})`);
+
+    row.append('text')
+      .attr('x', -8).attr('y', 4)
+      .attr('text-anchor', 'end')
+      .attr('fill', 'rgba(40,30,25,0.7)')
+      .attr('font-family', "'DM Sans', sans-serif")
+      .attr('font-size', isMobile() ? 10 : 12)
+      .text(isMobile() ? crime.replace('Auto Theft', 'Auto') : crime);
+
+    periods.forEach((period, pi) => {
+      const d = data.find(r => r.crime_type === crime && r.time_window === period);
+      if (!d) return;
+
+      const yOff = periodOffset[period];
+      const color = d.sig ? periodColor[period] : 'rgba(138,155,176,0.35)';
+      const delay = (ci * periods.length + pi) * 55;
+
+      // CI line — grows from x=1
+      row.append('line')
+        .attr('x1', x(1)).attr('x2', x(1))
+        .attr('y1', yOff).attr('y2', yOff)
+        .attr('stroke', color).attr('stroke-width', 1.5).attr('opacity', 0)
+        .transition().delay(delay).duration(480).ease(d3.easeCubicOut)
+        .attr('x1', x(d.conf_low)).attr('x2', x(d.conf_high))
+        .attr('opacity', 0.7);
+
+      // Dot — pops in with back-ease
+      row.append('circle')
+        .attr('cx', x(d.irr)).attr('cy', yOff)
+        .attr('r', 0).attr('fill', color)
+        .attr('stroke', '#ffffff').attr('stroke-width', 1.5)
+        .style('cursor', 'pointer')
+        .transition().delay(delay + 140).duration(320).ease(d3.easeBackOut)
+        .attr('r', 5)
+        .on('end', function() {
+          d3.select(this)
+            .on('mouseover', (event) => {
+              const pct = ((d.irr - 1) * 100).toFixed(1);
+              showTip(`<strong>${period}-game · ${crime}</strong><br>IRR: ${d.irr.toFixed(3)} (+${pct}%)<br>95% CI: [${d.conf_low.toFixed(3)}, ${d.conf_high.toFixed(3)}]<br>${d.sig ? '✓ Significant' : '— Not significant'}`, event);
+            })
+            .on('mousemove', moveTip)
+            .on('mouseout', hideTip);
+        });
+    });
+  });
+}
+
+function updateTemporalChart(league, btn) {
+  document.querySelectorAll('#chart-temporal .toggle-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  temporalLeague = league;
+  drawTemporalChart(league);
+
+  // Swap callout
+  const nflCallout = document.getElementById('callout-nfl');
+  const mlbCallout = document.getElementById('callout-mlb');
+  if (league === 'NFL') {
+    nflCallout.style.display = '';
+    mlbCallout.style.display = 'none';
+  } else {
+    nflCallout.style.display = 'none';
+    mlbCallout.style.display = '';
+  }
+}
+
+// ── CHART 4: CATERPILLAR ───────────────────────────────────────
+function drawCaterpillar(league, outcome) {
+  const svg = d3.select('#svg-venues');
+  svg.selectAll('*').remove();
+
+  const raw = venueData[league].filter(d => d.Band === 'Within 1km' && d.Outcome === outcome);
+  if (!raw.length) {
+    svg.attr('height', 60)
+      .append('text').attr('x', 20).attr('y', 35)
+      .attr('fill', '#6b6560').attr('font-size', 13)
+      .text('Model did not converge for this combination.');
+    return;
+  }
+
+  const data = [...raw].sort((a, b) => a.Random_Slope - b.Random_Slope);
+  const container = document.getElementById('chart-venues');
+  const W = container.clientWidth - 64;
+  const margin = { top: 10, right: 20, bottom: 30, left: isMobile() ? 120 : 200 };
+  const innerW = W - margin.left - margin.right;
+  const rowH = isMobile() ? 18 : 22;
+  const H = data.length * rowH + margin.top + margin.bottom;
+
+  svg.attr('height', H);
+
+  const ext = d3.extent([...data.map(d => d.Lower), ...data.map(d => d.Upper)]);
+  const pad = (ext[1] - ext[0]) * 0.1;
+  const x = d3.scaleLinear().domain([ext[0] - pad, ext[1] + pad]).range([0, innerW]);
+
+  const g = svg.append('g').attr('transform', `translate(${margin.left},${margin.top})`);
+
+  // Zero line
+  g.append('line')
+    .attr('x1', x(0)).attr('x2', x(0))
+    .attr('y1', 0).attr('y2', data.length * rowH)
+    .attr('stroke', 'rgba(26,26,26,0.3)')
+    .attr('stroke-width', 1);
+
+  // X axis
+  g.append('g').attr('class', 'axis')
+    .attr('transform', `translate(0,${data.length * rowH})`)
+    .call(d3.axisBottom(x).ticks(axisTicks(innerW)).tickFormat(d => d.toFixed(2)));
+
+  // Dynamically find highest and lowest venues by Random_Slope
+  const highest = data[data.length - 1].Venue;  // data sorted asc, so last = highest
+  const lowest  = data[0].Venue;                 // first = lowest
+
+  // Venue rows
+  data.forEach((d, i) => {
+    const row = g.append('g').attr('transform', `translate(0,${i * rowH + rowH / 2})`);
+    const isAbove = d.Random_Slope >= 0;
+    const color = isAbove ? '#D71920' : '#b08060';
+    const isSig  = !(d.Lower <= 0 && d.Upper >= 0);
+    const dotColor = isSig ? color : 'rgba(138,155,176,0.4)';
+
+    // Highlight highest and lowest venues
+    const isHighest = d.Venue === highest;
+    const isLowest  = d.Venue === lowest;
+    const isHighlight = isHighest || isLowest;
+    const starLabel = isHighest ? ' ▲' : isLowest ? ' ▼' : '';
+
+    const labelText = isMobile() && d.Venue.length > 14
+      ? d.Venue.slice(0, 13) + '…' + starLabel
+      : d.Venue + starLabel;
+
+    row.append('text')
+      .attr('x', -8).attr('y', 4)
+      .attr('text-anchor', 'end')
+      .attr('fill', isHighlight ? '#1a1a1a' : 'rgba(40,30,25,0.6)')
+      .attr('font-family', "'DM Sans', sans-serif")
+      .attr('font-size', isMobile() ? 9 : (isHighlight ? 11.5 : 11))
+      .attr('font-weight', isHighlight ? 500 : 300)
+      .text(labelText);
+
+    // CI bar — grows from zero
+    row.append('line')
+      .attr('x1', x(d.Random_Slope)).attr('x2', x(d.Random_Slope))
+      .attr('y1', 0).attr('y2', 0)
+      .attr('stroke', dotColor).attr('stroke-width', 1.5).attr('opacity', 0)
+      .transition().delay(i * 30).duration(450).ease(d3.easeCubicOut)
+      .attr('x1', d.Lower !== null ? x(d.Lower) : x(d.Random_Slope))
+      .attr('x2', d.Upper !== null ? x(d.Upper) : x(d.Random_Slope))
+      .attr('opacity', 0.6);
+
+    // Dot — scales in
+    row.append('circle')
+      .attr('cx', x(d.Random_Slope)).attr('cy', 0)
+      .attr('r', 0).attr('fill', dotColor)
+      .attr('stroke', '#ffffff').attr('stroke-width', 1)
+      .style('cursor', 'pointer')
+      .transition().delay(i * 30 + 120).duration(280).ease(d3.easeBackOut)
+      .attr('r', 4.5)
+      .on('end', function() {
+        d3.select(this)
+          .on('mouseover', (event) => {
+            const total = d.Fixed_Home + d.Random_Slope;
+            const pct = ((Math.exp(total) - 1) * 100).toFixed(1);
+            showTip(`<strong>${d.Venue}</strong><br>Deviation: ${d.Random_Slope > 0 ? '+' : ''}${d.Random_Slope.toFixed(3)}<br>Total effect: ${total.toFixed(3)} (≈${pct}% change)<br>95% CI: [${d.Lower !== null ? d.Lower.toFixed(3) : 'n/a'}, ${d.Upper !== null ? d.Upper.toFixed(3) : 'n/a'}]`, event);
+          })
+          .on('mousemove', moveTip)
+          .on('mouseout', hideTip);
+      });
+  });
+}
+
+function updateCaterpillar(league, outcome, btn, type) {
+  if (type === 'league') {
+    document.querySelectorAll('#league-toggle .toggle-btn').forEach(b => b.classList.remove('active'));
+    currentLeague = league;
+  } else {
+    document.querySelectorAll('#outcome-toggle .toggle-btn').forEach(b => b.classList.remove('active'));
+    currentOutcome = outcome;
+  }
+  btn.classList.add('active');
+  drawCaterpillar(currentLeague, currentOutcome);
+}
+
+// ── EXPLORER ──────────────────────────────────────────────────
+function updateExplorer() {
+  const league = document.getElementById('exp-league').value;
+  const crime  = document.getElementById('exp-crime').value;
+  const band   = document.getElementById('exp-band').value;
+  const time   = document.getElementById('exp-time').value;
+
+  let filtered = explorerData.filter(d => d.league === league && d.crime_type === crime);
+
+  // Determine mode
+  const isSpatialMode  = band !== 'spatial' && time === 'temporal';
+  const isTemporalMode = time !== 'temporal' && band === 'spatial';
+  const isBothMode     = band !== 'spatial' && time !== 'temporal';
+  const isAllMode      = band === 'spatial' && time === 'temporal';
+
+  let chartData = [];
+  let xLabel = '';
+  let title = `${league} · ${crime}`;
+  let sub = '';
+
+  if (isAllMode) {
+    // Show spatial results (null time_window)
+    chartData = filtered.filter(d => d.time_window === null);
+    xLabel = 'Distance Band';
+    sub = 'All time windows combined · by distance band';
+    chartData.sort((a, b) => {
+      const o = ['Within 1 km', '1-2 km', '2-3 km'];
+      return o.indexOf(a.distance_band) - o.indexOf(b.distance_band);
+    });
+  } else if (isBothMode) {
+    const row = filtered.find(d => d.distance_band === band && d.time_window === time);
+    chartData = row ? [row] : [];
+    sub = `${band} · ${time}-game`;
+  } else if (isSpatialMode) {
+    const row = filtered.find(d => d.distance_band === band && d.time_window === null);
+    chartData = row ? [row] : [];
+    sub = `${band} · all time windows`;
+  } else if (isTemporalMode) {
+    chartData = filtered.filter(d => d.time_window === time);
+    sub = `${time}-game · by distance band`;
+    chartData.sort((a, b) => {
+      const o = ['Within 1 km', '1-2 km', '2-3 km'];
+      return o.indexOf(a.distance_band) - o.indexOf(b.distance_band);
+    });
+  } else {
+    chartData = filtered.filter(d => d.time_window === null);
+  }
+
+  document.getElementById('exp-chart-title').textContent = title;
+  document.getElementById('exp-chart-sub').textContent = sub;
+
+  drawExplorerChart(chartData, band === 'spatial' ? 'distance_band' : 'time_window');
+}
+
+function drawExplorerChart(data, groupBy) {
+  const svg = d3.select('#svg-explorer');
+  svg.selectAll('*').remove();
+
+  if (!data.length) {
+    svg.attr('height', 60)
+      .append('text').attr('x', 20).attr('y', 35)
+      .attr('fill', '#6b6560').attr('font-size', 13)
+      .text('No data available for this combination.');
+    return;
+  }
+
+  const container = document.getElementById('explorer-chart-wrap');
+  const W = container.clientWidth - 64;
+  const margin = { top: 20, right: 20, bottom: 50, left: responsiveMarginLeft(120) };
+  const innerW = W - margin.left - margin.right;
+  const rowH = isMobile() ? 36 : 44;
+  const H = data.length * rowH + margin.top + margin.bottom;
+
+  svg.attr('height', H);
+
+  const allLow  = d3.min(data, d => d.conf_low) * 0.85;
+  const allHigh = d3.max(data, d => d.conf_high) * 1.08;
+  const x = d3.scaleLinear().domain([Math.min(allLow, 0.5), allHigh]).range([0, innerW]);
+
+  const g = svg.append('g').attr('transform', `translate(${margin.left},${margin.top})`);
+
+  // Null line
+  g.append('line')
+    .attr('x1', x(1)).attr('x2', x(1))
+    .attr('y1', 0).attr('y2', data.length * rowH)
+    .attr('stroke', 'rgba(26,26,26,0.2)')
+    .attr('stroke-dasharray', '4,3').attr('stroke-width', 1);
+
+  g.append('g').attr('class', 'axis')
+    .attr('transform', `translate(0,${data.length * rowH})`)
+    .call(d3.axisBottom(x).ticks(axisTicks(innerW)).tickFormat(d => d.toFixed(1) + '×'));
+
+  data.forEach((d, i) => {
+    const row = g.append('g').attr('transform', `translate(0,${i * rowH + rowH / 2})`);
+    const color = d.sig ? '#D71920' : 'rgba(100,90,85,0.35)';
+    const label = groupBy === 'distance_band' ? (d.distance_band || 'All') : (d.time_window || 'All');
+
+    row.append('text')
+      .attr('x', -8).attr('y', 4)
+      .attr('text-anchor', 'end')
+      .attr('fill', 'rgba(40,30,25,0.8)')
+      .attr('font-family', "'DM Mono', monospace")
+      .attr('font-size', 11)
+      .text(label);
+
+    // CI — grows from x=1
+    row.append('line')
+      .attr('x1', x(1)).attr('x2', x(1))
+      .attr('y1', 0).attr('y2', 0)
+      .attr('stroke', color).attr('stroke-width', 2.5).attr('opacity', 0)
+      .transition().delay(i * 80).duration(500).ease(d3.easeCubicOut)
+      .attr('x1', x(d.conf_low)).attr('x2', x(d.conf_high))
+      .attr('opacity', 0.7);
+
+    [-1,1].forEach(dir => {
+      const xv = dir === -1 ? d.conf_low : d.conf_high;
+      row.append('line')
+        .attr('x1', x(1)).attr('x2', x(1))
+        .attr('y1', -6).attr('y2', 6)
+        .attr('stroke', color).attr('stroke-width', 1.5).attr('opacity', 0)
+        .transition().delay(i * 80 + 200).duration(280)
+        .attr('x1', x(xv)).attr('x2', x(xv))
+        .attr('opacity', 0.7);
+    });
+
+    // IRR dot
+    row.append('circle')
+      .attr('cx', x(d.irr)).attr('cy', 0)
+      .attr('r', 0).attr('fill', color)
+      .attr('stroke', '#ffffff').attr('stroke-width', 2)
+      .transition().delay(i * 80 + 160).duration(360).ease(d3.easeBackOut)
+      .attr('r', 7);
+
+    // IRR label — fades in after dot
+    const pct = ((d.irr - 1) * 100);
+    const pctStr = pct >= 0 ? `+${pct.toFixed(0)}%` : `${pct.toFixed(0)}%`;
+    row.append('text')
+      .attr('x', x(d.irr)).attr('y', -12)
+      .attr('text-anchor', 'middle')
+      .attr('fill', color)
+      .attr('font-family', "'DM Mono', monospace")
+      .attr('font-size', 10)
+      .attr('opacity', 0)
+      .text(`${d.irr.toFixed(2)}× (${pctStr})`)
+      .transition().delay(i * 80 + 350).duration(250)
+      .attr('opacity', 1);
+
+    // Sig badge
+    row.append('text')
+      .attr('x', innerW - 2).attr('y', 4)
+      .attr('text-anchor', 'end')
+      .attr('fill', d.sig ? '#8B1A1F' : 'rgba(100,90,85,0.4)')
+      .attr('font-family', "'DM Mono', monospace")
+      .attr('font-size', 9)
+      .attr('opacity', 0)
+      .text(d.sig ? 'p < .05' : 'n.s.')
+      .transition().delay(i * 80 + 400).duration(200)
+      .attr('opacity', 1);
+  });
+}
+
+// ── CAROUSEL ──────────────────────────────────────────────────
+let carouselIndex = 0;
+let carouselTimer = null;
+const slides = document.querySelectorAll('.hero-stat[data-index]');
+const dots   = document.querySelectorAll('.carousel-dot');
+
+function goToSlide(n) {
+  const current = document.querySelector('.hero-stat.active');
+  if (current) {
+    current.classList.add('exiting');
+    setTimeout(() => {
+      current.classList.remove('active', 'exiting');
+    }, 400);
+  }
+  dots.forEach(d => d.classList.remove('active'));
+
+  carouselIndex = n;
+  setTimeout(() => {
+    slides[carouselIndex].classList.add('active');
+    dots[carouselIndex].classList.add('active');
+  }, 420);
+
+  // Reset timer on manual navigation
+  clearInterval(carouselTimer);
+  carouselTimer = setInterval(nextSlide, 5000);
+}
+
+function nextSlide() {
+  goToSlide((carouselIndex + 1) % slides.length);
+}
+
+// Kick off auto-rotation after initial animations settle
+setTimeout(() => {
+  carouselTimer = setInterval(nextSlide, 5000);
+}, 1200);
+
+// ── RESIZE ────────────────────────────────────────────────────
+window.addEventListener('resize', () => {
+  if (explorerData.length) {
+    drawSpatialChart(spatialBand);
+    drawDesignDiagram();
+    drawTemporalChart(temporalLeague);
+    drawCaterpillar(currentLeague, currentOutcome);
+    updateExplorer();
+  }
+});
+</script>
+</body>
+</html>
