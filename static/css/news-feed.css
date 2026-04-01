@@ -378,6 +378,16 @@
   filter: invert(1);
 }
 
+.dark .card-title {
+  color: #f0f0f0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card-title {
+    color: #f0f0f0;
+  }
+}
+
 /* Responsive adjustments */
 @media (max-width: 480px) {
   .news-controls {
