@@ -1,6 +1,6 @@
 ---
 title: Join us in celebrating our recent graduates!
-date: 2026-05-19
+date: 2026-05-21
 image:
   focal_point: "smart"
   caption: ""
