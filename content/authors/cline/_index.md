@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position
-role: M.A. Student
+role: Ph.D. Student
 
 # Organizations/Affiliations
 organizations:
@@ -18,19 +18,22 @@ organizations:
   url: "https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/funded-graduate-students.php#Masters%20Students%20(funded%20on%20graduate%20assistantships)-main"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests lie in policing methods, public perception of authority, and quantitative analysis.
+bio: My research interests lie in policing, procedural justice, and, crime analysis.
 
 interests:
-- Police use of force
-- Public sentiment
-- Quantitative methods
+- Policing
+- Procedural justice
+- Crime analysis
 - Philosophy
 
 education:
   courses:
+  - course: Ph.D. in Criminology & Criminal Justice
+    institution: University of Nebraska at Omaha
+    year: "Anticipated 2030"
   - course: MA in Criminology & Criminal Justice
     institution: University of Nebraska at Omaha
-    year: "Anticipated 2026"
+    year: "2026"
   - course: BS in Criminal Justice
     institution: Wichita State University
     year: "2024"
@@ -68,4 +71,4 @@ user_groups:
 - Grad Students
 ---
 
-Jordan Cline is a master of arts student in the School of Criminology and Criminal Justice at the University of Nebraska at Omaha. He also enjoys studying philosophy, physics, art, and everything in between. Jordan holds a B.S. in Criminal Justice with minors in philosophy and political science from Wichita State University. Currently, he works in the VIPR Lab on projects involving police shootings and traffic stops.
+Jordan Cline is a doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska at Omaha. Jordan's work has mostly revolved around policing and crime analysis. He also enjoys studying philosophy, art, plants, and everything in between. Jordan holds a B.S. in Criminal Justice with minors in philosophy and political science from Wichita State University. Currently, he works in the VIPR Lab on projects involving police shootings of canines.
