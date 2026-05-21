@@ -10,6 +10,4 @@ image:
 
 Colton drew quite the crowd to come see his work, both in person and online.
 
-![colton_defense](colton_defense.jpg)
-
 Next up for Colton: PhD. Stay tuned for more great work from him...
