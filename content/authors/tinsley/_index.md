@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position
-role: M.A. Student
+role: Ph.D. Student
 
 # Organizations/Affiliations
 organizations:
@@ -29,9 +29,12 @@ interests:
 
 education:
   courses:
+  - course: Ph.D. in Criminology & Criminal Justice
+    institution: University of Nebraska at Omaha
+    year: "Anticipated 2030"
   - course: MA in Criminology & Criminal Justice
     institution: University of Nebraska at Omaha
-    year: "Anticipated 2026"
+    year: "2026"
   - course: BA in Criminal Justice & Political Science
     institution: Michigan State University
     year: "2023"
@@ -60,4 +63,4 @@ user_groups:
 - Grad Students
 ---
 
-Colton is a Master's student in the School of Criminology and Criminal Justice at the University of Nebraska atttt Omaha. His research interests pertain to mass, youth, and firearm violence. He holds a degree in Criminal Justice and Political Science from Michigan State University, where he minored in Law, Justice, and Public Policy. Additional to his responsibilities in the VIPR Lab, Colton is a graduate assistant for Dr. Jessica Deitzer, analyzing behavioral tendencies of youth violence.
+Colton is a doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska at Omaha. His research interests pertain to mass, youth, and firearm violence. He holds a degree in Criminal Justice and Political Science from Michigan State University, where he minored in Law, Justice, and Public Policy. Additional to his responsibilities in the VIPR Lab, Colton is a graduate assistant for [Dr. Jessica Deitzer](https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/jessica-deitzer.php), analyzing behavioral tendencies of youth violence.
