@@ -30,7 +30,7 @@ education:
   courses:
   - course: MS in Criminology & Criminal Justice
     institution: University of Nebraska at Omaha
-    year: "2028"
+    year: "Anticipated 2028"
   - course: BS in Criminology and Criminal Justice
     institution: University of Nebraska Lincoln
     year: "2026"
