@@ -16,15 +16,18 @@ A running list of open source data related to policing and other violence interv
 ## **Violence**
 
 * [Gun Violence Archive](https://www.gunviolencearchive.org/)
+* [Gun Violence Data Hub](https://datahub.thetrace.org/data-library/?dir=desc&sort=date_updated&pg=1)
 * [Historical Violence Database](https://cjrc.osu.edu/research/interdisciplinary/hvd)
 
 ## **Use of Force**
 
 ### National level
 
+* [Dogs Shot by Police](https://jnix.netlify.app/dog-shooting-tracker/)
 * [Fatal Encounters](https://fatalencounters.org)
 * [Fatal Force (by *Washington Post*)](https://github.com/washingtonpost/data-police-shootings)
 * [Mapping Police Violence](https://mappingpoliceviolence.org)
+* [PoliceData.org](policedata.org)
 * [SPOTLITE](https://clinecenter.illinois.edu/spotlite)
 
 ### State level
@@ -62,5 +65,7 @@ A running list of open source data related to policing and other violence interv
 
 ## **Miscellaneous**
 
+* [California Open Justice](https://openjustice.doj.ca.gov/data)
+* [Free Datasets for Social Science Research](https://github.com/toddrjones/datasets)
 * [Police Data Initiative](https://www.policedatainitiative.org/datasets/)
 * [Police Scorecard Data](https://drive.google.com/drive/folders/1iivJXgHgyXF9RR-wKYLnpXwXRCGVXlpE)
